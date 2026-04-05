@@ -38,8 +38,8 @@ export default function HeroBanner() {
           <div className="planb-fv__content">
             <div className="planb-fv__badge">
               <Image
-                src="/img/planb-fv/badge.svg"
-                alt="&quot;AI時代の即戦力&quot;を育成！"
+                src="/img/planb-fv/badge.svg?v=2"
+                alt="&quot;使えるAI力&quot;を装着！"
                 width={326}
                 height={54}
                 priority
@@ -53,9 +53,7 @@ export default function HeroBanner() {
                   受講後<br />生産性向上率
                 </span>
                 <span className="planb-fv__stat-number">88</span>
-                <span className="planb-fv__stat-unit">
-                  <sup className="planb-fv__stat-note">※1</sup>％
-                </span>
+                <span className="planb-fv__stat-unit">％</span>
               </div>
 
               <div className="planb-fv__stat-divider" />
@@ -64,10 +62,8 @@ export default function HeroBanner() {
                 <span className="planb-fv__stat-label">
                   受講者<br />満足度
                 </span>
-                <span className="planb-fv__stat-number">96.2</span>
-                <span className="planb-fv__stat-unit">
-                  <sup className="planb-fv__stat-note">※2</sup>％
-                </span>
+                <span className="planb-fv__stat-number">96</span>
+                <span className="planb-fv__stat-unit">％</span>
               </div>
             </div>
 
@@ -92,11 +88,6 @@ export default function HeroBanner() {
               </a>
             </div>
 
-            <div className="planb-fv__notes">
-              <p>※1 2024年度の受講企業へのアンケート調査をもとに算出。</p>
-              <p>研修受講後のチーム開発生産性が平均88.0%向上しています</p>
-              <p>※2 2024年度の受講者アンケートにおける満足度</p>
-            </div>
           </div>
 
           <div className="planb-fv__illust">
