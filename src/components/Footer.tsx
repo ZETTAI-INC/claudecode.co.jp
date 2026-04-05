@@ -50,7 +50,7 @@ export default function Footer() {
           ))}
         </ul>
         <p className="text-xs text-center text-gray-400">
-          © claudecode.co.jp
+          © 株式会社ZETTAI
         </p>
       </div>
     </footer>

@@ -140,7 +140,7 @@ export default function RelatedServices() {
           <div>
             <p className="text-center text-xs pt-12">
               「CLAUDE CODE リスキリング研修」は<br className="sp-only" />
-              claudecode.co.jpが提供するサービスです
+              株式会社ZETTAIが運営するサービスです
             </p>
           </div>
         </div>

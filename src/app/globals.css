@@ -394,8 +394,21 @@ body {
 /* ===== Comparison Section (Skettt-style) ===== */
 @layer components {
 .comparison {
-  background: #e2f5ec;
+  background: #eaf3fc;
   padding: 100px 20px 80px;
+  position: relative;
+  overflow: visible;
+}
+.comparison::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #eaf3fc;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 1;
 }
 .comparison__inner {
   max-width: 1040px;
@@ -571,14 +584,18 @@ body {
 /* Bottom text */
 .comparison__bottom-text {
   text-align: center;
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
   color: #151515;
   margin-top: 48px;
 }
 .comparison__bottom-text strong {
-  color: #2563eb;
-  font-size: 36px;
+  color: #f59e0b;
+  font-size: 48px;
+  text-emphasis: filled dot #f59e0b;
+  -webkit-text-emphasis: filled dot #f59e0b;
+  text-emphasis-position: over right;
+  -webkit-text-emphasis-position: over right;
 }
 
 /* Comparison responsive */
@@ -617,7 +634,14 @@ body {
     margin-top: 32px;
   }
   .comparison__bottom-text strong {
-    font-size: 26px;
+    font-size: 32px;
+  }
+  .comparison {
+    padding-bottom: 120px;
+  }
+  .comparison::after {
+    height: 80px;
+    bottom: -80px;
   }
 }
 } /* end @layer components — comparison */
@@ -665,7 +689,7 @@ body {
 
 /* For Home / Service Description */
 .for-home {
-  padding: 90px 0 33px;
+  padding: 210px 0 33px;
 }
 .for-home .for-home-container {
   max-width: 1056px;
