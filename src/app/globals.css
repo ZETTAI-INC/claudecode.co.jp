@@ -1075,6 +1075,83 @@ body {
   opacity: 0.85;
 }
 
+/* Models table */
+.models-table-wrap {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+.models-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5dfdb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.models-table__corner {
+  background: #f5f5f5;
+  width: 100px;
+}
+.models-table__th {
+  padding: 20px 16px;
+  text-align: center;
+  border-left: 1px solid #e5dfdb;
+}
+.models-table__th--opus { background: #fdf6f5; }
+.models-table__th--sonnet { background: #f5f8ff; }
+.models-table__th--haiku { background: #f5fbf5; }
+.models-table__th-name {
+  display: block;
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #333;
+}
+.models-table__th-sub {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  margin-top: 4px;
+}
+.models-table__label {
+  background: #fafafa;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  padding: 14px 16px;
+  white-space: nowrap;
+}
+.models-table td {
+  font-size: 14px;
+  color: #555;
+  padding: 14px 16px;
+  border-top: 1px solid #e5dfdb;
+  border-left: 1px solid #e5dfdb;
+  text-align: center;
+  line-height: 1.6;
+}
+.models-table__em {
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #c0392b;
+}
+.models-table__circle {
+  color: #2563eb;
+  font-weight: 700;
+}
+.models-table__dash {
+  color: #ccc;
+}
+@media (max-width: 640px) {
+  .models-table__th-name { font-size: 16px; }
+  .models-table__th { padding: 14px 8px; }
+  .models-table td { font-size: 13px; padding: 10px 8px; }
+  .models-table__corner { width: 70px; }
+  .models-table__label { font-size: 12px; padding: 10px 8px; }
+}
+
 /* Course Section */
 .course-header {
   text-align: center;
@@ -1233,171 +1310,69 @@ body {
   background: #fff;
 }
 .models__inner {
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
-}
-.models__header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-.models__title {
-  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #151515;
-  margin: 0 0 12px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 16px;
-}
-.models__title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 64px;
-  height: 4px;
-  background: #2563eb;
-  border-radius: 2px;
 }
 .models__lead {
   font-size: 15px;
   color: #666;
-  margin: 16px 0 0;
+  margin: 0 0 40px;
   line-height: 1.7;
-}
-.models__table-wrap {
-  overflow-x: auto;
-}
-.models__table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-.models__th {
-  padding: 24px 16px 20px;
   text-align: center;
-  vertical-align: bottom;
-  border-bottom: 2px solid #e5e7eb;
 }
-.models__th--empty {
-  width: 140px;
-  border-bottom: none;
+
+/* Achievement stats - FV style */
+.models__achievement {
+  margin-bottom: 48px;
 }
-.models__th--opus { background: #fef3f2; border-radius: 12px 12px 0 0; }
-.models__th--sonnet { background: #eff6ff; border-radius: 12px 12px 0 0; }
-.models__th--haiku { background: #f0fdf4; border-radius: 12px 12px 0 0; }
-.models__badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 8px;
+.models__achievement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
-.models__badge--opus { background: #dc2626; color: #fff; }
-.models__badge--sonnet { background: #2563eb; color: #fff; }
-.models__badge--haiku { background: #16a34a; color: #fff; }
-.models__model-name {
-  display: block;
-  font-family: var(--font-roboto), "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 28px;
-  color: #151515;
-  line-height: 1.2;
+.models__achievement-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
 }
-.models__model-id {
-  display: block;
-  font-family: var(--font-roboto), "Roboto", sans-serif;
-  font-size: 11px;
-  color: #999;
-  margin-top: 4px;
-  letter-spacing: 0.02em;
-}
-.models__label {
-  padding: 16px;
+.models__achievement-label {
   font-size: 14px;
   font-weight: 700;
-  color: #333;
-  border-bottom: 1px solid #f0f0f0;
-  white-space: nowrap;
-}
-.models__cell {
-  padding: 16px;
-  text-align: center;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 14px;
-  color: #333;
-}
-.models__cell--use {
-  font-size: 13px;
   color: #555;
-  line-height: 1.6;
-  text-align: left;
-  padding: 16px 20px;
-}
-.models__meter {
-  display: inline-block;
-  width: 80px;
-  height: 8px;
-  background: #e5e7eb;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  vertical-align: middle;
+  line-height: 1.4;
   margin-right: 8px;
 }
-.models__meter::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background: #2563eb;
-}
-.models__meter--5::after { width: 100%; background: #dc2626; }
-.models__meter--4::after { width: 80%; background: #2563eb; }
-.models__meter--3::after { width: 60%; background: #16a34a; }
-.models__val {
-  font-size: 13px;
-  font-weight: 700;
-  vertical-align: middle;
-}
-.models__cost {
+.models__achievement-num {
   font-family: var(--font-roboto), "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 18px;
-  color: #f59e0b;
-  letter-spacing: 2px;
+  font-size: 56px;
+  color: #2563eb;
+  line-height: 1;
 }
-.models__note {
-  margin-top: 40px;
-  text-align: center;
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 24px;
-  border: 1px solid #e5e7eb;
+.models__achievement-unit {
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2563eb;
 }
-.models__note p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.8;
-  margin: 0;
+.models__achievement-divider {
+  width: 1px;
+  height: 48px;
+  background: #ddd;
 }
+
 @media (max-width: 768px) {
-  .models__title {
-    font-size: 26px;
+  .models__achievement-inner {
+    flex-direction: column;
+    gap: 20px;
   }
-  .models__th--empty {
-    width: 100px;
+  .models__achievement-divider {
+    width: 60px;
+    height: 1px;
   }
-  .models__model-name {
-    font-size: 20px;
-  }
-  .models__meter {
-    width: 48px;
+  .models__achievement-num {
+    font-size: 44px;
   }
 }
 

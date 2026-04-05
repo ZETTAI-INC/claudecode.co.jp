@@ -47,7 +47,7 @@ const courses: CourseProps[] = [
     subtitle: "Dispatch",
     color: "#8b5cf6",
     description:
-      "Claude Codeを使いこなせる人材を貴社に派遣。研修だけでなく、実際のプロジェクトにAIエンジニアが参画し、チーム全体のスキル底上げを実現します。",
+      "Claude Codeを使いこなせる人材を貴社に派遣。実際のプロジェクトにAIエンジニアが参画し、チーム全体のスキル底上げを実現します。",
     targets: ["開発チーム", "人材不足の企業", "DX推進部門"],
     href: "/course/dispatch/",
   },
@@ -63,42 +63,158 @@ const courses: CourseProps[] = [
   },
 ];
 
+
 export default function Services() {
   return (
     <section className="section-services" id="contentServices">
-      <div className="course-header">
-        <h2 className="course-header__title">
-          研修コースから探す
-        </h2>
-        <p className="course-header__desc">
-          目的・レベルに合わせて最適なコースをお選びいただけます
-        </p>
+      <div>
+        <div className="flex justify-center contentServices_whoFor_title">
+          CLAUDE CODE リスキリング研修は、<br className="sp-only" />
+          あらゆる職種・レベルに対応した
+        </div>
+        <div className="flex justify-center contentServices_title">
+          実践型AI開発スキル<br className="sp-only" />
+          研修サービスです。
+        </div>
       </div>
 
-      <div className="course-list">
-        {courses.map((course) => (
-          <Link href={course.href} key={course.number} className="course-row" style={{ "--course-color": course.color } as React.CSSProperties}>
-            <div className="course-row__left">
-              <span className="course-row__number">{course.number}</span>
-              <div className="course-row__bar" />
-              <div className="course-row__titles">
-                <h3 className="course-row__title">{course.title}</h3>
-                <span className="course-row__sub">{course.subtitle}</span>
+      {/* 01: 研修コース */}
+      <div id="supportSubsidyApplications">
+        <div className="supportSubsidyApplications_title">
+          <span className="mr-3 supportSubsidyApplications_titleNumber">01</span>
+          <span className="supportSubsidyApplications_titleText">研修コースから探す</span>
+        </div>
+
+        <div id="supportSubsidyApplications_content" className="pt-20">
+          <div className="text-center mb-10">
+            <span className="supportSubsidyApplications_description">
+              目的・レベルに合わせて<br className="sp-only" />
+              最適なコースを<br className="sp-only" />
+              お選びいただけます。
+            </span>
+          </div>
+
+          <div className="course-list">
+            {courses.map((course) => (
+              <Link href={course.href} key={course.number} className="course-row" style={{ "--course-color": course.color } as React.CSSProperties}>
+                <div className="course-row__left">
+                  <span className="course-row__number">{course.number}</span>
+                  <div className="course-row__bar" />
+                  <div className="course-row__titles">
+                    <h3 className="course-row__title">{course.title}</h3>
+                    <span className="course-row__sub">{course.subtitle}</span>
+                  </div>
+                </div>
+                <p className="course-row__desc">{course.description}</p>
+                <div className="course-row__right">
+                  <div className="course-row__tags">
+                    {course.targets.map((t) => (
+                      <span key={t} className="course-row__tag">{t}</span>
+                    ))}
+                  </div>
+                  <span className="course-row__arrow">
+                    <span className="material-icons-outlined">arrow_forward</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 02: 使えるモデル */}
+      <div id="applySubsidy">
+        <div className="applySubsidy_title">
+          <span className="mr-3 applySubsidy_titleNumber">02</span>
+          <span className="applySubsidy_titleText">Claude Codeで使えるモデル</span>
+        </div>
+
+        <div id="applySubsidy_content" className="pt-20">
+          <div className="text-center mb-5">
+            <span className="applySubsidy_description">
+              用途に応じて3つのモデルを<br className="sp-only" />
+              使い分けることで、<br />
+              コストと性能を<br className="sp-only" />
+              最適化できます。
+            </span>
+
+            {/* ベンチマーク実績数字 */}
+            <div className="models__achievement">
+              <div className="models__achievement-inner">
+                <div className="models__achievement-stat">
+                  <span className="models__achievement-label">コーディング<br />ベンチマーク</span>
+                  <span className="models__achievement-num">72.0</span>
+                  <span className="models__achievement-unit">％</span>
+                </div>
+                <div className="models__achievement-divider" />
+                <div className="models__achievement-stat">
+                  <span className="models__achievement-label">Terminal-bench<br />2位との差</span>
+                  <span className="models__achievement-num">+21</span>
+                  <span className="models__achievement-unit">pt</span>
+                </div>
+                <div className="models__achievement-divider" />
+                <div className="models__achievement-stat">
+                  <span className="models__achievement-label">Agentic<br />Coding</span>
+                  <span className="models__achievement-num">No.1</span>
+                </div>
               </div>
             </div>
-            <p className="course-row__desc">{course.description}</p>
-            <div className="course-row__right">
-              <div className="course-row__tags">
-                {course.targets.map((t) => (
-                  <span key={t} className="course-row__tag">{t}</span>
-                ))}
-              </div>
-              <span className="course-row__arrow">
-                <span className="material-icons-outlined">arrow_forward</span>
-              </span>
-            </div>
-          </Link>
-        ))}
+          </div>
+
+          <div className="models-table-wrap">
+            <table className="models-table">
+              <thead>
+                <tr>
+                  <th className="models-table__corner" />
+                  <th className="models-table__th models-table__th--opus">
+                    <span className="models-table__th-name">Opus 4</span>
+                    <span className="models-table__th-sub">困ったらこれ</span>
+                  </th>
+                  <th className="models-table__th models-table__th--sonnet">
+                    <span className="models-table__th-name">Sonnet 4</span>
+                    <span className="models-table__th-sub">迷ったらこれ</span>
+                  </th>
+                  <th className="models-table__th models-table__th--haiku">
+                    <span className="models-table__th-name">Haiku 4.5</span>
+                    <span className="models-table__th-sub">速さ重視ならこれ</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="models-table__label">得意なこと</td>
+                  <td>設計判断<br />大規模改修</td>
+                  <td>日常開発<br />レビュー・テスト</td>
+                  <td>コード補完<br />簡単な修正</td>
+                </tr>
+                <tr>
+                  <td className="models-table__label">コンテキスト</td>
+                  <td><strong className="models-table__em">1M</strong> tokens</td>
+                  <td>200K tokens</td>
+                  <td>200K tokens</td>
+                </tr>
+                <tr>
+                  <td className="models-table__label">拡張思考</td>
+                  <td><span className="models-table__circle">○</span></td>
+                  <td><span className="models-table__circle">○</span></td>
+                  <td><span className="models-table__dash">—</span></td>
+                </tr>
+                <tr>
+                  <td className="models-table__label">速度</td>
+                  <td>じっくり</td>
+                  <td>ちょうどいい</td>
+                  <td><strong>最速</strong></td>
+                </tr>
+                <tr>
+                  <td className="models-table__label">コスト</td>
+                  <td>高め</td>
+                  <td>ちょうどいい</td>
+                  <td><strong>最安</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   );
