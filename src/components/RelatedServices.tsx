@@ -1,140 +1,101 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
+const rows = [
+  [
+    {
+      title: "Webサイト・LP制作",
+      img: "/img/theme/home/mae-hojyo-image.svg",
+      desc: "コーポレートサイトやLPを、デザインからコーディングまで高速に構築。このサイトもClaude Codeで作られています。",
+    },
+    {
+      title: "業務自動化ツール",
+      img: "/img/theme/home/super-efficiency-image.svg",
+      desc: "日報作成、データ集計、レポート生成など、定型業務を自動化するスクリプトやツールを即座に開発できます。",
+    },
+  ],
+  [
+    {
+      title: "社内Webアプリ開発",
+      img: "/img/theme/home/mag-image.svg",
+      desc: "顧客管理、在庫管理、勤怠管理など、必要なWebアプリを外注せずに自社で開発・保守できます。",
+    },
+    {
+      title: "API連携ツール",
+      img: "/img/theme/home/super-efficiency-image.svg",
+      desc: "Slack、Google Sheets、社内システムなど、複数サービスを繋ぐAPI連携ツールを短時間で構築できます。",
+    },
+  ],
+  [
+    {
+      title: "データ分析・可視化",
+      img: "/img/theme/home/mae-hojyo-image.svg",
+      desc: "売上や顧客データを自動で集計・グラフ化。経営判断に役立つダッシュボードを内製できます。",
+    },
+    {
+      title: "チャットボット",
+      img: "/img/theme/home/mag-image.svg",
+      desc: "社内FAQ対応やカスタマーサポート用のAIチャットボットを、自社の情報に合わせて構築できます。",
+    },
+  ],
+];
 
 export default function RelatedServices() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleRows = showAll ? rows : rows.slice(0, 1);
+
   return (
     <div className="my-12">
       <section>
         <div>
-          <div className="block-title mb-6">CLAUDE CODE リスキリング研修 関連サービス</div>
+          <div className="block-title mb-6">CLAUDE CODEで作れるもの</div>
 
-          <div className="mt-12">
-            <div className="flex justify-center professionalService_cardWrapper">
-              <div className="flex justify-center">
-                <div className="professionalMaeHojyoContent">
-                  <div className="flex flex-col items-center">
-                    <div className="my-6">
-                      <Image
-                        src="/img/theme/home/logo-mae-hojyo.svg"
-                        alt="eラーニング"
-                        width={300}
-                        height={60}
-                        style={{ width: "auto", height: "auto" }}
-                      />
+          <div className="mt-12 related-expand-wrap">
+            {visibleRows.map((row, ri) => (
+              <div key={ri} className={ri > 0 ? "mt-4" : ""}>
+                <div className="flex justify-center professionalService_cardWrapper">
+                  {row.map((item, ci) => (
+                    <div key={ci} className="flex justify-center">
+                      <div className="professionalMaeHojyoContent">
+                        <div className="flex flex-col items-center">
+                          <div className="my-6">
+                            <h3 className="text-xl font-bold text-center">{item.title}</h3>
+                          </div>
+                          <div>
+                            <Image
+                              src={item.img}
+                              alt={`${item.title}イメージ`}
+                              width={400}
+                              height={200}
+                              style={{ width: "100%", height: "auto" }}
+                            />
+                          </div>
+                          <div className="my-6 mx-6 text-sm">
+                            {item.desc}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <Image
-                        src="/img/theme/home/mae-hojyo-image.svg"
-                        alt="eラーニングイメージ"
-                        width={400}
-                        height={200}
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
-                    <div className="my-6 mx-6 text-sm">
-                      いつでもどこでも学べるオンデマンド型eラーニング。動画教材とハンズオン演習で、自分のペースでClaude Codeを習得できます。
-                    </div>
-                  </div>
-                  <div className="flex justify-end">
-                    <Link className="flex mt-6 mx-6 text-sm items-center" href="/e-learning/">
-                      サービスサイトを見る
-                      <Image
-                        className="ml-2"
-                        src="/img/theme/home/right-arrow.svg"
-                        alt=""
-                        width={16}
-                        height={16}
-                      />
-                    </Link>
-                  </div>
+                  ))}
                 </div>
               </div>
+            ))}
 
-              <div className="mx-3" />
-
-              <div className="flex justify-center">
-                <div className="professionalAiContent">
-                  <div className="flex flex-col items-center">
-                    <div className="my-6">
-                      <Image
-                        src="/img/theme/home/logo-gpt4.svg"
-                        alt="AI開発環境構築支援"
-                        width={300}
-                        height={60}
-                        style={{ width: "auto", height: "auto" }}
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        src="/img/theme/home/super-efficiency-image.svg"
-                        alt="AI開発環境構築支援イメージ"
-                        width={400}
-                        height={200}
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
-                    <div className="my-6 mx-6 text-sm">
-                      Claude Codeの導入・設定から、社内ガイドライン策定、セキュリティポリシーの整備まで。AI開発環境の構築を包括的にご支援します。
-                    </div>
-                  </div>
-                  <div className="flex justify-end">
-                    <Link className="flex mt-6 mx-6 text-sm items-center" href="/environment-setup/">
-                      サービスサイトを見る
-                      <Image
-                        className="ml-2"
-                        src="/img/theme/home/right-arrow.svg"
-                        alt=""
-                        width={16}
-                        height={16}
-                      />
-                    </Link>
-                  </div>
-                </div>
+            {!showAll && (
+              <div className="related-fade-overlay">
+                <button
+                  className="related-more__btn"
+                  onClick={() => setShowAll(true)}
+                >
+                  もっと見る
+                  <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
-            </div>
-
-            <div className="mt-4">
-              <div className="flex justify-center">
-                <div className="professionalMagContent">
-                  <div className="flex flex-col items-center">
-                    <div className="my-6">
-                      <Image
-                        src="/img/theme/home/logo-mag.svg"
-                        alt="ナレッジベース"
-                        width={300}
-                        height={60}
-                        style={{ width: "auto", height: "auto" }}
-                      />
-                    </div>
-                    <div>
-                      <Image
-                        src="/img/theme/home/mag-image.svg"
-                        alt="ナレッジベースイメージ"
-                        width={400}
-                        height={200}
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
-                    <div className="my-6 mx-6 text-sm">
-                      受講者限定のナレッジベース＆コミュニティ。最新のAI開発Tips、活用事例、Q&Aを共有し、継続的なスキルアップを支援します。
-                    </div>
-                  </div>
-                  <div className="flex justify-end">
-                    <Link className="flex mt-6 mx-6 text-sm items-center" href="/knowledge/">
-                      サービスサイトを見る
-                      <Image
-                        className="ml-2"
-                        src="/img/theme/home/right-arrow.svg"
-                        alt=""
-                        width={16}
-                        height={16}
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <div className="magBlankContent" />
-              </div>
-            </div>
+            )}
           </div>
 
           <div>
