@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-const partners = [
+interface Partner {
+  src: string;
+  alt: string;
+  w: number;
+  h: number;
+}
+
+const partners: Partner[] = [
   { src: "/img/planb-fv/partner-anthropic.png", alt: "Anthropic", w: 128, h: 128 },
   { src: "/img/planb-fv/partner-openai.png", alt: "OpenAI", w: 128, h: 128 },
   { src: "/img/planb-fv/partner-google-ai.png", alt: "Google", w: 128, h: 128 },
@@ -12,21 +19,22 @@ export default function HeroBanner() {
   return (
     <section className="planb-fv">
       <div className="planb-fv__bg">
-        {/* Right-top wave */}
-        <img
+        <Image
           className="planb-fv__wave planb-fv__wave--rt"
           src="/img/planb-fv/wave-rt-v2.svg"
           alt=""
+          width={600}
+          height={400}
         />
-        {/* Left-bottom wave */}
-        <img
+        <Image
           className="planb-fv__wave planb-fv__wave--lb"
           src="/img/planb-fv/wave-lb-v2.svg"
           alt=""
+          width={600}
+          height={400}
         />
 
         <div className="planb-fv__inner">
-          {/* Left content */}
           <div className="planb-fv__content">
             <div className="planb-fv__badge">
               <Image
@@ -91,7 +99,6 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          {/* Right illustration */}
           <div className="planb-fv__illust">
             <Image
               src="/img/planb-fv/hero-illust.webp"
@@ -105,7 +112,6 @@ export default function HeroBanner() {
         </div>
       </div>
 
-      {/* Partner logos bar — white card overlapping FV bottom */}
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
           <p className="planb-fv__partners-text">

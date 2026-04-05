@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
+import ComparisonSection from "@/components/ComparisonSection";
 import ServiceDescription from "@/components/ServiceDescription";
 import Services from "@/components/Services";
 import SubsidyList from "@/components/SubsidyList";
@@ -15,6 +16,7 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
+          <ComparisonSection />
           <ServiceDescription />
           <Services />
           <SubsidyList />
