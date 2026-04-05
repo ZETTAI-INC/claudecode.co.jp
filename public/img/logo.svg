@@ -1,0 +1,15 @@
+<svg width="240" height="40" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="4" width="32" height="32" rx="8" fill="url(#brandGradient)" />
+  <path d="M11 15L16 20L11 25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 25L23 25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <text x="42" y="27" font-family="'Roboto', 'Inter', sans-serif" font-weight="900" font-size="20" fill="#1A1A1A" letter-spacing="1">CLAUDE CODE</text>
+  <text x="194" y="27" font-family="'Noto Sans JP', sans-serif" font-weight="700" font-size="14" fill="#2563EB">研修</text>
+
+  <defs>
+    <linearGradient id="brandGradient" x1="0" y1="4" x2="32" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB" />
+      <stop offset="1" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+</svg>

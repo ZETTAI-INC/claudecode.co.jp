@@ -3,10 +3,12 @@ import HeroBanner from "@/components/HeroBanner";
 import ComparisonSection from "@/components/ComparisonSection";
 import ServiceDescription from "@/components/ServiceDescription";
 import Services from "@/components/Services";
+import ModelOverview from "@/components/ModelOverview";
 import SubsidyList from "@/components/SubsidyList";
 import RelatedServices from "@/components/RelatedServices";
 import CaseStudies from "@/components/CaseStudies";
 import News from "@/components/News";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,10 +21,12 @@ export default function Home() {
           <ComparisonSection />
           <ServiceDescription />
           <Services />
+          <ModelOverview />
           <SubsidyList />
           <RelatedServices />
           <CaseStudies />
           <News />
+          <ContactForm />
         </div>
       </main>
       <Footer />
