@@ -106,7 +106,7 @@ export default function HeroBanner() {
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
           <p className="planb-fv__partners-text">
-            最先端のAIプラットフォームと<br />連携した研修を提供しています
+            これらのAIツールを<br />全て使いこなせるようになります
           </p>
         </div>
         <div className="planb-fv__partners-logos">
