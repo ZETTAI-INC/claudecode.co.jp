@@ -1,0 +1,40 @@
+.l-container--880-pc {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.l-container--920-pc {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container--295_78-sp {}
+@media screen and (max-width: 768px) {
+    .l-container--295_78-sp {
+        min-width: 295px;
+        width: 78%;
+    }
+    .l-container--295_89-sp {
+        min-width: 295px;
+        width: 89%;
+    }
+}
+
+.l-container--1080-pc {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container--1200-pc {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container--1440-pc {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
