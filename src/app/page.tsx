@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
+import RecommendSection from "@/components/RecommendSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import ServiceDescription from "@/components/ServiceDescription";
+import WhyResults from "@/components/WhyResults";
 import Services from "@/components/Services";
 import SubsidyList from "@/components/SubsidyList";
 import RelatedServices from "@/components/RelatedServices";
@@ -17,8 +19,10 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
+          <RecommendSection />
           <ComparisonSection />
           <ServiceDescription />
+          <WhyResults />
           <Services />
           <SubsidyList />
           <RelatedServices />

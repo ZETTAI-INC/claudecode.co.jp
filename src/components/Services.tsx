@@ -96,7 +96,7 @@ export default function Services() {
 
           <div className="course-list">
             {courses.map((course) => (
-              <Link href={course.href} key={course.number} className="course-row" style={{ "--course-color": course.color } as React.CSSProperties}>
+              <Link href={course.href} key={course.number} className="course-row" style={{ "--course-color": course.color } as React.CSSProperties & Record<string, string>}>
                 <div className="course-row__left">
                   <span className="course-row__number">{course.number}</span>
                   <div className="course-row__bar" />

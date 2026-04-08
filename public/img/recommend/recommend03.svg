@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="none">
+  <!-- エンジニア生産性 - コードエディタ -->
+  <rect x="30" y="40" width="60" height="45" rx="4" fill="#3d75ca" opacity=".12"/>
+  <rect x="33" y="43" width="54" height="36" rx="2" fill="#2d3748"/>
+  <rect x="37" y="49" width="20" height="2.5" rx="1" fill="#6eb6db"/>
+  <rect x="40" y="54" width="30" height="2.5" rx="1" fill="#68d391"/>
+  <rect x="40" y="59" width="24" height="2.5" rx="1" fill="#f6ad55"/>
+  <rect x="37" y="64" width="18" height="2.5" rx="1" fill="#6eb6db"/>
+  <rect x="40" y="69" width="28" height="2.5" rx="1" fill="#fc8181"/>
+  <rect x="45" y="85" width="30" height="4" rx="2" fill="#3d75ca" opacity=".15"/>
+  <!-- ロケット -->
+  <g transform="translate(96,42)">
+    <path d="M8 28l-4-4 2-6 6 2z" fill="#f6ad55"/>
+    <ellipse cx="8" cy="16" rx="6" ry="14" fill="#6eb6db"/>
+    <ellipse cx="8" cy="16" rx="4" ry="10" fill="#fff" opacity=".4"/>
+    <circle cx="8" cy="12" r="2.5" fill="#3d75ca"/>
+    <path d="M2 20c-3 2-3 6-3 6l5-4z" fill="#3d75ca" opacity=".3"/>
+    <path d="M14 20c3 2 3 6 3 6l-5-4z" fill="#3d75ca" opacity=".3"/>
+  </g>
+</svg>

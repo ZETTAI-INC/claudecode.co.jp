@@ -2,48 +2,97 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { works } from "@/data/works";
+import type { WorkItem } from "@/data/works";
 
 const rows = [
   [
     {
-      title: "Webサイト・LP制作",
+      ...works[0],
       img: "/img/theme/home/mae-hojyo-image.svg",
-      desc: "コーポレートサイトやLPを、デザインからコーディングまで高速に構築。このサイトもClaude Codeで作られています。",
     },
     {
-      title: "業務自動化ツール",
+      ...works[1],
       img: "/img/theme/home/super-efficiency-image.svg",
-      desc: "日報作成、データ集計、レポート生成など、定型業務を自動化するスクリプトやツールを即座に開発できます。",
     },
   ],
   [
     {
-      title: "社内Webアプリ開発",
+      ...works[2],
       img: "/img/theme/home/mag-image.svg",
-      desc: "顧客管理、在庫管理、勤怠管理など、必要なWebアプリを外注せずに自社で開発・保守できます。",
     },
     {
-      title: "API連携ツール",
+      ...works[3],
       img: "/img/theme/home/super-efficiency-image.svg",
-      desc: "Slack、Google Sheets、社内システムなど、複数サービスを繋ぐAPI連携ツールを短時間で構築できます。",
     },
   ],
   [
     {
-      title: "データ分析・可視化",
+      ...works[4],
       img: "/img/theme/home/mae-hojyo-image.svg",
-      desc: "売上や顧客データを自動で集計・グラフ化。経営判断に役立つダッシュボードを内製できます。",
     },
     {
-      title: "チャットボット",
+      ...works[5],
       img: "/img/theme/home/mag-image.svg",
-      desc: "社内FAQ対応やカスタマーサポート用のAIチャットボットを、自社の情報に合わせて構築できます。",
     },
   ],
 ];
 
+/* ── ポップアップ ── */
+function WorkPopup({
+  item,
+  onClose,
+}: {
+  item: WorkItem;
+  onClose: () => void;
+}) {
+  return (
+    <div className="works-popup-overlay" onClick={onClose}>
+      <div className="works-popup" onClick={(e) => e.stopPropagation()}>
+        <button className="works-popup__close" onClick={onClose}>
+          <span className="material-icons">close</span>
+        </button>
+
+        <div className="works-popup__icon-wrap">
+          <span className="material-icons-outlined works-popup__icon">
+            {item.icon}
+          </span>
+        </div>
+
+        <h3 className="works-popup__title">{item.title}</h3>
+        <span className="works-popup__category">{item.category}</span>
+        <p className="works-popup__desc">{item.desc}</p>
+
+        <div className="works-popup__details">
+          <p className="works-popup__details-label">作れるものの例</p>
+          <ul className="works-popup__list">
+            {item.details.map((d) => (
+              <li key={d} className="works-popup__list-item">
+                <span className="material-icons works-popup__check">
+                  check_circle
+                </span>
+                {d}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <Link href="/works" className="works-popup__cta" onClick={onClose}>
+          全てのカテゴリを見る
+          <span className="material-icons" style={{ fontSize: 18 }}>
+            arrow_forward
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+/* ── メインセクション ── */
 export default function RelatedServices() {
   const [showAll, setShowAll] = useState(false);
+  const [popup, setPopup] = useState<WorkItem | null>(null);
   const visibleRows = showAll ? rows : rows.slice(0, 1);
 
   return (
@@ -58,10 +107,16 @@ export default function RelatedServices() {
                 <div className="flex justify-center professionalService_cardWrapper">
                   {row.map((item, ci) => (
                     <div key={ci} className="flex justify-center">
-                      <div className="professionalMaeHojyoContent">
+                      <div
+                        className="professionalMaeHojyoContent"
+                        style={{ cursor: "pointer" }}
+                        onClick={() => setPopup(item)}
+                      >
                         <div className="flex flex-col items-center">
                           <div className="my-6">
-                            <h3 className="text-xl font-bold text-center">{item.title}</h3>
+                            <h3 className="text-xl font-bold text-center">
+                              {item.title}
+                            </h3>
                           </div>
                           <div>
                             <Image
@@ -72,9 +127,7 @@ export default function RelatedServices() {
                               style={{ width: "100%", height: "auto" }}
                             />
                           </div>
-                          <div className="my-6 mx-6 text-sm">
-                            {item.desc}
-                          </div>
+                          <div className="my-6 mx-6 text-sm">{item.desc}</div>
                         </div>
                       </div>
                     </div>
@@ -91,21 +144,41 @@ export default function RelatedServices() {
                 >
                   もっと見る
                   <svg width="14" height="9" viewBox="0 0 14 9" fill="none">
-                    <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path
+                      d="M1 1L7 7L13 1"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </button>
+              </div>
+            )}
+
+            {showAll && (
+              <div className="related-more" style={{ marginTop: 32 }}>
+                <Link href="/works" className="related-more__link">
+                  全てを見る
+                  <span className="material-icons" style={{ fontSize: 20 }}>
+                    arrow_forward
+                  </span>
+                </Link>
               </div>
             )}
           </div>
 
           <div>
             <p className="text-center text-xs pt-12">
-              「CLAUDE CODE リスキリング研修」は<br className="sp-only" />
+              「CLAUDE CODE リスキリング研修」は
+              <br className="sp-only" />
               株式会社ZETTAIが運営するサービスです
             </p>
           </div>
         </div>
       </section>
+
+      {popup && <WorkPopup item={popup} onClose={() => setPopup(null)} />}
     </div>
   );
 }

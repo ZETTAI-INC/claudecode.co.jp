@@ -44,68 +44,41 @@ const cases: CaseStudy[] = [
   },
 ];
 
-function InfoLabel({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="mt-1 mb-1 flex items-baseline" style={{ width: "50%" }}>
-      <label
-        className="mr-2 text-xs text-center border-current border-solid border rounded inline-block"
-        style={{ minWidth: 62, color: "#3D75CA" }}
-      >
-        {label}
-      </label>
-      <span className="text-xs md:text-sm text-black">{value}</span>
-    </div>
-  );
-}
-
 export default function CaseStudies() {
   return (
-    <section
-      id="frontSectionCaseStudies"
-      className="pt-14 pb-12 md:py-20"
-      style={{ background: "#F4FAFD" }}
-    >
-      <div className="l-container--casestudies">
-        <div className="p-headline mb-8">
-          <span className="p-headline__sub md:mb-2">CASE STUDIES</span>
-          <p className="p-headline__main">導入事例</p>
+    <section id="frontSectionCaseStudies" className="cs-section">
+      <div className="cs-inner">
+        <div className="cs-header">
+          <span className="cs-header__sub">CASE STUDIES</span>
+          <p className="cs-header__main">導入事例</p>
         </div>
 
-        <ul>
+        <div className="cs-grid">
           {cases.map((c) => (
-            <li key={c.href} className="md:flex mx-auto mb-8 md:mb-10">
-              <div className="flex-none mb-4 md:mb-0 md:mr-8">
+            <Link key={c.href} href={c.href} className="cs-card">
+              <div className="cs-card__img">
                 <Image
                   src={c.image}
                   alt={c.title}
-                  width={320}
-                  height={200}
-                  className="rounded-lg object-cover w-full md:w-80"
-                  style={{ height: 200 }}
+                  width={400}
+                  height={220}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
-              <div className="flex-1">
-                <Link href={c.href}>
-                  <p className="mb-3 md:mb-4 font-bold leading-normal text-base md:text-xl u-ff--headline">
-                    {c.title}
-                  </p>
-                </Link>
-                <div className="case-study-info flex flex-wrap py-3 px-6">
-                  <InfoLabel label="企業名" value={c.company} />
-                  <InfoLabel label="成果" value={c.amount} />
-                  <InfoLabel label="規模" value={c.employees} />
-                  <InfoLabel label="業種" value={c.industry} />
+              <div className="cs-card__body">
+                <p className="cs-card__title">{c.title}</p>
+                <div className="cs-card__tags">
+                  <span className="cs-card__tag cs-card__tag--accent">{c.amount}</span>
+                  <span className="cs-card__tag">{c.industry}</span>
+                  <span className="cs-card__tag">{c.employees}</span>
                 </div>
               </div>
-            </li>
+            </Link>
           ))}
-        </ul>
+        </div>
 
-        <div>
-          <Link
-            className="mx-auto font-bold p-button p-button--blue p-button--chevron-right p-button--shadow py-3 px-14"
-            href="/case/"
-          >
+        <div className="cs-more">
+          <Link className="cs-more__btn" href="/case/">
             他の導入事例を見る
           </Link>
         </div>
