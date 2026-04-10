@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { M_PLUS_1p, Noto_Sans_JP, Roboto } from "next/font/google";
+import {
+  M_PLUS_1p,
+  Noto_Sans_JP,
+  Noto_Serif_JP,
+  Roboto,
+} from "next/font/google";
 import "./globals.css";
 
 const mplus1p = M_PLUS_1p({
@@ -13,6 +18,13 @@ const notoSansJP = Noto_Sans_JP({
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
   variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
+const notoSerifJP = Noto_Serif_JP({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-noto-serif-jp",
   display: "swap",
 });
 
@@ -58,7 +70,7 @@ export default function RootLayout({
     <html
       lang="ja"
       dir="ltr"
-      className={`${mplus1p.variable} ${notoSansJP.variable} ${roboto.variable}`}
+      className={`${mplus1p.variable} ${notoSansJP.variable} ${notoSerifJP.variable} ${roboto.variable}`}
     >
       <head>
         <link

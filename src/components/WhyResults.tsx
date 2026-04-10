@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
 const managementCards = [
@@ -39,25 +38,153 @@ const managementCards = [
   },
 ];
 
-const comparisonRows = [
-  { item: "コードベース全体の理解", cc: "〇", gpt: "△", gem: "△" },
-  { item: "ターミナルから直接操作", cc: "〇", gpt: "×", gem: "×" },
-  { item: "既存プロジェクトへの即適用", cc: "〇", gpt: "△", gem: "△" },
-  { item: "ファイル横断の一括編集", cc: "〇", gpt: "×", gem: "×" },
-  { item: "Git操作・PR作成の自動化", cc: "〇", gpt: "×", gem: "×" },
-  { item: "テスト作成・実行の一気通貫", cc: "〇", gpt: "△", gem: "△" },
-  { item: "大規模リファクタリング対応", cc: "〇", gpt: "×", gem: "×" },
-  { item: "セキュリティ・コード品質の担保", cc: "〇", gpt: "△", gem: "△" },
-  { item: "チーム開発ワークフローとの統合", cc: "〇", gpt: "×", gem: "×" },
-  { item: "エンジニアの生産性向上実績", cc: "〇", gpt: "△", gem: "△" },
+type Mark = "best" | "full" | "partial" | "none";
+type Cell = { mark: Mark; label: string };
+
+const comparisonRows: {
+  question: string;
+  cc: Cell;
+  gpt: Cell;
+  gem: Cell;
+  cop: Cell;
+}[] = [
+  {
+    question: "Webサイト・LPの生成",
+    cc: { mark: "best", label: "一式を自動構築" },
+    gpt: { mark: "full", label: "コード生成" },
+    gem: { mark: "full", label: "コード生成" },
+    cop: { mark: "partial", label: "IDE補完中心" },
+  },
+  {
+    question: "Webアプリ・管理画面の構築",
+    cc: { mark: "best", label: "DBまで実装" },
+    gpt: { mark: "partial", label: "雛形のみ" },
+    gem: { mark: "partial", label: "雛形のみ" },
+    cop: { mark: "partial", label: "ファイル単位" },
+  },
+  {
+    question: "スライド・営業資料の作成",
+    cc: { mark: "best", label: "PPTX/MARP生成" },
+    gpt: { mark: "full", label: "文面生成" },
+    gem: { mark: "full", label: "Slides連携" },
+    cop: { mark: "none", label: "非対応" },
+  },
+  {
+    question: "画像・図版・アイコンの生成",
+    cc: { mark: "full", label: "API連携/SVG" },
+    gpt: { mark: "best", label: "DALL-E標準" },
+    gem: { mark: "best", label: "Imagen標準" },
+    cop: { mark: "none", label: "非対応" },
+  },
+  {
+    question: "業務ツール・社内システムの作成",
+    cc: { mark: "best", label: "実行・配布まで" },
+    gpt: { mark: "full", label: "コード生成" },
+    gem: { mark: "full", label: "コード生成" },
+    cop: { mark: "partial", label: "IDE補完中心" },
+  },
+  {
+    question: "データ分析・レポート生成",
+    cc: { mark: "best", label: "実データを処理" },
+    gpt: { mark: "full", label: "Code Interpreter" },
+    gem: { mark: "full", label: "コード実行可" },
+    cop: { mark: "none", label: "非対応" },
+  },
+  {
+    question: "API連携・バッチ処理の自動化",
+    cc: { mark: "best", label: "cron/CI連携" },
+    gpt: { mark: "none", label: "ローカル不可" },
+    gem: { mark: "none", label: "ローカル不可" },
+    cop: { mark: "none", label: "非対応" },
+  },
+  {
+    question: "モバイルアプリの試作",
+    cc: { mark: "best", label: "ビルドまで" },
+    gpt: { mark: "partial", label: "コード提案" },
+    gem: { mark: "partial", label: "コード提案" },
+    cop: { mark: "partial", label: "補完のみ" },
+  },
+  {
+    question: "技術ドキュメント・READMEの作成",
+    cc: { mark: "best", label: "コードから自動生成" },
+    gpt: { mark: "full", label: "テキスト生成" },
+    gem: { mark: "full", label: "テキスト生成" },
+    cop: { mark: "full", label: "コメント補完" },
+  },
+  {
+    question: "既存システムの改修・機能追加",
+    cc: { mark: "best", label: "プロジェクト横断" },
+    gpt: { mark: "partial", label: "貼付範囲のみ" },
+    gem: { mark: "partial", label: "貼付範囲のみ" },
+    cop: { mark: "full", label: "@workspace対応" },
+  },
 ];
 
+const markLabel: Record<Mark, string> = {
+  best: "最適",
+  full: "対応",
+  partial: "一部対応",
+  none: "非対応",
+};
+
+function Mark({ mark }: { mark: Mark }) {
+  return (
+    <span
+      className={`wr-compare__mark wr-compare__mark--${mark}`}
+      role="img"
+      aria-label={markLabel[mark]}
+    >
+      {mark === "best" && (
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="8.4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+          <circle cx="10" cy="10" r="4.2" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+      )}
+      {mark === "full" && (
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="8.4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+      )}
+      {mark === "partial" && (
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path
+            d="M10 3 L17.5 16.5 L2.5 16.5 Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
+      {mark === "none" && (
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path
+            d="M5 5 L15 15 M15 5 L5 15"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+        </svg>
+      )}
+    </span>
+  );
+}
+
+function ScoreCell({ cell, highlighted = false }: { cell: Cell; highlighted?: boolean }) {
+  return (
+    <div
+      className={`wr-compare__matrix-cell wr-compare__matrix-cell--score${
+        highlighted ? " wr-compare__matrix-cell--cc" : ""
+      }`}
+      role="cell"
+    >
+      <Mark mark={cell.mark} />
+      <span className="wr-compare__matrix-caption">{cell.label}</span>
+    </div>
+  );
+}
+
 export default function WhyResults() {
-  const [openCase, setOpenCase] = useState<number | null>(null);
-
-  const toggle = (idx: number) =>
-    setOpenCase((prev) => (prev === idx ? null : idx));
-
   return (
     <>
       {/* ===== なぜ結果を出せるのか ===== */}
@@ -119,29 +246,43 @@ export default function WhyResults() {
             どのように研修を設計・運用しているのかをご紹介します。
           </p>
 
-          <div className="wr-mgmt__grid">
+          <div className="wr-mgmt__list">
             {managementCards.map((c, i) => (
-              <div key={c.title} className="wr-mgmt__card">
-                <div className="wr-mgmt__card-img">
-                  <Image src={c.img} alt="" width={400} height={260} />
-                </div>
-                <div className="wr-mgmt__card-body">
-                  <span className="wr-mgmt__card-num">
+              <article key={c.title} className="wr-mgmt__row">
+                <div className="wr-mgmt__photo">
+                  <span className="wr-mgmt__bignum" aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="wr-mgmt__card-title">{c.title}</h3>
-                  <p className="wr-mgmt__card-lead">{c.lead}</p>
-                  <p className="wr-mgmt__card-text">
+                  <div className="wr-mgmt__photo-frame">
+                    <Image
+                      src={c.img}
+                      alt=""
+                      width={520}
+                      height={400}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <span className="wr-mgmt__photo-caption">{c.title}</span>
+                  </div>
+                </div>
+                <div className="wr-mgmt__content">
+                  <span className="wr-mgmt__label">
+                    <span className="wr-mgmt__label-en">
+                      CHAPTER {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="wr-mgmt__label-jp">{c.title}</span>
+                  </span>
+                  <h3 className="wr-mgmt__row-title">{c.lead}</h3>
+                  <p className="wr-mgmt__row-text">
                     {c.text}
                     {c.highlight && (
                       <>
-                        <span className="wr-accent">{c.highlight}</span>
+                        <mark className="wr-mgmt__marker">{c.highlight}</mark>
                         {c.highlightSuffix}
                       </>
                     )}
                   </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -187,393 +328,151 @@ export default function WhyResults() {
       {/* ===== 業務に生きるAIはどれか？ ===== */}
       <section className="wr-compare">
         <div className="wr-compare__inner">
-          <div className="wr-section-header">
-            <h2 className="wr-section-header__title">
-              業務に生きるAIはどれか？
+          <div className="wr-compare__header">
+            <span className="wr-compare__eyebrow">COMPARISON</span>
+            <h2 className="wr-compare__title">
+              Claude Codeで、何が作れるのか。
             </h2>
+            <p className="wr-compare__subtitle">
+              Web制作・スライド資料・画像生成・業務ツール――
+              <br />
+              実務に直結する10のアウトプットを、主要AI4サービスで比較しました。
+            </p>
           </div>
 
-          <div className="wr-compare__table-wrap">
-            <table className="wr-compare__table">
-              <thead>
-                <tr>
-                  <th>比較項目</th>
-                  <td className="wr-compare__col-cc">
-                    Claude
-                    <br className="sp-only" />
-                    Code
-                  </td>
-                  <td>
-                    Chat
-                    <br className="sp-only" />
-                    GPT
-                  </td>
-                  <td>Gemini</td>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((r) => (
-                  <tr key={r.item}>
-                    <th>{r.item}</th>
-                    <td className="wr-compare__col-cc">{r.cc}</td>
-                    <td>{r.gpt}</td>
-                    <td>{r.gem}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="wr-compare__matrix" role="table" aria-label="Claude Code・ChatGPT・Gemini・Copilot比較表">
+            <div className="wr-compare__matrix-head" role="row">
+              <div className="wr-compare__matrix-cell wr-compare__matrix-cell--label" role="columnheader">
+                <span className="wr-compare__matrix-head-eyebrow">DELIVERABLES</span>
+                <span className="wr-compare__matrix-head-label">何が作れるか</span>
+              </div>
+              <div className="wr-compare__matrix-cell wr-compare__matrix-cell--cc-head" role="columnheader">
+                <span className="wr-compare__matrix-badge">RECOMMENDED</span>
+                <span className="wr-compare__matrix-col-name">Claude Code</span>
+                <span className="wr-compare__matrix-col-tag">エージェント型</span>
+              </div>
+              <div className="wr-compare__matrix-cell wr-compare__matrix-cell--ai" role="columnheader">
+                <span className="wr-compare__matrix-col-name">ChatGPT</span>
+                <span className="wr-compare__matrix-col-tag">対話型</span>
+              </div>
+              <div className="wr-compare__matrix-cell wr-compare__matrix-cell--ai" role="columnheader">
+                <span className="wr-compare__matrix-col-name">Gemini</span>
+                <span className="wr-compare__matrix-col-tag">対話型</span>
+              </div>
+              <div className="wr-compare__matrix-cell wr-compare__matrix-cell--ai" role="columnheader">
+                <span className="wr-compare__matrix-col-name">Copilot</span>
+                <span className="wr-compare__matrix-col-tag">IDE補完</span>
+              </div>
+            </div>
+
+            {comparisonRows.map((r, i) => (
+              <div className="wr-compare__matrix-row" role="row" key={i}>
+                <div className="wr-compare__matrix-cell wr-compare__matrix-cell--label" role="rowheader">
+                  <span className="wr-compare__matrix-num" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="wr-compare__matrix-question">{r.question}</h3>
+                </div>
+                <ScoreCell cell={r.cc} highlighted />
+                <ScoreCell cell={r.gpt} />
+                <ScoreCell cell={r.gem} />
+                <ScoreCell cell={r.cop} />
+              </div>
+            ))}
           </div>
 
-          <div className="wr-compare__text">
-            <p>
-              ChatGPTやGeminiは「質問に答えるAI」。
-              <br />
-              Claude Codeは
-              <span className="wr-accent">「一緒に開発するAI」</span>です。
-            </p>
-            <p>
-              チャット画面にコードを貼り付けて回答を待つのではなく、
-              <br />
-              プロジェクトの中に入り込み、コードを読み、書き、テストし、コミットする。
-            </p>
-            <p>
-              だからこそ、実務の現場で圧倒的な生産性の差が生まれます。
-              <br />
-              私たちの研修では、この
-              <span className="wr-accent">&quot;実務直結のAI開発体験&quot;</span>
-              を
-              <br />
-              すべてのエンジニアが再現できる状態まで引き上げます。
+          <ul className="wr-compare__matrix-legend" aria-label="凡例">
+            <li>
+              <Mark mark="best" />
+              <span>最適</span>
+            </li>
+            <li>
+              <Mark mark="full" />
+              <span>対応</span>
+            </li>
+            <li>
+              <Mark mark="partial" />
+              <span>一部対応</span>
+            </li>
+            <li>
+              <Mark mark="none" />
+              <span>非対応</span>
+            </li>
+          </ul>
+
+          <div className="wr-compare__closing">
+            <p className="wr-compare__closing-text">
+              質問に答えるだけのAIではなく、
+              <span className="wr-compare__closing-mark">
+                一緒に開発するAI
+              </span>
+              を。
             </p>
           </div>
         </div>
       </section>
 
       {/* ===== 支援実績 ===== */}
-      <section className="wr-cases">
-        <div className="wr-cases__inner">
-          <div className="wr-section-header">
-            <span className="wr-section-header__en">CASES</span>
-            <h2 className="wr-section-header__title">支援実績</h2>
-          </div>
-          <p className="wr-cases__lead">
-            &quot;成果が出た手法だけを厳選し提供できる&quot;のが私たちの研修です。
-            <br />
-            自社グループ事業での活用実績からも、再現性のあるノウハウ蓄積と、確かな成果をお届けすることができます。
-          </p>
-
-          {/* Case 1: alter */}
-          <div className="wr-case-card">
-            <h3 className="wr-case-card__title">
-              <span className="wr-case-card__label">自社グループ</span>
-              株式会社alter
-            </h3>
-            <div className="wr-case-card__body">
-              <div className="wr-case-card__top">
-                <div className="wr-case-card__img">
-                  <Image
-                    src="/saleslink/assets/images/img01_cases.png"
-                    alt=""
-                    width={320}
-                    height={200}
-                  />
-                </div>
-                <div className="wr-case-card__summary">
-                  <h4 className="wr-case-card__result-title">導入後の成果</h4>
-                  <p className="wr-case-card__result-lead">
-                    Claude Code導入わずか半年で、開発生産性が大幅に向上
-                  </p>
-                  <ul className="wr-check-list">
-                    <li>
-                      エンジニア全員がClaude
-                      Codeを日常業務で活用する体制を構築
-                    </li>
-                    <li>
-                      コーディング工数を大幅に削減し、企画・設計に集中できる体制へ
-                    </li>
-                    <li>コードレビュー品質が向上し、バグ発生率が低下</li>
-                    <li>新規プロジェクトの立ち上げスピードが飛躍的に向上</li>
-                  </ul>
-                </div>
-              </div>
-
-              <button
-                className="wr-case-card__toggle"
-                onClick={() => toggle(0)}
-              >
-                {openCase === 0 ? "閉じる" : "続きを見る"}
-              </button>
-
-              {openCase === 0 && (
-                <div className="wr-case-card__detail">
-                  <div className="wr-case-detail-grid">
-                    <div className="wr-case-detail-box">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico01_cases.svg"
-                          alt=""
-                          width={18}
-                          height={18}
-                        />
-                        取り組み内容
-                      </h5>
-                      <p>
-                        <strong>対象</strong> ： 開発チーム全体
-                        <br />
-                        <strong>研修期間</strong> ： 3ヶ月間
-                        <br />
-                        <strong>ターゲット</strong> ： エンジニア組織
-                        <br />
-                        <strong>手法</strong> ： ハンズオン ×
-                        実務プロジェクト適用
-                      </p>
-                    </div>
-                    <div className="wr-case-detail-box">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico02_cases.svg"
-                          alt=""
-                          width={21}
-                          height={21}
-                        />
-                        導入前の課題
-                      </h5>
-                      <p>
-                        エンジニアが手作業で開発を行っており、下記の課題がありました。
-                      </p>
-                      <ul className="wr-check-list">
-                        <li>
-                          AIツールの導入が進まず生産性が頭打ちだった
-                        </li>
-                        <li>設計やレビューに十分な時間を割けない</li>
-                      </ul>
-                    </div>
-                    <div className="wr-case-detail-box">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico03_cases.svg"
-                          alt=""
-                          width={21}
-                          height={21}
-                        />
-                        支援内容
-                      </h5>
-                      <p>
-                        Claude Codeの導入から定着までを一貫して支援しました。
-                        <br />
-                        開発現場ごとに異なる技術スタックに合わせたカリキュラムを設計。
-                        <br />
-                        プロンプト設計、コードレビュー活用、テスト自動化に注力しました。
-                      </p>
-                    </div>
-                    <div className="wr-case-detail-box wr-case-detail-box--highlight">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico04_cases.svg"
-                          alt=""
-                          width={21}
-                          height={21}
-                        />
-                        数字で見る、圧倒的な成果
-                      </h5>
-                      <div className="wr-case-numbers">
-                        <div className="wr-case-numbers__item">
-                          <dt>受講者数</dt>
-                          <dd>全員定着</dd>
-                        </div>
-                        <div className="wr-case-numbers__item">
-                          <dt>生産性向上</dt>
-                          <dd>最大10倍</dd>
-                        </div>
-                        <div className="wr-case-numbers__item wr-case-numbers__item--wide">
-                          <dt>研修後の活用継続率</dt>
-                          <dd>95%以上</dd>
-                        </div>
-                      </div>
-                      <div className="wr-case-point">
-                        <div className="wr-case-point__img">
-                          <Image
-                            src="/saleslink/assets/images/img_point.jpg"
-                            alt=""
-                            width={200}
-                            height={140}
-                          />
-                        </div>
-                        <p>
-                          業界水準を大きく上回る数値。
-                          <br />
-                          <span className="wr-accent">
-                            大規模組織 × 多様な技術スタック
-                          </span>
-                          という
-                          <br />
-                          難易度の高い条件下でも、この成果を実現
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="wr-case-arrow">▼</div>
-
-                  <div className="wr-case-strength">
-                    <p className="wr-case-strength__lead">
-                      難易度の高い組織にこそ、弊社の強みで差が出ます！
-                    </p>
-                    <div className="wr-case-strength__flex">
-                      <p>
-                        技術スタックが多様で複雑な組織ほどAI活用の定着が難しいからこそ、実務特化のカリキュラム設計が成果を左右します。
-                      </p>
-                      <ul className="wr-check-list">
-                        <li>
-                          【カリキュラム設計】
-                          現場の技術に最適化したプログラム
-                        </li>
-                        <li>
-                          【課題ヒアリング】
-                          チームごとの課題に合わせた個別対応
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="wr-case-detail-box wr-case-detail-box--full">
-                    <h5 className="wr-case-detail-box__title">
-                      <Image
-                        src="/saleslink/assets/images/ico05_cases.svg"
-                        alt=""
-                        width={23}
-                        height={23}
-                      />
-                      支援結果へのコメント
-                    </h5>
-                    <p>
-                      研修から成果が出るまでのスピードがとにかく速くて驚いています。
-                      <br />
-                      エンジニア全員のAI活用レベルが安定し、社内でも&quot;受けて正解だった&quot;という声が多く上がっています。
-                      <br />
-                      今後も継続的にお願いしたいです。
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Case 2: アシスト */}
-          <div className="wr-case-card">
-            <h3 className="wr-case-card__title">株式会社アシスト様</h3>
-            <div className="wr-case-card__body">
-              <div className="wr-case-card__top">
-                <div className="wr-case-card__img">
-                  <Image
-                    src="/saleslink/assets/images/img02_cases.png"
-                    alt=""
-                    width={320}
-                    height={200}
-                  />
-                </div>
-                <div className="wr-case-card__summary">
-                  <h4 className="wr-case-card__result-title">導入後の成果</h4>
-                  <p className="wr-case-card__result-lead">
-                    AI活用レベルが安定し、組織の属人化が解消。
-                  </p>
-                  <ul className="wr-check-list">
-                    <li>
-                      研修支援により全員がトップエンジニアと同水準のAI活用力を獲得
-                    </li>
-                    <li>
-                      社内で安定したAI活用開発が完結する状態を実現
-                    </li>
-                    <li>
-                      組織の属人化が解消し、開発品質の安定化に成功
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <button
-                className="wr-case-card__toggle wr-case-card__toggle--alt"
-                onClick={() => toggle(1)}
-              >
-                {openCase === 1 ? "閉じる" : "続きを見る"}
-              </button>
-
-              {openCase === 1 && (
-                <div className="wr-case-card__detail">
-                  <div className="wr-case-detail-grid">
-                    <div className="wr-case-detail-box">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico02_cases.svg"
-                          alt=""
-                          width={21}
-                          height={21}
-                        />
-                        導入前の課題
-                      </h5>
-                      <p>
-                        社内にAI活用を推進するメンバーはいるが、活用レベルが安定しておらず、属人化が強いため、組織としての再現性が実現できていない。
-                      </p>
-                    </div>
-                    <div className="wr-case-detail-box">
-                      <h5 className="wr-case-detail-box__title">
-                        <Image
-                          src="/saleslink/assets/images/ico03_cases.svg"
-                          alt=""
-                          width={21}
-                          height={21}
-                        />
-                        支援内容
-                      </h5>
-                      <p>
-                        全員が安定してClaude
-                        Codeを活用できるよう勝ちパターンの分析・蓄積を実施。
-                        <br />
-                        再現性構築によって完全内製化を支援。
-                      </p>
-                    </div>
-                  </div>
-                  <div className="wr-case-detail-box wr-case-detail-box--full">
-                    <h5 className="wr-case-detail-box__title">
-                      <Image
-                        src="/saleslink/assets/images/ico05_cases.svg"
-                        alt=""
-                        width={23}
-                        height={23}
-                      />
-                      支援結果へのコメント
-                    </h5>
-                    <p>
-                      成果が出ている人と出ていない人の差を言語化・仕組み化していただいたことでAI活用率・開発生産性ともに劇的に改善することができました。まさに組織のボトルネックを解消してもらったと感じています！
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* 成果を出せる秘訣 */}
-        <div className="wr-secret">
-          <div className="wr-secret__inner">
-            <h3 className="wr-secret__title">
-              <span>成果を出せる秘訣</span>
-            </h3>
-            <ul className="wr-secret__list">
-              <li>誰が受けても一定の成果が出る設計</li>
-              <li>実務に直結した実践型カリキュラム</li>
-              <li>数字をもとに改善を繰り返す運用</li>
-            </ul>
-            <p className="wr-secret__text">
-              現場で成果を出すための研修設計を行っています。
-              <br />
-              実践演習と習熟度管理の徹底で、確実にAI活用力を定着。
+      <section className="wr-cases-v2">
+        <div className="wr-cases-v2__inner">
+          <div className="wr-cases-v2__header">
+            <span className="wr-cases-v2__eyebrow">CASES</span>
+            <h2 className="wr-cases-v2__title">支援実績</h2>
+            <p className="wr-cases-v2__subtitle">
+              成果が出た手法だけを厳選。自社グループ事業での活用実績から、再現性のあるノウハウをお届けします。
             </p>
-            <p className="wr-secret__text2">
-              感覚ではなく、数字で改善することで
-              <span className="wr-underline">成果が出るAI活用の仕組み</span>
-              を構築しています。
-            </p>
+          </div>
+
+          <div className="wr-cases-v2__list">
+            <article className="wr-cases-v2__row">
+              <div
+                className="wr-cases-v2__row-image"
+                role="img"
+                aria-label="株式会社alterの導入事例 画像プレースホルダー"
+              >
+                <span>IMG</span>
+              </div>
+              <div className="wr-cases-v2__row-body">
+                <div className="wr-cases-v2__row-meta">
+                  <span className="wr-cases-v2__row-num">01</span>
+                  <span className="wr-cases-v2__row-tag">自社グループ</span>
+                  <h3 className="wr-cases-v2__row-name">株式会社alter</h3>
+                </div>
+                <p className="wr-cases-v2__row-result">
+                  Claude Code導入わずか半年で、開発生産性が大幅に向上。
+                </p>
+                <ul className="wr-cases-v2__row-list">
+                  <li>エンジニア全員がClaude Codeを日常業務で活用</li>
+                  <li>コーディング工数を大幅削減し、企画・設計に集中</li>
+                  <li>コードレビュー品質が向上し、バグ発生率が低下</li>
+                  <li>新規プロジェクトの立ち上げスピードが向上</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="wr-cases-v2__row">
+              <div
+                className="wr-cases-v2__row-image"
+                role="img"
+                aria-label="株式会社アシスト様の導入事例 画像プレースホルダー"
+              >
+                <span>IMG</span>
+              </div>
+              <div className="wr-cases-v2__row-body">
+                <div className="wr-cases-v2__row-meta">
+                  <span className="wr-cases-v2__row-num">02</span>
+                  <h3 className="wr-cases-v2__row-name">株式会社アシスト様</h3>
+                </div>
+                <p className="wr-cases-v2__row-result">
+                  AI活用レベルが安定し、組織の属人化が解消。
+                </p>
+                <ul className="wr-cases-v2__row-list">
+                  <li>全員がトップエンジニアと同水準のAI活用力を獲得</li>
+                  <li>社内で安定したAI活用開発が完結する状態を実現</li>
+                  <li>組織の属人化が解消し、開発品質の安定化に成功</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
