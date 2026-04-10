@@ -14,6 +14,9 @@ import Footer from "@/components/Footer";
 import AdPerformanceComparison from "@/components/AdPerformanceComparison";
 import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
+import TalentDevelopment from "@/components/TalentDevelopment";
+import AiEffectiveness from "@/components/AiEffectiveness";
+import TrainingTimeline from "@/components/TrainingTimeline";
 
 export default function Home() {
   return (
@@ -26,6 +29,9 @@ export default function Home() {
           <AdPerformanceComparison />
           <AiDevelopmentWorkflow />
           <AiServiceStrengths />
+          <TalentDevelopment />
+          <AiEffectiveness />
+          <TrainingTimeline />
           <ServiceDescription />
           <WhyResults />
           <RelatedServices />
