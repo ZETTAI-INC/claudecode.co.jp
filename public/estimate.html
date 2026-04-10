@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>御見積書｜WEB制作</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --sub: #555;
+    --line: #d9d9d9;
+    --accent: #0b5ed7;
+    --accent-soft: #eaf2ff;
+    --bg-soft: #f7f7f8;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family:
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+      "Noto Sans JP", "Yu Gothic", "YuGothic",
+      "Meiryo", system-ui, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+  }
+
+  .page {
+    width: 186mm;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media screen {
+    body { background: #ececec; padding: 16px 0; }
+    .page {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 14mm;
+      box-shadow: 0 2px 16px rgba(0,0,0,.12);
+    }
+    .print-hint {
+      max-width: 210mm;
+      margin: 0 auto 12px;
+      padding: 10px 14px;
+      background: #fffbe6;
+      border: 1px solid #ffe58f;
+      border-radius: 6px;
+      font-size: 10pt;
+      color: #614700;
+    }
+  }
+  @media print {
+    .print-hint { display: none; }
+    .page {
+      width: auto;
+      min-height: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    body { background: #fff; padding: 0; }
+  }
+
+  header.top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    margin: 0;
+  }
+  .meta {
+    text-align: right;
+    font-size: 8.5pt;
+    color: var(--sub);
+    line-height: 1.55;
+  }
+  .meta b { color: var(--ink); }
+
+  .parties {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .to {
+    flex: 1;
+  }
+  .to .name {
+    font-size: 12pt;
+    font-weight: 700;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    display: inline-block;
+    min-width: 200px;
+  }
+  .to .lead {
+    margin-top: 4px;
+    font-size: 9pt;
+    color: var(--sub);
+  }
+  .from {
+    flex: 0 0 40%;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--bg-soft);
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+  .from b { font-size: 9.5pt; }
+
+  .total-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 6px 12px;
+    margin: 6px 0 8px;
+    border-radius: 2px;
+  }
+  .total-bar .label {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .total-bar .amount {
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .total-bar .amount small {
+    font-size: 8.5pt;
+    color: var(--sub);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+
+  h2.section {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 6px 0 4px;
+    padding-left: 6px;
+    border-left: 3px solid var(--accent);
+  }
+
+  table.plans {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  table.plans th, table.plans td {
+    border: 1px solid var(--line);
+    padding: 4px 7px;
+    vertical-align: top;
+    font-size: 8.5pt;
+  }
+  table.plans thead th {
+    background: var(--ink);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    font-size: 9pt;
+    padding: 5px 7px;
+  }
+  table.plans col.c-plan  { width: 22%; }
+  table.plans col.c-detail{ width: 48%; }
+  table.plans col.c-price { width: 18%; }
+  table.plans col.c-tax   { width: 12%; }
+
+  .plan-name {
+    font-weight: 700;
+    font-size: 9.5pt;
+    margin-bottom: 1px;
+  }
+  .plan-tag {
+    display: inline-block;
+    font-size: 7.5pt;
+    color: #fff;
+    background: var(--accent);
+    padding: 0 5px;
+    border-radius: 8px;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
+  .plan-sub {
+    font-size: 8pt;
+    color: var(--sub);
+    margin-top: 1px;
+  }
+
+  ul.features {
+    margin: 2px 0 0 0;
+    padding-left: 1em;
+    line-height: 1.4;
+  }
+  ul.features li {
+    margin: 0;
+  }
+
+  td.price {
+    text-align: right;
+    font-weight: 700;
+    font-size: 10pt;
+    white-space: nowrap;
+  }
+  td.tax {
+    text-align: right;
+    font-size: 8pt;
+    color: var(--sub);
+    white-space: nowrap;
+  }
+
+  tr.highlight td { background: #fafcff; }
+
+  .totals {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+  .totals table {
+    border-collapse: collapse;
+    min-width: 240px;
+  }
+  .totals td {
+    padding: 2px 10px;
+    font-size: 8.5pt;
+  }
+  .totals td.k { color: var(--sub); text-align: left; }
+  .totals td.v { text-align: right; font-weight: 700; }
+  .totals tr.grand td {
+    border-top: 1.5px solid var(--ink);
+    font-size: 10pt;
+    color: var(--accent);
+  }
+
+  .notes {
+    margin-top: 8px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 8pt;
+    line-height: 1.45;
+    color: #333;
+    background: #fff;
+    page-break-inside: avoid;
+  }
+  .notes h3 {
+    margin: 0 0 3px;
+    font-size: 9pt;
+    color: var(--accent);
+  }
+  .notes ol {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+  .notes li { margin: 0; }
+
+  footer.foot {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 7.5pt;
+    color: var(--sub);
+  }
+</style>
+</head>
+<body>
+
+<div class="print-hint">
+  このページをブラウザの「印刷 → 送信先：PDFに保存」で1枚のPDFとして保存できます（用紙サイズ：A4 / 余白：デフォルト）。
+</div>
+
+<div class="page">
+
+  <header class="top">
+    <h1 class="title">御　見　積　書</h1>
+    <div class="meta">
+      <div>発行日：<b>2026年4月10日</b></div>
+      <div>見積番号：<b>Q-2026-0410</b></div>
+      <div>有効期限：<b>発行日より30日間</b></div>
+    </div>
+  </header>
+
+  <section class="parties">
+    <div class="to">
+      <div class="name">　　　　　　　　　　　　　 御中</div>
+      <div class="lead">下記のとおり御見積申し上げます。ご検討のほどよろしくお願いいたします。</div>
+    </div>
+    <div class="from">
+      <b>株式会社ZETTAI</b><br />
+      WEB制作・SEO／AIO基盤支援<br />
+      TEL：＿＿＿＿＿　MAIL：＿＿＿＿＿<br />
+      担当：＿＿＿＿＿<br />
+      登録番号：T＿＿＿＿＿＿＿＿＿
+    </div>
+  </section>
+
+  <div class="total-bar">
+    <div class="label">お見積合計金額</div>
+    <div class="amount">¥150,000 〜 ¥350,000 <small>（税抜・プラン選択制）</small></div>
+  </div>
+
+  <h2 class="section">ご提案プラン</h2>
+
+  <table class="plans">
+    <colgroup>
+      <col class="c-plan" />
+      <col class="c-detail" />
+      <col class="c-price" />
+      <col class="c-tax" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>プラン</th>
+        <th>内容</th>
+        <th>金額（税抜）</th>
+        <th>税込</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="plan-name">ベーシック</div>
+          <div class="plan-sub">デザイン制作のみ</div>
+        </td>
+        <td>
+          <ul class="features">
+            <li>ヒアリング・要件整理</li>
+            <li>トップページ＋下層ページのデザイン制作</li>
+            <li>レスポンシブ対応（PC／タブレット／スマホ）</li>
+            <li>静的コーディング・公開サーバーへの設置</li>
+            <li><b>※ 管理画面（CMS）からの投稿・編集は不可</b></li>
+          </ul>
+        </td>
+        <td class="price">¥150,000</td>
+        <td class="tax">¥165,000</td>
+      </tr>
+      <tr class="highlight">
+        <td>
+          <div class="plan-name">スタンダード<span class="plan-tag">人気</span></div>
+          <div class="plan-sub">管理画面（CMS）込み</div>
+        </td>
+        <td>
+          <ul class="features">
+            <li>ベーシックプランの全内容</li>
+            <li>管理画面（CMS）構築：お知らせ・ブログ等の投稿／編集／削除</li>
+            <li>画像アップロード・カテゴリ管理機能</li>
+            <li>お問い合わせフォーム（自動返信付き）</li>
+            <li>管理画面の操作マニュアル（PDF）提供</li>
+          </ul>
+        </td>
+        <td class="price">¥250,000</td>
+        <td class="tax">¥275,000</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plan-name">プレミアム</div>
+          <div class="plan-sub">SEO・AIO対策基盤支援付き</div>
+        </td>
+        <td>
+          <ul class="features">
+            <li>スタンダードプランの全内容</li>
+            <li>SEO内部対策：サイト構造設計・メタ情報・構造化データ（JSON-LD）実装</li>
+            <li>AIO（AI検索最適化）対応：llms.txt 設置・E-E-A-T 考慮したコンテンツ設計</li>
+            <li>ページ表示速度チューニング・Core Web Vitals 計測設定</li>
+            <li>Google Search Console／アナリティクス導入・初期レポート</li>
+            <li>公開後1ヶ月間の運用サポート</li>
+          </ul>
+        </td>
+        <td class="price">¥350,000</td>
+        <td class="tax">¥385,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="totals">
+    <table>
+      <tr>
+        <td class="k">小計（プラン最小〜最大）</td>
+        <td class="v">¥150,000 〜 ¥350,000</td>
+      </tr>
+      <tr>
+        <td class="k">消費税（10%）</td>
+        <td class="v">¥15,000 〜 ¥35,000</td>
+      </tr>
+      <tr class="grand">
+        <td class="k">合計（税込）</td>
+        <td class="v">¥165,000 〜 ¥385,000</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="notes">
+    <h3>備考・お取引条件</h3>
+    <ol>
+      <li>制作期間の目安：ベーシック 約2週間 ／ スタンダード 約4週間 ／ プレミアム 約6週間（ご契約後・素材支給後から起算）。</li>
+      <li>お支払い条件：ご契約時に 50%、納品検収後に 50%（銀行振込）。振込手数料はご負担願います。</li>
+      <li>本見積に含まれないもの：ドメイン・サーバー費用、有料素材／フォント、ロゴ新規作成、原稿・写真撮影、多言語対応。</li>
+      <li>軽微な修正は各フェーズ 2 回まで無償、以降は別途お見積となります。</li>
+      <li>本見積書の有効期限は発行日より 30 日間といたします。</li>
+    </ol>
+  </div>
+
+  <footer class="foot">
+    本見積に関するお問い合わせは 株式会社ZETTAI 担当までご連絡ください。
+  </footer>
+
+</div>
+
+</body>
+</html>

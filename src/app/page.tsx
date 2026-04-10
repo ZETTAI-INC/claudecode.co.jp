@@ -17,6 +17,7 @@ import AiServiceStrengths from "@/components/AiServiceStrengths";
 import TalentDevelopment from "@/components/TalentDevelopment";
 import AiEffectiveness from "@/components/AiEffectiveness";
 import TrainingTimeline from "@/components/TrainingTimeline";
+import SpeedComparison from "@/components/SpeedComparison";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           <TalentDevelopment />
           <AiEffectiveness />
           <TrainingTimeline />
+          <SpeedComparison />
           <ServiceDescription />
           <WhyResults />
           <RelatedServices />
