@@ -12,6 +12,8 @@ import News from "@/components/News";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import AdPerformanceComparison from "@/components/AdPerformanceComparison";
+import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
+import AiServiceStrengths from "@/components/AiServiceStrengths";
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
           <HeroBanner />
           <RecommendSection />
           <AdPerformanceComparison />
+          <AiDevelopmentWorkflow />
+          <AiServiceStrengths />
           <ServiceDescription />
           <WhyResults />
           <RelatedServices />
