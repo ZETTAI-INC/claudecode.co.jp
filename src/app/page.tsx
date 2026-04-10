@@ -11,6 +11,7 @@ import CaseStudies from "@/components/CaseStudies";
 import News from "@/components/News";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import AdPerformanceComparison from "@/components/AdPerformanceComparison";
 
 export default function Home() {
   return (
@@ -20,14 +21,15 @@ export default function Home() {
         <div>
           <HeroBanner />
           <RecommendSection />
-          <ComparisonSection />
+          <AdPerformanceComparison />
           <ServiceDescription />
           <WhyResults />
+          <RelatedServices />
           <Services />
           <SubsidyList />
-          <RelatedServices />
           <CaseStudies />
           <News />
+          <ComparisonSection />
           <ContactForm />
         </div>
       </main>

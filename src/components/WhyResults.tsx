@@ -234,93 +234,40 @@ export default function WhyResults() {
       </section>
 
       {/* ===== 研修設計へのこだわり ===== */}
-      <section className="wr-mgmt">
-        <div className="wr-mgmt__inner">
-          <div className="wr-section-header">
-            <span className="wr-section-header__en">MANAGEMENT</span>
-            <h2 className="wr-section-header__title">研修設計へのこだわり</h2>
+      <section className="wr-mgmt-v2">
+        <div className="wr-mgmt-v2__inner">
+          <div className="wr-mgmt-v2__header">
+            <span className="wr-mgmt-v2__eyebrow">MANAGEMENT</span>
+            <h2 className="wr-mgmt-v2__title">研修設計へのこだわり</h2>
+            <p className="wr-mgmt-v2__subtitle">
+              受講者の成長にとことんこだわる、研修の設計と運用ポイント。
+            </p>
           </div>
-          <p className="wr-mgmt__lead">
-            受講者の成長にとことんこだわっている私たちが
-            <br />
-            どのように研修を設計・運用しているのかをご紹介します。
-          </p>
 
-          <div className="wr-mgmt__list">
+          <div className="wr-mgmt-v2__steps">
             {managementCards.map((c, i) => (
-              <article key={c.title} className="wr-mgmt__row">
-                <div className="wr-mgmt__photo">
-                  <span className="wr-mgmt__bignum" aria-hidden="true">
+              <article key={c.title} className="wr-mgmt-v2__step">
+                <div className="wr-mgmt-v2__step-head">
+                  <span className="wr-mgmt-v2__step-num">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <div className="wr-mgmt__photo-frame">
-                    <Image
-                      src={c.img}
-                      alt=""
-                      width={520}
-                      height={400}
-                      style={{ width: "100%", height: "auto" }}
-                    />
-                    <span className="wr-mgmt__photo-caption">{c.title}</span>
-                  </div>
-                </div>
-                <div className="wr-mgmt__content">
-                  <span className="wr-mgmt__label">
-                    <span className="wr-mgmt__label-en">
-                      CHAPTER {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="wr-mgmt__label-jp">{c.title}</span>
+                  <span className="wr-mgmt-v2__step-chapter">
+                    Chapter {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="wr-mgmt__row-title">{c.lead}</h3>
-                  <p className="wr-mgmt__row-text">
-                    {c.text}
-                    {c.highlight && (
-                      <>
-                        <mark className="wr-mgmt__marker">{c.highlight}</mark>
-                        {c.highlightSuffix}
-                      </>
-                    )}
-                  </p>
                 </div>
+                <h3 className="wr-mgmt-v2__step-name">{c.title}</h3>
+                <p className="wr-mgmt-v2__step-lead">{c.lead}</p>
+                <p className="wr-mgmt-v2__step-text">
+                  {c.text}
+                  {c.highlight && (
+                    <>
+                      <strong>{c.highlight}</strong>
+                      {c.highlightSuffix}
+                    </>
+                  )}
+                </p>
               </article>
             ))}
-          </div>
-        </div>
-
-        {/* 研修後も成果が持続する理由 */}
-        <div className="wr-persist">
-          <div className="wr-persist__inner">
-            <div className="wr-persist__text">
-              <h3 className="wr-persist__title">研修後も成果が持続する理由</h3>
-              <p className="wr-persist__desc">
-                受講者が実際に書いたプロンプトと生成結果をすべて記録・分析し、
-                最適な活用パターンが身についているかまで細かくチェックします。
-              </p>
-              <p className="wr-persist__desc">
-                受講者の共通認識として必ず持たせているのは、
-                <br />
-                <span className="wr-accent">
-                  「AIは使うだけでなく、使いこなして初めて価値になる。」
-                </span>
-                ということです。
-                <br />
-                ツールを導入しただけでは生産性は上がらず、正しい活用法の習得が不可欠だと考えています。
-              </p>
-              <p className="wr-persist__lead">
-                現場で即成果が出る実践力を、
-                <br />
-                <span className="wr-accent">確実に身につけられる研修</span>
-                をお届けします。
-              </p>
-            </div>
-            <div className="wr-persist__img">
-              <Image
-                src="/saleslink/assets/images/img_reason02.png"
-                alt=""
-                width={460}
-                height={380}
-              />
-            </div>
           </div>
         </div>
       </section>
