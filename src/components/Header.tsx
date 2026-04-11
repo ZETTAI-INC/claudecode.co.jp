@@ -7,7 +7,7 @@ const menuItems = [
   { label: "コース一覧", href: "/courses/", icon: "school" },
   { label: "料金プラン", href: "/price/", icon: "payments" },
   { label: "導入事例", href: "/case/", icon: "cases" },
-  { label: "実績紹介", href: "/works/", icon: "photo_library" },
+  { label: "活用事例", href: "/works/", icon: "photo_library" },
   { label: "セミナー情報", href: "/seminars/", icon: "event" },
   { label: "お役立ち資料", href: "/resources/", icon: "description" },
   { label: "お知らせ", href: "/info/", icon: "campaign" },
@@ -46,7 +46,7 @@ export default function Header() {
             ))}
           </ul>
           <Link
-            href="#contact"
+            href="/consultation/"
             className="header__cta"
             onClick={() => setIsMenuOpen(false)}
           >

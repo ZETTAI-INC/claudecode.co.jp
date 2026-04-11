@@ -63,7 +63,7 @@ const AiServiceStrengths: React.FC = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-12">
           <span className="w-1.5 h-6 md:h-8 bg-[#333] block"></span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#666]">業務を知る社員こそ、最速の実装者になれる</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#666]">こんなお悩みございませんか？</h2>
         </div>
 
         {/* --- Top Area: Struggles (Desktop Grid, Mobile Flex) --- */}
@@ -164,7 +164,7 @@ const AiServiceStrengths: React.FC = () => {
 
         {/* --- Middle Banner: Solution Statement --- */}
         <div className="relative bg-[#1e5eb0] text-white py-6 md:py-8 text-center text-xl md:text-3xl font-bold tracking-wide shadow-md">
-          外から人を採るより、業務を知る社員にClaude Codeを。
+          そのお悩み、私たちが解決します！
           {/* Downward Triangle */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-t-[#1e5eb0]"></div>
         </div>

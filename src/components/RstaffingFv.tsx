@@ -32,7 +32,7 @@ export default function RstaffingFv() {
 
               <div className="mv__inquiryButton">
                 <div className="inquiryButtonArea">
-                  <a className="inquiryButtonArea__button" href="#contact">
+                  <a className="inquiryButtonArea__button" href="/consultation/">
                     研修資料ダウンロード
                     <div className="onlyPc --inline">・</div>
                     <br className="onlySp" />

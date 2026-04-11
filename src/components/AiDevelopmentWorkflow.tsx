@@ -53,8 +53,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
         {/* Title */}
         <div className="mb-20 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-[32px] font-black text-[#29034f] tracking-wide leading-[1.7]">
-            研修修了後、社員1人の開発フローが<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別物</strong>に変わります。<br className="hidden md:block" />
-            業務要件を知っているからこそ、Claude Codeと組み合わせると一気に<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>最短ルート</strong>になります。
+            研修修了後、社員1人の仕事の進め方と生産性が<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別物</strong>に変わります。<br className="hidden md:block" />
+            業務を一番知っているからこそ、Claude Codeと組み合わせると一気に<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>最短ルート</strong>になります。
           </h2>
         </div>
 
@@ -78,8 +78,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#555] text-[13px] leading-[1.8] font-bold mt-2">
-                  外注先とのやりとりが多く、業務改善が現場のペースで進まない。<br />
-                  <span className="text-[#ff5c00]">小さな変更も社内完結できず時間がかかる</span>
+                  業務ツール1本につき外注なら数十万〜数百万円。<br />
+                  <span className="text-[#ff5c00]">年間で数千万円のコストが積み上がる</span>
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
             {/* Column 2: Traditional Method */}
             <div className="w-52 flex flex-col gap-6 relative z-10">
               <div className="h-10 bg-[#a6a6a6] text-white flex items-center justify-center font-bold text-lg mb-6 shadow-sm">
-                受講前の開発フロー
+                外注で作る場合
               </div>
               
               {PROCESS_STEPS.map((step) => (
@@ -113,7 +113,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
               <div className="h-10 flex items-center justify-center font-bold mb-6">
                 <div className="flex items-center gap-2 text-[#4682b4] text-xl">
                   <div className="w-8 h-8 bg-[#6aa1d4] text-white rounded-md flex items-center justify-center font-bold text-lg">C</div>
-                  研修後のフロー
+                  研修後に社内で作る場合
                 </div>
               </div>
               
@@ -143,14 +143,18 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#4682b4] text-[14px] leading-[1.8] font-bold text-center mt-3">
-                  環境構築やコーディング・デバッグの大半を<br className="hidden lg:block"/>Claude Codeが代行し、<br />
-                  <span className="text-[#ff5c00] border-b-2 border-orange-200 pb-1 mt-2 inline-block">受講者は業務設計と現場改善に集中できる状態へ</span>
+                  実質コストは社員の2〜3日の工数だけ。<br className="hidden lg:block"/>
+                  <span className="text-[#ff5c00] border-b-2 border-orange-200 pb-1 mt-2 inline-block">1本あたりROIは10倍以上、年間で数百万円単位の削減に</span>
                 </p>
               </div>
             </div>
 
           </div>
         </div>
+
+        <p className="text-[#888] text-[11px] md:text-[12px] leading-[1.7] text-center mt-6">
+          ※ 業務ツールの規模・外注先により変動します。一般的なBtoB受託開発の公表見積もりレンジ（数十万〜数百万円／本）に基づく参考値です。
+        </p>
 
       </div>
     </section>

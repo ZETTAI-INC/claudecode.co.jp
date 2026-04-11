@@ -50,7 +50,7 @@ const courses: CourseItem[] = [
   {
     name: "カスタム研修プログラム",
     description: "自社の課題に合わせた研修をご希望の方向け",
-    href: "/contact/",
+    href: "/consultation/",
   },
   {
     name: "1on1 AIコーチング",

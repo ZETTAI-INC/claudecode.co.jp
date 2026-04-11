@@ -18,10 +18,9 @@ import RstaffingFv from "@/components/RstaffingFv";
 import ResourceDownloadCta from "@/components/ResourceDownloadCta";
 import ServiceDifferentiation from "@/components/ServiceDifferentiation";
 import Pricing from "@/components/Pricing";
-import Instructors from "@/components/Instructors";
-import Testimonials from "@/components/Testimonials";
 import Flow from "@/components/Flow";
 import Faq from "@/components/Faq";
+import Chatbot from "@/components/Chatbot";
 
 export default function Home() {
   return (
@@ -43,9 +42,7 @@ export default function Home() {
           <TrainingTimeline />
           <Pricing />
           <SubsidyList />
-          <Instructors />
           <CaseStudies />
-          <Testimonials />
           <Flow />
           <Faq />
           <News />
@@ -54,6 +51,7 @@ export default function Home() {
         </div>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

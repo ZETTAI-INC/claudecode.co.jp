@@ -113,7 +113,7 @@ export default function HeroBanner() {
                 <Image src="/img/planb-fv/icon-doc.svg" alt="" width={16} height={16} />
               </a>
               <a
-                href="/contact/"
+                href="/consultation/"
                 className="planb-fv__btn planb-fv__btn--primary"
               >
                 <span>無料相談する</span>

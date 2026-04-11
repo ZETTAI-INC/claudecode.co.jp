@@ -137,7 +137,7 @@ export default function CasePage() {
               まずは無料相談で、貴社に最適な研修プランをご提案いたします。
             </p>
             <a
-              href="/#contact"
+              href="/consultation/"
               className="inline-block font-bold text-white rounded-full px-10 py-4 transition-opacity hover:opacity-80"
               style={{ background: "#2563eb" }}
             >

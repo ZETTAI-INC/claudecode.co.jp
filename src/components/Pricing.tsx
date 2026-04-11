@@ -126,7 +126,7 @@ export default function Pricing() {
                   {plan.priceNote}
                 </div>
                 <a
-                  href="/contact/"
+                  href="/consultation/"
                   className={`block w-full py-3 rounded-full font-bold text-sm md:text-base transition-colors ${
                     plan.recommended
                       ? "bg-[#2563eb] text-white hover:bg-[#1d4ed8]"

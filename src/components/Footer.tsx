@@ -44,7 +44,7 @@ export default function Footer() {
               <span className="material-icons-outlined footer__btn-icon">description</span>
               資料ダウンロード
             </Link>
-            <Link href="#contact" className="footer__cta-btn footer__cta-btn--primary">
+            <Link href="/consultation/" className="footer__cta-btn footer__cta-btn--primary">
               <span className="material-icons-outlined footer__btn-icon">mail_outline</span>
               無料相談はこちら
             </Link>

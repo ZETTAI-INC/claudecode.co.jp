@@ -104,7 +104,7 @@ export default function WorksPage() {
                 CLAUDE CODE リスキリング研修で、実践的なAI開発スキルを身につけましょう。
               </p>
               <a
-                href="/#contact"
+                href="/consultation/"
                 className="inline-block font-bold text-white rounded-full px-10 py-4 transition-opacity hover:opacity-80"
                 style={{ background: "#2563eb" }}
               >

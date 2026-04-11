@@ -158,7 +158,7 @@ export default function PricePage() {
 
                   {/* CTA button */}
                   <Link
-                    href="/#contact"
+                    href="/consultation/"
                     className={`block text-center font-bold py-3 px-6 rounded-full transition-colors ${
                       plan.recommended
                         ? "text-white hover:opacity-90"
