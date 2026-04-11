@@ -59,9 +59,9 @@ const plans: Plan[] = [
 
 export default function Pricing() {
   return (
-    <section className="bg-white py-20 md:py-28 px-4 sm:px-6 font-sans">
+    <section className="bg-white py-10 md:py-28 px-4 sm:px-6 font-sans">
       <div className="max-w-[1240px] mx-auto">
-        <div className="text-center mb-14 md:mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <div className="inline-flex items-center justify-center gap-2 mb-5">
             <span className="w-1.5 h-5 bg-[#2563eb] block"></span>
             <span className="text-[#2563eb] font-bold tracking-[0.1em] text-sm md:text-base">
@@ -82,7 +82,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-[16px] p-8 md:p-10 flex flex-col border-2 transition-all duration-300 ${
+              className={`relative rounded-[16px] p-5 md:p-10 flex flex-col border-2 transition-all duration-300 ${
                 plan.recommended
                   ? "bg-[#f0f6ff] border-[#2563eb] shadow-[0_12px_32px_rgba(37,99,235,0.15)]"
                   : "bg-[#f8fafc] border-transparent hover:border-[#2563eb] hover:-translate-y-1 shadow-[0_4px_12px_rgba(0,0,0,0.03)]"

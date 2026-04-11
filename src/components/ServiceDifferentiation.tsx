@@ -103,39 +103,49 @@ export default function ServiceDifferentiation() {
         </div>
 
         <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.04)] border border-[#e6edf5]">
-          <div className="grid grid-cols-[120px_1fr_1fr] md:grid-cols-[180px_1fr_1fr]">
-            <div className="bg-[#151515] text-white p-4 md:p-6 font-bold text-sm md:text-base flex items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[180px_1fr_1fr]">
+            <div className="hidden md:flex bg-[#151515] text-white p-6 font-bold text-base items-center">
               比較項目
             </div>
-            <div className="bg-[#e6edf5] text-[#555] p-4 md:p-6 font-bold text-sm md:text-base text-center border-r border-white">
+            <div className="hidden md:block bg-[#e6edf5] text-[#555] p-6 font-bold text-base text-center border-r border-white">
               一般的なAI研修
             </div>
-            <div className="bg-[#2563eb] text-white p-4 md:p-6 font-bold text-sm md:text-base text-center">
+            <div className="hidden md:block bg-[#2563eb] text-white p-6 font-bold text-base text-center">
               当社のリスキリング研修
             </div>
 
             {comparisons.map((row, i) => (
-              <div key={row.label} className="contents">
+              <div key={row.label} className="flex flex-col border-b-[6px] border-[#e6edf5] md:border-none md:contents last:border-b-0">
                 <div
-                  className={`p-4 md:p-6 font-bold text-[#151515] text-sm md:text-[15px] flex items-center ${
-                    i % 2 === 0 ? "bg-[#f8fafc]" : "bg-white"
-                  } border-t border-[#e6edf5]`}
+                  className={`p-4 md:p-6 font-bold text-white md:text-[#151515] text-[15px] flex items-center bg-[#151515] md:bg-transparent ${
+                    i % 2 === 0 ? "md:bg-[#f8fafc]" : "md:bg-white"
+                  } md:border-t md:border-[#e6edf5]`}
                 >
                   {row.label}
                 </div>
-                <div
-                  className={`p-4 md:p-6 text-[#888] text-[13px] md:text-[14px] leading-[1.7] ${
-                    i % 2 === 0 ? "bg-[#f8fafc]" : "bg-white"
-                  } border-t border-[#e6edf5] border-r border-[#e6edf5]`}
-                >
-                  {row.others}
+                <div className="flex flex-col md:contents">
+                  <div className="bg-[#f1f5f9] text-[#555] px-4 py-2 font-bold text-[12px] md:hidden border-b border-[#e2e8f0]">
+                    一般的なAI研修
+                  </div>
+                  <div
+                    className={`p-5 md:p-6 text-[#888] text-[14px] leading-[1.7] bg-white md:bg-transparent ${
+                      i % 2 === 0 ? "md:bg-[#f8fafc]" : "md:bg-white"
+                    } border-b md:border-b-0 md:border-t md:border-r border-[#e6edf5]`}
+                  >
+                    {row.others}
+                  </div>
                 </div>
-                <div
-                  className={`p-4 md:p-6 text-[#151515] text-[13px] md:text-[14px] leading-[1.7] font-medium ${
-                    i % 2 === 0 ? "bg-[#eaf3ff]" : "bg-[#f0f6ff]"
-                  } border-t border-[#e6edf5]`}
-                >
-                  {row.us}
+                <div className="flex flex-col md:contents">
+                  <div className="bg-[#eef2ff] text-[#2563eb] px-4 py-2 font-bold text-[12px] md:hidden border-b border-[#dbeafe]">
+                    当社のリスキリング研修
+                  </div>
+                  <div
+                    className={`p-5 md:p-6 text-[#151515] text-[14px] leading-[1.7] font-medium bg-[#f8fafc] md:bg-transparent ${
+                      i % 2 === 0 ? "md:bg-[#eaf3ff]" : "md:bg-[#f0f6ff]"
+                    } md:border-t border-[#e6edf5]`}
+                  >
+                    {row.us}
+                  </div>
                 </div>
               </div>
             ))}

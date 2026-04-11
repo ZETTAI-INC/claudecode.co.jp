@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SubsidyFlow from "@/components/SubsidyFlow";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
@@ -187,7 +188,8 @@ export default function PricePage() {
         {/* Note section */}
         <section className="pb-16 md:pb-24" style={{ background: "#f5f8fa" }}>
           <div className="mx-auto px-5" style={{ maxWidth: 1200 }}>
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm">
+            {/* Intro about Subsidy */}
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm mb-8">
               <h2
                 className="text-xl md:text-2xl font-bold mb-6 text-center"
                 style={{ color: "#333" }}
@@ -202,6 +204,9 @@ export default function PricePage() {
                 エンタープライズプランでは助成金の申請サポートも行っておりますので、お気軽にご相談ください。
               </p>
             </div>
+
+            {/* Detailed Subsidy Flow */}
+            <SubsidyFlow />
           </div>
         </section>
       </main>

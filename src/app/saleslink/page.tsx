@@ -364,7 +364,7 @@ export default function SaleslinkPage() {
                 <div className="l-wrapper js-anime fadeIn">
                   <div className="txt-wrap">
                     <h2 className="ttl">
-                      セールスリンクのテレアポ代行はなぜ結果を出せるのか？
+                      ZETTAIのテレアポ代行はなぜ結果を出せるのか？
                     </h2>
                     <p className="lead-txt">
                       成果を出せる
@@ -380,7 +380,7 @@ export default function SaleslinkPage() {
                       それを使いこなす&quot;人&quot;がいなければ成果は生まれません。
                     </p>
                     <p className="txt">
-                      セールスリンクでは、&quot;人&quot;に徹底してこだわることで、外注リスクとなりがちな
+                      ZETTAIでは、&quot;人&quot;に徹底してこだわることで、外注リスクとなりがちな
                       <br />
                       <span className="strong col01">
                         「担当者によって成果がブレる」という問題を根本から解消
@@ -411,7 +411,7 @@ export default function SaleslinkPage() {
                   <p className="en subttl">MANAGEMENT</p>
                 </div>
                 <p className="lead-txt">
-                  架電する人にとことんこだわっているセールスリンクが
+                  架電する人にとことんこだわっているZETTAIが
                   <br />
                   どのように人材をマネージメントしているのかを
                   <br className="nopc" />
@@ -907,9 +907,9 @@ export default function SaleslinkPage() {
                 <p className="lead-txt">
                   &quot;成果が出た施策だけを厳選し提供できる&quot;のが
                   <br className="nopc" />
-                  セールスリンクです。
+                  ZETTAIです。
                   <br />
-                  自社グループ事業での検証実績からも、
+                  自社事業での検証実績からも、
                   <br className="nopc" />
                   再現性のあるノウハウ蓄積と、確かな成果を
                   <br className="nopc" />
@@ -919,8 +919,8 @@ export default function SaleslinkPage() {
                   <div className="case-slider">
                     <div className="cases-box slick-slide">
                       <h3 className="cases-box__ttl">
-                        <span className="small">自社グループ</span>
-                        株式会社alter
+                        <span className="small">自社事例</span>
+                        Claude Codeによる開発生産性向上
                       </h3>
                       <div className="cases-box__inner">
                         <div className="flex">
@@ -1137,7 +1137,10 @@ export default function SaleslinkPage() {
                       </div>
                     </div>
                     <div className="cases-box slick-slide">
-                      <h3 className="cases-box__ttl">株式会社アシスト様</h3>
+                      <h3 className="cases-box__ttl">
+                        <span className="small">自社事例</span>
+                        Claude Code研修プログラム
+                      </h3>
                       <div className="cases-box__inner">
                         <div className="flex">
                           <div className="flex-img">
@@ -1826,7 +1829,7 @@ export default function SaleslinkPage() {
                     <dl className="conmpany-tbl__box">
                       <dt className="conmpany-tbl__ttl">会社名</dt>
                       <dd className="conmpany-tbl__txt">
-                        株式会社セールスリンク
+                        株式会社ZETTAI
                       </dd>
                     </dl>
                     <dl className="conmpany-tbl__box">
@@ -1853,12 +1856,6 @@ export default function SaleslinkPage() {
                       <dt className="conmpany-tbl__ttl">従業員数</dt>
                       <dd className="conmpany-tbl__txt">
                         51人（グループ合計）
-                      </dd>
-                    </dl>
-                    <dl className="conmpany-tbl__box">
-                      <dt className="conmpany-tbl__ttl">グループ会社</dt>
-                      <dd className="conmpany-tbl__txt">
-                        株式会社alter（100％出資）
                       </dd>
                     </dl>
                     <dl className="conmpany-tbl__box">

@@ -140,9 +140,9 @@ export default function HeroBanner() {
 
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
-          <p className="planb-fv__partners-text" style={{ wordBreak: 'keep-all' }}>
-            <span className="inline-block">非エンジニア職が14日間で</span><br />
-            <span className="inline-block">これらを<strong style={{ WebkitTextEmphasis: 'filled circle #ffab08', textEmphasis: 'filled circle #ffab08', color: '#ffab08', padding: '0 2px' }}>使いこなす</strong>レベルへ</span>
+          <p className="planb-fv__partners-text">
+            <span>非エンジニア職が14日間で</span><br className="hidden md:block" />
+            <span>これらを<strong style={{ WebkitTextEmphasis: 'filled circle #ffab08', textEmphasis: 'filled circle #ffab08', color: '#ffab08', padding: '0 2px' }}>使いこなす</strong>レベルへ</span>
           </p>
         </div>
         <div className="planb-fv__partners-logos">

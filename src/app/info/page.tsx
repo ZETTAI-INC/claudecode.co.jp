@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { newsEntries } from "@/data/news";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "お知らせ | CLAUDE CODE リスキリング研修",
 };
 

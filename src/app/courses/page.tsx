@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
 import ContactForm from "@/components/ContactForm";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "コース一覧 | CLAUDE CODE リスキリング研修",
   description:
     "CLAUDE CODE リスキリング研修のすべてのコースを一覧でご紹介します。非エンジニア向けの基礎導入から、エンジニア向けの上級編、人材派遣型のDISPATCH、実務伴走型のCoworkまで、企業の課題に合わせてお選びいただけます。",

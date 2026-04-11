@@ -17,9 +17,9 @@ interface CaseStudy {
 const cases: CaseStudy[] = [
   {
     company: "大手製造業A社",
-    title: "開発チーム50名の生産性が2倍に",
+    title: "開発チーム50名の生産性が2倍に向上",
     description:
-      "Claude Codeを導入し、コードレビュー時間を60%削減。開発チーム全体の生産性が飛躍的に向上し、リリースサイクルの短縮にも成功しました。",
+      "Claude Codeを導入し、コードレビュー時間を60%削減。開発チーム全体の生産性が飛躍的に向上し、AIを活用した新しいスタイルの開発フローが定着。リリースサイクルの短縮にも大きく貢献しました。",
     industry: "製造業",
     results: [
       { label: "生産性向上", value: "200%" },
@@ -29,25 +29,25 @@ const cases: CaseStudy[] = [
   },
   {
     company: "ITコンサルティングB社",
-    title: "新人エンジニアの即戦力化に成功",
+    title: "新人エンジニアの圧倒的な早期即戦力化",
     description:
-      "研修期間を3ヶ月から1ヶ月に短縮。Claude Codeを活用した実践型カリキュラムにより、新人エンジニアが早期にプロジェクトへ参画できるようになりました。",
-    industry: "IT・コンサルティング",
+      "研修期間を従来の3ヶ月からわずか1ヶ月に短縮。Claude Codeを活用した実務直結型カリキュラムにより、初学者のエンジニアであっても早期に高難易度のプロジェクトへアサイン可能になりました。",
+    industry: "IT・コンサル",
     results: [
-      { label: "研修期間短縮", value: "1/3" },
+      { label: "研修期間", value: "1/3" },
       { label: "即戦力化", value: "1ヶ月" },
-      { label: "コスト削減", value: "40%" },
+      { label: "教育コスト削減", value: "40%" },
     ],
   },
   {
     company: "金融系C社",
-    title: "AI活用による業務効率化を実現",
+    title: "AI導入による大幅な業務効率化とROI向上",
     description:
-      "定型業務の自動化率80%を達成。AIを活用した業務プロセスの見直しにより、社員がより付加価値の高い業務に集中できる環境を構築しました。",
-    industry: "金融",
+      "社内の定型業務の自動化率80%を達成。AIを活用した既存業務プロセスの抜本的な見直しにより、社員がより創造的で付加価値の高い業務に集中できる理想的な労働環境を構築しました。",
+    industry: "金融機関",
     results: [
-      { label: "自動化率", value: "80%" },
-      { label: "工数削減", value: "65%" },
+      { label: "定型業務自動", value: "80%" },
+      { label: "全体工数削減", value: "65%" },
       { label: "ROI", value: "350%" },
     ],
   },
@@ -55,96 +55,118 @@ const cases: CaseStudy[] = [
 
 export default function CasePage() {
   return (
-    <div id="page" className="site">
+    <div id="page" className="site font-sans bg-white pb-10">
       <Header />
       <main id="primary" className="site-main">
-        {/* Page Header */}
-        <section
-          className="pt-28 pb-14 md:pt-36 md:pb-20 text-center text-white"
-          style={{ background: "linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%)" }}
-        >
-          <div className="mx-auto px-4" style={{ maxWidth: 1200 }}>
-            <span className="inline-block text-sm tracking-widest uppercase opacity-80 mb-3">
+
+        {/* Hero Section */}
+        <section className="pt-24 pb-8 md:pt-32 md:pb-12 text-center bg-[#f8f9fa] border-b border-gray-200">
+          <div className="mx-auto px-5 max-w-3xl">
+            <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-2">
               Case Studies
-            </span>
-            <h1 className="text-3xl md:text-5xl font-bold u-ff--headline">
+            </p>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-black mb-4">
               導入事例
             </h1>
-            <p className="mt-4 text-base md:text-lg opacity-90 max-w-2xl mx-auto">
-              CLAUDE CODE リスキリング研修を導入いただいた企業様の成果をご紹介します
+            <p className="text-black text-sm md:text-base leading-relaxed">
+              CLAUDE CODE研修による生産性向上・業務効率化の成功事例をご紹介します。
             </p>
           </div>
         </section>
 
-        {/* Case Study Cards */}
-        <section className="py-14 md:py-20" style={{ background: "#F4FAFD" }}>
-          <div className="mx-auto px-4" style={{ maxWidth: 1200 }}>
-            <div className="grid gap-8 md:gap-12">
-              {cases.map((c) => (
-                <article
-                  key={c.company}
-                  className="bg-white rounded-2xl shadow-sm overflow-hidden md:flex"
-                >
-                  {/* Left: Info */}
-                  <div className="flex-1 p-6 md:p-10">
-                    <span
-                      className="inline-block text-xs font-bold px-3 py-1 rounded-full text-white mb-4"
-                      style={{ background: "#2563eb" }}
-                    >
+        {/* Global Impact Stats */}
+        <section className="bg-white border-b border-gray-200 py-4">
+            <div className="mx-auto px-5 max-w-5xl flex justify-center gap-8 md:gap-16 text-center text-sm">
+                <div>
+                    <span className="text-gray-500 font-bold mr-2">導入企業数</span>
+                    <span className="text-xl font-bold text-black">100<span className="text-blue-600 text-xs ml-1">社以上</span></span>
+                </div>
+                <div className="w-px h-6 bg-gray-200 hidden md:block mt-1"></div>
+                <div>
+                    <span className="text-gray-500 font-bold mr-2">平均生産性向上</span>
+                    <span className="text-xl font-bold text-black">1.8<span className="text-blue-600 text-xs ml-1">倍</span></span>
+                </div>
+            </div>
+        </section>
+
+        {/* Cases List */}
+        <section className="py-12 md:py-16">
+          <div className="mx-auto px-5 max-w-5xl space-y-6">
+            {cases.map((c) => (
+              <article
+                key={c.company}
+                className="bg-white border border-gray-200 flex flex-col md:flex-row hover:border-blue-600 transition-colors shadow-sm overflow-hidden"
+              >
+                {/* Left: Photo & Logo Slots */}
+                <div className="w-full md:w-56 bg-gray-50 p-5 flex flex-col gap-3 border-b md:border-b-0 md:border-r border-gray-200">
+                    <div className="w-full aspect-video bg-gray-200 flex flex-col items-center justify-center border border-gray-300 border-dashed text-gray-500 hover:bg-gray-300 transition-colors cursor-pointer">
+                        <span className="material-icons-outlined text-2xl mb-1">photo_camera</span>
+                        <span className="text-[10px] font-bold">写真スロット</span>
+                    </div>
+                    <div className="w-full h-12 bg-white flex items-center justify-center border border-gray-300 border-dashed text-gray-500 hover:bg-gray-100 transition-colors cursor-pointer">
+                        <span className="text-[10px] font-bold">{c.company} ロゴ</span>
+                    </div>
+                </div>
+
+                {/* Middle: Text Area */}
+                <div className="flex-1 p-6 md:p-8">
+                  <div className="mb-4">
+                    <span className="bg-black text-white text-[11px] font-bold px-2 py-1 inline-block mb-1">
                       {c.industry}
                     </span>
-                    <p className="text-sm font-bold mb-1" style={{ color: "#2563eb" }}>
+                    <p className="text-gray-500 text-xs font-bold mt-1">
                       {c.company}
                     </p>
-                    <h2 className="text-xl md:text-2xl font-bold mb-4 u-ff--headline leading-snug">
-                      {c.title}
-                    </h2>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                      {c.description}
-                    </p>
                   </div>
+                  
+                  <h2 className="text-lg md:text-xl font-bold text-black mb-3 leading-tight">
+                    {c.title}
+                  </h2>
+                  
+                  <p className="text-sm text-gray-800 leading-relaxed">
+                    {c.description}
+                  </p>
+                </div>
 
-                  {/* Right: Results */}
-                  <div
-                    className="flex-none md:w-72 lg:w-80 p-6 md:p-10 flex flex-wrap items-center justify-center gap-4 md:gap-6"
-                    style={{ background: "#f0f7ff" }}
-                  >
-                    {c.results.map((r) => (
-                      <div key={r.label} className="text-center min-w-[80px]">
-                        <p
-                          className="text-2xl md:text-3xl font-bold"
-                          style={{ color: "#2563eb" }}
-                        >
-                          {r.value}
-                        </p>
-                        <p className="text-xs text-gray-500 mt-1">{r.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
+                {/* Right: Data Area */}
+                <div className="bg-[#f0f4f8] md:w-56 p-6 md:p-8 flex flex-row md:flex-col justify-around md:justify-center items-center md:items-start border-t md:border-t-0 md:border-l border-gray-200 gap-4">
+                  {c.results.map((r, i) => (
+                    <div key={r.label} className="text-center md:text-left w-full">
+                      <p className="text-[11px] text-gray-500 font-bold mb-1">
+                        {r.label}
+                      </p>
+                      <p className="text-2xl font-black text-blue-600 tracking-tight">
+                        {r.value}
+                      </p>
+                      {i < c.results.length - 1 && (
+                        <div className="hidden md:block w-full h-[1px] bg-gray-200 my-3"></div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-14 md:py-20 text-center">
-          <div className="mx-auto px-4" style={{ maxWidth: 800 }}>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 u-ff--headline">
-              貴社でも導入しませんか？
+        <section className="py-10 bg-white text-center border-t border-gray-200">
+          <div className="mx-auto px-5 max-w-3xl">
+            <h2 className="text-xl font-bold text-black mb-3">
+              同様の成果を貴社でも
             </h2>
-            <p className="text-gray-600 mb-8">
-              まずは無料相談で、貴社に最適な研修プランをご提案いたします。
+            <p className="text-xs text-gray-600 mb-6">
+              課題に合わせた最適な研修プランをご提案します。まずは無料相談をご利用ください。
             </p>
             <a
               href="/consultation/"
-              className="inline-block font-bold text-white rounded-full px-10 py-4 transition-opacity hover:opacity-80"
-              style={{ background: "#2563eb" }}
+              className="inline-block font-bold text-white bg-blue-600 px-8 py-3 transition-colors hover:bg-blue-700 text-sm shadow-sm"
             >
               無料相談はこちら
             </a>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

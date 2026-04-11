@@ -2,7 +2,7 @@ import React from "react";
 
 const TalentDevelopment: React.FC = () => {
   return (
-    <section className="bg-white py-16 md:py-24 font-sans text-[#333] overflow-hidden">
+    <section className="bg-white py-10 md:py-24 font-sans text-[#333] overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Title */}
@@ -13,9 +13,16 @@ const TalentDevelopment: React.FC = () => {
           </h2>
         </div>
 
-        {/* Scrollable Container for Mobile */}
-        <div className="overflow-x-auto pb-8">
-          <div className="min-w-[950px] relative">
+        {/* Scrollable Container for Mobile with Swipe Affordance */}
+        <div className="relative mt-8 md:mt-0">
+          <div className="md:hidden absolute top-[-28px] right-0 text-[#2563eb] text-[12px] font-bold flex items-center gap-1 animate-pulse z-20">
+            <span>スワイプで全体を見る</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+          <div className="md:hidden absolute top-0 bottom-8 right-0 w-12 bg-gradient-to-l from-white to-transparent pointer-events-none z-50"></div>
+          
+          <div className="overflow-x-auto pb-8 relative" style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
+            <div className="min-w-[950px] relative px-4">
             
             {/* === UPPER SECTION (Visible Iceberg - Knowledge/Skills) === */}
             <div className="flex items-end justify-between gap-6 pb-6 relative z-10">
@@ -172,7 +179,7 @@ const TalentDevelopment: React.FC = () => {
                       </li>
                       <li className="flex items-start">
                         <span className="mr-2 mt-0.5">•</span>
-                        <span>業務直結の成果コミット<br/><span className="text-[#666] text-[13px]">（"使われる"ツールへの執念）</span></span>
+                        <span>業務直結の成果コミット<br/><span className="text-[#666] text-[13px]">（&quot;使われる&quot;ツールへの執念）</span></span>
                       </li>
                     </ul>
                   </div>
@@ -181,6 +188,7 @@ const TalentDevelopment: React.FC = () => {
 
             </div>
           </div>
+        </div>
         </div>
 
       </div>

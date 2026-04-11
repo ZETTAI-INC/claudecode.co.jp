@@ -36,26 +36,35 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "CLAUDE CODE リスキリング研修",
+  metadataBase: new URL("https://claudecode.co.jp"),
+  title: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
   description:
     "Claude Codeを活用したAI開発スキルの習得を、企業・個人向けにサポート。実践型リスキリング研修サービス。",
   openGraph: {
     locale: "ja_JP",
     siteName: "CLAUDE CODE リスキリング研修",
     type: "website",
-    title: "CLAUDE CODE リスキリング研修",
+    title: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
     url: "https://claudecode.co.jp/",
-    images: ["/img/uploads/2021/11/hojyokincloud_ogp.png"],
+    images: [
+      {
+        url: "/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "CLAUDE CODE リスキリング研修",
-    images: ["/img/uploads/2021/11/hojyokincloud_ogp.png"],
+    card: "summary_large_image",
+    title: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
+    images: ["/ogp.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon.png", sizes: "32x32" },
-      { url: "/favicon.png", sizes: "192x192" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "192x192", type: "image/png" },
     ],
     apple: "/favicon.png",
   },

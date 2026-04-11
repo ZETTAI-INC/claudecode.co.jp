@@ -170,7 +170,7 @@ function Mark({ mark }: { mark: Mark }) {
   );
 }
 
-function ScoreCell({ cell, highlighted = false }: { cell: Cell; highlighted?: boolean }) {
+function ScoreCell({ cell, highlighted = false, mobileName }: { cell: Cell; highlighted?: boolean; mobileName?: string }) {
   return (
     <div
       className={`wr-compare__matrix-cell wr-compare__matrix-cell--score${
@@ -178,6 +178,11 @@ function ScoreCell({ cell, highlighted = false }: { cell: Cell; highlighted?: bo
       }`}
       role="cell"
     >
+      {mobileName && (
+        <span className="md:hidden font-bold text-[12px] mb-2 block border-b border-[#e6edf5] pb-1 w-full text-center">
+          {mobileName}
+        </span>
+      )}
       <Mark mark={cell.mark} />
       <span className="wr-compare__matrix-caption">{cell.label}</span>
     </div>
@@ -326,10 +331,10 @@ export function WhyResultsCompare() {
                   </span>
                   <h3 className="wr-compare__matrix-question">{r.question}</h3>
                 </div>
-                <ScoreCell cell={r.cc} highlighted />
-                <ScoreCell cell={r.gpt} />
-                <ScoreCell cell={r.gem} />
-                <ScoreCell cell={r.cop} />
+                <ScoreCell cell={r.cc} mobileName="Claude Code" highlighted />
+                <ScoreCell cell={r.gpt} mobileName="ChatGPT" />
+                <ScoreCell cell={r.gem} mobileName="Gemini" />
+                <ScoreCell cell={r.cop} mobileName="Copilot" />
               </div>
             ))}
           </div>
@@ -372,7 +377,7 @@ export function WhyResultsCompare() {
             <span className="wr-cases-v2__eyebrow">CASES</span>
             <h2 className="wr-cases-v2__title">支援実績</h2>
             <p className="wr-cases-v2__subtitle">
-              成果が出た手法だけを厳選。自社グループ事業での活用実績から、再現性のあるノウハウをお届けします。
+              成果が出た手法だけを厳選。自社事業での活用実績から、再現性のあるノウハウをお届けします。
             </p>
           </div>
 
@@ -381,15 +386,15 @@ export function WhyResultsCompare() {
               <div
                 className="wr-cases-v2__row-image"
                 role="img"
-                aria-label="株式会社alterの導入事例 画像プレースホルダー"
+                aria-label="自社事例 Claude Code開発生産性向上の画像プレースホルダー"
               >
                 <span>IMG</span>
               </div>
               <div className="wr-cases-v2__row-body">
                 <div className="wr-cases-v2__row-meta">
                   <span className="wr-cases-v2__row-num">01</span>
-                  <span className="wr-cases-v2__row-tag">自社グループ</span>
-                  <h3 className="wr-cases-v2__row-name">株式会社alter</h3>
+                  <span className="wr-cases-v2__row-tag">自社事例</span>
+                  <h3 className="wr-cases-v2__row-name">Claude Codeによる開発生産性向上</h3>
                 </div>
                 <p className="wr-cases-v2__row-result">
                   Claude Code導入わずか半年で、開発生産性が大幅に向上。
@@ -407,14 +412,15 @@ export function WhyResultsCompare() {
               <div
                 className="wr-cases-v2__row-image"
                 role="img"
-                aria-label="株式会社アシスト様の導入事例 画像プレースホルダー"
+                aria-label="自社事例 Claude Code研修プログラムの画像プレースホルダー"
               >
                 <span>IMG</span>
               </div>
               <div className="wr-cases-v2__row-body">
                 <div className="wr-cases-v2__row-meta">
                   <span className="wr-cases-v2__row-num">02</span>
-                  <h3 className="wr-cases-v2__row-name">株式会社アシスト様</h3>
+                  <span className="wr-cases-v2__row-tag">自社事例</span>
+                  <h3 className="wr-cases-v2__row-name">Claude Code研修プログラム</h3>
                 </div>
                 <p className="wr-cases-v2__row-result">
                   AI活用レベルが安定し、組織の属人化が解消。

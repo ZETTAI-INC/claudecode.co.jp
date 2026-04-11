@@ -6,7 +6,9 @@ import Link from "next/link";
 import { works } from "@/data/works";
 import type { WorkItem } from "@/data/works";
 
-const rows = [
+type DisplayWork = WorkItem & { img: string };
+
+const rows: DisplayWork[][] = [
   [
     {
       ...works[0],

@@ -1,33 +1,5 @@
 import React from "react";
 
-const STRUGGLES = [
-  {
-    title: "内製化が進まない",
-    desc: "PoCは作れても、本番運用まで持っていける人材が社内にいない",
-    position: "left-top",
-  },
-  {
-    title: "外注費が膨らむ一方",
-    desc: "軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する",
-    position: "right-top",
-  },
-  {
-    title: "AI人材が採用できない",
-    desc: "年収レンジを上げても採れない、採れても定着しない",
-    position: "left-bottom",
-  },
-  {
-    title: "PoCで止まる",
-    desc: "生成AIの検証は進むが、業務に落ちる実装まで到達しない",
-    position: "right-bottom",
-  },
-  {
-    title: "属人化が止まらない",
-    desc: "AI活用が一部社員に依存、退職リスクで事業が止まりかねない",
-    position: "center-bottom",
-  }
-];
-
 const POINTS = [
   {
     num: "01",
@@ -57,7 +29,7 @@ const POINTS = [
 
 const AiServiceStrengths: React.FC = () => {
   return (
-    <section className="bg-white py-16 md:py-24 font-sans text-[#333] overflow-hidden">
+    <section className="bg-white py-10 md:py-24 font-sans text-[#333] overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Header */}
