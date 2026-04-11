@@ -275,15 +275,15 @@ export default function WhyResults() {
       {/* ===== 業務に生きるAIはどれか？ ===== */}
       <section className="wr-compare">
         <div className="wr-compare__inner">
-          <div className="wr-compare__header">
-            <span className="wr-compare__eyebrow">COMPARISON</span>
-            <h2 className="wr-compare__title">
-              Claude Codeで、何が作れるのか。
+          <div className="wr-compare__header" style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <span className="wr-compare__eyebrow" style={{ display: 'inline-block', fontSize: '14px', letterSpacing: '0.1em', color: '#666', marginBottom: '8px' }}>COMPARISON</span>
+            <h2 className="wr-compare__title" style={{ fontSize: '32px', fontWeight: '900', color: '#29034f', marginBottom: '24px', lineHeight: '1.5' }}>
+              Claude Codeで、何が<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>作れる</strong>のか。
             </h2>
-            <p className="wr-compare__subtitle">
+            <p className="wr-compare__subtitle" style={{ fontSize: '15px', lineHeight: '1.8', color: '#444', fontWeight: 'bold' }}>
               Web制作・スライド資料・画像生成・業務ツール――
               <br />
-              実務に直結する10のアウトプットを、主要AI4サービスで比較しました。
+              実務に直結する<strong style={{ color: '#ff5c00', fontWeight: 900, borderBottom: '2px solid #ff5c00', paddingBottom: '2px', margin: '0 4px' }}>10のアウトプット</strong>を、<br className="block md:hidden"/>主要AI4サービスで比較しました。
             </p>
           </div>
 

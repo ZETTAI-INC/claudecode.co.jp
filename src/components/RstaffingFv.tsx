@@ -46,7 +46,7 @@ export default function RstaffingFv() {
             </div>
             
             <div className="mv__illustrationBlock">
-              <img src="/rstaffing/assets/images/mv/hero_illustration.png?v=2" alt="Claude Code Training" className="mv__illustrationImg" />
+              <img src="/rstaffing/assets/images/mv/hero_illustration_v3.png?v=3" alt="Claude Code Training" className="mv__illustrationImg" />
             </div>
           </div>
         </div>

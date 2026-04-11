@@ -51,10 +51,10 @@ const AiDevelopmentWorkflow: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 overflow-hidden">
         
         {/* Title */}
-        <div className="mb-16">
-          <h2 className="text-xl md:text-[22px] lg:text-2xl font-bold text-center text-[#666] tracking-wide leading-relaxed">
-            研修修了後、社員1人の開発フローが別物に変わります。<br className="hidden md:block" />
-            業務要件を知っているからこそ、Claude Codeと組み合わせると一気に最短ルートになります。
+        <div className="mb-20 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-[32px] font-black text-[#29034f] tracking-wide leading-[1.7]">
+            研修修了後、社員1人の開発フローが<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別物</strong>に変わります。<br className="hidden md:block" />
+            業務要件を知っているからこそ、Claude Codeと組み合わせると一気に<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>最短ルート</strong>になります。
           </h2>
         </div>
 
@@ -77,8 +77,9 @@ const AiDevelopmentWorkflow: React.FC = () => {
                     <path d="M 25 50 c -10 20, 40 40, 50 10 c 10 -30, -40 -40, -50 -10" />
                   </svg>
                 </div>
-                <p className="text-[#666] text-xs leading-relaxed font-bold">
-                  外注先とのやりとりが多く、業務改善が現場のペースで進まない。小さな変更も社内完結できず時間がかかる
+                <p className="text-[#555] text-[13px] leading-[1.8] font-bold mt-2">
+                  外注先とのやりとりが多く、業務改善が現場のペースで進まない。<br />
+                  <span className="text-[#ff5c00]">小さな変更も社内完結できず時間がかかる</span>
                 </p>
               </div>
             </div>
@@ -99,8 +100,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
             {/* Column 3: Descriptions */}
             <div className="w-72 flex flex-col gap-6 pt-[5.5rem] relative z-10">
               {PROCESS_STEPS.map((step) => (
-                <div key={`desc-${step.id}`} className="h-14 flex items-center justify-center text-center">
-                  <p className="text-[#888] text-[11px] leading-[1.6] font-bold">
+                <div key={`desc-${step.id}`} className="h-14 flex items-center justify-center text-center px-3">
+                  <p className="text-[#555] text-[13px] leading-[1.6] font-semibold tracking-wide">
                     {step.desc}
                   </p>
                 </div>
@@ -141,9 +142,9 @@ const AiDevelopmentWorkflow: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-[#4682b4] text-xs leading-[1.8] font-bold text-center mt-2">
-                  環境構築やコーディング・デバッグの大半をClaude Codeが代行し、<br className="hidden lg:block"/>
-                  <span className="text-[#2c5b82] border-b border-[#2c5b82]">受講者は業務設計と現場改善に集中できる状態へ</span>
+                <p className="text-[#4682b4] text-[14px] leading-[1.8] font-bold text-center mt-3">
+                  環境構築やコーディング・デバッグの大半を<br className="hidden lg:block"/>Claude Codeが代行し、<br />
+                  <span className="text-[#ff5c00] border-b-2 border-orange-200 pb-1 mt-2 inline-block">受講者は業務設計と現場改善に集中できる状態へ</span>
                 </p>
               </div>
             </div>

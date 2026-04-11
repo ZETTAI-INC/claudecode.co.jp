@@ -15,12 +15,12 @@ const TrainingTimeline: React.FC = () => {
           <h2 className="text-xl md:text-2xl font-bold text-[#333]">14日間ブートキャンプ 典型的な1日の流れ</h2>
         </div>
 
-        <div className="border border-[#e0e0e0] rounded-xl p-5 md:p-6 mb-12 shadow-[0_2px_10px_rgba(0,0,0,0.03)] bg-white relative z-20">
-          <p className="text-[15px] md:text-lg font-bold text-[#444] leading-relaxed mb-3">
-            2週間の研修は毎日9時スタート。1日の中で「講義→実装→デプロイ」までを一気通貫で体験します。<span className="text-[#888] font-normal text-sm md:text-base">（未経験者でも置き去りにしない少人数制）</span>
+        <div className="border-2 border-[#ffcaa5] bg-[#fff8f3] rounded-xl p-6 md:p-8 mb-12 shadow-sm relative z-20">
+          <p className="text-[16px] md:text-[20px] font-bold text-[#29034f] leading-[1.8] mb-5 tracking-wide">
+            2週間の研修は毎日9時スタート。1日の中で<strong className="text-[#ff5c00] font-black">「講義→実装→デプロイ」</strong>までを<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 2px', fontWeight: 900 }}>一気通貫</strong>で体験します。<br className="hidden md:block"/><span className="text-[#888] font-semibold text-sm md:text-base mt-2 inline-block">（未経験者でも置き去りにしない少人数制）</span>
           </p>
-          <p className="text-[15px] md:text-lg font-bold text-[#444] leading-relaxed">
-            座学は最小限。初日から手を動かし、Day14には自分一人でWebアプリを企画・開発・公開できるレベルまで育て上げます。
+          <p className="text-[16px] md:text-[20px] font-bold text-[#29034f] leading-[1.8] tracking-wide">
+            座学は最小限。初日から手を動かし、Day14には<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 2px', fontWeight: 900 }}>自分一人で</strong><strong className="text-[#ff5c00] font-black border-b-2 border-orange-200 pb-1 ml-1">Webアプリを企画・開発・公開できるレベル</strong>まで育て上げます。
           </p>
         </div>
 
