@@ -236,34 +236,45 @@
 }
 
 .rstaffing-fv .mv__titleAccent {
-  font-size: 56px;
+  font-size: 48px;
   color: #0073ce;
-  display: block;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 2px;
+  line-height: 1;
 }
 
 .rstaffing-fv .mv__titleParticle {
-  font-size: 34px;
+  font-size: 28px;
   color: #1a3a5f;
-  margin-left: 5px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   font-weight: 800;
+  margin-right: 8px;
+}
+
+.rstaffing-fv .mv__titleHighlight {
+  color: #f97316;
+  -webkit-text-emphasis: filled circle #f97316;
+  text-emphasis: filled circle #f97316;
+  font-weight: 900;
+  padding: 0 4px;
 }
 
 @media screen and (max-width: 1024px) {
   .rstaffing-fv .mv__title {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 25px;
   }
   .rstaffing-fv .mv__titleAccent {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-right: 2px;
   }
   .rstaffing-fv .mv__titleParticle {
-    font-size: 20px;
-    margin-left: 3px;
+    font-size: 16px;
+    margin-right: 4px;
+    margin-left: 0;
   }
 }
 

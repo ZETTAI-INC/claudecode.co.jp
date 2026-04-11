@@ -12,7 +12,7 @@ const AdPerformanceComparison: React.FC = () => {
             <h2 className="text-xl md:text-2xl font-bold text-[#333]">CLAUDECODE研修受講前後の違い</h2>
           </div>
           <div className="text-center font-bold text-lg md:text-xl md:text-2xl text-[#333] tracking-wide mb-8">
-            本研修の受講により、従来に比べて<span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] text-white px-3 py-1.5 mx-1.5 rounded-lg shadow-sm border border-[#1e40af] inline-block mt-2 sm:mt-0 transform -translate-y-0.5">圧倒的な生産性向上が実現</span>できます！
+            業務を一番知る社員が、14日で<span className="bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] text-white px-3 py-1.5 mx-1.5 rounded-lg shadow-sm border border-[#1e40af] inline-block mt-2 sm:mt-0 transform -translate-y-0.5">自部署の業務ツールを自力で公開</span>できる状態へ
           </div>
         </div>
 
@@ -30,16 +30,16 @@ const AdPerformanceComparison: React.FC = () => {
 
             <div className="relative z-10 w-full pr-12 flex flex-col flex-1">
               <div className="bg-white rounded-full py-2.5 px-6 text-center shadow-sm w-[90%] mx-auto mb-8 font-bold text-[#333] text-[13px] md:text-[15px] border-2 border-white">
-                AIツールを使いこなせず、手作業で開発を継続
+                社内ツールは全て外注、社員はAIを「触ったことがある」止まり
               </div>
 
               <ul className="space-y-3 md:space-y-4 mb-8">
                 {[
-                  { text: 'AIツールの正しい活用法が分からず、', highlight: '従来の手法に依存', highlightPost: 'している' },
-                  { text: '致命的なエラー発生時の', highlight: 'AIへの適切な質問方法が分からない', highlightPost: '' },
-                  { text: '最適なアーキテクチャや技術選定に', highlight: '時間がかかっている', highlightPost: '' },
-                  { text: '企画・要件定義から', highlight: '実装完了までの期間が長い', highlightPost: '' },
-                  { text: '複数の生成AIツールを', highlight: '適材適所で使い分けられない', highlightPost: '' }
+                  { text: '業務改善のアイデアがあっても、', highlight: '実装できる人材がおらず外注頼み', highlightPost: 'になっている' },
+                  { text: '簡単なフォームやダッシュボードでも、', highlight: '見積もり数十万・納期数週間', highlightPost: 'が当たり前' },
+                  { text: '生成AIを導入しても', highlight: '"触ってみた"で止まり業務に落ちない', highlightPost: '' },
+                  { text: 'AI活用が一部のエンジニアに依存し、', highlight: '非エンジニア職は取り残されている', highlightPost: '' },
+                  { text: '研修予算は使ったが、', highlight: '現場で使える状態にならないまま忘却', highlightPost: 'される' }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 bg-white/10 border border-white/20 px-4 py-3 rounded-xl hover:-translate-y-0.5 transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.5)] text-white text-[13.5px] md:text-[15px] leading-[1.7]">
                     <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#e43b3b] flex items-center justify-center rounded-full shadow-sm">
@@ -104,16 +104,16 @@ const AdPerformanceComparison: React.FC = () => {
 
             <div className="relative z-10 flex flex-col flex-1">
               <div className="bg-[#d2eaff] rounded-full py-2.5 px-6 text-center w-[90%] mx-auto mb-8 font-bold text-[#1e5eb0] text-[13px] md:text-[15px] border border-[#b8daff]">
-                Claude Codeを駆使して、超高速なシステム開発を実現
+                14日後、非エンジニアが業務ツールを自力で本番公開できる状態へ
               </div>
 
               <ul className="space-y-3 md:space-y-4 mb-10 pl-2 md:pl-6">
                 {[
-                  { text: 'を用いて、爆速なコーディングとエラー解決を実現', highlight: 'Claude Code', type: 'prefix' },
-                  { text: 'により高品質な実装を担保', highlight: '最適なプロンプト設定', type: 'prefix' },
-                  { text: 'プロジェクトの特性に合わせて', highlight: '最適なAIツールの選択が可能', type: 'suffix' },
-                  { text: 'でプロトタイプから本番実装まで完了', highlight: '最短数日', type: 'prefix' },
-                  { text: '複数のAIツールを', highlight: 'シームレスに組み合わせて開発可能', type: 'suffix' }
+                  { text: 'を用いて、要件ヒアリングから実装・デプロイまで自走', highlight: 'Claude Code', type: 'prefix' },
+                  { text: '営業・企画・事務職でも、', highlight: '自部署の業務ツールを自力でリリース', type: 'suffix' },
+                  { text: 'これまで外注していた軽微な改修が、', highlight: '社内で当日中に対応可能', type: 'suffix' },
+                  { text: '研修修了後も', highlight: '伴走メンターが現場定着まで支援', type: 'prefix' },
+                  { text: '成果物は', highlight: '本番稼働する1つの業務アプリとして残る', type: 'suffix' }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 bg-white border border-[#e0f0ff] px-4 py-3 rounded-xl hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_15px_rgba(37,99,235,0.05)] text-[#333] text-[13.5px] md:text-[15px] leading-[1.7]">
                     <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#2563eb] flex items-center justify-center rounded-full shadow-sm">

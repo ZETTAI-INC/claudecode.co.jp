@@ -22,12 +22,15 @@ const SpeedComparison: React.FC = () => {
         {/* --- Header & Lead Area --- */}
         <div className="mb-10">
           <h2 className="text-xl md:text-2xl font-bold text-[#333] mb-6">
-            自社（AI推進）の強み： 圧倒的な開発・導入期間の短さ
+            研修修了後の実力： 社内で業務ツールを最短4日で本番公開
           </h2>
           <div className="bg-[#f5f5f5] p-5 md:p-6 rounded-sm">
             <p className="text-[#444] text-[14px] md:text-base leading-[1.8] font-medium">
-              AIを活用した超高速開発により、キックオフ翌日にはプロトタイプ（モックアップ）を確認いただけます。<br className="hidden md:block" />
-              また、本番環境の構築まで<span className="font-bold text-[#2563eb]">最短４日間</span>で対応可能となるため、機会損失をゼロにし即座に業務の効率化をスタートできます。
+              研修を修了した社員は、これまで外注していた業務ツール開発を社内で完結できます。アイデアが出た翌日にはプロトタイプを提示でき、<br className="hidden md:block" />
+              本番稼働まで<span className="font-bold text-[#2563eb]">最短４日間</span>。外注の見積もり待ちが消え、現場の改善スピードが一段上がります。
+            </p>
+            <p className="text-[#888] text-[12px] md:text-[13px] leading-[1.7] mt-3">
+              ※ 社内業務ツール（フォーム・ダッシュボード・自動化スクリプト等）を想定。外注との比較は一般的なBtoB受託開発の公表見積もりレンジに基づく参考値です。
             </p>
           </div>
         </div>
@@ -46,21 +49,21 @@ const SpeedComparison: React.FC = () => {
               </div>
               {/* Header 2: Ours (Highlighted) */}
               <div className="text-center flex items-center justify-center font-bold text-[16px] text-[#2563eb] h-[50px] relative z-20 bg-white">
-                ZETT-AI
+                研修修了者（社内）
                 {/* Top border of the blue highlight box */}
                 <div className="absolute top-0 left-2 right-2 border-t-[3px] border-l-[3px] border-r-[3px] border-[#2563eb] h-full rounded-t-sm pointer-events-none"></div>
               </div>
               {/* Header 3: Competitor A */}
               <div className="text-center flex items-center justify-center font-bold text-[15px] text-[#666] h-[50px]">
-                一般的な外注 A社
+                外注A（スポット受託）
               </div>
               {/* Header 4: Competitor B */}
               <div className="text-center flex items-center justify-center font-bold text-[15px] text-[#666] h-[50px]">
-                一般的な外注 B社
+                外注B（中規模SIer）
               </div>
               {/* Header 5: Competitor C */}
               <div className="text-center flex items-center justify-center font-bold text-[15px] text-[#666] h-[50px]">
-                一般的な外注 C社
+                外注C（大手ベンダー）
               </div>
 
               {/* === BACKGROUND ARROWS (Absolute positioned over the columns) === */}

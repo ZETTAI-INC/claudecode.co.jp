@@ -195,6 +195,13 @@ body {
   flex-shrink: 0;
   align-self: center;
 }
+.planb-fv__stat-note {
+  font-size: 11px;
+  color: #7a6b8a;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
 .planb-fv__heading {
   font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
   font-weight: 900;
@@ -202,6 +209,13 @@ body {
   line-height: 1.15;
   color: #29034f;
   margin-bottom: 24px;
+}
+.planb-fv__kenten {
+  color: #f97316;
+  -webkit-text-emphasis: filled circle #f97316;
+  text-emphasis: filled circle #f97316;
+  font-weight: 900;
+  padding: 0 4px;
 }
 .planb-fv__cta {
   display: flex;

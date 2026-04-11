@@ -1,12 +1,8 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
-import RecommendSection from "@/components/RecommendSection";
 import ComparisonSection from "@/components/ComparisonSection";
-import ServiceDescription from "@/components/ServiceDescription";
 import WhyResults from "@/components/WhyResults";
-import Services from "@/components/Services";
 import SubsidyList from "@/components/SubsidyList";
-import RelatedServices from "@/components/RelatedServices";
 import CaseStudies from "@/components/CaseStudies";
 import News from "@/components/News";
 import ContactForm from "@/components/ContactForm";
@@ -18,9 +14,14 @@ import TalentDevelopment from "@/components/TalentDevelopment";
 import AiEffectiveness from "@/components/AiEffectiveness";
 import TrainingTimeline from "@/components/TrainingTimeline";
 import SpeedComparison from "@/components/SpeedComparison";
-import RecruitKnowhow from "@/components/RecruitKnowhow";
 import RstaffingFv from "@/components/RstaffingFv";
 import ResourceDownloadCta from "@/components/ResourceDownloadCta";
+import ServiceDifferentiation from "@/components/ServiceDifferentiation";
+import Pricing from "@/components/Pricing";
+import Instructors from "@/components/Instructors";
+import Testimonials from "@/components/Testimonials";
+import Flow from "@/components/Flow";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -29,26 +30,27 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <RecommendSection />
-          <ServiceDescription />
-          <AiDevelopmentWorkflow />
+          <RstaffingFv />
           <AiServiceStrengths />
-          <AdPerformanceComparison />
-          <AiEffectiveness />
+          <AiDevelopmentWorkflow />
           <SpeedComparison />
-          <WhyResults />
-          <Services />
-          <TrainingTimeline />
-          <TalentDevelopment />
-          <SubsidyList />
-          <RelatedServices />
-          <CaseStudies />
-          <News />
+          <AiEffectiveness />
+          <AdPerformanceComparison />
           <ComparisonSection />
-          <RecruitKnowhow />
+          <ServiceDifferentiation />
+          <TalentDevelopment />
+          <WhyResults />
+          <TrainingTimeline />
+          <Pricing />
+          <SubsidyList />
+          <Instructors />
+          <CaseStudies />
+          <Testimonials />
+          <Flow />
+          <Faq />
+          <News />
           <ResourceDownloadCta />
           <ContactForm />
-          <RstaffingFv />
         </div>
       </main>
       <Footer />

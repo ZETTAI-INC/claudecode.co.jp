@@ -7,13 +7,13 @@ import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const painItems = [
-  "毎月のPL管理",
-  "スライド作成",
-  "勤怠管理",
-  "NDA作成",
-  "WEB・LP制作",
-  "リスト取得",
-  "保守運用",
+  "社内フォーム制作",
+  "ダッシュボード作成",
+  "定型業務の自動化",
+  "簡易LP・社内ツール",
+  "業務改善アプリ",
+  "保守・軽微改修",
+  "外注見積もり待ち",
 ];
 
 function Counter({ end, visible }: { end: number; visible: boolean }) {
@@ -78,7 +78,7 @@ export default function ComparisonSection() {
                 />
               </div>
               <p className="cmp__before-msg">
-                全部ひとりで抱えて、<br />毎日が精一杯...
+                社内のあらゆる改善が<br />外注頼みで止まっている
               </p>
               <div className="cmp__before-pills">
                 {painItems.map((t) => (
@@ -111,19 +111,18 @@ export default function ComparisonSection() {
               {/* ヒーロー数値 */}
               <div className="cmp__nums">
                 <div className="cmp__num-block">
-                  <span className="cmp__num-sub">開発速度</span>
+                  <span className="cmp__num-sub">業務ツール1本の公開まで</span>
                   <span className="cmp__num-big">
-                    <Counter end={3} visible={vis} />
-                    <small>倍</small>
+                    <Counter end={4} visible={vis} />
+                    <small>日</small>
                   </span>
                 </div>
                 <div className="cmp__num-div" />
                 <div className="cmp__num-block">
-                  <span className="cmp__num-sub">生産性向上</span>
-                  <span className="cmp__num-pre">最大</span>
+                  <span className="cmp__num-sub">研修期間</span>
                   <span className="cmp__num-big">
-                    <Counter end={88} visible={vis} />
-                    <small>%</small>
+                    <Counter end={14} visible={vis} />
+                    <small>日</small>
                   </span>
                 </div>
               </div>
@@ -132,19 +131,19 @@ export default function ComparisonSection() {
               <ul className="cmp__results">
                 <li className="cmp__result">
                   <span className="cmp__result-dot" style={{ background: "#22c55e" }} />
-                  <span className="cmp__result-text">コード品質が<strong>大幅アップ</strong></span>
+                  <span className="cmp__result-text">軽微な改修は<strong>社内で当日対応</strong></span>
                 </li>
                 <li className="cmp__result">
                   <span className="cmp__result-dot" style={{ background: "#f97316" }} />
-                  <span className="cmp__result-text">残業時間が<strong>激減</strong></span>
+                  <span className="cmp__result-text">外注見積もり待ちが<strong>0日</strong></span>
                 </li>
                 <li className="cmp__result">
                   <span className="cmp__result-dot" style={{ background: "#8b5cf6" }} />
-                  <span className="cmp__result-text">属人化を<strong>解消</strong></span>
+                  <span className="cmp__result-text">AI活用を<strong>全部署へ横展開</strong></span>
                 </li>
                 <li className="cmp__result">
                   <span className="cmp__result-dot" style={{ background: "#ef4444" }} />
-                  <span className="cmp__result-text">外注コストを<strong>削減</strong></span>
+                  <span className="cmp__result-text">業務改善が<strong>現場から自走</strong></span>
                 </li>
               </ul>
             </div>
@@ -152,7 +151,7 @@ export default function ComparisonSection() {
         </div>
 
         <p className="cmp__bottom">
-          研修後、チームの開発力が<strong>劇的に変わる！</strong>
+          研修後、社内に<strong>「自走する実装者」</strong>が残る
         </p>
       </div>
     </section>

@@ -8,11 +8,8 @@ export default function RstaffingFv() {
           <div className="mv__content">
             <div className="mv__textBlock">
               <h2 className="mv__title">
-                <span className="mv__titleAccent">
-                  Claude Code<span className="mv__titleParticle">の</span>
-                </span>
-                実践的ノウハウで、<br />
-                開発チームの圧倒的な生産性をサポート
+                <span className="mv__titleAccent">Claude Code</span><span className="mv__titleParticle">の</span>実践的ノウハウで、<br />
+                社内の業務内製化を<strong className="mv__titleHighlight">最短で</strong>進める
               </h2>
 
               <div className="mv__servicesWrapper">
@@ -32,7 +29,7 @@ export default function RstaffingFv() {
                 スタートアップから大企業まで各種ユースケースに合わせてご提案します。<br />
                 お気軽にご相談ください
               </p>
-              
+
               <div className="mv__inquiryButton">
                 <div className="inquiryButtonArea">
                   <a className="inquiryButtonArea__button" href="#contact">

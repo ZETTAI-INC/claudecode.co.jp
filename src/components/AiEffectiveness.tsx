@@ -8,14 +8,14 @@ const AiEffectiveness: React.FC = () => {
         {/* --- Header Copy --- */}
         <div className="text-center mb-16 md:mb-24">
           <p className="text-[#333] text-[15px] md:text-xl font-bold mb-4 tracking-wide leading-relaxed">
-            「最新生成AI（Claude 3.5 Sonnet等）の徹底活用」×「プロフェッショナルの設計」により
+            業務を知る社員が Claude Code を扱えるようになると、
           </p>
           <h2 className="text-[#333] text-2xl md:text-4xl font-bold tracking-wider leading-snug">
-            <span 
+            <span
               className="inline-block relative"
               style={{ background: 'linear-gradient(transparent 60%, #cde1ff 40%)' }}
             >
-              高品質なシステムを短期間・低コストで提供
+              同じ業務ツールを、1/10の時間で社内完結
             </span>
           </h2>
         </div>
@@ -29,7 +29,7 @@ const AiEffectiveness: React.FC = () => {
             {/* Title Box */}
             <div className="w-full max-w-[320px] mb-6">
               <div className="border border-[#888] py-2 md:py-3 text-center relative">
-                <span className="text-[#666] font-bold text-sm md:text-base tracking-widest">従来型開発の場合</span>
+                <span className="text-[#666] font-bold text-sm md:text-base tracking-widest">受講前（外注に依頼）</span>
                 {/* Downward Triangle */}
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[12px] border-t-[#888]"></div>
                 {/* Inner white triangle to hollow it out */}
@@ -64,14 +64,14 @@ const AiEffectiveness: React.FC = () => {
                 </div>
                 {/* Base Pillar */}
                 <div className="bg-[#808080] text-white text-center py-5 md:py-6 text-sm md:text-xl font-bold tracking-widest border border-white">
-                  制作期間
+                  公開までの期間
                 </div>
               </div>
 
               {/* Right Side: Building Blocks */}
               <div className="flex flex-col justify-end w-[130px] md:w-[150px] relative pb-[1px] ml-1 md:ml-3">
                 <div className="absolute -top-8 left-0 w-full text-center text-[11px] md:text-xs text-[#888] font-bold">
-                  すべて<br/>人手で開発
+                  外注に発注し<br/>納品を待つ
                 </div>
                 
                 {/* Block 3 (Top) */}
@@ -105,7 +105,7 @@ const AiEffectiveness: React.FC = () => {
           {/* ----- Center: Arrow & Label (Hidden on mobile for stacking layout) ----- */}
           <div className="hidden md:flex w-[16%] flex-col items-center justify-center h-[280px] relative mb-12">
             <div className="text-[#2563eb] font-bold text-center text-sm mb-2 pt-16">
-              AI活用による<br/>自動化
+              研修修了者が<br/>社内で実装
             </div>
             
             {/* SVG Complex Arrow connecting the two blocks */}
@@ -129,7 +129,7 @@ const AiEffectiveness: React.FC = () => {
             {/* Title Box */}
             <div className="w-full max-w-[320px] mb-6">
               <div className="border-2 border-[#2563eb] py-2 md:py-3 text-center relative">
-                <span className="text-[#2563eb] font-bold text-sm md:text-base tracking-widest">AI活用した特化型開発の場合</span>
+                <span className="text-[#2563eb] font-bold text-sm md:text-base tracking-widest">受講後（社内で実装）</span>
                 {/* Downward Triangle */}
                 <div className="absolute -bottom-[14px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[14px] border-t-[#2563eb]"></div>
                 {/* Inner white triangle to hollow it out */}
@@ -152,7 +152,7 @@ const AiEffectiveness: React.FC = () => {
             {/* Downward pointing text before block */}
              <div className="w-full max-w-[380px] flex justify-end pr-10 md:pr-[4.5rem] mb-2 -mt-4">
                  <div className="text-center text-[11px] md:text-sm text-[#2563eb] font-bold flex flex-col items-center">
-                    <span className="mb-1 hidden md:inline-block">AIで生成し<br/>人がチェック</span>
+                    <span className="mb-1 hidden md:inline-block">Claude Codeで実装<br/>受講者がチェック</span>
                     {/* Mobile version simple arrow */}
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" className="md:hidden mt-4 mb-2">
                        <path d="M12 5v14M19 12l-7 7-7-7"/>
@@ -175,7 +175,7 @@ const AiEffectiveness: React.FC = () => {
                 </div>
                 {/* Base Pillar: Much thicker overall height */}
                 <div className="bg-[#2563eb] text-white text-center py-7 md:py-9 text-sm md:text-xl font-bold tracking-widest border border-white">
-                  制作期間
+                  公開までの期間
                 </div>
               </div>
 
@@ -184,13 +184,13 @@ const AiEffectiveness: React.FC = () => {
                 
                 {/* Mobile version text visible only when SVG is hidden */}
                 <div className="md:hidden absolute -top-10 left-0 w-full text-center text-[10px] text-[#2563eb] font-bold">
-                  AIで生成し人がチェック
+                  Claude Codeで実装／受講者がチェック
                 </div>
 
                 {/* Single Compressed Block */}
                 <div className="h-[45px] md:h-[55px] border-2 border-[#2563eb] flex items-center justify-center bg-white shadow-sm relative z-20">
                   <span className="text-[#2563eb] font-bold text-[10px] md:text-[13px] leading-tight text-center px-1">
-                    要件〜設計<br/>コーディング
+                    要件定義〜実装<br/>デプロイ
                   </span>
                 </div>
                 

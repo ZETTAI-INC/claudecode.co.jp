@@ -2,55 +2,55 @@ import React from "react";
 
 const STRUGGLES = [
   {
-    title: "開発が間に合わない",
-    desc: "採用や外注を駆使しても、思ったペースで開発が進まない...",
+    title: "内製化が進まない",
+    desc: "PoCは作れても、本番運用まで持っていける人材が社内にいない",
     position: "left-top",
   },
   {
-    title: "要件管理が大変",
-    desc: "開発会社への仕様変更の指示や調整など、管理の手間がかかりすぎる",
+    title: "外注費が膨らむ一方",
+    desc: "軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する",
     position: "right-top",
   },
   {
-    title: "技術的負債が増える",
-    desc: "一応動くものはできても、その後の運用で誰も中身を触れない",
+    title: "AI人材が採用できない",
+    desc: "年収レンジを上げても採れない、採れても定着しない",
     position: "left-bottom",
   },
   {
-    title: "システム更新が面倒",
-    desc: "ちょっとしたUI変更や機能追加が、地味に時間がかかって辛い...",
+    title: "PoCで止まる",
+    desc: "生成AIの検証は進むが、業務に落ちる実装まで到達しない",
     position: "right-bottom",
   },
   {
-    title: "バグで動かない",
-    desc: "リリースを急ぐあまり、本番運用後にエラーが多発して品質が低い",
-    position: "center-bottom", // Or center-left/right depending on layout
+    title: "属人化が止まらない",
+    desc: "AI活用が一部社員に依存、退職リスクで事業が止まりかねない",
+    position: "center-bottom",
   }
 ];
 
 const POINTS = [
   {
     num: "01",
-    title: "Claude活用による実装コスト激減",
+    title: "2週間で「社内に実装者を残す」",
     list: [
-      "既存のベンダー外注費用の最大80%を削減！",
-      "要件定義から実装まで自社内で一貫した超高速開発を実現"
+      "外注に出していた業務ツール開発を、社内メンバーが自走で完遂できる状態まで引き上げ",
+      "研修後に残るのは知識ではなく、本番リリース済みの成果物"
     ]
   },
   {
     num: "02",
-    title: "的確なプロンプトによる品質と安定",
+    title: "非エンジニアを実装者に変える",
     list: [
-      "エラーを生まないプロンプトの記述法を標準でレクチャー",
-      "経験なしでも高品質で保守性の高いシステム構築が可能！"
+      "営業・企画・事務職でも、業務ツールを自力で設計・実装・公開できるレベルまで到達",
+      "高騰するAI人材採用に依存せず、既存社員で内製体制を構築"
     ]
   },
   {
     num: "03",
-    title: "AIによるDevOps・テスト業務削減",
+    title: "修了後も続く伴走サポート",
     list: [
-      "コードレビューやバグ修正など、これまでの運用負荷を大幅に削減",
-      "インフラ構築やデプロイ作業も、AI活用により日々アップデート！"
+      "研修修了後に手が止まらないよう、現場定着まで専門メンターが継続支援",
+      "学んだ内容を「使い続けられる」状態まで仕組み化"
     ]
   }
 ];
@@ -63,7 +63,7 @@ const AiServiceStrengths: React.FC = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-12">
           <span className="w-1.5 h-6 md:h-8 bg-[#333] block"></span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#666]">ZETT-AI（研修）の強み</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#666]">業務を知る社員こそ、最速の実装者になれる</h2>
         </div>
 
         {/* --- Top Area: Struggles (Desktop Grid, Mobile Flex) --- */}
@@ -88,19 +88,19 @@ const AiServiceStrengths: React.FC = () => {
             <div className="flex flex-col gap-6 w-full lg:w-[32%]">
               {/* Bubble: Left Top */}
               <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">開発が間に合わない</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">内製化が進まない</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  採用や外注を駆使しても、思ったペースで開発が進まない...
+                  PoCは作れても、本番運用まで持っていける人材が社内にいない
                 </p>
                 {/* Tail pointing towards center-right */}
                 <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#f0f0f0]"></div>
               </div>
-              
+
               {/* Bubble: Left Bottom */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">CVRが低い（バグ多発）</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">属人化が止まらない</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  リリースを急ぐあまり、本番運用後に予期せぬエラーが多発する
+                  AI活用が一部社員に依存、退職リスクで事業が止まりかねない
                 </p>
                 <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#e8e8e8]"></div>
               </div>
@@ -110,9 +110,9 @@ const AiServiceStrengths: React.FC = () => {
             <div className="flex flex-col items-center gap-6 w-full lg:w-[32%]">
               {/* Bubble: Center Top */}
               <div className="bg-[#ebebeb] rounded-xl p-5 relative shadow-sm w-full">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">要件管理が大変</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">外注費が膨らむ一方</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  開発会社への仕様変更の指示や調整など、管理の手間がかかりすぎる
+                  軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する
                 </p>
                 <div className="hidden lg:block absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-[#ebebeb]"></div>
               </div>
@@ -142,18 +142,18 @@ const AiServiceStrengths: React.FC = () => {
             <div className="flex flex-col gap-6 w-full lg:w-[32%]">
               {/* Bubble: Right Top */}
               <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">技術的負債が増える</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">AI人材が採用できない</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  一応動くものはできても、中身がブラックボックス化し誰も触れない
+                  年収レンジを上げても採れない、採れても定着しない
                 </p>
                 <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#f0f0f0]"></div>
               </div>
-              
+
               {/* Bubble: Right Bottom */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">システム更新が面倒</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">PoCで止まる</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  ちょっとしたUI変更や機能追加が、いちいち外注で時間がかかって辛い...
+                  生成AIの検証は進むが、業務に落ちる実装まで到達しない
                 </p>
                 <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#e8e8e8]"></div>
               </div>
@@ -164,7 +164,7 @@ const AiServiceStrengths: React.FC = () => {
 
         {/* --- Middle Banner: Solution Statement --- */}
         <div className="relative bg-[#1e5eb0] text-white py-6 md:py-8 text-center text-xl md:text-3xl font-bold tracking-wide shadow-md">
-          ZETT-AI は、すべてのお悩みを解決します。
+          外から人を採るより、業務を知る社員にClaude Codeを。
           {/* Downward Triangle */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-t-[#1e5eb0]"></div>
         </div>

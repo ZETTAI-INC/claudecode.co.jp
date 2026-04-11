@@ -53,8 +53,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
         {/* Title */}
         <div className="mb-16">
           <h2 className="text-xl md:text-[22px] lg:text-2xl font-bold text-center text-[#666] tracking-wide leading-relaxed">
-            AI活用した内製化開発により、コスト・期間を圧縮しつつ、<br className="hidden md:block" />
-            コアビジネス（新規機能やマーケティング）へ集中できる開発運用を実現します。
+            研修修了後、社員1人の開発フローが別物に変わります。<br className="hidden md:block" />
+            業務要件を知っているからこそ、Claude Codeと組み合わせると一気に最短ルートになります。
           </h2>
         </div>
 
@@ -78,7 +78,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#666] text-xs leading-relaxed font-bold">
-                  工程や外注先ステークホルダが多く、思うようにサービス設計・マーケティングに注力できていない事業社が多い
+                  外注先とのやりとりが多く、業務改善が現場のペースで進まない。小さな変更も社内完結できず時間がかかる
                 </p>
               </div>
             </div>
@@ -86,7 +86,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
             {/* Column 2: Traditional Method */}
             <div className="w-52 flex flex-col gap-6 relative z-10">
               <div className="h-10 bg-[#a6a6a6] text-white flex items-center justify-center font-bold text-lg mb-6 shadow-sm">
-                従来の開発体制
+                受講前の開発フロー
               </div>
               
               {PROCESS_STEPS.map((step) => (
@@ -112,7 +112,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
               <div className="h-10 flex items-center justify-center font-bold mb-6">
                 <div className="flex items-center gap-2 text-[#4682b4] text-xl">
                   <div className="w-8 h-8 bg-[#6aa1d4] text-white rounded-md flex items-center justify-center font-bold text-lg">C</div>
-                  Claude Code
+                  研修後のフロー
                 </div>
               </div>
               
@@ -142,8 +142,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#4682b4] text-xs leading-[1.8] font-bold text-center mt-2">
-                  環境構築や単調なコーディング・デバッグ作業が全自動化され、<br className="hidden lg:block"/>
-                  <span className="text-[#2c5b82] border-b border-[#2c5b82]">自社はコアな要件設計・マーケティングに注力が可能に！</span>
+                  環境構築やコーディング・デバッグの大半をClaude Codeが代行し、<br className="hidden lg:block"/>
+                  <span className="text-[#2c5b82] border-b border-[#2c5b82]">受講者は業務設計と現場改善に集中できる状態へ</span>
                 </p>
               </div>
             </div>
