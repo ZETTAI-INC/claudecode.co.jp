@@ -2,36 +2,36 @@ import Image from "next/image";
 
 const cards = [
   {
-    challenge: "学習の課題",
+    challenge: "ゼロからの壁",
     challengeDesc:
-      "AIツールは増え続けるのに、何から学べばいいかわからない。独学では非効率で、実務に活かせるレベルに到達できない。",
-    stat: "AI導入企業の70%が「人材不足」を課題に挙げている",
+      "プログラミング未経験者に、何から教えればいいか分からない。独学では遠回りで、実務に活かせるレベルまで到達できない。",
+    stat: "未経験者の独学挫折率は70%以上と言われている",
     topImg: "/img/service/card1_top.png",
-    solution: "体系的カリキュラムで即戦力化",
+    solution: "14日間の逆算カリキュラム",
     solutionDesc:
-      "初級から上級まで段階的に学べるカリキュラムで、最短ルートでClaude Codeを使いこなせる人材に育成します。",
+      "「2週間後にアプリを自作できる」から逆算した短期集中カリキュラム。未経験者が最短で自走レベルに到達します。",
     bottomImg: "/img/service/card1_bottom.png",
   },
   {
-    challenge: "活用の課題",
+    challenge: "座学で終わる壁",
     challengeDesc:
-      "ツールを導入しても、現場では「結局使えない」「何に使えばいいか分からない」と形骸化してしまう。",
-    stat: "AI活用率わずか15% — 導入しても8割以上が未活用",
+      "動画やテキスト中心の研修では「知っている」で止まり、現場では「結局使えない」と形骸化してしまう。",
+    stat: "座学型AI研修の実務活用率はわずか15%",
     topImg: "/img/service/card2_top.png",
-    solution: "実務ベースのハンズオン研修",
+    solution: "1日目から手を動かす実践型",
     solutionDesc:
-      "受講者自身の業務課題をテーマに、実際にClaude Codeでプロダクトを作りながら学ぶ実践形式です。",
+      "初日からClaude Codeでコードを書き、アプリを作り、本番デプロイまで体験。「使える」を最初から体に染み込ませます。",
     bottomImg: "/img/service/card2_bottom.png",
   },
   {
-    challenge: "定着の課題",
+    challenge: "忘却の壁",
     challengeDesc:
-      "研修直後は使えても、日常業務に戻ると忘れてしまう。一度きりの研修ではスキルが定着しない。",
+      "2週間で覚えても、現場に戻ると手が止まる。独りになった瞬間、学んだはずの内容がすぐ抜け落ちてしまう。",
     stat: "研修内容の87%は30日以内に忘れられる",
     topImg: "/img/service/card3_top.png",
-    solution: "伴走サポートで確実に定着",
+    solution: "研修後も続く伴走サポート",
     solutionDesc:
-      "研修後も専門メンターが伴走。Learn → Practice → Feedback → Improve のサイクルでスキルを確実に定着させます。",
+      "修了後も専門メンターが継続伴走。Learn → Practice → Feedback → Improveのサイクルで現場定着まで支援します。",
     bottomImg: "/img/service/card3_bottom.png",
   },
 ];
@@ -42,21 +42,21 @@ export default function ServiceDescription() {
       <div className="for-home-container sd-wrap">
         {/* ヘッドライン */}
         <div className="text-center home_serviceDescriptionText">
-          AI開発の<br className="sp-only" />
+          未経験が2週間で<br className="sp-only" />
           「
           <span className="home_serviceDescriptionText-strong">
-            使いこなせない
+            自走できる
           </span>
-          」を
+          」までの
           <br className="sp-only" />
-          解決します。
+          全てを設計。
         </div>
         <p className="sd-subtitle">
-          企業がAIツールを導入しても成果が出ない原因は
+          未経験者の育成が失敗する原因は
           <br className="pc-only" />
-          「学習・活用・定着」の3つの壁。
+          「ゼロから・座学で終わる・忘却」の3つの壁。
           <br />
-          CLAUDE CODE リスキリング研修は、この3つを一気通貫で解決します。
+          CLAUDE CODE リスキリング研修は、この3つを14日間で一気通貫に突破させます。
         </p>
 
         {/* 3カード */}

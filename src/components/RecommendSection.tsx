@@ -3,33 +3,33 @@ import Image from "next/image";
 const items = [
   {
     img: "/img/recommend/recommend01_t.png",
-    title: "AIで<em>業務効率化</em>したい",
-    desc: "日常業務をAIで自動化・効率化したいが、何から始めればいいかわからない。",
+    title: "<em>未経験社員</em>を戦力化したい",
+    desc: "文系出身や非エンジニアの社員でも、2週間でAI開発の現場に投入できる人材に育てたい。",
   },
   {
     img: "/img/recommend/recommend02_t.png",
-    title: "<em>社内DX</em>を推進したい",
-    desc: "社内のDX推進を任されたが、具体的なツールやスキルが不足している。",
+    title: "<em>AI人材</em>が採用できない",
+    desc: "経験者採用の単価が高騰。自社で短期間に育成する方が早く確実だと感じている。",
   },
   {
     img: "/img/recommend/recommend03_t.png",
-    title: "<em>エンジニア</em>の生産性を上げたい",
-    desc: "開発チームの生産性を向上させ、少人数でも大きな成果を出したい。",
+    title: "<em>新卒・中途</em>を即戦力化したい",
+    desc: "入社したばかりの社員を、配属前にAI活用の基礎と実践力まで一気に身につけさせたい。",
   },
   {
     img: "/img/recommend/recommend04_t.png",
-    title: "AI研修で<em>失敗</em>した経験がある",
-    desc: "過去にAI研修を受けたが、実務に活かせず効果を実感できなかった。",
+    title: "過去のAI研修が<em>形骸化</em>した",
+    desc: "座学中心の研修を受けたが「知っている」だけで「使えない」状態で終わってしまった。",
   },
   {
     img: "/img/recommend/recommend05_t.png",
-    title: "<em>非エンジニア</em>にも使わせたい",
-    desc: "営業や企画など、非エンジニア職にもAI活用スキルを身につけさせたい。",
+    title: "<em>非エンジニア</em>にも開発力を",
+    desc: "営業・企画・事務など、非エンジニア職にもアプリを自作できるレベルまで育てたい。",
   },
   {
     img: "/img/recommend/recommend06_t.png",
-    title: "<em>外注コスト</em>を削減したい",
-    desc: "Web制作や業務ツール開発の外注費を抑え、内製化を進めたい。",
+    title: "<em>外注依存</em>から脱却したい",
+    desc: "Web制作や業務ツール開発の外注費を抑え、社内で内製できる体制を短期間で構築したい。",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function RecommendSection() {
             <span className="text-[#2563eb] font-bold tracking-[0.1em] text-sm md:text-base">CLAUDE CODE リスキリング研修</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-black text-[#151515] leading-[1.4] tracking-tight">
-            このようなお客様向けのサービスです
+            未経験人材を"2週間で"戦力化したい企業へ
           </h2>
         </div>
 

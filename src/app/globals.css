@@ -293,10 +293,18 @@ body {
   line-height: 1.7;
   flex-shrink: 0;
 }
+.planb-fv__partner-name {
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+}
 .planb-fv__partners-logos {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
   flex: 1;
   justify-content: center;
   padding: 20px 32px;
@@ -387,10 +395,10 @@ body {
   }
   .planb-fv__partners-logos {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 14px 18px;
   }
-  .planb-fv__partners-logos img {
-    height: 40px !important;
+  .planb-fv__partner-name {
+    font-size: 16px;
   }
 }
 
@@ -2192,14 +2200,30 @@ body {
   height: 56px;
 }
 .header__logo {
-  font-family: var(--font-roboto), "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: #1a1a1a;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
   text-decoration: none;
-  letter-spacing: 0.02em;
   flex-shrink: 0;
   margin-right: 24px;
+  line-height: 1;
+}
+.header__logo-mark {
+  font-family: var(--font-roboto), "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: #0b1220;
+}
+.header__logo-sub {
+  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #eff4ff;
 }
 .header__nav {
   display: flex;

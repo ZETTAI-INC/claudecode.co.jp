@@ -12,15 +12,15 @@ const TrainingTimeline: React.FC = () => {
         {/* --- Header Area --- */}
         <div className="flex items-center gap-3 mb-6">
           <span className="w-1.5 h-6 md:h-8 bg-[#333] block"></span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#333]">AIブートキャンプ 1日の流れ</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-[#333]">14日間ブートキャンプ 典型的な1日の流れ</h2>
         </div>
 
         <div className="border border-[#e0e0e0] rounded-xl p-5 md:p-6 mb-12 shadow-[0_2px_10px_rgba(0,0,0,0.03)] bg-white relative z-20">
           <p className="text-[15px] md:text-lg font-bold text-[#444] leading-relaxed mb-3">
-            研修当日は9時に研修センター内の指定ルームへお集まりください。<span className="text-[#888] font-normal text-sm md:text-base">（ルームNoは別紙をご確認ください）</span>
+            2週間の研修は毎日9時スタート。1日の中で「講義→実装→デプロイ」までを一気通貫で体験します。<span className="text-[#888] font-normal text-sm md:text-base">（未経験者でも置き去りにしない少人数制）</span>
           </p>
           <p className="text-[15px] md:text-lg font-bold text-[#444] leading-relaxed">
-            当日はAI基礎講義の実施後、グループワークにて入社者・配属先メンバーにて交流いただきます。
+            座学は最小限。初日から手を動かし、Day14には自分一人でWebアプリを企画・開発・公開できるレベルまで育て上げます。
           </p>
         </div>
 
@@ -101,10 +101,10 @@ const TrainingTimeline: React.FC = () => {
               {/* Event 7: Wrap up (16-18) */}
               <div className="col-start-8 col-span-3 pr-8 pl-4 flex flex-col items-center" style={{ marginTop: '20px' }}>
                 <div className="bg-[#e4e4e4] rounded-full py-1.5 px-6 font-bold text-[#444] text-[14px] shadow-sm tracking-widest w-[70%] text-center">
-                  最低教養の定着・まとめ
+                  当日の振り返り・翌日接続
                 </div>
                 <p className="mt-3 text-[#555] leading-[1.5] font-medium text-[13px] text-center w-full">
-                  ここまでの実践で、AI自走開発に必要な「最低教養」が完全に身につきます
+                  その日に学んだ内容をメンターと振り返り、翌日の実装課題まで見通しを立てます
                 </p>
               </div>
 
@@ -174,10 +174,10 @@ const TrainingTimeline: React.FC = () => {
                   <div className="w-0 h-[100px] border-l-[2px] border-dashed border-[#a0a0a0] absolute top-[9px] -ml-[9px] z-10"></div>
                 </div>
                 <div className="mt-20 font-bold text-lg text-[#333] tracking-wide bg-white relative px-2 inline-block z-20 text-center w-full">
-                  研修完了・修了式
+                  1日の完了・翌日へ
                 </div>
                 <p className="mt-2 text-[#666] text-[13px] leading-[1.6] font-medium bg-white relative z-20 text-center px-4 w-full">
-                  今日からあなたも「自走・自律型」のAIクリエイターです。
+                  これを14日間積み重ねると「自走・自律型」のAIクリエイターに育ちます。
                 </p>
               </div>
 

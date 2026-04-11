@@ -20,6 +20,7 @@ import TrainingTimeline from "@/components/TrainingTimeline";
 import SpeedComparison from "@/components/SpeedComparison";
 import RecruitKnowhow from "@/components/RecruitKnowhow";
 import RstaffingFv from "@/components/RstaffingFv";
+import ResourceDownloadCta from "@/components/ResourceDownloadCta";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
           <News />
           <ComparisonSection />
           <RecruitKnowhow />
+          <ResourceDownloadCta />
           <ContactForm />
           <RstaffingFv />
         </div>

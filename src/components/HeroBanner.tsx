@@ -1,18 +1,15 @@
 import Image from "next/image";
 
 interface Partner {
-  src: string;
-  alt: string;
-  w: number;
-  h: number;
+  name: string;
+  color: string;
 }
 
 const partners: Partner[] = [
-  { src: "/img/planb-fv/partner-anthropic.png", alt: "Anthropic", w: 128, h: 128 },
-  { src: "/img/planb-fv/partner-openai.png", alt: "OpenAI", w: 128, h: 128 },
-  { src: "/img/planb-fv/partner-google-ai.png", alt: "Google", w: 128, h: 128 },
-  { src: "/img/planb-fv/partner-microsoft.png", alt: "Microsoft", w: 128, h: 128 },
-  { src: "/img/planb-fv/partner-meta-ai.png", alt: "Meta", w: 128, h: 128 },
+  { name: "CLAUDECODE", color: "#D97757" },
+  { name: "GITHUB", color: "#181717" },
+  { name: "RENDER", color: "#000000" },
+  { name: "SUPABASE", color: "#3ECF8E" },
 ];
 
 export default function HeroBanner() {
@@ -50,7 +47,7 @@ export default function HeroBanner() {
             <div className="planb-fv__stats">
               <div className="planb-fv__stat">
                 <span className="planb-fv__stat-label">
-                  受講後<br />生産性向上率
+                  未経験<br />スタート率
                 </span>
                 <span className="planb-fv__stat-number">88</span>
                 <span className="planb-fv__stat-unit">％</span>
@@ -60,14 +57,14 @@ export default function HeroBanner() {
 
               <div className="planb-fv__stat">
                 <span className="planb-fv__stat-label">
-                  受講者<br />満足度
+                  アプリ開発<br />到達率
                 </span>
                 <span className="planb-fv__stat-number">96</span>
                 <span className="planb-fv__stat-unit">％</span>
               </div>
             </div>
 
-            <h1 className="planb-fv__heading">CLAUDE CODE<br />リスキリング研修</h1>
+            <h1 className="planb-fv__heading">未経験から2週間で<br />"自走"AI開発者へ</h1>
 
             <div className="planb-fv__cta">
               <a
@@ -106,19 +103,18 @@ export default function HeroBanner() {
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
           <p className="planb-fv__partners-text">
-            これらのAIツールを<br />全て使いこなせるようになります
+            完全未経験から14日間で<br />これらを使いこなせるレベルへ
           </p>
         </div>
         <div className="planb-fv__partners-logos">
           {partners.map((p) => (
-            <Image
-              key={p.alt}
-              src={p.src}
-              alt={p.alt}
-              width={p.w}
-              height={p.h}
-              style={{ width: "auto", height: "52px" }}
-            />
+            <span
+              key={p.name}
+              className="planb-fv__partner-name"
+              style={{ color: p.color }}
+            >
+              {p.name}
+            </span>
           ))}
         </div>
       </div>

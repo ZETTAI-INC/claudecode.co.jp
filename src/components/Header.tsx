@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 const menuItems = [
@@ -19,15 +18,9 @@ export default function Header() {
   return (
     <header className="site-header header">
       <div className="header__inner">
-        <Link href="/" className="header__logo" aria-label="CLAUDE CODE 研修">
-          <Image
-            src="/img/logo.svg"
-            alt="CLAUDE CODE 研修"
-            width={240}
-            height={40}
-            priority
-            style={{ display: "block", width: "auto", height: "32px" }}
-          />
+        <Link href="/" className="header__logo" aria-label="CLAUDECODE研修">
+          <span className="header__logo-mark">CLAUDECODE</span>
+          <span className="header__logo-sub">研修</span>
         </Link>
 
         <button
