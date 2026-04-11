@@ -6,10 +6,9 @@ import { useState } from "react";
 const menuItems = [
   { label: "コース一覧", href: "/courses/", icon: "school" },
   { label: "料金プラン", href: "/price/", icon: "payments" },
-  { label: "導入事例", href: "/case/", icon: "cases" },
+  { label: "AI比較", href: "/compare/", icon: "compare_arrows" },
+  { label: "事例", href: "/case/", icon: "cases" },
   { label: "活用事例", href: "/works/", icon: "photo_library" },
-  { label: "セミナー情報", href: "/seminars/", icon: "event" },
-  { label: "お役立ち資料", href: "/resources/", icon: "description" },
   { label: "お知らせ", href: "/info/", icon: "campaign" },
 ];
 

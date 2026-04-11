@@ -7,9 +7,9 @@ export default function RstaffingFv() {
         <div className="mv__wrap">
           <div className="mv__content">
             <div className="mv__textBlock">
-              <h2 className="mv__title">
-                <span className="mv__titleAccent">Claude Code</span><span className="mv__titleParticle">の</span>実践的ノウハウで、<br />
-                社内の業務内製化を<strong className="mv__titleHighlight">最短で</strong>進める
+              <h2 className="mv__title" style={{ wordBreak: 'keep-all' }}>
+                <span className="inline-block"><span className="mv__titleAccent">Claude Code</span><span className="mv__titleParticle">の</span>実践的ノウハウで、</span><br />
+                <span className="inline-block">社内の業務内製化を<strong className="mv__titleHighlight">最短で</strong>進める</span>
               </h2>
 
               <div className="mv__servicesWrapper">

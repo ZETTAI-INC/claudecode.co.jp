@@ -1,34 +1,81 @@
+import React from "react";
+
 type Comparison = {
   label: string;
-  others: string;
-  us: string;
+  others: React.ReactNode;
+  us: React.ReactNode;
 };
 
 const comparisons: Comparison[] = [
   {
     label: "教える相手",
     others: "プログラミング未経験者を一から育てる",
-    us: "業務を一番知る既存社員にClaude Codeだけ追加する",
+    us: (
+      <div className="flex flex-col gap-2">
+        <span className="inline-block w-fit text-[#ff5c00] text-[11px] md:text-[12px] font-bold border border-[#ffcaa5] bg-white px-2 py-0.5 rounded-sm tracking-wide">
+          最適人材への投資
+        </span>
+        <span className="font-bold text-[#151515] text-[13.5px] md:text-[15px] leading-[1.6]">
+          業務を一番知る既存社員に<br className="hidden lg:block"/>Claude Codeだけ追加する
+        </span>
+      </div>
+    ),
   },
   {
     label: "ゴール定義",
     others: "「AIを理解している」状態で終了",
-    us: "修了日に本番稼働する業務ツールが1本残る",
+    us: (
+      <div className="flex flex-col gap-2">
+        <span className="inline-block w-fit text-[#ff5c00] text-[11px] md:text-[12px] font-bold border border-[#ffcaa5] bg-white px-2 py-0.5 rounded-sm tracking-wide">
+          実運用への到達
+        </span>
+        <span className="font-bold text-[#151515] text-[13.5px] md:text-[15px] leading-[1.6]">
+          修了日に本番稼働する<br className="hidden lg:block"/>業務ツールが1本残る
+        </span>
+      </div>
+    ),
   },
   {
     label: "カリキュラム",
     others: "座学・動画中心で汎用的に設計",
-    us: "受講者の自部署の業務課題をそのまま題材にする",
+    us: (
+      <div className="flex flex-col gap-2">
+        <span className="inline-block w-fit text-[#ff5c00] text-[11px] md:text-[12px] font-bold border border-[#ffcaa5] bg-white px-2 py-0.5 rounded-sm tracking-wide">
+          即効性の高い題材
+        </span>
+        <span className="font-bold text-[#151515] text-[13.5px] md:text-[15px] leading-[1.6]">
+          受講者の自部署の業務課題を<br className="hidden lg:block"/>そのまま題材にする
+        </span>
+      </div>
+    ),
   },
   {
     label: "修了後",
     others: "研修終了で関係も終了",
-    us: "現場定着まで伴走メンターが継続支援",
+    us: (
+      <div className="flex flex-col gap-2">
+        <span className="inline-block w-fit text-[#2563eb] text-[11px] md:text-[12px] font-bold border border-[#b3d4ff] bg-white px-2 py-0.5 rounded-sm tracking-wide">
+          継続的なサポート
+        </span>
+        <span className="font-bold text-[#151515] text-[13.5px] md:text-[15px] leading-[1.6]">
+          現場定着まで伴走メンターが<br className="hidden lg:block"/>継続支援
+        </span>
+      </div>
+    ),
   },
   {
     label: "成果測定",
     others: "理解度テスト・アンケート",
-    us: "業務ツールの稼働数と社内改善の工数削減",
+    us: (
+      <div className="flex flex-col gap-2">
+        <span className="inline-block w-fit text-[#ff5c00] text-[11px] md:text-[12px] font-bold border border-[#ffcaa5] bg-white px-2 py-0.5 rounded-sm tracking-wide">
+          事業KPIでの評価
+        </span>
+        <span className="font-bold text-[#151515] text-[13.5px] md:text-[15px] leading-[1.6]">
+          業務ツールの稼働数と<br className="hidden lg:block"/>社内改善の工数削減
+        </span>
+      </div>
+    ),
   },
 ];
 

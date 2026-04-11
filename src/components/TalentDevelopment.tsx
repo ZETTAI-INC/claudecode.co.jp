@@ -6,9 +6,11 @@ const TalentDevelopment: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Title */}
-        <div className="flex items-center gap-3 mb-10 md:mb-14">
-          <span className="w-1.5 h-6 md:h-8 bg-[#333] block"></span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#333]">14日で成果が出る理由：教えるのはClaude Codeだけだから</h2>
+        <div className="flex items-center gap-3 mb-10 md:mb-14 pb-4 border-b border-orange-100">
+          <span className="w-2 h-8 md:h-10 bg-[#ff5c00] block rounded-sm"></span>
+          <h2 className="text-2xl md:text-3xl lg:text-[30px] font-black text-[#29034f] tracking-wide leading-[1.6]">
+            14日で成果が出る理由：<br className="block md:hidden"/>教えるのは<span className="text-[#ff5c00] font-black">Claude Code</span><strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>だけ</strong>だから
+          </h2>
         </div>
 
         {/* Scrollable Container for Mobile */}
@@ -117,14 +119,14 @@ const TalentDevelopment: React.FC = () => {
                 <div className="absolute left-[35%] top-[80px] bottom-[110px] w-0 border-l-[3px] border-dotted border-[#2563eb]"></div>
 
                 {/* Point Label */}
-                <div className="absolute bottom-[20px] left-0 right-10">
-                  <div className="bg-[#1e5eb0] text-white text-[13px] font-bold px-4 py-1.5 inline-block rounded-full mb-3 shadow-md tracking-wider">
+                <div className="absolute bottom-[-15px] left-[-15px] w-[270px] z-20">
+                  <div className="bg-[#1e5eb0] text-white text-[14px] font-bold px-4 py-1.5 inline-block rounded-full mb-3 shadow-md tracking-wider">
                     POINT
                   </div>
-                  <p className="text-[13px] text-[#444] font-bold leading-[1.6]">
+                  <p className="text-[15.5px] text-[#29034f] font-extrabold leading-[1.9] tracking-wide">
                     14日でゼロから育てるのは不可能。<br/>
-                    <span className="border-b-2 border-[#1e5eb0] pb-0.5">既にある業務知識の上にClaude Codeだけを載せる</span><br/>
-                    これが短期で成果が出る本質的な理由。
+                    <strong className="text-[#ff5c00] border-b-[3px] border-[#ffcaa5] pb-0.5">既にある業務知識の上に<br/>Claude Codeだけを載せる</strong><br/>
+                    これが短期で<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>成果が出る</strong>本質的な理由。
                   </p>
                 </div>
               </div>

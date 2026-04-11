@@ -99,9 +99,9 @@ export default function HeroBanner() {
 
             <p className="planb-fv__stat-note">※ 自社パイロット研修実績（n=128）</p>
 
-            <h1 className="planb-fv__heading">
-              業務を一番知る社員を、<br />
-              2週間で<strong className="planb-fv__kenten">作れる</strong>人材へ
+            <h1 className="planb-fv__heading" style={{ wordBreak: 'keep-all' }}>
+              <span className="inline-block">「業務を知り尽くした社員」に、</span><br />
+              <span className="inline-block">2週間で<strong className="planb-fv__kenten">つくるAI力</strong>を。</span>
             </h1>
 
             <div className="planb-fv__cta">
@@ -140,8 +140,9 @@ export default function HeroBanner() {
 
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
-          <p className="planb-fv__partners-text">
-            非エンジニア職が14日間で<br />これらを使いこなすレベルへ
+          <p className="planb-fv__partners-text" style={{ wordBreak: 'keep-all' }}>
+            <span className="inline-block">非エンジニア職が14日間で</span><br />
+            <span className="inline-block">これらを<strong style={{ WebkitTextEmphasis: 'filled circle #ffab08', textEmphasis: 'filled circle #ffab08', color: '#ffab08', padding: '0 2px' }}>使いこなす</strong>レベルへ</span>
           </p>
         </div>
         <div className="planb-fv__partners-logos">

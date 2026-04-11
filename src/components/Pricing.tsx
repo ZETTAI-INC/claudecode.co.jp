@@ -1,5 +1,6 @@
 type Plan = {
   name: string;
+  format: string;
   target: string;
   duration: string;
   capacity: string;
@@ -10,44 +11,47 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: "基礎導入コース",
-    target: "初めて Claude Code を社内導入する企業",
-    duration: "2週間（14日間）",
-    capacity: "5〜10名 / 回",
+    name: "Eラーニングコース",
+    format: "完全オンライン / 自己ペース",
+    target: "自社のペースで全社展開したい企業",
+    duration: "14日間（オンデマンド）",
+    capacity: "人数上限なし",
     includes: [
-      "Claude Code の実務活用トレーニング",
-      "受講者1人1本の業務ツール実装課題",
-      "本番デプロイ・運用手順のレクチャー",
-      "修了後1ヶ月の質問対応サポート",
+      "全14日分の動画教材＆実装課題",
+      "Claude Code の実務活用カリキュラム",
+      "チャット質問サポート（30日間）",
+      "修了テスト・修了証の発行",
     ],
     priceNote: "お見積もりください",
   },
   {
-    name: "実践開発コース",
-    target: "業務ツール内製化を本格的に進めたい企業",
-    duration: "2週間（14日間）+ 伴走4週間",
+    name: "ハイブリッドコース",
+    format: "対面 + オンライン併用",
+    target: "対面の伴走とオンラインの柔軟性を両立したい企業",
+    duration: "2週間（対面+オンライン）+ 伴走4週間",
     capacity: "5〜15名 / 回",
     includes: [
-      "基礎導入コースの全内容",
+      "Eラーニング教材＋ライブ講義",
+      "キックオフ・中間・最終回は対面開催",
+      "平日はオンライン伴走・コードレビュー",
       "自部署の業務課題を題材にした実装演習",
-      "チーム開発・コードレビュー研修",
-      "修了後3ヶ月の現場伴走サポート",
-      "社内ナレッジ化ワークショップ",
+      "修了後3ヶ月のチャット伴走サポート",
     ],
     priceNote: "お見積もりください",
     recommended: true,
   },
   {
-    name: "社内講師育成コース",
-    target: "継続的に全社展開したい企業",
-    duration: "4週間（28日間）+ 伴走8週間",
-    capacity: "3〜8名 / 回",
+    name: "完全対面コース",
+    format: "講師が御社に常駐",
+    target: "集中合宿型でチーム全員を一気に底上げしたい企業",
+    duration: "2週間（フル対面）+ 伴走4週間",
+    capacity: "5〜10名 / 回",
     includes: [
-      "実践開発コースの全内容",
-      "社内講師向けのティーチング研修",
-      "カリキュラム・教材の譲渡と改変権",
-      "修了後6ヶ月の講師サポート",
-      "半期ごとのアップデート勉強会",
+      "講師が御社オフィスに常駐し対面指導",
+      "業務課題のヒアリング＆設計支援",
+      "対面ワークショップ・実装伴走",
+      "チームビルディング込みの集中育成",
+      "修了後1ヶ月の現場フォロー",
     ],
     priceNote: "お見積もりください",
   },
@@ -68,7 +72,7 @@ export default function Pricing() {
             料金プラン
           </h2>
           <p className="text-[#555] text-base md:text-lg leading-[1.9]">
-            受講人数・期間・サポート範囲に応じた3つのコースをご用意しています。
+            学習スタイルに応じた3つのコースをご用意しています（完全Eラーニング／対面＋オンラインのハイブリッド／完全対面）。
             <br className="hidden md:block" />
             料金は受講人数・カスタマイズ内容により変動するため、お見積もりにてご案内します。
           </p>
@@ -90,9 +94,18 @@ export default function Pricing() {
                 </div>
               )}
 
-              <h3 className="text-xl md:text-2xl font-bold text-[#151515] mb-3">
+              <h3 className="text-xl md:text-2xl font-bold text-[#151515] mb-2">
                 {plan.name}
               </h3>
+              <div
+                className={`inline-block self-start text-[11px] md:text-[12px] font-bold px-2.5 py-1 rounded-full mb-3 ${
+                  plan.recommended
+                    ? "bg-[#2563eb] text-white"
+                    : "bg-[#e6edf5] text-[#2563eb]"
+                }`}
+              >
+                {plan.format}
+              </div>
               <p className="text-[#555] text-[13px] md:text-[14px] leading-[1.7] mb-6 min-h-[3rem]">
                 {plan.target}
               </p>

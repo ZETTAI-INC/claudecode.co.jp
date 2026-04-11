@@ -61,9 +61,14 @@ const AiServiceStrengths: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         
         {/* Header */}
-        <div className="flex items-center gap-3 mb-12">
-          <span className="w-1.5 h-6 md:h-8 bg-[#333] block"></span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#666]">こんなお悩みございませんか？</h2>
+        <div className="flex flex-col items-center justify-center text-center mb-16 relative">
+          <span className="text-[13px] md:text-[14px] font-bold text-[#2563eb] tracking-[0.25em] mb-3 opacity-90 uppercase">
+            Common Struggles
+          </span>
+          <h2 className="text-2xl md:text-3xl lg:text-[36px] font-black text-[#29034f] tracking-wide relative pb-5">
+            こんなお悩みございませんか？
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60px] h-[4px] bg-gradient-to-r from-[#2563eb] to-[#ff5c00] rounded-full opacity-80"></div>
+          </h2>
         </div>
 
         {/* --- Top Area: Struggles (Desktop Grid, Mobile Flex) --- */}

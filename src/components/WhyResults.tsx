@@ -271,7 +271,13 @@ export default function WhyResults() {
           </div>
         </div>
       </section>
+    </>
+  );
+}
 
+export function WhyResultsCompare() {
+  return (
+    <>
       {/* ===== 業務に生きるAIはどれか？ ===== */}
       <section className="wr-compare">
         <div className="wr-compare__inner">
