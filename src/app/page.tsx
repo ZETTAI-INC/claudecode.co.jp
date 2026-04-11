@@ -18,6 +18,8 @@ import TalentDevelopment from "@/components/TalentDevelopment";
 import AiEffectiveness from "@/components/AiEffectiveness";
 import TrainingTimeline from "@/components/TrainingTimeline";
 import SpeedComparison from "@/components/SpeedComparison";
+import RecruitKnowhow from "@/components/RecruitKnowhow";
+import RstaffingFv from "@/components/RstaffingFv";
 
 export default function Home() {
   return (
@@ -27,22 +29,24 @@ export default function Home() {
         <div>
           <HeroBanner />
           <RecommendSection />
-          <AdPerformanceComparison />
+          <ServiceDescription />
           <AiDevelopmentWorkflow />
           <AiServiceStrengths />
-          <TalentDevelopment />
+          <AdPerformanceComparison />
           <AiEffectiveness />
-          <TrainingTimeline />
           <SpeedComparison />
-          <ServiceDescription />
           <WhyResults />
-          <RelatedServices />
           <Services />
+          <TrainingTimeline />
+          <TalentDevelopment />
           <SubsidyList />
+          <RelatedServices />
           <CaseStudies />
           <News />
           <ComparisonSection />
+          <RecruitKnowhow />
           <ContactForm />
+          <RstaffingFv />
         </div>
       </main>
       <Footer />
