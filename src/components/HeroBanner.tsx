@@ -103,9 +103,7 @@ export default function HeroBanner() {
       <div className="planb-fv__partners">
         <div className="planb-fv__partners-text-wrap">
           <p className="planb-fv__partners-text">
-            <span>対象職種：</span>
-            <strong style={{ color: '#151515' }}>営業・事務・企画・マーケ・生産管理・CS</strong>
-            <span style={{ color: '#888', fontSize: '13px', marginLeft: '8px' }}>など非エンジニア全般</span>
+            <span>プログラミング</span><strong style={{ color: '#ffab08', padding: '0 2px' }}>完全未経験</strong><span>から始められます</span>
           </p>
         </div>
       </div>
