@@ -3,44 +3,44 @@ import React from "react";
 const PROCESS_STEPS = [
   {
     id: 1,
-    traditionalTitle: "要件定義",
-    desc: "サービスコンセプトを立案、機能や仕様などの要件定義書を作成し開発ベンダーへ指示",
-    aiTitle: "要件・プロンプト設計",
+    traditionalTitle: "業務課題の設定",
+    desc: "研修で取り組むテーマを決め、ゴールを明確にする。ここは同じ",
+    aiTitle: "自部署の課題を題材に",
     isAiSkipped: false,
   },
   {
     id: 2,
-    traditionalTitle: "設計・モックアップ",
-    desc: "要件定義書を基にモックやプロトタイプを確認し、システム化に向けた微調整を実施",
-    aiTitle: "モック自動生成",
-    isAiSkipped: false,
+    traditionalTitle: "プログラミング基礎",
+    desc: "変数、関数、条件分岐など、プログラミングの基礎文法を座学で学ぶ",
+    aiTitle: "",
+    isAiSkipped: true,
   },
   {
     id: 3,
-    traditionalTitle: "実装・コーディング",
-    desc: "開発リソースを確保した上で、実装を進め納期・進捗を管理",
+    traditionalTitle: "フレームワーク学習",
+    desc: "React、SQL、インフラなど、技術スタックを体系的に座学で習得する",
     aiTitle: "",
     isAiSkipped: true,
   },
   {
     id: 4,
-    traditionalTitle: "インフラ構築",
-    desc: "実装が完了したら、サーバー等のインフラ環境を自動構築し本番環境へアップ（デプロイ）",
+    traditionalTitle: "演習・理解度テスト",
+    desc: "用意された課題でコーディング練習。テストやレポートで知識を確認",
     aiTitle: "",
     isAiSkipped: true,
   },
   {
     id: 5,
-    traditionalTitle: "テスト・バグ対応",
-    desc: "品質確認のテスト実施と、発見されたエラー・バグ対応などの処理を実施",
-    aiTitle: "",
-    isAiSkipped: true,
+    traditionalTitle: "実務への応用",
+    desc: "学んだ知識を実務にどう活かすかを考えるが、実践機会は限られる",
+    aiTitle: "Claude Codeで即開発",
+    isAiSkipped: false,
   },
   {
     id: 6,
-    traditionalTitle: "サービス提供・改善",
-    desc: "本番リリース・サービス提供を実行。ユーザーからのフィードバック対応も実施",
-    aiTitle: "サービス提供・改善",
+    traditionalTitle: "修了",
+    desc: "「AIを理解した」状態で終了。成果物は特になく、現場に戻る",
+    aiTitle: "本番ツール1本が稼働",
     isAiSkipped: false,
   },
 ];
@@ -53,8 +53,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
         {/* Title */}
         <div className="mb-20 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-[32px] font-black text-[#29034f] tracking-wide leading-[1.7]">
-            研修修了後、社員1人の仕事の進め方と生産性が<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別物</strong>に変わります。<br className="hidden md:block" />
-            業務を一番知っているからこそ、Claude Codeと組み合わせると一気に<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>最短ルート</strong>になります。
+            同じ「AI研修」でも、<br className="hidden md:block" />
+            <strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>設計思想</strong>がまるで違います。
           </h2>
         </div>
 
@@ -78,8 +78,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#555] text-[13px] leading-[1.8] font-bold mt-2">
-                  業務ツール1本につき外注なら数十万〜数百万円。<br />
-                  <span className="text-[#ff5c00]">年間で数千万円のコストが積み上がる</span>
+                  受講期間3〜6ヶ月。<br />
+                  <span className="text-[#ff5c00]">修了後に残るのは「理解した」という感覚だけ</span>
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
             {/* Column 2: Traditional Method */}
             <div className="w-52 flex flex-col gap-6 relative z-10">
               <div className="h-10 bg-[#a6a6a6] text-white flex items-center justify-center font-bold text-lg mb-6 shadow-sm">
-                外注で作る場合
+                一般的なAI研修
               </div>
               
               {PROCESS_STEPS.map((step) => (
@@ -113,7 +113,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
               <div className="h-10 flex items-center justify-center font-bold mb-6">
                 <div className="flex items-center gap-2 text-[#4682b4] text-xl">
                   <div className="w-8 h-8 bg-[#6aa1d4] text-white rounded-md flex items-center justify-center font-bold text-lg">C</div>
-                  研修後に社内で作る場合
+                  私たちのClaude Code研修
                 </div>
               </div>
               
@@ -143,8 +143,8 @@ const AiDevelopmentWorkflow: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-[#4682b4] text-[14px] leading-[1.8] font-bold text-center mt-3">
-                  実質コストは社員の2〜3日の工数だけ。<br className="hidden lg:block"/>
-                  <span className="text-[#ff5c00] border-b-2 border-orange-200 pb-1 mt-2 inline-block">1本あたりROIは10倍以上、年間で数百万円単位の削減に</span>
+                  受講期間14日。<br className="hidden lg:block"/>
+                  <span className="text-[#ff5c00] border-b-2 border-orange-200 pb-1 mt-2 inline-block">修了日に本番稼働する業務ツールが1本残る</span>
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
         </div>
 
         <p className="text-[#888] text-[11px] md:text-[12px] leading-[1.7] text-center mt-6">
-          ※ 業務ツールの規模・外注先により変動します。一般的なBtoB受託開発の公表見積もりレンジ（数十万〜数百万円／本）に基づく参考値です。
+          ※ 一般的なAI研修・プログラミング研修のカリキュラム構成に基づく比較です。
         </p>
 
       </div>

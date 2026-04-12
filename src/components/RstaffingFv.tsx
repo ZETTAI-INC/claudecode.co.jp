@@ -8,35 +8,32 @@ export default function RstaffingFv() {
           <div className="mv__content">
             <div className="mv__textBlock">
               <h2 className="mv__title" style={{ wordBreak: 'keep-all' }}>
-                <span className="inline-block"><span className="mv__titleAccent">Claude Code</span><span className="mv__titleParticle">の</span>実践的ノウハウで、</span><br />
-                <span className="inline-block">社内の業務内製化を<strong className="mv__titleHighlight">最短で</strong>進める</span>
+                <span className="inline-block">次は御社の番です。</span><br />
+                <span className="inline-block">14日後、<strong className="mv__titleHighlight">1本の業務ツール</strong>が本番で動きます</span>
               </h2>
 
               <div className="mv__servicesWrapper">
                 <div className="mv__servicesDivider">
                   <span className="mv__dividerLine">＼</span>
-                  企業の課題に合わせたコースをご用意
+                  お問い合わせ後の3ステップ
                   <span className="mv__dividerLine">／</span>
                 </div>
                 <div className="mv__serviceBoxes">
-                  <span className="mv__serviceBox">基礎導入<br className="onlySp" />コース</span>
-                  <span className="mv__serviceBox">実践開発<br className="onlySp" />コース</span>
-                  <span className="mv__serviceBox">社内講師<br className="onlySp" />育成</span>
+                  <span className="mv__serviceBox">課題<br className="onlySp" />ヒアリング</span>
+                  <span className="mv__serviceBox">カリキュラム<br className="onlySp" />設計</span>
+                  <span className="mv__serviceBox">14日で<br className="onlySp" />本番公開</span>
                 </div>
               </div>
               
               <p className="mv__desc">
-                スタートアップから大企業まで各種ユースケースに合わせてご提案します。<br />
-                お気軽にご相談ください
+                業種・規模を問わず、御社の業務課題に合わせて研修を設計します。<br />
+                まずは30分で「自社に合うか」を確認しましょう。
               </p>
 
               <div className="mv__inquiryButton">
                 <div className="inquiryButtonArea">
                   <a className="inquiryButtonArea__button" href="/consultation/">
-                    研修資料ダウンロード
-                    <div className="onlyPc --inline">・</div>
-                    <br className="onlySp" />
-                    無料相談はこちら
+                    30分の適合診断を予約する
                     <span className="inquiryButtonArea__arrow"> </span>
                     <span className="inquiryButtonArea__arrow"> </span>
                     <span className="inquiryButtonArea__arrow"> </span>

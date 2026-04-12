@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
-import FitAssessment from "@/components/FitAssessment";
-import ReadinessCheck from "@/components/ReadinessCheck";
 import CaseStudies from "@/components/CaseStudies";
 import ProgramGates from "@/components/ProgramGates";
 import WhyResults from "@/components/WhyResults";
@@ -17,7 +15,6 @@ import RstaffingFv from "@/components/RstaffingFv";
 import ResourceDownloadCta from "@/components/ResourceDownloadCta";
 import Flow from "@/components/Flow";
 import Faq from "@/components/Faq";
-import News from "@/components/News";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
@@ -29,23 +26,20 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <AdoptionTimeline />
-          <RstaffingFv />
-          <FitAssessment />
-          <ReadinessCheck />
           <AiServiceStrengths />
-          <AiDevelopmentWorkflow />
-          <CaseStudies />
-          <ProgramGates />
-          <ServiceDifferentiation />
+          <AdoptionTimeline />
           <TalentDevelopment />
-          <WhyResults />
+          <ProgramGates />
+          <CaseStudies />
+          <RstaffingFv />
+          <AiDevelopmentWorkflow />
+          <ServiceDifferentiation />
           <SecurityCompliance />
           <Pricing />
           <SubsidyList />
           <Flow />
+          <WhyResults />
           <Faq />
-          <News />
           <ResourceDownloadCta />
           <ContactForm />
         </div>

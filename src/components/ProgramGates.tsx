@@ -15,8 +15,8 @@ export default function ProgramGates() {
     {
       day: "Day 4–7",
       gate: "レビュー通過",
-      color: "#7c3aed",
-      bg: "#f5f3ff",
+      color: "#1d4ed8",
+      bg: "#eef2ff",
       deliverables: [
         "プロトタイプをもとに機能を拡充",
         "コードレビュー & フィードバック対応",

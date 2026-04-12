@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const menuItems = [
+  { label: "適正診断", href: "/fit-check/", icon: "checklist" },
   { label: "コース一覧", href: "/courses/", icon: "school" },
   { label: "料金プラン", href: "/price/", icon: "payments" },
   { label: "AI比較", href: "/compare/", icon: "compare_arrows" },

@@ -8,54 +8,54 @@ interface CourseItem {
 
 const courses: CourseItem[] = [
   {
-    name: "Claude Code入門講座",
-    description: "AIコーディングツールを初めて使う方向け",
-    href: "/courses/introduction/",
+    name: "Excel台帳のWeb化",
+    description: "属人化した管理台帳をチーム全員で使えるWebアプリに",
+    href: "#contact",
   },
   {
-    name: "プロンプトエンジニアリング実践",
-    description: "効果的なAI指示出しスキルを身につけたい方向け",
-    href: "/courses/prompt-engineering/",
+    name: "日報・週報の自動集計",
+    description: "手入力の報告書を自動集計＋ダッシュボード化",
+    href: "#contact",
   },
   {
-    name: "AIペアプログラミング研修",
-    description: "開発チームの生産性を向上させたい方向け",
-    href: "/courses/pair-programming/",
+    name: "承認フローのアプリ化",
+    description: "紙・メールの承認プロセスをワンクリック化",
+    href: "#contact",
   },
   {
-    name: "AI駆動テスト自動化講座",
-    description: "テスト工程のAI活用を検討中の方向け",
-    href: "/courses/test-automation/",
+    name: "顧客ステータス管理",
+    description: "スプレッドシートの顧客管理を対応漏れゼロのアプリに",
+    href: "#contact",
   },
   {
-    name: "レガシーコード改善AI活用講座",
-    description: "既存システムの保守・改修を効率化したい方向け",
-    href: "/courses/legacy-code/",
+    name: "在庫・発注管理ツール",
+    description: "目視チェックの在庫管理をリアルタイム可視化",
+    href: "#contact",
   },
   {
-    name: "AIセキュリティ研修",
-    description: "AIツール導入時のセキュリティ対策を学びたい方向け",
-    href: "/courses/ai-security/",
+    name: "社内FAQ・ナレッジ検索",
+    description: "散在するノウハウを検索できるツールに集約",
+    href: "#contact",
   },
   {
-    name: "マネジメント向けAIリテラシー研修",
-    description: "経営層・管理職のAI理解を深めたい方向け",
-    href: "/courses/management/",
+    name: "営業実績ダッシュボード",
+    description: "月次報告のための手集計をリアルタイム可視化",
+    href: "#contact",
   },
   {
-    name: "AI活用DX推進リーダー育成講座",
-    description: "社内のAI推進リーダーを育成したい方向け",
-    href: "/courses/dx-leader/",
+    name: "勤怠・シフト管理アプリ",
+    description: "Excel管理のシフト表をチーム共有のWebアプリに",
+    href: "#contact",
   },
   {
-    name: "カスタム研修プログラム",
-    description: "自社の課題に合わせた研修をご希望の方向け",
-    href: "/consultation/",
+    name: "問い合わせ対応の自動振り分け",
+    description: "受信した問い合わせを担当者へ自動ルーティング",
+    href: "#contact",
   },
   {
-    name: "1on1 AIコーチング",
-    description: "個別指導で集中的にスキルアップしたい方向け",
-    href: "/courses/coaching/",
+    name: "データ分析・レポート自動生成",
+    description: "散在するデータを1画面で可視化＋定期レポート",
+    href: "#contact",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function SubsidyList() {
   return (
     <section id="subsidySearch" className="section-subsidy">
       <div>
-        <div className="block-title mb-6">研修コースから探す</div>
+        <div className="block-title mb-6">14日で内製化できる業務の例</div>
         <ul className="contentSubsidy_list">
           {courses.map((item) => (
             <li key={item.name}>
