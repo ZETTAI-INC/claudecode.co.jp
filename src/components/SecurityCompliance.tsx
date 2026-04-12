@@ -25,6 +25,12 @@ export default function SecurityCompliance() {
         "デプロイ先は御社の既存環境（AWS / GCP / Azure / オンプレミス）を前提とします。閉域網での実施にも対応。デプロイ先が未定の場合は、ヒアリング時に一緒に検討します。",
     },
     {
+      icon: "laptop_mac",
+      title: "端末・OS",
+      description:
+        "推奨環境は Mac です。Windowsでも受講可能ですが、WSL2 または Git for Windows の事前セットアップが必要で、環境起因のエラーが起きやすいため非推奨です。メモリは16GB以上推奨、32GBあるとより安定します。",
+    },
+    {
       icon: "build",
       title: "御社側の事前準備",
       description:
