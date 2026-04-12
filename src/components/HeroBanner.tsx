@@ -22,19 +22,14 @@ export default function HeroBanner() {
         <div className="planb-fv__inner">
           <div className="planb-fv__content">
             <div className="planb-fv__badge">
-              <span style={{
-                display: "inline-block",
-                background: "#fff3e0",
-                color: "#e65100",
-                fontWeight: 900,
-                fontSize: "13px",
-                letterSpacing: "0.08em",
-                padding: "6px 18px",
-                borderRadius: "100px",
-                border: "1.5px solid #ffcc80",
-              }}>
-                非エンジニアの業務担当者が対象です
-              </span>
+              <Image
+                src="/img/planb-fv/badge.svg?v=2"
+                alt="&quot;使えるAI力&quot;を装着！"
+                width={326}
+                height={54}
+                priority
+                style={{ width: "auto", height: "54px" }}
+              />
             </div>
 
             <h1 className="planb-fv__heading" style={{ wordBreak: 'keep-all' }}>
