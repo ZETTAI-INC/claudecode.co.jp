@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import FitAssessment from "@/components/FitAssessment";
+import ReadinessCheck from "@/components/ReadinessCheck";
 import CaseStudies from "@/components/CaseStudies";
 import ProgramGates from "@/components/ProgramGates";
 import WhyResults from "@/components/WhyResults";
@@ -31,6 +32,7 @@ export default function Home() {
           <AdoptionTimeline />
           <RstaffingFv />
           <FitAssessment />
+          <ReadinessCheck />
           <AiServiceStrengths />
           <AiDevelopmentWorkflow />
           <CaseStudies />
