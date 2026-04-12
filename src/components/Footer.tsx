@@ -33,20 +33,16 @@ export default function Footer() {
         <div className="footer__cta-inner">
           <div className="footer__cta-text">
             <p className="footer__cta-heading">
-              まずは<strong>無料相談</strong>から始めませんか？
+              14日で内製化できる業務か、<strong>30分で診断</strong>します
             </p>
             <p className="footer__cta-sub">
-              研修内容・費用・スケジュールなど、お気軽にご相談ください
+              対象部署・作りたい業務・セキュリティ前提の3点だけ確認します
             </p>
           </div>
           <div className="footer__cta-buttons">
-            <Link href="/resources/" className="footer__cta-btn footer__cta-btn--outline">
-              <span className="material-icons-outlined footer__btn-icon">description</span>
-              資料ダウンロード
-            </Link>
             <Link href="/consultation/" className="footer__cta-btn footer__cta-btn--primary">
               <span className="material-icons-outlined footer__btn-icon">mail_outline</span>
-              無料相談はこちら
+              30分の適合診断を受ける
             </Link>
           </div>
         </div>

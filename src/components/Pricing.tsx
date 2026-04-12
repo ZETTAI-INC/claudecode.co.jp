@@ -22,7 +22,7 @@ const plans: Plan[] = [
       "チャット質問サポート（30日間）",
       "修了テスト・修了証の発行",
     ],
-    priceNote: "お見積もりください",
+    priceNote: "30万円〜 / 月",
   },
   {
     name: "ハイブリッドコース",
@@ -37,7 +37,7 @@ const plans: Plan[] = [
       "自部署の業務課題を題材にした実装演習",
       "修了後3ヶ月のチャット伴走サポート",
     ],
-    priceNote: "お見積もりください",
+    priceNote: "50万円〜 / 月",
     recommended: true,
   },
   {
@@ -53,7 +53,7 @@ const plans: Plan[] = [
       "チームビルディング込みの集中育成",
       "修了後1ヶ月の現場フォロー",
     ],
-    priceNote: "お見積もりください",
+    priceNote: "120万円〜 / 月",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function Pricing() {
           <p className="text-[#555] text-base md:text-lg leading-[1.9]">
             学習スタイルに応じた3つのコースをご用意しています（完全Eラーニング／対面＋オンラインのハイブリッド／完全対面）。
             <br className="hidden md:block" />
-            料金は受講人数・カスタマイズ内容により変動するため、お見積もりにてご案内します。
+            料金は受講人数・カスタマイズ内容により変動します。パイロット導入は30万円〜。
           </p>
         </div>
 
@@ -134,10 +134,13 @@ export default function Pricing() {
               </ul>
 
               <div className="text-center">
-                <div className="text-[#888] text-[12px] md:text-[13px] mb-2">料金</div>
-                <div className="text-[#151515] font-black text-lg md:text-xl mb-4">
+                <div className="text-[#888] text-[12px] md:text-[13px] mb-2">料金目安</div>
+                <div className="text-[#151515] font-black text-lg md:text-xl mb-1">
                   {plan.priceNote}
                 </div>
+                <p className="text-[#888] text-[11px] md:text-[12px] mb-4">
+                  ※ 受講人数・カスタマイズにより変動
+                </p>
                 <a
                   href="/consultation/"
                   className={`block w-full py-3 rounded-full font-bold text-sm md:text-base transition-colors ${
@@ -146,7 +149,7 @@ export default function Pricing() {
                       : "bg-white text-[#2563eb] border-2 border-[#2563eb] hover:bg-[#2563eb] hover:text-white"
                   }`}
                 >
-                  お見積もり依頼
+                  30分の適合診断を受ける
                 </a>
               </div>
             </div>

@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "無料相談 | CLAUDE CODE リスキリング研修",
+  title: "適合診断（30分） | CLAUDE CODE リスキリング研修",
   description:
-    "業務を一番知る社員が、2週間で作れる人材へ。貴社の業務課題・推進体制・助成金活用まで、専門家が無料でご相談を承ります。",
+    "14日で内製化できる業務か、30分で診断します。対象部署・作りたい業務・セキュリティ前提の3点を確認し、48時間以内に適合判定をお返しします。",
 };
 
 const topics = [
@@ -89,11 +89,14 @@ export default function ConsultationPage() {
               Free Consultation
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              無料相談
+              14日で内製化できるか、
+              <br />
+              30分で診断します
             </h1>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-              貴社の業務課題から研修プラン・助成金活用まで、<br className="hidden md:block" />
-              専門家が <strong>30〜45分のオンライン</strong> で丁寧にご案内します。
+              「対象部署」「作りたい業務」「セキュリティ前提」の3点だけ確認。
+              <br className="hidden md:block" />
+              相談後<strong>48時間以内</strong>に適合判定と概算の方向性をお返しします。
             </p>
 
             {/* Seamless Grid Stats */}
@@ -251,7 +254,7 @@ export default function ConsultationPage() {
               className="inline-flex items-center gap-2 font-bold text-blue-600 bg-white px-8 md:px-12 py-4 rounded-full hover:bg-gray-50 transition-colors text-sm shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
               <span className="material-icons-outlined text-lg">event_available</span>
-              無料相談を予約する
+              30分の適合診断を受ける
             </a>
           </div>
         </section>
@@ -264,7 +267,7 @@ export default function ConsultationPage() {
         className="md:hidden fixed bottom-6 left-5 right-5 z-50 flex items-center justify-center gap-2 font-bold text-white bg-gray-900 py-4 rounded-xl shadow-2xl transition-transform active:scale-95"
       >
         <span className="material-icons-outlined text-base">mail_outline</span>
-        <span className="text-sm tracking-wide">無料で相談を予約する</span>
+        <span className="text-sm tracking-wide">適合診断を予約する</span>
       </a>
       <Footer />
     </div>

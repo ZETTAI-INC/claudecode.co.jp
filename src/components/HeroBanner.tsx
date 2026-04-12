@@ -106,17 +106,10 @@ export default function HeroBanner() {
 
             <div className="planb-fv__cta">
               <a
-                href="/resources/"
-                className="planb-fv__btn planb-fv__btn--outline"
-              >
-                <span>研修資料をダウンロード</span>
-                <Image src="/img/planb-fv/icon-doc.svg" alt="" width={16} height={16} />
-              </a>
-              <a
                 href="/consultation/"
                 className="planb-fv__btn planb-fv__btn--primary"
               >
-                <span>無料相談する</span>
+                <span>14日で内製化できるか相談する</span>
                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
                   <path d="M1.16 12.85c-.14-.17-.22-.37-.22-.58 0-.21.07-.39.22-.55l4.6-4.6L1.13 2.49c-.14-.14-.21-.33-.2-.57.01-.24.08-.42.22-.56.18-.18.36-.26.56-.25.2.01.38.1.53.25l5.21 5.21c.09.09.14.17.18.26.04.09.05.18.05.29s-.02.2-.05.29c-.04.09-.09.17-.18.26l-5.18 5.18c-.16.16-.34.23-.55.22-.2-.01-.4-.08-.56-.22z" fill="white" stroke="white" strokeWidth="1"/>
                 </svg>
