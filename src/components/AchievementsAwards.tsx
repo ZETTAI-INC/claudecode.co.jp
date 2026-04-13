@@ -112,12 +112,6 @@ const achievements = [
     number: '88',
     unit: '%',
     label: '非エンジニア率',
-  },
-  {
-    year: 'TRACK RECORD',
-    number: '98',
-    unit: '%',
-    label: '受講生満足度',
   }
 ];
 

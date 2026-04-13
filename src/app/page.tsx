@@ -1,13 +1,12 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
-import AchievementsAwards from "@/components/AchievementsAwards";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import CaseStudies from "@/components/CaseStudies";
 import WhyResults from "@/components/WhyResults";
-import ServiceDifferentiation from "@/components/ServiceDifferentiation";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
 import BeforeAfter from "@/components/BeforeAfter";
+import DevelopmentSpeedComparison from "@/components/DevelopmentSpeedComparison";
 import RoiEquation from "@/components/RoiEquation";
 import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
 import TalentDevelopment from "@/components/TalentDevelopment";
@@ -28,20 +27,19 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <AchievementsAwards />
           <AiServiceStrengths />
-          <BeforeAfter />
-          <AdoptionTimeline />
           <ClaudeCodeOverview />
+          <BeforeAfter />
           <TalentDevelopment />
+          <DevelopmentSpeedComparison />
           <AiDevelopmentWorkflow />
-          <ServiceDifferentiation />
-          <WhyResults />
+          <SubsidyList />
+          <AdoptionTimeline />
           <CaseStudies />
-          <RstaffingFv />
+          <WhyResults />
           <RoiEquation />
           <Pricing />
-          <SubsidyList />
+          <RstaffingFv />
           <Flow />
           <Faq />
           <ResourceDownloadCta />
