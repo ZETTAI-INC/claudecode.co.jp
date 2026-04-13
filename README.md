@@ -58,6 +58,32 @@ public/             画像・OGP・favicon などの静的アセット
 scripts/            補助スクリプト
 ```
 
+## ホーム（`src/app/page.tsx`）のセクション構成
+
+営業導線に沿って「掴み → 課題共感 → 位置づけ → サービス理解 → Why → 具体像 → 証拠 → ROI → 料金 → クロージング」の順で構成しています。
+
+| # | セクション | 役割 |
+| --- | --- | --- |
+| 1 | `HeroBanner` | ファーストビュー・キャッチコピー |
+| 2 | `AiServiceStrengths` | お悩み共感（内製化停滞・属人化・外注費） |
+| 3 | `TargetAudience` | ターゲット層と提供価値の位置づけ |
+| 4 | `ClaudeCodeOverview` | Claude Code とは／サービス概要 |
+| 5 | `BeforeAfter` | 研修前後の社員像の変化 |
+| 6 | `TalentDevelopment` | 14日で成果が出る理由（氷山モデル） |
+| 7 | `DevelopmentSpeedComparison` | 未経験からの最短学習（学習速度 1/10） |
+| 8 | `AiDevelopmentWorkflow` | 一般的なAI研修との設計思想の違い |
+| 9 | `SubsidyList` | こんな業務から始められる（業務例） |
+| 10 | `AdoptionTimeline` | 導入後 14〜90日の段階的成果 |
+| 11 | `CaseStudies` | 導入事例 |
+| 12 | `WhyResults` | AI開発の投資対効果 |
+| 13 | `RoiEquation` | ROI 10倍の仕組み |
+| 14 | `Pricing` | 料金プラン |
+| 15 | `RstaffingFv` | 3ステップ導入イメージ |
+| 16 | `Flow` | お問い合わせから研修開始までの標準フロー |
+| 17 | `Faq` | よくあるご質問 |
+| 18 | `ResourceDownloadCta` | 資料ダウンロードCTA |
+| 19 | `ContactForm` | お問い合わせフォーム |
+
 ## ドキュメント
 
 - `AGENTS.md` — AI エージェント向けの作業ガイドライン（Next.js 16 の注意事項など）
