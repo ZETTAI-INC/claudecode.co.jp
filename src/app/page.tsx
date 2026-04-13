@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import CaseStudies from "@/components/CaseStudies";
-import ProgramGates from "@/components/ProgramGates";
 import WhyResults from "@/components/WhyResults";
 import ServiceDifferentiation from "@/components/ServiceDifferentiation";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
@@ -21,7 +20,6 @@ import Faq from "@/components/Faq";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
-import PositioningAndFeatures from "@/components/PositioningAndFeatures";
 
 export default function Home() {
   return (
@@ -36,12 +34,10 @@ export default function Home() {
           <AdoptionTimeline />
           <TalentDevelopment />
           <MentorshipSupport />
-          <ProgramGates />
           <CaseStudies />
           <RstaffingFv />
           <AiDevelopmentWorkflow />
           <ServiceDifferentiation />
-          <PositioningAndFeatures />
           <SecurityCompliance />
           <Pricing />
           <SubsidyList />
