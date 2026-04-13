@@ -30,19 +30,19 @@ export default function Home() {
           <HeroBanner />
           <AiServiceStrengths />
           <BeforeAfter />
-          <RoiEquation />
           <AdoptionTimeline />
           <TalentDevelopment />
-          <MentorshipSupport />
-          <CaseStudies />
-          <RstaffingFv />
           <AiDevelopmentWorkflow />
           <ServiceDifferentiation />
+          <CaseStudies />
+          <RstaffingFv />
+          <MentorshipSupport />
+          <WhyResults />
+          <RoiEquation />
           <SecurityCompliance />
           <Pricing />
           <SubsidyList />
           <Flow />
-          <WhyResults />
           <Faq />
           <ResourceDownloadCta />
           <ContactForm />
