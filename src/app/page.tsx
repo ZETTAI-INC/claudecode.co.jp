@@ -3,6 +3,7 @@ import HeroBanner from "@/components/HeroBanner";
 import TargetAudience from "@/components/TargetAudience";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
+import ClientCompanies from "@/components/ClientCompanies";
 import CaseStudies from "@/components/CaseStudies";
 import WhyResults from "@/components/WhyResults";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
@@ -37,6 +38,7 @@ export default function Home() {
           <AiDevelopmentWorkflow />
           <SubsidyList />
           <AdoptionTimeline />
+          <ClientCompanies />
           <CaseStudies />
           <WhyResults />
           <RoiEquation />

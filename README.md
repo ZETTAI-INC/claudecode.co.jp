@@ -74,15 +74,16 @@ scripts/            補助スクリプト
 | 8 | `AiDevelopmentWorkflow` | 一般的なAI研修との設計思想の違い |
 | 9 | `SubsidyList` | こんな業務から始められる（業務例） |
 | 10 | `AdoptionTimeline` | 導入後 14〜90日の段階的成果 |
-| 11 | `CaseStudies` | 導入事例 |
-| 12 | `WhyResults` | AI開発の投資対効果 |
-| 13 | `RoiEquation` | ROI 10倍の仕組み |
-| 14 | `Pricing` | 料金プラン |
-| 15 | `RstaffingFv` | 3ステップ導入イメージ |
-| 16 | `Flow` | お問い合わせから研修開始までの標準フロー |
-| 17 | `Faq` | よくあるご質問 |
-| 18 | `ResourceDownloadCta` | 資料ダウンロードCTA |
-| 19 | `ContactForm` | お問い合わせフォーム |
+| 11 | `ClientCompanies` | 導入企業・パートナー紹介 |
+| 12 | `CaseStudies` | 導入事例 |
+| 13 | `WhyResults` | AI開発の投資対効果 |
+| 14 | `RoiEquation` | ROI 10倍の仕組み |
+| 15 | `Pricing` | 料金プラン |
+| 16 | `RstaffingFv` | 3ステップ導入イメージ |
+| 17 | `Flow` | お問い合わせから研修開始までの標準フロー |
+| 18 | `Faq` | よくあるご質問 |
+| 19 | `ResourceDownloadCta` | 資料ダウンロードCTA |
+| 20 | `ContactForm` | お問い合わせフォーム |
 
 ## ドキュメント
 
