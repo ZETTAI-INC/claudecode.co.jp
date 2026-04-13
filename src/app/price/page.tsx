@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubsidyFlow from "@/components/SubsidyFlow";
 import MentorshipSupport from "@/components/MentorshipSupport";
+import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
@@ -76,6 +77,9 @@ export default function PricePage() {
             </p>
           </div>
         </section>
+
+        {/* Overview section */ }
+        <ClaudeCodeOverview />
 
         {/* Pricing cards */}
         <section
