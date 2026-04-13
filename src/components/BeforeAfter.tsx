@@ -8,7 +8,7 @@ const BeforeAfter: React.FC = () => {
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-xl md:text-[24px] font-bold tracking-wider text-gray-800">
-            内製化がもたらす変化
+            研修前と研修後、社員1人の姿が変わる
           </h2>
           <div className="text-[#1890FF] font-black text-lg md:text-xl tracking-widest">
             Claude Code
@@ -18,8 +18,8 @@ const BeforeAfter: React.FC = () => {
         {/* Text */}
         <div className="text-center mb-16 px-4">
           <p className="text-[16px] md:text-[20px] font-bold leading-[1.8] tracking-wide text-gray-700">
-            Claude Codeを活用できる人材を社内で育成することで、<br className="hidden md:block" />
-            外注依存のレガシーな体制から脱却し、圧倒的スピードで事業を推進する自走組織へと進化します。
+            組織の変化は、社員1人の仕事の変化から始まります。<br className="hidden md:block" />
+            研修を受けた社員は、同じ業務に「別の手札」で向き合えるようになります。
           </p>
         </div>
 
@@ -29,7 +29,7 @@ const BeforeAfter: React.FC = () => {
           {/* LEFT: Before Block */}
           <div className="w-full md:w-[46%] bg-[#EAF5FF] rounded-lg p-6 md:p-8 flex flex-col items-center">
             <h3 className="text-[#1890FF] font-bold text-xl md:text-2xl tracking-wider mb-6">
-              現状の課題 (Before)
+              研修前の社員 (Before)
             </h3>
             
             <div className="w-full flex flex-col gap-4">
@@ -42,7 +42,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  外注依存による高額なコストと<br className="hidden lg:block"/>開発工数の増大
+                  業務課題に気づいても、<br className="hidden lg:block"/>改善する手段を持っていない
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  軽微な修正でも時間がかかり、<br className="hidden lg:block"/>アジャイルな改善ができない
+                  Excel・マクロ止まりで<br className="hidden lg:block"/>生産性の限界を感じている
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  社内にAIや開発の知見が<br className="hidden lg:block"/>全く蓄積されない
+                  改善提案はできても、<br className="hidden lg:block"/>実行は外注・IT部門頼み
                 </div>
               </div>
 
@@ -81,7 +81,7 @@ const BeforeAfter: React.FC = () => {
           {/* RIGHT: After Block */}
           <div className="w-full md:w-[46%] bg-[#FCE8E8] rounded-lg p-6 md:p-8 flex flex-col items-center">
             <h3 className="text-[#E55252] font-bold text-xl md:text-2xl tracking-wider mb-6">
-              内製化による劇的変化 (After)
+              研修後の社員 (After)
             </h3>
             
             <div className="w-full flex flex-col gap-4">
@@ -94,7 +94,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  全ての開発を社内で自走し、<br className="hidden lg:block"/>外注費を劇的に削減
+                  業務課題を自分の手で<br className="hidden lg:block"/>ツール化・自動化できる
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  アイディアを数時間で形にする<br className="hidden lg:block"/>爆速PDCAと即座の要望反映
+                  Claude Codeで試作が数時間、<br className="hidden lg:block"/>改修も自分で即反映
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ const BeforeAfter: React.FC = () => {
                   </svg>
                 </div>
                 <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  現場の業務理解が深い社員自身で<br className="hidden lg:block"/>「生きたツール」を自作・改修
+                  提案ではなく「完成品」を<br className="hidden lg:block"/>上司や部署に持っていける
                 </div>
               </div>
 

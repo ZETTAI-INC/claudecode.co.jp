@@ -6,10 +6,10 @@ export default function AdoptionTimeline() {
       color: "#2563eb",
       bg: "#eaf3ff",
       border: "#b3d4ff",
-      title: "社内ツール1本が本番公開",
+      title: "最初の業務ツールが現場で動く",
       description:
-        "1部署1テーマに絞り、受講者が自部署の業務課題を題材に開発した社内ツールが本番環境で稼働を開始します。",
-      deliverable: "納品物：本番稼働する業務ツール 1本",
+        "受講者が自部署の課題（Excel台帳のWeb化、日報の自動集計、承認フローのアプリ化など）をClaude Codeで実装。修了日には、現場で使える動くツールが1本完成しています。",
+      deliverable: "納品物：動作する業務ツール 1本 ＋ 運用手順書",
     },
     {
       day: "30",
@@ -17,10 +17,10 @@ export default function AdoptionTimeline() {
       color: "#ff5c00",
       bg: "#fff7f0",
       border: "#ffcaa5",
-      title: "受講者が改修を自走",
+      title: "現場の要望を自分で反映できる",
       description:
-        "受講者2名以上が軽微な改修・機能追加を自力で実行。改善 backlog が整理され、次に作るべきものが見えている状態になります。",
-      deliverable: "納品物：改善 backlog と自走実績レポート",
+        "使い始めて出てきた「ここを変えたい」「この項目も追加したい」という要望を、受講者がClaude Codeに指示して翌日には反映。外注せず、同部署内で改善サイクルが回り始めます。",
+      deliverable: "納品物：改修ログ・追加機能一覧",
     },
     {
       day: "90",
@@ -28,10 +28,10 @@ export default function AdoptionTimeline() {
       color: "#059669",
       bg: "#ecfdf5",
       border: "#a7f3d0",
-      title: "小規模改善が内製候補に切り替わる",
+      title: "2本目・3本目のツールが生まれる",
       description:
-        "これまで外注前提だった小規模な業務改善が、社内で検討・実装できる体制に変わります。外注費の削減と意思決定スピードの向上が同時に起きます。",
-      deliverable: "納品物：内製化判断フレームワークと実績データ",
+        "最初のツールの成功を見た周囲から「これも作れない？」という会話が自然発生。受講者が核となり、部署内の他の業務課題もClaude Codeで順次ツール化されていきます。",
+      deliverable: "納品物：部署内で稼働する業務ツール 複数本",
     },
   ];
 

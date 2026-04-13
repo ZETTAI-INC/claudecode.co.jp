@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const managementCards = [
   {
     title: "カリキュラム",
@@ -192,52 +190,6 @@ function ScoreCell({ cell, highlighted = false, mobileName }: { cell: Cell; high
 export default function WhyResults() {
   return (
     <>
-      {/* ===== なぜ結果を出せるのか ===== */}
-      <section className="wr-reason">
-        <div className="wr-reason__inner">
-          <div className="wr-reason__text">
-            <h2 className="wr-reason__title">
-              Claude Code研修はなぜ結果を出せるのか？
-            </h2>
-            <p className="wr-reason__lead">
-              受講者の
-              <br />
-              <span className="wr-accent">開発生産性を最大10倍</span>
-              に引き上げます！
-            </p>
-            <p className="wr-reason__desc">
-              どれだけ優れたAIツールがあっても、
-              <br />
-              それを使いこなす&quot;人&quot;がいなければ成果は生まれません。
-            </p>
-            <p className="wr-reason__desc">
-              私たちの研修では、&quot;人&quot;の習熟度に徹底してこだわることで、AI導入にありがちな
-              <br />
-              <span className="wr-accent">
-                「担当者によって活用レベルがバラつく」という問題を根本から解消
-              </span>
-              しています。
-            </p>
-          </div>
-          <div className="wr-reason__bottom">
-            <p>
-              <span className="wr-accent">受講者全員が即戦力</span>
-              としてClaude Codeを使いこなせるため、
-              <br />
-              確実に開発生産性が向上します。
-            </p>
-          </div>
-        </div>
-        <div className="wr-reason__img">
-          <Image
-            src="/saleslink/assets/images/img_reason.png"
-            alt=""
-            width={520}
-            height={502}
-          />
-        </div>
-      </section>
-
       {/* ===== 研修設計へのこだわり ===== */}
       <section className="wr-mgmt-v2">
         <div className="wr-mgmt-v2__inner">

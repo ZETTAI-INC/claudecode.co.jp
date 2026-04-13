@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubsidyFlow from "@/components/SubsidyFlow";
+import MentorshipSupport from "@/components/MentorshipSupport";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
@@ -185,6 +186,9 @@ export default function PricePage() {
             ))}
           </div>
         </section>
+
+        {/* Mentorship support */}
+        <MentorshipSupport />
 
         {/* Note section */}
         <section className="pb-16 md:pb-24" style={{ background: "#f5f8fa" }}>

@@ -9,20 +9,23 @@ const RoiEquation: React.FC = () => {
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-xl md:text-[22px] font-bold tracking-wider flex items-center gap-4 text-gray-800">
             <span className="w-5 h-[3px] bg-gray-800 inline-block rounded-sm"></span>
-            意識すべき数字
+            なぜROIが10倍以上になるのか
           </h2>
           <div className="text-[#1890FF] font-black text-lg md:text-2xl tracking-widest">
-            超速AI開発研修
+            Claude Code研修
           </div>
         </div>
 
         {/* Text */}
         <div className="text-center mb-14">
           <p className="text-[17px] md:text-[22px] font-bold leading-[1.8] tracking-wide text-gray-800">
-            内製化によるAI開発のROIを最大限高めるには、<br />
-            分子の<span className="text-[#1890FF]">「社内開発力」の継続的成長と最大化</span>
-            ＆
-            分母の<span className="text-[#E55252]">「外注コスト」の最小化</span>に努める
+            外注で<span className="text-[#E55252]">約300〜1,200万円</span>かかっていた業務ツールが、<br className="hidden md:block" />
+            研修後は社員<span className="text-[#1890FF]">2〜3日の工数</span>で作れるようになります。
+          </p>
+          <p className="text-[14px] md:text-[16px] font-bold leading-[1.9] tracking-wide text-gray-600 mt-6">
+            <span className="text-[#1890FF]">社内の「作る力」が増える</span>ほど、
+            <span className="text-[#E55252]">「外注に払うコスト」は下がる</span>。<br className="hidden md:block" />
+            この2つが同時に動くから、同じ投資でもリターンが桁違いになります。
           </p>
         </div>
 
@@ -53,12 +56,12 @@ const RoiEquation: React.FC = () => {
                 Internal Development Power
               </div>
               <div className="text-base md:text-lg font-bold text-gray-700">
-                社内開発力・AI活用スキル
+                社員が自分で作れる業務ツールの数
               </div>
 
               {/* Blue Bubble */}
               <div className="absolute -top-12 md:-top-16 -right-2 md:right-0 bg-[#1890FF] text-white text-[11px] md:text-sm font-bold py-2 md:py-3 px-4 md:px-5 rounded-[40px] shadow-md z-10 text-center leading-snug">
-                継続的成長<br/>＆ 最大化
+                研修で<br/>増やす
                 {/* Tail */}
                 <div className="absolute -bottom-2 md:-bottom-2.5 left-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-[#1890FF] -rotate-[20deg]"></div>
               </div>
@@ -73,12 +76,12 @@ const RoiEquation: React.FC = () => {
                 Outsourcing Cost
               </div>
               <div className="text-base md:text-lg font-bold text-gray-700">
-                外注コスト・開発期間
+                外注にかかる費用・開発期間
               </div>
 
               {/* Red Bubble */}
               <div className="absolute top-3 md:top-2 -right-4 md:-right-8 bg-[#E55252] text-white text-[12px] md:text-sm font-bold py-2.5 px-6 rounded-[30px] shadow-md z-10 text-center leading-snug">
-                最小化
+                研修で<br/>減らす
                 {/* Tail */}
                 <div className="absolute -top-[10px] left-3 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[12px] border-b-[#E55252] rotate-[20deg]"></div>
               </div>

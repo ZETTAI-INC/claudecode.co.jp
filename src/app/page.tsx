@@ -9,8 +9,6 @@ import BeforeAfter from "@/components/BeforeAfter";
 import RoiEquation from "@/components/RoiEquation";
 import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
 import TalentDevelopment from "@/components/TalentDevelopment";
-import MentorshipSupport from "@/components/MentorshipSupport";
-import SecurityCompliance from "@/components/SecurityCompliance";
 import Pricing from "@/components/Pricing";
 import SubsidyList from "@/components/SubsidyList";
 import RstaffingFv from "@/components/RstaffingFv";
@@ -34,12 +32,10 @@ export default function Home() {
           <TalentDevelopment />
           <AiDevelopmentWorkflow />
           <ServiceDifferentiation />
+          <WhyResults />
           <CaseStudies />
           <RstaffingFv />
-          <MentorshipSupport />
-          <WhyResults />
           <RoiEquation />
-          <SecurityCompliance />
           <Pricing />
           <SubsidyList />
           <Flow />

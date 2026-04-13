@@ -63,7 +63,7 @@ export default function SubsidyList() {
   return (
     <section id="subsidySearch" className="section-subsidy">
       <div>
-        <div className="block-title mb-6">14日で内製化できる業務の例</div>
+        <div className="block-title mb-6">まず、こんな業務から始められます</div>
         <ul className="contentSubsidy_list">
           {courses.map((item) => (
             <li key={item.name}>
