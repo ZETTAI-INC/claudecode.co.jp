@@ -1,0 +1,153 @@
+.achievements-awards {
+  background-color: #0c0f12;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+    url('/img/planb-fv/city-bg.webp'); /* 共通の背景等があれば。無ければ黒系で代用 */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 80px 20px;
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
+  overflow: hidden;
+}
+
+.achievements-awards__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievements-awards__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.achievements-awards__item {
+  position: relative;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.achievements-awards__laurel {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 280px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.achievements-awards__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.achievements-awards__year {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  opacity: 0.9;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.achievements-awards__number-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.achievements-awards__number {
+  font-size: 80px;
+  line-height: 1;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.achievements-awards__unit {
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 2px;
+}
+
+.achievements-awards__ribbon-wrap {
+  position: relative;
+  z-index: 3;
+  margin-top: 10px;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+.achievements-awards__ribbon {
+  position: relative;
+  background: linear-gradient(135deg, #d3a444 0%, #fae69e 50%, #c49129 100%);
+  padding: 12px 30px;
+  color: #111;
+  font-weight: 700;
+  font-size: 20px;
+  display: inline-block;
+  min-width: 220px;
+}
+
+.achievements-awards__ribbon::before,
+.achievements-awards__ribbon::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  z-index: -1;
+  border: 24px solid #a4761a;
+}
+
+.achievements-awards__ribbon::before {
+  left: -28px;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-10deg);
+}
+
+.achievements-awards__ribbon::after {
+  right: -28px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(10deg);
+}
+
+.achievements-awards__ribbon-tail-l,
+.achievements-awards__ribbon-tail-r {
+  position: absolute;
+  top: 10px;
+  z-index: -2;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to right, #9e7011, #d3a444);
+}
+
+.achievements-awards__ribbon-tail-l {
+  left: -40px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 70%, 0 100%);
+  transform: rotate(20deg);
+}
+
+.achievements-awards__ribbon-tail-r {
+  right: -40px;
+  background: linear-gradient(to left, #9e7011, #d3a444);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 70%, 0 100%);
+  transform: rotate(-20deg);
+}
+
+@media (max-width: 768px) {
+  .achievements-awards__item {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 40px;
+  }
+}
