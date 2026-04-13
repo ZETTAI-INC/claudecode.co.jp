@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
+import AchievementsAwards from "@/components/AchievementsAwards";
+import TargetAudience from "@/components/TargetAudience";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import CaseStudies from "@/components/CaseStudies";
@@ -27,6 +29,8 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
+          <AchievementsAwards />
+          <TargetAudience />
           <AiServiceStrengths />
           <ClaudeCodeOverview />
           <BeforeAfter />
