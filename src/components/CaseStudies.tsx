@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 interface CaseStudy {
@@ -24,15 +27,15 @@ const cases: CaseStudy[] = [
     industry: "製造業",
     scale: "従業員800名（対象部門100名）",
     department: "生産管理部",
-    role: "生産管理担当者（非エンジニア）",
+    role: "生産管理担当",
     challenge:
-      "Excel台帳による工程管理が属人化し、担当者の退職リスクが経営課題に。外注見積もりは1,200万円・6ヶ月。",
+      "Excel台帳による工程管理が属人化し、担当者の退職リスクが経営課題に。外注の見積もりは「1,200万円・6ヶ月」と高額かつ長期間であり早急な解決策を求めていた。",
     built: "工程進捗ダッシュボード（Webアプリ）",
     daysToLaunch: "12日",
-    impact: "開発工数50%削減、年間外注費▲800万円相当の内製化を実現",
+    impact: "開発工数50%削減、年間外注費▲800万円相当の内製化を実現。\n数ヶ月かかると言われていたダッシュボードを自社リソースのみでわずか12日で構築し、現場の属人化状態から素早く脱却することができました。",
     tools: "Claude Code / Next.js / Supabase / Render",
     constraints:
-      "社内ネットワークのみ。実データはマスク済みを使用、本番切り替え時に情シス承認を経て接続。",
+      "社内ネットワークのみという制約下で実施。実データはマスク済みのダミーデータを使用し、本番環境への切り替え時には情報システム部の厳格な承認を経て接続する体制を構築。",
   },
   {
     image: "/img/uploads/2024/02/c3e59afb1b9e8b9302dadc9db83a8df4.png",
@@ -43,13 +46,13 @@ const cases: CaseStudy[] = [
     department: "受託開発チーム",
     role: "SE・プログラマー",
     challenge:
-      "案件ごとにコード品質がバラつき、レビュー工数が開発時間の30%を占有。納品遅延が常態化。",
-    built: "AIコードレビュー＆テスト自動生成ツール",
+      "属人的なコーディングにより案件ごとにコード品質がバラつき、レビュー工数が開発時間全体の30%を占有。結果として納品遅延が常態化し組織全体の生産性低下を招いていた。",
+    built: "AIコードレビュー＆自動生成ツール",
     daysToLaunch: "10日",
-    impact: "納品速度3倍、レビュー工数60%削減、バグ発生率40%低下",
+    impact: "納品速度が従来の3倍へと圧倒的に向上。\nさらにコードレビューにかかる工数を60%削減しつつ、AIによる確実なテスト生成でバグ発生率も40%低下させるなど、品質向上とスピードアップを両立しました。",
     tools: "Claude Code / GitHub Actions / Jest",
     constraints:
-      "顧客コードは一切使用せず、社内プロジェクトのコードのみで研修を実施。NDA締結済み。",
+      "セキュリティの観点から顧客のソースコードは一切使用せず、自社内プロジェクトのコードのみを用いたセキュアな研修スキームにて実施。事前のNDA完全締結のもと遂行。",
   },
   {
     image: "/img/uploads/2024/02/13cf17df8b0af8de2e099ea6c60f09d5.png",
@@ -58,110 +61,163 @@ const cases: CaseStudy[] = [
     industry: "SaaS",
     scale: "従業員30名（全社参加）",
     department: "事業推進部",
-    role: "営業企画・CS・マーケティング担当者",
+    role: "営業・CS・広報担当",
     challenge:
-      "Googleスプレッドシートとメールで回していた顧客管理が限界。ツール導入予算は月10万円以内。",
+      "Googleスプレッドシートと手動メールによる顧客ステータス管理が限界に達し、オペレーションミスが多発していた。しかし新たなツール導入の予算は「月額10万円以内」と厳しい制限があった。",
     built: "顧客ステータス管理アプリ＆自動通知Bot",
     daysToLaunch: "9日",
-    impact: "業務効率化70%、対応漏れゼロ化、月間20時間の手作業を自動化",
+    impact: "全体の業務効率化70%を達成し、これまで手作業で行っていた月間20時間の入力・対応作業を完全に自動化。\n顧客情報の対応漏れが事実上「ゼロ」になる劇的なオペレーション改善を実現しました。",
     tools: "Claude Code / Next.js / Supabase / Slack API",
     constraints:
-      "SaaSのため顧客データは完全マスク。テストデータ100件で開発し、本番切り替え時にCTO承認。",
+      "SaaS企業としてのガバナンスに従い顧客データは完全マスク。テストデータ100件を用いた段階的な開発・検証フェーズを設け、本番切り替え時にCTOの最終承認を得るフローを策定。",
   },
 ];
 
 export default function CaseStudies() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const c = cases[currentIndex];
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? cases.length - 1 : prev - 1));
+  };
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === cases.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section id="frontSectionCaseStudies" className="bg-[#f8fafc] py-16 md:py-24 px-4 sm:px-6 font-sans">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center justify-center gap-2 mb-5">
-            <span className="w-1.5 h-5 bg-[#2563eb] block" />
-            <span className="text-[#2563eb] font-bold tracking-[0.1em] text-sm md:text-base">
-              CASE STUDIES
-            </span>
-          </div>
-          <h2 className="text-2xl md:text-4xl lg:text-[42px] font-black text-[#151515] leading-[1.4] tracking-tight mb-4">
+    <section id="frontSectionCaseStudies" className="bg-white py-14 md:py-20 px-4 sm:px-6 font-sans text-[#333]">
+      <div className="max-w-[1000px] mx-auto">
+        
+        {/* --- Global Header --- */}
+        <div className="flex justify-between items-end mb-2">
+          <h2 className="text-xl md:text-[28px] font-bold tracking-wider text-gray-800">
             導入事例
           </h2>
-          <p className="text-[#555] text-base md:text-lg leading-[1.9]">
-            「すごかった」ではなく、再現条件を公開します。
-          </p>
+          <div className="text-[#1890FF] font-black text-lg md:text-xl tracking-widest leading-none mb-1">
+            Claude Code
+          </div>
         </div>
+        {/* Blue Thick Line */}
+        <div className="w-full h-[5px] md:h-[6px] bg-[#1890FF] mb-12 md:mb-14"></div>
 
-        <div className="space-y-6 md:space-y-8">
-          {cases.map((c) => (
-            <article
-              key={c.company}
-              className="bg-white rounded-[20px] overflow-hidden border border-[#e6edf5] shadow-[0_4px_16px_rgba(0,0,0,0.04)]"
-            >
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-[280px] lg:w-[320px] flex-shrink-0">
-                  <div className="relative h-[200px] md:h-full">
-                    <Image
-                      src={c.image}
-                      alt={c.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
+        {/* --- Single Case Display --- */}
+        <div className="min-h-[480px]">
+          <article key={currentIndex} className="w-full transition-opacity duration-300">
+            
+            {/* Top Section: Image & Info */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
+              
+              {/* Image (Compact) */}
+              <div className="md:w-[220px] lg:w-[260px] flex-shrink-0">
+                <div className="relative w-full aspect-[4/3] md:aspect-square overflow-hidden bg-gray-100 rounded-sm">
+                  <Image
+                    src={c.image}
+                    alt={c.company}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </div>
+
+              {/* Info (Right Side) */}
+              <div className="flex-1 flex flex-col justify-center">
+                
+                {/* Title & Company */}
+                <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
+                  <h3 className="text-xl md:text-[28px] font-bold text-[#1890FF] tracking-wide">
+                    {c.company} <span className="text-lg md:text-xl font-medium">様</span>
+                  </h3>
+                  <p className="text-xs md:text-sm font-bold text-gray-600 mt-1 md:mt-0 md:ml-3">
+                    {c.built}の開発・提供
+                  </p>
                 </div>
 
-                <div className="flex-1 p-5 md:p-7">
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <span className="text-[11px] md:text-[12px] font-bold text-white bg-[#2563eb] px-2.5 py-1 rounded-full">
-                      {c.industry}
-                    </span>
-                    <span className="text-[11px] md:text-[12px] font-bold text-[#2563eb] bg-[#eaf3ff] px-2.5 py-1 rounded-full">
-                      {c.scale}
-                    </span>
+                {/* Department & Role */}
+                <div className="text-base md:text-lg font-bold text-gray-700 mb-5">
+                  {c.department}　{c.role} 様
+                </div>
+
+                {/* Challenge Box (Compact) */}
+                <div className="bg-[#F2F2F2] p-4 w-full rounded-sm">
+                  <div className="text-xs font-bold text-gray-500 mb-1.5">
+                    課題
                   </div>
+                  <p className="font-bold text-[14px] md:text-base text-gray-800 leading-[1.6] tracking-wide">
+                    {c.challenge}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                  <h3 className="text-base md:text-lg font-bold text-[#151515] mb-4 leading-[1.6]">
-                    {c.title}
-                  </h3>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-[12px] md:text-[13px]">
-                    <div className="flex gap-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">対象部署</span>
-                      <span className="text-[#151515] font-medium">{c.department}</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">受講者職種</span>
-                      <span className="text-[#151515] font-medium">{c.role}</span>
-                    </div>
-                    <div className="flex gap-2 sm:col-span-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">元の課題</span>
-                      <span className="text-[#151515] font-medium">{c.challenge}</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">作ったもの</span>
-                      <span className="text-[#151515] font-bold">{c.built}</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">公開日数</span>
-                      <span className="text-[#ff5c00] font-black">{c.daysToLaunch}</span>
-                    </div>
-                    <div className="flex gap-2 sm:col-span-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">成果</span>
-                      <span className="text-[#2563eb] font-bold">{c.impact}</span>
-                    </div>
-                    <div className="flex gap-2 sm:col-span-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">使用環境</span>
-                      <span className="text-[#151515] font-medium">{c.tools}</span>
-                    </div>
-                    <div className="flex gap-2 sm:col-span-2">
-                      <span className="text-[#888] flex-shrink-0 w-[5.5em]">制約・前提</span>
-                      <span className="text-[#555] text-[11px] md:text-[12px] leading-[1.7]">
-                        {c.constraints}
-                      </span>
-                    </div>
+            {/* Bottom Section: 2 Columns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 pl-0 md:pl-[250px] lg:pl-[290px]">
+              
+              {/* Left Column: 導入背景 / 制約 */}
+              <div>
+                <div className="text-[14px] md:text-[15px] font-bold text-[#A6A6A6] mb-2.5">
+                  導入背景・制約
+                </div>
+                <div className="text-[13px] md:text-[14px] font-bold text-gray-700 leading-[1.7] flex flex-col gap-3">
+                  <p>{c.constraints}</p>
+                  <div className="bg-gray-50 p-2.5 mt-1 border-l-4 border-gray-300 text-[12px] md:text-[13px]">
+                    <span className="text-gray-500 block text-[11px] mb-1">使用技術 / 環境</span>
+                    {c.tools}
                   </div>
                 </div>
               </div>
-            </article>
-          ))}
+
+              {/* Right Column: 得られた成果 */}
+              <div>
+                <div className="text-[14px] md:text-[15px] font-bold text-[#A6A6A6] mb-2.5">
+                  得られた成果
+                </div>
+                <div className="text-[13px] md:text-[14px] font-bold text-gray-700 leading-[1.7] flex flex-col gap-2">
+                  {c.impact.split('\n').map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                  <div className="inline-block mt-2 font-black text-[#1890FF] text-[15px]">
+                    公開までの期間：{c.daysToLaunch}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </article>
         </div>
+
+        {/* --- Slider Controls --- */}
+        <div className="flex items-center justify-center gap-6 mt-14 md:mt-16">
+          <button 
+            onClick={handlePrev}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold transition-colors cursor-pointer"
+            aria-label="Previous Case"
+          >
+            ←
+          </button>
+          
+          <div className="flex gap-3">
+            {cases.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                aria-label={`Go to case ${idx + 1}`}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  idx === currentIndex ? "bg-[#1890FF] scale-110" : "bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button 
+            onClick={handleNext}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold transition-colors cursor-pointer"
+            aria-label="Next Case"
+          >
+            →
+          </button>
+        </div>
+
       </div>
     </section>
   );

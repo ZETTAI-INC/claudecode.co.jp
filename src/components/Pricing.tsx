@@ -1,164 +1,157 @@
-type Plan = {
-  name: string;
-  format: string;
-  target: string;
-  duration: string;
-  capacity: string;
-  includes: string[];
-  priceNote: string;
-  recommended?: boolean;
-};
-
-const plans: Plan[] = [
-  {
-    name: "Eラーニングコース",
-    format: "完全オンライン / 自己ペース",
-    target: "自社のペースで全社展開したい企業",
-    duration: "14日間（オンデマンド）",
-    capacity: "人数上限なし",
-    includes: [
-      "全14日分の動画教材＆実装課題",
-      "Claude Code の実務活用カリキュラム",
-      "チャット質問サポート（30日間）",
-      "修了テスト・修了証の発行",
-    ],
-    priceNote: "30万円〜 / 月",
-  },
-  {
-    name: "ハイブリッドコース",
-    format: "対面 + オンライン併用",
-    target: "対面の伴走とオンラインの柔軟性を両立したい企業",
-    duration: "2週間（対面+オンライン）+ 伴走4週間",
-    capacity: "5〜15名 / 回",
-    includes: [
-      "Eラーニング教材＋ライブ講義",
-      "キックオフ・中間・最終回は対面開催",
-      "平日はオンライン伴走・コードレビュー",
-      "自部署の業務課題を題材にした実装演習",
-      "修了後3ヶ月のチャット伴走サポート",
-    ],
-    priceNote: "50万円〜 / 月",
-    recommended: true,
-  },
-  {
-    name: "完全対面コース",
-    format: "講師が御社に常駐",
-    target: "集中合宿型でチーム全員を一気に底上げしたい企業",
-    duration: "2週間（フル対面）+ 伴走4週間",
-    capacity: "5〜10名 / 回",
-    includes: [
-      "講師が御社オフィスに常駐し対面指導",
-      "業務課題のヒアリング＆設計支援",
-      "対面ワークショップ・実装伴走",
-      "チームビルディング込みの集中育成",
-      "修了後1ヶ月の現場フォロー",
-    ],
-    priceNote: "120万円〜 / 月",
-  },
-];
+import React from "react";
 
 export default function Pricing() {
   return (
-    <section className="bg-white py-10 md:py-28 px-4 sm:px-6 font-sans">
-      <div className="max-w-[1240px] mx-auto">
-        <div className="text-center mb-8 md:mb-16">
-          <div className="inline-flex items-center justify-center gap-2 mb-5">
-            <span className="w-1.5 h-5 bg-[#2563eb] block"></span>
-            <span className="text-[#2563eb] font-bold tracking-[0.1em] text-sm md:text-base">
-              PRICING
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-black text-[#151515] leading-[1.4] tracking-tight mb-6">
+    <section className="bg-white py-16 md:py-24 px-4 sm:px-6 font-sans text-[#333]">
+      <div className="max-w-[1000px] mx-auto">
+        
+        {/* Header Bar */}
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="text-xl md:text-[26px] font-bold tracking-wider text-gray-800 flex items-center gap-3">
             料金プラン
           </h2>
-          <p className="text-[#555] text-base md:text-lg leading-[1.9]">
-            学習スタイルに応じた3つのコースをご用意しています（完全Eラーニング／対面＋オンラインのハイブリッド／完全対面）。
-            <br className="hidden md:block" />
-            料金は受講人数・カスタマイズ内容により変動します。パイロット導入は30万円〜。
+          <div className="text-[#1890FF] font-black text-lg md:text-xl tracking-widest">
+            Claude Code
+          </div>
+        </div>
+
+        {/* Pricing Table Wrapper */}
+        <div className="w-full overflow-x-auto pb-6 -mx-4 px-4 md:mx-0 md:px-0">
+          <div className="min-w-[800px] grid grid-cols-[minmax(150px,200px)_minmax(180px,1fr)_minmax(180px,1fr)_minmax(180px,1fr)] gap-[2px] bg-[#E5E7EB] border border-[#E5E7EB]">
+            
+            {/* --- Header Row --- */}
+            {/* Top-left empty cell */}
+            <div className="bg-white"></div>
+            {/* Column Headers */}
+            <div className="bg-[#7A7A7A] text-white font-bold py-4 px-2 text-center text-[15px] tracking-wide relative">
+              Eラーニングコース
+            </div>
+            <div className="bg-[#7A7A7A] text-white font-bold py-4 px-2 text-center text-[15px] tracking-wide relative">
+               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#1890FF] text-white text-[10px] font-black px-3 py-0.5 rounded shadow-sm tracking-widest whitespace-nowrap">
+                おすすめ
+              </div>
+              ハイブリッドコース
+            </div>
+            <div className="bg-[#7A7A7A] text-white font-bold py-4 px-2 text-center text-[15px] tracking-wide relative">
+              完全対面コース
+            </div>
+
+            {/* --- Row 1: 基本利用料 / 料金目安 --- */}
+            <div className="bg-[#F5F5F5] text-gray-700 font-bold py-6 px-4 flex items-center justify-center text-sm tracking-wide text-center">
+              料金目安
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-6 px-2 text-center">
+              <span className="font-bold text-xl md:text-2xl text-gray-800">
+                30万円〜<span className="text-sm font-bold"> / 月</span>
+              </span>
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-6 px-2 text-center">
+              <span className="font-bold text-xl md:text-2xl text-gray-800">
+                50万円〜<span className="text-sm font-bold"> / 月</span>
+              </span>
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-6 px-2 text-center">
+              <span className="font-bold text-xl md:text-2xl text-gray-800">
+                120万円〜<span className="text-sm font-bold"> / 月</span>
+              </span>
+            </div>
+
+            {/* --- Row 2: 期間・スケジュール --- */}
+            <div className="bg-[#F5F5F5] text-gray-700 font-bold py-6 px-4 flex items-center justify-center text-sm tracking-wide text-center">
+              期間・スケジュール
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                14日間は無料<br />15日目以降は、各プランと同様
+              </span>
+              <span className="text-[11px] text-gray-500 mt-1 font-bold">※(オンデマンド期間の例)</span>
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                2週間（対面+オンライン）<br />+ 伴走4週間
+              </span>
+            </div>
+            <div className="bg-white flex flex-col items-center justify-center py-4 px-4 text-center relative group">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                2週間（フル対面）<br />+ 伴走4週間
+              </span>
+            </div>
+
+            {/* --- Row 3: 受講形式 --- */}
+            <div className="bg-[#F5F5F5] text-gray-700 font-bold py-6 px-4 flex items-center justify-center text-sm tracking-wide text-center">
+              受講形式
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                完全オンライン / 自己ペース
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                対面 + オンライン併用
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                講師が御社に常駐
+              </span>
+            </div>
+
+            {/* --- Row 4: 受講上限人数 --- */}
+            <div className="bg-[#F5F5F5] text-gray-700 font-bold py-6 px-4 flex items-center justify-center text-sm tracking-wide text-center">
+              受講人数
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                無料（人数上限なし）
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                5〜15名 / 回
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                5〜10名 / 回
+              </span>
+            </div>
+
+            {/* --- Row 5: 伴走・サポート体制 --- */}
+            <div className="bg-[#F5F5F5] text-gray-700 font-bold py-6 px-4 flex items-center justify-center text-sm tracking-wide text-center">
+              サポート体制
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                無料（チャット質問サポート30日）
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                無料（修了後3ヶ月のチャット伴走に加え、<br/>平日オンラインコードレビュー含む）
+              </span>
+            </div>
+            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+              <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
+                修了後1ヶ月の現場フォローと<br/>対面でのチームビルディング
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        {/* --- Conditions / Notes (Bottom Area) --- */}
+        <div className="mt-12 text-left">
+          <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-4 tracking-wide">
+            対象企業・法人の条件
+          </h3>
+          <p className="text-gray-700 font-bold text-[13px] md:text-sm leading-[1.8] tracking-wide">
+            自社内のDX・内製化にコミットする意志があること。実際の業務課題を題材とした学習プロジェクトが設計されていること。<br />
+            記載の料金目安は受講人数・カスタマイズ内容により変動いたします。<br />
+            ※ 厚生労働省の人材開発支援助成金・DX分野リスキリング推進事業など、各種助成金の対象となる可能性があります。
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`relative rounded-[16px] p-5 md:p-10 flex flex-col border-2 transition-all duration-300 ${
-                plan.recommended
-                  ? "bg-[#f0f6ff] border-[#2563eb] shadow-[0_12px_32px_rgba(37,99,235,0.15)]"
-                  : "bg-[#f8fafc] border-transparent hover:border-[#2563eb] hover:-translate-y-1 shadow-[0_4px_12px_rgba(0,0,0,0.03)]"
-              }`}
-            >
-              {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#2563eb] text-white text-xs font-black px-4 py-1.5 rounded-full tracking-wider">
-                  MOST POPULAR
-                </div>
-              )}
-
-              <h3 className="text-xl md:text-2xl font-bold text-[#151515] mb-2">
-                {plan.name}
-              </h3>
-              <div
-                className={`inline-block self-start text-[11px] md:text-[12px] font-bold px-2.5 py-1 rounded-full mb-3 ${
-                  plan.recommended
-                    ? "bg-[#2563eb] text-white"
-                    : "bg-[#e6edf5] text-[#2563eb]"
-                }`}
-              >
-                {plan.format}
-              </div>
-              <p className="text-[#555] text-[13px] md:text-[14px] leading-[1.7] mb-6 min-h-[3rem]">
-                {plan.target}
-              </p>
-
-              <div className="space-y-2 mb-6 pb-6 border-b border-[#e6edf5]">
-                <div className="flex justify-between text-[13px] md:text-[14px]">
-                  <span className="text-[#888]">期間</span>
-                  <span className="text-[#151515] font-bold">{plan.duration}</span>
-                </div>
-                <div className="flex justify-between text-[13px] md:text-[14px]">
-                  <span className="text-[#888]">受講人数</span>
-                  <span className="text-[#151515] font-bold">{plan.capacity}</span>
-                </div>
-              </div>
-
-              <ul className="space-y-3 mb-8 flex-1">
-                {plan.includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-[13px] md:text-[14px] text-[#444] leading-[1.7]"
-                  >
-                    <span className="text-[#2563eb] font-bold mt-0.5 flex-shrink-0">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="text-center">
-                <div className="text-[#888] text-[12px] md:text-[13px] mb-2">料金目安</div>
-                <div className="text-[#151515] font-black text-lg md:text-xl mb-1">
-                  {plan.priceNote}
-                </div>
-                <p className="text-[#888] text-[11px] md:text-[12px] mb-4">
-                  ※ 受講人数・カスタマイズにより変動
-                </p>
-                <a
-                  href="/consultation/"
-                  className={`block w-full py-3 rounded-full font-bold text-sm md:text-base transition-colors ${
-                    plan.recommended
-                      ? "bg-[#2563eb] text-white hover:bg-[#1d4ed8]"
-                      : "bg-white text-[#2563eb] border-2 border-[#2563eb] hover:bg-[#2563eb] hover:text-white"
-                  }`}
-                >
-                  30分の適合診断を受ける
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p className="text-center text-[#888] text-[13px] md:text-[14px] mt-10 leading-[1.8]">
-          ※ 厚生労働省の人材開発支援助成金・DX分野リスキリング推進事業など、各種助成金の対象となる可能性があります。
-        </p>
       </div>
     </section>
   );

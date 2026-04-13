@@ -6,8 +6,11 @@ import ProgramGates from "@/components/ProgramGates";
 import WhyResults from "@/components/WhyResults";
 import ServiceDifferentiation from "@/components/ServiceDifferentiation";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
+import BeforeAfter from "@/components/BeforeAfter";
+import RoiEquation from "@/components/RoiEquation";
 import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
 import TalentDevelopment from "@/components/TalentDevelopment";
+import MentorshipSupport from "@/components/MentorshipSupport";
 import SecurityCompliance from "@/components/SecurityCompliance";
 import Pricing from "@/components/Pricing";
 import SubsidyList from "@/components/SubsidyList";
@@ -18,6 +21,7 @@ import Faq from "@/components/Faq";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import PositioningAndFeatures from "@/components/PositioningAndFeatures";
 
 export default function Home() {
   return (
@@ -27,13 +31,17 @@ export default function Home() {
         <div>
           <HeroBanner />
           <AiServiceStrengths />
+          <BeforeAfter />
+          <RoiEquation />
           <AdoptionTimeline />
           <TalentDevelopment />
+          <MentorshipSupport />
           <ProgramGates />
           <CaseStudies />
           <RstaffingFv />
           <AiDevelopmentWorkflow />
           <ServiceDifferentiation />
+          <PositioningAndFeatures />
           <SecurityCompliance />
           <Pricing />
           <SubsidyList />
