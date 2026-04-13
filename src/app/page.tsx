@@ -28,8 +28,8 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <TargetAudience />
           <AiServiceStrengths />
+          <TargetAudience />
           <ClaudeCodeOverview />
           <BeforeAfter />
           <TalentDevelopment />
