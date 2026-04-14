@@ -1,4 +1,5 @@
 import React from "react";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 const TalentDevelopment: React.FC = () => {
   return (
@@ -64,7 +65,7 @@ const TalentDevelopment: React.FC = () => {
                   <div className="bg-[#f5f5f5] flex-1 p-5 rounded-b-sm shadow-sm border border-[#e8e8e8]">
                     <ul className="space-y-2 text-[14px] text-[#444]">
                       <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>自然言語での要件→コード変換</li>
-                      <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>デバッグ・エラー対応の実践</li>
+                      <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>{renderWithTerms("デバッグ・エラー対応の実践")}</li>
                     </ul>
                   </div>
                 </div>
@@ -75,7 +76,7 @@ const TalentDevelopment: React.FC = () => {
                   </div>
                   <div className="bg-[#f5f5f5] flex-1 p-5 rounded-b-sm shadow-sm border border-[#e8e8e8]">
                     <ul className="space-y-2 text-[14px] text-[#444]">
-                      <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>要件定義〜実装〜デプロイ</li>
+                      <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>{renderWithTerms("要件定義〜実装〜デプロイ")}</li>
                       <li className="flex items-start"><span className="mr-2 mt-0.5">•</span>本番運用を前提にした設計</li>
                     </ul>
                   </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import TermPopover from '@/components/TermPopover';
 
 const RoiEquation: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const RoiEquation: React.FC = () => {
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-xl md:text-[22px] font-bold tracking-wider flex items-center gap-4 text-gray-800">
             <span className="w-5 h-[3px] bg-gray-800 inline-block rounded-sm"></span>
-            なぜROIが10倍以上になるのか
+            なぜ<TermPopover termKey="ROI">ROI</TermPopover>が10倍以上になるのか
           </h2>
           <div className="text-[#1890FF] font-black text-lg md:text-2xl tracking-widest">
             Claude Code研修

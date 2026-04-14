@@ -1,4 +1,5 @@
 import React from 'react';
+import TermPopover from '@/components/TermPopover';
 
 export default function ClaudeDesktopFeatures() {
   return (
@@ -77,7 +78,9 @@ export default function ClaudeDesktopFeatures() {
                 <span className="inline-flex items-center bg-gray-100 px-2.5 py-1 text-[11px] font-bold text-gray-600 rounded-md mb-6 tracking-wider">
                   複雑な作業向け
                 </span>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-wide">Cowork</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-wide">
+                  <TermPopover termKey="Cowork">Cowork</TermPopover>
+                </h3>
                 <p className="text-[14px] text-gray-600 leading-[1.7] mb-6 font-medium">
                   ファイルやアプリ間で作業できま<br />
                   す。繰り返し可能なワークフローを<br />

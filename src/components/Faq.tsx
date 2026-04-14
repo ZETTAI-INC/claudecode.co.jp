@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
+import TermPopover from "@/components/TermPopover";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 type QA = {
-  q: string;
-  a: string;
+  q: ReactNode;
+  a: ReactNode;
 };
 
 const faqs: QA[] = [
@@ -38,11 +40,23 @@ const faqs: QA[] = [
   },
   {
     q: "研修中に扱うデータの範囲と、実データの取り扱いはどうなりますか？",
-    a: "原則としてマスク済みデータまたはテストデータを使用します。実データを使う必要がある場合は、NDA締結のうえ、アクセス範囲と保持期間を書面で合意します。機密データを直接使う場合は、事前に御社セキュリティポリシーに沿った取り扱い方法を合意します。",
+    a: (
+      <>
+        原則としてマスク済みデータまたはテストデータを使用します。実データを使う必要がある場合は、
+        <TermPopover termKey="NDA">NDA</TermPopover>
+        締結のうえ、アクセス範囲と保持期間を書面で合意します。機密データを直接使う場合は、事前に御社セキュリティポリシーに沿った取り扱い方法を合意します。
+      </>
+    ),
   },
   {
     q: "アカウント・権限の管理、SSO/IdP連携は可能ですか？",
-    a: "Claude Code のアカウントは受講者ごとに個別発行します。研修終了後の権限引き継ぎ・削除手順も事前に定義。御社のSSO/IdP連携にも対応可能です。",
+    a: (
+      <>
+        Claude Code のアカウントは受講者ごとに個別発行します。研修終了後の権限引き継ぎ・削除手順も事前に定義。御社の
+        <TermPopover termKey="SSO">SSO/IdP連携</TermPopover>
+        にも対応可能です。
+      </>
+    ),
   },
   {
     q: "デプロイ先の環境は指定できますか？閉域網でも対応できますか？",
@@ -54,7 +68,13 @@ const faqs: QA[] = [
   },
   {
     q: "情シス・法務向けの確認事項や、導入前チェックリストはありますか？",
-    a: "導入前チェックリストをご用意しています。データ保持ポリシー、外部API通信先一覧、ログ取得範囲、契約終了後のデータ削除手順など、稟議に必要な情報をまとめてお渡しします。金融・医療・公共など機密性の高い業界での導入実績もあります。お問い合わせ時にご請求ください。",
+    a: (
+      <>
+        導入前チェックリストをご用意しています。データ保持ポリシー、外部
+        <TermPopover termKey="API">API</TermPopover>
+        通信先一覧、ログ取得範囲、契約終了後のデータ削除手順など、稟議に必要な情報をまとめてお渡しします。金融・医療・公共など機密性の高い業界での導入実績もあります。お問い合わせ時にご請求ください。
+      </>
+    ),
   },
 ];
 
@@ -112,7 +132,7 @@ export default function Faq() {
                       A
                     </span>
                     <p className="flex-1 text-[#444] text-[13px] md:text-[14px] leading-[1.9] pt-1">
-                      {item.a}
+                      {renderWithTerms(item.a)}
                     </p>
                   </div>
                 )}

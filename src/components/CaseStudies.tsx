@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 interface CaseStudy {
   image: string;
@@ -125,7 +126,7 @@ export default function CaseStudies() {
                 {/* Title & Company */}
                 <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
                   <h3 className="text-xl md:text-[28px] font-bold text-[#1890FF] tracking-wide">
-                    {c.company} <span className="text-lg md:text-xl font-medium">様</span>
+                    {renderWithTerms(c.company)} <span className="text-lg md:text-xl font-medium">様</span>
                   </h3>
                   <p className="text-xs md:text-sm font-bold text-gray-600 mt-1 md:mt-0 md:ml-3">
                     {c.built}の開発・提供
@@ -143,7 +144,7 @@ export default function CaseStudies() {
                     課題
                   </div>
                   <p className="font-bold text-[14px] md:text-base text-gray-800 leading-[1.6] tracking-wide">
-                    {c.challenge}
+                    {renderWithTerms(c.challenge)}
                   </p>
                 </div>
               </div>
@@ -158,10 +159,10 @@ export default function CaseStudies() {
                   導入背景・制約
                 </div>
                 <div className="text-[13px] md:text-[14px] font-bold text-gray-700 leading-[1.7] flex flex-col gap-3">
-                  <p>{c.constraints}</p>
+                  <p>{renderWithTerms(c.constraints)}</p>
                   <div className="bg-gray-50 p-2.5 mt-1 border-l-4 border-gray-300 text-[12px] md:text-[13px]">
                     <span className="text-gray-500 block text-[11px] mb-1">使用技術 / 環境</span>
-                    {c.tools}
+                    {renderWithTerms(c.tools)}
                   </div>
                 </div>
               </div>

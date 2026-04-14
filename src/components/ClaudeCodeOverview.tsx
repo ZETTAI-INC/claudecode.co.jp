@@ -1,14 +1,18 @@
 "use client";
 
 import React, { useRef } from 'react';
+import TermPopover from "@/components/TermPopover";
+import type { GlossaryKey } from "@/data/glossary";
 
-const cards = [
+type Card = { title: string; icon: string; term?: GlossaryKey };
+
+const cards: Card[] = [
   { title: "プロンプト設計", icon: "architecture" },
-  { title: "自社データ連携(RAG)", icon: "dataset" },
+  { title: "自社データ連携(RAG)", icon: "dataset", term: "RAG" },
   { title: "自律AIエージェント", icon: "psychology" },
-  { title: "業務自動化(RPA+AI)", icon: "account_tree" },
+  { title: "業務自動化(RPA+AI)", icon: "account_tree", term: "RPA" },
   { title: "社内AIツール開発", icon: "integration_instructions" },
-  { title: "API・システム連携", icon: "hub" },
+  { title: "API・システム連携", icon: "hub", term: "API" },
   { title: "高度なデータ分析", icon: "query_stats" },
   { title: "エラー解決・デバッグ", icon: "troubleshoot" },
   { title: "セキュリティ設計", icon: "gpp_good" },
@@ -83,6 +87,9 @@ export default function ClaudeCodeOverview() {
                         <div className="absolute top-0 right-0 w-full h-[120px] bg-white border border-gray-300 rounded-t flex flex-col items-center overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
                            <div className="w-full bg-[#003b73] text-white text-center text-[13px] font-bold py-2.5 border-b border-[#003b73] leading-tight px-1">
                               {card.title}
+                              {card.term && (
+                                <TermPopover termKey={card.term} iconOnly tone="inherit" />
+                              )}
                            </div>
                            <div className="flex-1 flex justify-center items-center w-full bg-white">
                               <span className="material-icons-outlined text-[46px] text-[#003b73] group-hover:scale-110 transition-transform">{card.icon}</span>
@@ -105,13 +112,6 @@ export default function ClaudeCodeOverview() {
                        <div>要件定義スキル ／ プロジェクト推進体制</div>
                     </div>
 
-                    {/* Left Logo Overlay Button-style */}
-                    <div className="absolute left-[-2%] md:left-[3%] top-1/2 -translate-y-1/2 bg-white text-gray-900 border-[3px] border-blue-500 rounded-[24px] px-5 py-2 font-bold shadow-xl flex items-center gap-2 transform">
-                       <div className="w-7 h-7 bg-blue-600 rounded flex justify-center items-center text-white text-sm font-black shadow-inner">
-                         C
-                       </div>
-                       <span className="text-base font-black tracking-tight cursor-default">CLAUDE CODE</span>
-                    </div>
                  </div>
              </div>
 

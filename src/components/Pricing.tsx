@@ -1,4 +1,5 @@
 import React from "react";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 export default function Pricing() {
   return (
@@ -128,7 +129,7 @@ export default function Pricing() {
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
-                修了後3ヶ月のチャット伴走＋<br/>平日オンラインコードレビュー<br/>（追加料金なし）
+                修了後3ヶ月のチャット伴走＋<br/>平日オンライン{renderWithTerms("コードレビュー")}<br/>（追加料金なし）
               </span>
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
@@ -146,9 +147,9 @@ export default function Pricing() {
             対象企業・法人の条件
           </h3>
           <p className="text-gray-700 font-bold text-[13px] md:text-sm leading-[1.8] tracking-wide">
-            自社内のDX・内製化にコミットする意志があること。実際の業務課題を題材とした学習プロジェクトが設計されていること。<br />
+            {renderWithTerms("自社内のDX・内製化にコミットする意志があること。")}実際の業務課題を題材とした学習プロジェクトが設計されていること。<br />
             記載の料金目安は受講人数・カスタマイズ内容により変動いたします。<br />
-            ※ 厚生労働省の人材開発支援助成金・DX分野リスキリング推進事業など、各種助成金の対象となる可能性があります。
+            ※ {renderWithTerms("厚生労働省の人材開発支援助成金・DX分野リスキリング推進事業など、各種助成金の対象となる可能性があります。")}
           </p>
         </div>
 

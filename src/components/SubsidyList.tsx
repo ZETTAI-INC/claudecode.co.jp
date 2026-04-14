@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 interface CourseItem {
   name: string;
@@ -75,7 +76,7 @@ export default function SubsidyList() {
                 >
                   {item.name}
                 </Link>
-                <p>{item.description}</p>
+                <p>{renderWithTerms(item.description)}</p>
               </div>
             </li>
           ))}

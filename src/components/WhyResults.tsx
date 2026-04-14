@@ -1,5 +1,8 @@
 "use client";
 
+import type { ReactNode } from "react";
+import TermPopover from "@/components/TermPopover";
+
 const managementCards = [
   {
     title: "カリキュラム",
@@ -37,7 +40,7 @@ const managementCards = [
 ];
 
 type Mark = "best" | "full" | "partial" | "none";
-type Cell = { mark: Mark; label: string };
+type Cell = { mark: Mark; label: ReactNode };
 
 const comparisonRows: {
   question: string;
@@ -51,7 +54,7 @@ const comparisonRows: {
     cc: { mark: "best", label: "一式を自動構築" },
     gpt: { mark: "full", label: "コード生成" },
     gem: { mark: "full", label: "コード生成" },
-    cop: { mark: "partial", label: "IDE補完中心" },
+    cop: { mark: "partial", label: <><TermPopover termKey="IDE">IDE</TermPopover>補完中心</> },
   },
   {
     question: "Webアプリ・管理画面の構築",
@@ -79,18 +82,18 @@ const comparisonRows: {
     cc: { mark: "best", label: "実行・配布まで" },
     gpt: { mark: "full", label: "コード生成" },
     gem: { mark: "full", label: "コード生成" },
-    cop: { mark: "partial", label: "IDE補完中心" },
+    cop: { mark: "partial", label: <><TermPopover termKey="IDE">IDE</TermPopover>補完中心</> },
   },
   {
     question: "データ分析・レポート生成",
     cc: { mark: "best", label: "実データを処理" },
-    gpt: { mark: "full", label: "Code Interpreter" },
+    gpt: { mark: "full", label: <TermPopover termKey="CodeInterpreter">Code Interpreter</TermPopover> },
     gem: { mark: "full", label: "コード実行可" },
     cop: { mark: "none", label: "非対応" },
   },
   {
     question: "API連携・バッチ処理の自動化",
-    cc: { mark: "best", label: "cron/CI連携" },
+    cc: { mark: "best", label: <><TermPopover termKey="Cron">cron</TermPopover>/<TermPopover termKey="CI">CI連携</TermPopover></> },
     gpt: { mark: "none", label: "ローカル不可" },
     gem: { mark: "none", label: "ローカル不可" },
     cop: { mark: "none", label: "非対応" },
@@ -114,7 +117,7 @@ const comparisonRows: {
     cc: { mark: "best", label: "プロジェクト横断" },
     gpt: { mark: "partial", label: "貼付範囲のみ" },
     gem: { mark: "partial", label: "貼付範囲のみ" },
-    cop: { mark: "full", label: "@workspace対応" },
+    cop: { mark: "full", label: <><TermPopover termKey="Workspace">@workspace</TermPopover>対応</> },
   },
 ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 const POINTS = [
   {
@@ -65,9 +66,9 @@ const AiServiceStrengths: React.FC = () => {
             <div className="flex flex-col gap-6 w-full lg:w-[32%]">
               {/* Bubble: Left Top */}
               <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">内製化が進まない</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">{renderWithTerms("内製化が進まない")}</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
-                  PoCは作れても、本番運用まで持っていける人材が社内にいない
+                  {renderWithTerms("PoCは作れても、本番運用まで持っていける人材が社内にいない")}
                 </p>
                 {/* Tail pointing towards center-right */}
                 <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#f0f0f0]"></div>
@@ -128,7 +129,7 @@ const AiServiceStrengths: React.FC = () => {
 
               {/* Bubble: Right Bottom */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">PoCで止まる</h3>
+                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">{renderWithTerms("PoCで止まる")}</h3>
                 <p className="text-sm text-[#555] leading-relaxed">
                   生成AIの検証は進むが、業務に落ちる実装まで到達しない
                 </p>
@@ -173,7 +174,7 @@ const AiServiceStrengths: React.FC = () => {
                 {point.list.map((item, i) => (
                   <li key={i} className="flex items-start text-[14px] md:text-[15px] text-[#444] leading-[1.7]">
                     <span className="text-[#2563eb] font-bold mr-2 mt-0.5">•</span>
-                    <span>{item}</span>
+                    <span>{renderWithTerms(item)}</span>
                   </li>
                 ))}
               </ul>

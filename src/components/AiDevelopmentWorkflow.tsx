@@ -1,4 +1,5 @@
 import React from "react";
+import { renderWithTerms } from "@/components/renderWithTerms";
 
 const PROCESS_STEPS = [
   {
@@ -105,7 +106,7 @@ const AiDevelopmentWorkflow: React.FC = () => {
               {PROCESS_STEPS.map((step) => (
                 <div key={`desc-${step.id}`} className="h-14 flex items-center justify-center text-center px-3">
                   <p className="text-[#555] text-[13px] leading-[1.6] font-semibold tracking-wide">
-                    {step.desc}
+                    {renderWithTerms(step.desc)}
                   </p>
                 </div>
               ))}
