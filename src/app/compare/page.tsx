@@ -5,6 +5,7 @@ import SpeedComparison from "@/components/SpeedComparison";
 import AiEffectiveness from "@/components/AiEffectiveness";
 import ComparisonSection from "@/components/ComparisonSection";
 import AdPerformanceComparison from "@/components/AdPerformanceComparison";
+import TargetAudience from "@/components/TargetAudience";
 import { WhyResultsCompare } from "@/components/WhyResults";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function ComparePage() {
           </div>
         </section>
 
+        <TargetAudience />
         <AdPerformanceComparison />
         <WhyResultsCompare />
         <SpeedComparison />

@@ -7,9 +7,10 @@ const TalentDevelopment: React.FC = () => {
         
         {/* Title */}
         <div className="flex items-center gap-3 mb-10 md:mb-14 pb-4 border-b border-orange-100">
-          <span className="w-2 h-8 md:h-10 bg-[#ff5c00] block rounded-sm"></span>
+          <span className="w-2 h-14 md:h-16 bg-[#ff5c00] block rounded-sm self-start mt-1"></span>
           <h2 className="text-2xl md:text-3xl lg:text-[30px] font-black text-[#29034f] tracking-wide leading-[1.6]">
-            14日で成果が出る理由：<br className="block md:hidden"/>教えるのは<span className="text-[#ff5c00] font-black">Claude Code</span><strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>だけ</strong>だから
+            <span className="text-gray-500 text-[16px] md:text-[20px] block mb-1 font-bold">なぜ&quot;現場社員×Claude Code&quot;が最強なのか</span>
+            <span className="text-[#ff5c00] font-black">Claude Code</span>は、業務を知り尽くした人が<br className="block md:hidden"/>握ると化ける
           </h2>
         </div>
 
@@ -131,9 +132,9 @@ const TalentDevelopment: React.FC = () => {
                     POINT
                   </div>
                   <p className="text-[15.5px] text-[#29034f] font-extrabold leading-[1.9] tracking-wide">
-                    14日でゼロから育てるのは不可能。<br/>
-                    <strong className="text-[#ff5c00] border-b-[3px] border-[#ffcaa5] pb-0.5">既にある業務知識の上に<br/>Claude Codeだけを載せる</strong><br/>
-                    これが短期で<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>成果が出る</strong>本質的な理由。
+                    現場の課題は外部には見えません。<br className="hidden md:block" />
+                    <strong className="text-[#ff5c00] border-b-[3px] border-[#ffcaa5] pb-0.5">業務を知り尽くした現場社員が<br/>Claude Codeを握った瞬間、</strong><br/>
+                    開発力は<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別次元</strong>に跳ね上がります。
                   </p>
                 </div>
               </div>

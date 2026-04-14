@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
-import TargetAudience from "@/components/TargetAudience";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import ClientCompanies from "@/components/ClientCompanies";
@@ -29,7 +28,6 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <TargetAudience />
           <AiServiceStrengths />
           <ClaudeCodeOverview />
           <BeforeAfter />
