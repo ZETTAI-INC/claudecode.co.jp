@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
+import ClaudeDesktopFeatures from "@/components/ClaudeDesktopFeatures";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import ClientCompanies from "@/components/ClientCompanies";
 import CaseStudies from "@/components/CaseStudies";
@@ -30,6 +31,7 @@ export default function Home() {
           <HeroBanner />
           <AiServiceStrengths />
           <ClaudeCodeOverview />
+          <ClaudeDesktopFeatures />
           <BeforeAfter />
           <TalentDevelopment />
           <DevelopmentSpeedComparison />

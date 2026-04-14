@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const entry = getNewsBySlug(slug);
   if (!entry) return {};
   return {
-    title: `${entry.title} | CLAUDE CODE リスキリング研修`,
+    title: `${entry.title} | Claude Code リスキリング研修`,
   };
 }
 

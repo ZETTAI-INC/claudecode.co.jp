@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー | CLAUDE CODE リスキリング研修",
+  title: "プライバシーポリシー | Claude Code リスキリング研修",
 };
 
 export default function PrivacyPage() {
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             </h1>
 
             <p className="mb-8 leading-relaxed">
-              株式会社ZETTAI（以下「当社」といいます）は、「CLAUDE CODE
+              株式会社ZETTAI（以下「当社」といいます）は、「Claude Code
               リスキリング研修」（以下「本サービス」といいます）の運営にあたり、お客様の個人情報の保護を重要な責務と考え、以下のとおりプライバシーポリシーを定めます。
             </p>
 

@@ -8,14 +8,18 @@ export default function TargetAudience() {
         {/* --- Header Section --- */}
         <div className="border-b-[1.5px] border-gray-300 pb-2 mb-6 md:mb-8 flex justify-between items-end">
           <h2 className="text-xl md:text-[22px] font-bold tracking-wide text-gray-800 relative">
-            ターゲット層と提供価値
+            どの企業レイヤーにフィットするか
             <div className="absolute -bottom-[3px] left-0 w-16 h-[3px] bg-[#1890FF]"></div>
           </h2>
+          <span className="hidden md:inline-block text-[11px] tracking-[0.18em] text-[#1890FF] font-bold uppercase">
+            Target Layer
+          </span>
         </div>
 
         <div className="mb-14 md:mb-20 text-[15px] md:text-base font-bold text-gray-700 leading-[1.8] tracking-wide">
-          ITリソース不足・高額な外注費・属人化 ── 
-          <span className="md:hidden"><br /></span>現場が抱える深刻な課題を、「AIによる圧倒的な内製化」でスマートに解決します。
+          ITリソース不足・高額な外注費・属人化 ──
+          <span className="md:hidden"><br /></span>現場が抱える深刻な課題を抱えるのは、主に<span className="text-[#1890FF]">中小企業・スタートアップ</span>のレイヤーです。
+          <span className="md:hidden"><br /></span>Claude Code 研修は、この層の「スピード・柔軟な内製化」ニーズに正面からフィットします。
         </div>
 
         {/* --- Main Content Area --- */}

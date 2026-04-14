@@ -3,13 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SpeedComparison from "@/components/SpeedComparison";
 import AiEffectiveness from "@/components/AiEffectiveness";
-import ComparisonSection from "@/components/ComparisonSection";
 import AdPerformanceComparison from "@/components/AdPerformanceComparison";
+import AiComparisonSelector from "@/components/AiComparisonSelector";
 import TargetAudience from "@/components/TargetAudience";
 import { WhyResultsCompare } from "@/components/WhyResults";
 
 export const metadata: Metadata = {
-  title: "AI比較・効果検証 | CLAUDE CODE リスキリング研修",
+  title: "AI比較・効果検証 | Claude Code リスキリング研修",
   description:
     "Claude Code と主要AIサービス（ChatGPT / Gemini / Copilot）の業務成果物ベース比較、研修前後の開発スピード差分、実装到達度データをまとめました。",
 };
@@ -42,12 +42,12 @@ export default function ComparePage() {
           </div>
         </section>
 
-        <TargetAudience />
-        <AdPerformanceComparison />
+        <AiComparisonSelector />
         <WhyResultsCompare />
         <SpeedComparison />
         <AiEffectiveness />
-        <ComparisonSection />
+        <AdPerformanceComparison />
+        <TargetAudience />
 
         {/* CTA */}
         <section className="py-14 md:py-20 text-center bg-white">

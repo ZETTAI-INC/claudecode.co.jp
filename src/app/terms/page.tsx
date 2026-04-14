@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "利用規約 | CLAUDE CODE リスキリング研修",
+  title: "利用規約 | Claude Code リスキリング研修",
 };
 
 export default function TermsPage() {

@@ -1,59 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubsidyFlow from "@/components/SubsidyFlow";
 import MentorshipSupport from "@/components/MentorshipSupport";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
+import Pricing from "@/components/Pricing";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
 };
-
-const plans = [
-  {
-    name: "Eラーニングコース",
-    price: "30万円〜",
-    unit: "/月",
-    recommended: false,
-    note: "受講人数・カスタマイズにより変動",
-    features: [
-      "人数上限なし",
-      "完全オンライン / 自己ペース",
-      "全14日分の動画教材＆実装課題",
-      "チャット質問サポート（30日間）",
-    ],
-  },
-  {
-    name: "ハイブリッドコース",
-    badge: "おすすめ",
-    price: "50万円〜",
-    unit: "/月",
-    recommended: true,
-    note: "受講人数・カスタマイズにより変動",
-    features: [
-      "5〜15名 / 回",
-      "対面 + オンライン併用",
-      "自部署の業務課題を題材にした実装演習",
-      "修了後3ヶ月のチャット伴走サポート",
-      "キックオフ・中間・最終回は対面開催",
-    ],
-  },
-  {
-    name: "完全対面コース",
-    price: "120万円〜",
-    unit: "/月",
-    recommended: false,
-    note: "受講人数・カスタマイズにより変動",
-    features: [
-      "5〜10名 / 回",
-      "講師が御社に常駐し対面指導",
-      "業務課題のヒアリング＆設計支援",
-      "チームビルディング込みの集中育成",
-      "修了後1ヶ月の現場フォロー",
-    ],
-  },
-];
 
 export default function PricePage() {
   return (
@@ -81,115 +36,8 @@ export default function PricePage() {
         {/* Overview section */ }
         <ClaudeCodeOverview />
 
-        {/* Pricing cards */}
-        <section
-          className="py-16 md:py-24"
-          style={{ background: "#f5f8fa" }}
-        >
-          <div
-            className="mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"
-            style={{ maxWidth: 1200 }}
-          >
-            {plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`relative rounded-2xl bg-white shadow-md flex flex-col overflow-hidden transition-shadow hover:shadow-lg ${
-                  plan.recommended
-                    ? "md:scale-105"
-                    : ""
-                }`}
-                style={
-                  plan.recommended
-                    ? { outline: "2px solid #2563eb", outlineOffset: "-2px" }
-                    : {}
-                }
-              >
-                {/* Recommended badge */}
-                {plan.badge && (
-                  <div
-                    className="text-center text-white text-sm font-bold py-2"
-                    style={{ background: "#2563eb" }}
-                  >
-                    {plan.badge}
-                  </div>
-                )}
-
-                <div className="p-8 flex flex-col flex-1">
-                  {/* Plan name */}
-                  <h2
-                    className="text-xl font-bold text-center mb-6"
-                    style={{ color: "#333" }}
-                  >
-                    {plan.name}
-                  </h2>
-
-                  {/* Price */}
-                  <div className="text-center mb-8">
-                    <span
-                      className={`font-bold ${
-                        plan.unit ? "text-4xl" : "text-2xl"
-                      }`}
-                      style={{ color: "#2563eb" }}
-                    >
-                      {plan.price}
-                    </span>
-                    {plan.unit && (
-                      <span
-                        className="text-base font-medium"
-                        style={{ color: "#666" }}
-                      >
-                        {plan.unit}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Divider */}
-                  <hr className="border-gray-200 mb-8" />
-
-                  {/* Features */}
-                  <ul className="space-y-4 mb-10 flex-1">
-                    {plan.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-start gap-3 text-sm"
-                        style={{ color: "#333" }}
-                      >
-                        <span
-                          className="material-icons-outlined text-lg mt-0.5 shrink-0"
-                          style={{ color: "#2563eb", fontSize: 20 }}
-                        >
-                          check_circle
-                        </span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA button */}
-                  <Link
-                    href="/consultation/"
-                    className={`block text-center font-bold py-3 px-6 rounded-full transition-colors ${
-                      plan.recommended
-                        ? "text-white hover:opacity-90"
-                        : "hover:text-white"
-                    }`}
-                    style={
-                      plan.recommended
-                        ? { background: "#2563eb", color: "#fff" }
-                        : {
-                            background: "#fff",
-                            color: "#2563eb",
-                            border: "2px solid #2563eb",
-                          }
-                    }
-                  >
-                    30分の適合診断を受ける
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* Pricing table (unified with home) */}
+        <Pricing />
 
         {/* Mentorship support */}
         <MentorshipSupport />

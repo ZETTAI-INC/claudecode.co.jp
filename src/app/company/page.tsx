@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "運営会社 | CLAUDE CODE リスキリング研修",
+  title: "運営会社 | Claude Code リスキリング研修",
 };
 
 const companyInfo = [

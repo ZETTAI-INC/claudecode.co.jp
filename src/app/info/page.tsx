@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { newsEntries } from "@/data/news";
 
 export const metadata: Metadata = {
-  title: "お知らせ | CLAUDE CODE リスキリング研修",
+  title: "お知らせ | Claude Code リスキリング研修",
 };
 
 export default function InfoPage() {
