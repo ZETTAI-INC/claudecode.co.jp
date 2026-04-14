@@ -78,13 +78,13 @@ export default function CasePage() {
         <section className="bg-white border-b border-gray-200 py-4">
             <div className="mx-auto px-5 max-w-5xl flex justify-center gap-8 md:gap-16 text-center text-sm">
                 <div>
-                    <span className="text-gray-500 font-bold mr-2">導入企業数</span>
-                    <span className="text-xl font-bold text-black">100<span className="text-blue-600 text-xs ml-1">社以上</span></span>
+                    <span className="text-gray-500 font-bold mr-2">パイロット研修受講者</span>
+                    <span className="text-xl font-bold text-black">128<span className="text-blue-600 text-xs ml-1">名（n=128）</span></span>
                 </div>
                 <div className="w-px h-6 bg-gray-200 hidden md:block mt-1"></div>
                 <div>
-                    <span className="text-gray-500 font-bold mr-2">平均生産性向上</span>
-                    <span className="text-xl font-bold text-black">1.8<span className="text-blue-600 text-xs ml-1">倍</span></span>
+                    <span className="text-gray-500 font-bold mr-2">14日以内の本番公開率</span>
+                    <span className="text-xl font-bold text-black">96<span className="text-blue-600 text-xs ml-1">%</span></span>
                 </div>
             </div>
         </section>

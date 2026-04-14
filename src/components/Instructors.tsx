@@ -14,7 +14,7 @@ const instructors: Instructor[] = [
     name: "Lead Instructor A",
     role: "チーフインストラクター",
     background:
-      "大手SIer出身。AIを活用した業務ツール内製化支援を100社以上経験。",
+      "大手SIer出身。AIを活用した業務ツール内製化支援の設計・講師経験を有し、自社パイロット研修（n=128名）のカリキュラム設計を主導。",
     expertise: ["Claude Code", "業務要件設計", "社内展開"],
   },
   {
