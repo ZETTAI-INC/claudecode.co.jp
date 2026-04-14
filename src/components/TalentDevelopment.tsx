@@ -107,7 +107,7 @@ const TalentDevelopment: React.FC = () => {
                 {/* Text */}
                 <div className="relative z-10 text-center tracking-widest text-[#333] mb-8">
                   <p className="text-lg md:text-xl font-bold mb-3">受講者が既に</p>
-                  <p className="text-lg md:text-xl font-bold">持っているもの</p>
+                  <p className="text-lg md:text-xl font-bold">持っている土台</p>
                 </div>
               </div>
 
@@ -132,8 +132,9 @@ const TalentDevelopment: React.FC = () => {
                     POINT
                   </div>
                   <p className="text-[15.5px] text-[#29034f] font-extrabold leading-[1.9] tracking-wide">
-                    現場の課題は外部には見えません。<br className="hidden md:block" />
-                    <strong className="text-[#ff5c00] border-b-[3px] border-[#ffcaa5] pb-0.5">業務を知り尽くした現場社員が<br/>Claude Codeを握った瞬間、</strong><br/>
+                    研修で教えるのは氷山の一角。<br className="hidden md:block" />
+                    本体は、現場社員の中にある業務知識と熱量です。<br/>
+                    <strong className="text-[#ff5c00] border-b-[3px] border-[#ffcaa5] pb-0.5">この土台にClaude Codeが乗った瞬間、</strong><br/>
                     開発力は<strong style={{ WebkitTextEmphasis: 'filled circle #ff5c00', textEmphasis: 'filled circle #ff5c00', color: '#ff5c00', padding: '0 4px', fontWeight: 900 }}>別次元</strong>に跳ね上がります。
                   </p>
                 </div>

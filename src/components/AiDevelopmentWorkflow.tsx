@@ -97,8 +97,11 @@ const AiDevelopmentWorkflow: React.FC = () => {
               ))}
             </div>
 
-            {/* Column 3: Descriptions */}
-            <div className="w-72 flex flex-col gap-6 pt-[5.5rem] relative z-10">
+            {/* Column 3: Descriptions (belongs to Column 2 / Traditional) */}
+            <div className="w-72 flex flex-col gap-6 relative z-10">
+              <div className="h-10 flex items-center justify-center font-bold text-[13px] text-[#888] mb-6 tracking-wide">
+                <span className="mr-1">←</span>一般的なAI研修の中身
+              </div>
               {PROCESS_STEPS.map((step) => (
                 <div key={`desc-${step.id}`} className="h-14 flex items-center justify-center text-center px-3">
                   <p className="text-[#555] text-[13px] leading-[1.6] font-semibold tracking-wide">

@@ -16,7 +16,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Table Wrapper */}
-        <div className="w-full overflow-x-auto pb-6 -mx-4 px-4 md:mx-0 md:px-0">
+        <div className="w-full overflow-x-auto pt-4 pb-6 -mx-4 px-4 md:mx-0 md:px-0">
           <div className="min-w-[800px] grid grid-cols-[minmax(150px,200px)_minmax(180px,1fr)_minmax(180px,1fr)_minmax(180px,1fr)] gap-[2px] bg-[#E5E7EB] border border-[#E5E7EB]">
             
             {/* --- Header Row --- */}
@@ -62,7 +62,7 @@ export default function Pricing() {
             </div>
             <div className="bg-white flex flex-col items-center justify-center py-4 px-4 text-center">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
-                14日間は無料<br />15日目以降は、各プランと同様
+                14日間は追加料金なし<br />15日目以降は、各プランと同様
               </span>
               <span className="text-[11px] text-gray-500 mt-1 font-bold">※(オンデマンド期間の例)</span>
             </div>
@@ -103,7 +103,7 @@ export default function Pricing() {
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
-                無料（人数上限なし）
+                人数上限なし（追加料金なし）
               </span>
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
@@ -123,12 +123,12 @@ export default function Pricing() {
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
-                無料（チャット質問サポート30日）
+                チャット質問サポート30日<br />（追加料金なし）
               </span>
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
-                無料（修了後3ヶ月のチャット伴走に加え、<br/>平日オンラインコードレビュー含む）
+                修了後3ヶ月のチャット伴走＋<br/>平日オンラインコードレビュー<br/>（追加料金なし）
               </span>
             </div>
             <div className="bg-white flex items-center justify-center py-4 px-4 text-center">

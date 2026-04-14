@@ -31,9 +31,9 @@ export default function ClaudeCodeOverview() {
   return (
     <div className="w-full bg-white py-16 font-sans select-none mb-10 border-b border-gray-200">
       <div className="max-w-[1100px] mx-auto px-5 mb-10 text-center">
-        <p className="text-blue-600 font-bold text-xs mb-2 tracking-widest uppercase">Overview</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">CLAUDE CODEとは？</h2>
-        <div className="bg-[#f8f9fa] p-6 md:p-8 rounded-2xl mx-auto max-w-4xl text-gray-800 font-bold leading-relaxed text-sm md:text-base border border-gray-100 shadow-sm">
+        <p className="text-blue-600 font-bold text-sm mb-2 tracking-widest uppercase">Overview</p>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Claude Codeとは？</h2>
+        <div className="bg-[#f8f9fa] p-7 md:p-10 rounded-2xl mx-auto max-w-4xl text-gray-800 font-bold leading-[1.9] text-base md:text-lg border border-gray-100 shadow-sm">
           非エンジニアでも圧倒的な成果を出せる、全く新しい企業向けの実践型AIリスキリング研修です。<br className="hidden md:block"/>
           最新AIスキルの習得・実務課題の直接的な解決・内製化支援のワンストップ提供により、貴社の事業拡大を強力に後押しします。
         </div>
@@ -44,11 +44,11 @@ export default function ClaudeCodeOverview() {
           
           {/* Main Title Area */}
           <div className="text-center mb-6">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4 tracking-wide">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 tracking-wide">
               AI内製化とグロースに必要な
             </h3>
-            <div className="bg-[#005ebb] text-white py-3 shadow-md mx-10">
-              <p className="text-2xl font-bold tracking-wider">
+            <div className="bg-[#005ebb] text-white py-4 shadow-md mx-10">
+              <p className="text-xl md:text-2xl font-bold tracking-wider">
                 機能・業務・ノウハウをワンストップでサービス提供
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function ClaudeCodeOverview() {
                         
                         {/* Actual Card */}
                         <div className="absolute top-0 right-0 w-full h-[120px] bg-white border border-gray-300 rounded-t flex flex-col items-center overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
-                           <div className="w-full bg-[#003b73] text-white text-center text-[11px] font-bold py-2 border-b border-[#003b73]">
+                           <div className="w-full bg-[#003b73] text-white text-center text-[13px] font-bold py-2.5 border-b border-[#003b73] leading-tight px-1">
                               {card.title}
                            </div>
                            <div className="flex-1 flex justify-center items-center w-full bg-white">
@@ -100,9 +100,9 @@ export default function ClaudeCodeOverview() {
                     {/* Internal Horizontal Divider */}
                     <div className="absolute top-1/2 left-0 w-full h-px bg-white/20"></div>
                     
-                    <div className="relative text-center text-[15px] font-bold tracking-[0.2em] leading-[30px] h-16 flex flex-col justify-between">
-                       <div className="mt-[-2px]">実践的AI実装基盤（Claude / Cursor / ChatGPT）</div>
-                       <div className="mb-[-2px]">要件定義スキル ／ プロジェクト推進体制</div>
+                    <div className="relative text-center text-[17px] font-bold tracking-[0.18em] leading-[32px] min-h-16 py-1 flex flex-col justify-between">
+                       <div>実践的AI実装基盤（Claude / Cursor / ChatGPT）</div>
+                       <div>要件定義スキル ／ プロジェクト推進体制</div>
                     </div>
 
                     {/* Left Logo Overlay Button-style */}

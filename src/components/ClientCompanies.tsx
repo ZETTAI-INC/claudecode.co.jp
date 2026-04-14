@@ -33,7 +33,7 @@ const companies: Company[] = [
 
 const CompanyLogo: React.FC<{ company: Company }> = ({ company }) => {
   return (
-    <div className="flex items-center justify-start sm:justify-center p-3 md:p-4 opacity-[0.65] grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default">
+    <div className="flex items-center justify-start sm:justify-center p-3 md:p-4 transition-all duration-300 cursor-default hover:-translate-y-0.5">
       <div className="flex items-center gap-3 md:gap-4">
         {/* Favicon Icon container */}
         <div className="w-8 h-8 md:w-10 md:h-10 rounded shadow-sm bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 relative overflow-hidden p-1.5">

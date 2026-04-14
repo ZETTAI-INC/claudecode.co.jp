@@ -29,7 +29,7 @@
   width: 601px;
   margin-left: -20px;
   content: "";
-  background-image: url("/rstaffing/assets/images/conversionArea/illustration-65f1938bb8.png");
+  background-image: url("/rstaffing/assets/images/conversionArea/illustration-claude.png");
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
   background-repeat: no-repeat;
   background-size: 100% auto, 100% auto;
@@ -73,7 +73,7 @@
     max-width: 333px;
     aspect-ratio: 333/252;
     content: "";
-    background-image: url("/rstaffing/assets/images/conversionArea/spIllustration-35ad7e58fa.png");
+    background-image: url("/rstaffing/assets/images/conversionArea/illustration-claude.png");
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
     background-repeat: no-repeat;
     background-size: contain;
