@@ -71,11 +71,11 @@ scripts/            補助スクリプト
 | 5 | `TalentDevelopment` | 14日で成果が出る理由（氷山モデル） |
 | 6 | `DevelopmentSpeedComparison` | 未経験からの最短学習（学習速度 1/10） |
 | 7 | `AiDevelopmentWorkflow` | 一般的なAI研修との設計思想の違い |
-| 8 | `SubsidyList` | こんな業務から始められる（業務例） |
-| 9 | `AdoptionTimeline` | 導入後 14〜90日の段階的成果 |
-| 10 | `ClientCompanies` | 導入企業・パートナー紹介 |
-| 11 | `CaseStudies` | 導入事例 |
-| 12 | `WhyResults` | AI開発の投資対効果 |
+| 8 | `WhyResults` | 研修設計へのこだわり（4つの設計原則） |
+| 9 | `SubsidyList` | こんな業務から始められる（業務例） |
+| 10 | `AdoptionTimeline` | 導入後 14〜90日の段階的成果 |
+| 11 | `ClientCompanies` | 導入企業・パートナー紹介 |
+| 12 | `CaseStudies` | 導入事例 |
 | 13 | `RoiEquation` | ROI 10倍の仕組み |
 | 14 | `Pricing` | 料金プラン |
 | 15 | `RstaffingFv` | 3ステップ導入イメージ |

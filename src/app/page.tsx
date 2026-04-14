@@ -34,11 +34,11 @@ export default function Home() {
           <TalentDevelopment />
           <DevelopmentSpeedComparison />
           <AiDevelopmentWorkflow />
+          <WhyResults />
           <SubsidyList />
           <AdoptionTimeline />
           <ClientCompanies />
           <CaseStudies />
-          <WhyResults />
           <RoiEquation />
           <Pricing />
           <RstaffingFv />
