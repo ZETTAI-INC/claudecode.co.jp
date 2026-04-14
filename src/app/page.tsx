@@ -29,8 +29,8 @@ export default function Home() {
       <main id="primary" className="site-main">
         <div>
           <HeroBanner />
-          <AiServiceStrengths />
           <TargetAudience />
+          <AiServiceStrengths />
           <ClaudeCodeOverview />
           <BeforeAfter />
           <TalentDevelopment />

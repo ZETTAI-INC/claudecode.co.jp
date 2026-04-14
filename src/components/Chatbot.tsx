@@ -33,14 +33,22 @@ const AlienOctopusIcon = () => {
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "msg-1",
       sender: "bot",
       text: "こんにちは！研修や導入に関するご質問など、何でもお気軽にお尋ねください。",
-      timestamp: new Date(),
+      timestamp: new Date(0),
     },
   ]);
+
+  useEffect(() => {
+    setMounted(true);
+    setMessages((prev) =>
+      prev.map((m) => (m.id === "msg-1" ? { ...m, timestamp: new Date() } : m))
+    );
+  }, []);
   const [inputVal, setInputVal] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -239,11 +247,13 @@ export default function Chatbot() {
                   )}
                   <span className="relative z-10">{msg.text}</span>
                 </div>
-                <span className="text-[10px] text-[#aaa] mt-1 px-1">
-                  {msg.timestamp.toLocaleTimeString("ja-JP", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
+                <span suppressHydrationWarning className="text-[10px] text-[#aaa] mt-1 px-1">
+                  {mounted
+                    ? msg.timestamp.toLocaleTimeString("ja-JP", {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })
+                    : ""}
                 </span>
 
                 {/* Show Quick Replies under the first bot message */}

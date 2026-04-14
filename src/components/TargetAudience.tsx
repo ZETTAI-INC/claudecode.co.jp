@@ -25,7 +25,7 @@ export default function TargetAudience() {
           <div className="flex w-full md:w-[45%] max-w-[400px] mx-auto md:mx-0 h-[320px] md:h-[380px] relative z-10 mb-8 md:mb-0">
             
             {/* Vertical Needs Labels (Left side of pyramid) */}
-            <div className="w-[60px] md:w-[70px] h-full flex flex-col text-[11px] md:text-xs font-bold text-gray-600 bg-white border border-gray-200 shadow-sm rounded-sm overflow-hidden">
+            <div className="w-[68px] md:w-[76px] h-full flex flex-col text-[11px] md:text-xs font-bold text-gray-600 bg-white border border-gray-200 shadow-sm rounded-sm overflow-hidden">
               {/* Top Level */}
               <div className="flex-1 flex items-center justify-center text-center px-1 bg-[#F5F7FA]">
                 <span className="writing-vertical-rl text-gray-500">フルスクラッチ<br/>大規模開発</span>
@@ -47,30 +47,37 @@ export default function TargetAudience() {
 
             {/* Pyramid */}
             <div className="flex-1 h-full relative group">
+              {/* Pyramid Background Shapes (Clipped) */}
               <div 
-                className="w-full h-full flex flex-col relative overflow-hidden bg-gray-50" 
+                className="absolute inset-0 w-full h-full flex flex-col overflow-hidden" 
                 style={{ clipPath: "polygon(50% 0, 100% 100%, 0 100%)" }}
               >
+                <div className="h-[30%] bg-[#E8EAEF] w-full"></div>
+                <div className="h-[40%] bg-[#1890FF] w-full"></div>
+                <div className="h-[30%] bg-[#E8EAEF] w-full"></div>
+                {/* Thin white gap lines to separate sections */}
+                <div className="absolute top-[30%] left-0 w-full h-[3px] bg-white"></div>
+                <div className="absolute top-[70%] left-0 w-full h-[3px] bg-white"></div>
+              </div>
+              
+              {/* Pyramid Text Content (Unclipped) */}
+              <div className="absolute inset-0 w-full h-full flex flex-col z-10 pointer-events-none">
                 {/* Top Level (Enterprise) */}
-                <div className="h-[30%] bg-[#E8EAEF] flex items-end justify-center pb-2">
-                  <span className="font-bold text-gray-500 text-[12px] md:text-[14px] tracking-wide mb-1 md:mb-2">エンタープライズ</span>
+                <div className="h-[30%] flex items-end justify-center pb-2">
+                  <span className="font-bold text-gray-600 text-[11px] sm:text-[12px] md:text-[13px] tracking-widest mb-1 md:mb-2">エンタープライズ</span>
                 </div>
                 
                 {/* Mid Level (Target) - Highlights */}
-                <div className="h-[40%] bg-[#1890FF] flex flex-col items-center justify-center relative shadow-inner">
-                  <span className="font-black text-white text-[17px] md:text-xl tracking-widest text-center leading-tight">中小企業<br/>スタートアップ</span>
+                <div className="h-[40%] flex flex-col items-center justify-center relative">
+                  <span className="font-black text-white text-[16px] md:text-[19px] tracking-widest text-center leading-tight drop-shadow-md">中小企業<br/>スタートアップ</span>
                   {/* Decorative highlight line inside */}
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[60%] h-[2px] bg-white/30 rounded-full"></div>
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[40%] h-[2px] bg-white/40 rounded-full"></div>
                 </div>
                 
                 {/* Bottom Level (Small/Solo) */}
-                <div className="h-[30%] bg-[#E8EAEF] flex items-start justify-center pt-3 md:pt-4">
-                  <span className="font-bold text-gray-500 text-[14px] md:text-[16px] tracking-wide mt-1 md:mt-2">個人事業・小規模</span>
+                <div className="h-[30%] flex items-center justify-center">
+                  <span className="font-bold text-gray-500 text-[11px] sm:text-[13px] md:text-[15px] tracking-normal md:tracking-wide">個人事業・小規模</span>
                 </div>
-                
-                {/* Thin white gap lines to separate sections */}
-                <div className="absolute top-[30%] left-0 w-full h-[3px] bg-white z-20"></div>
-                <div className="absolute top-[70%] left-0 w-full h-[3px] bg-white z-20"></div>
               </div>
             </div>
           </div>
@@ -143,7 +150,7 @@ export default function TargetAudience() {
                   </li>
                   <li className="flex items-start gap-2 bg-white p-2 rounded border border-gray-100 shadow-sm">
                     <span className="text-[#ff5c00] font-black mr-1">3.</span>
-                    <span>システム外注費用の劇的な削減（月額数百万 → <span className="text-[#1890FF] underline decoration-2 underline-offset-4">ほぼゼロへ</span>）</span>
+                    <span>システム外注費用の劇的な削減（月額数十万〜数百万 → <span className="text-[#1890FF] underline decoration-2 underline-offset-4">ほぼゼロへ</span>）</span>
                   </li>
                 </ul>
               </div>
@@ -160,7 +167,7 @@ export default function TargetAudience() {
         .writing-vertical-rl {
           writing-mode: vertical-rl;
           text-orientation: upright;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.05em;
         }
       `}} />
     </section>
