@@ -80,7 +80,7 @@ function WorkPopup({
           </ul>
         </div>
 
-        <Link href="/works" className="works-popup__cta" onClick={onClose}>
+        <Link href="/case/#works" className="works-popup__cta" onClick={onClose}>
           全てのカテゴリを見る
           <span className="material-icons" style={{ fontSize: 18 }}>
             arrow_forward
@@ -160,7 +160,7 @@ export default function RelatedServices() {
 
             {showAll && (
               <div className="related-more" style={{ marginTop: 32 }}>
-                <Link href="/works" className="related-more__link">
+                <Link href="/case/#works" className="related-more__link">
                   全てを見る
                   <span className="material-icons" style={{ fontSize: 20 }}>
                     arrow_forward

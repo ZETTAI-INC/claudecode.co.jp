@@ -9,7 +9,7 @@ const menuItems = [
   { label: "料金プラン", href: "/price/", icon: "payments" },
   { label: "AI比較", href: "/compare/", icon: "compare_arrows" },
   { label: "事例", href: "/case/", icon: "cases" },
-  { label: "活用事例", href: "/works/", icon: "photo_library" },
+  { label: "無料セミナー", href: "/seminars/", icon: "videocam" },
   { label: "お知らせ", href: "/info/", icon: "campaign" },
 ];
 
