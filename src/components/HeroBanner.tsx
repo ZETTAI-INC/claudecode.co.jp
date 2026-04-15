@@ -32,11 +32,19 @@ export default function HeroBanner() {
               />
             </div>
 
-            <h1 className="planb-fv__heading">
-              <span className="inline-block">営業・事務・企画の</span><span className="inline-block">社員が、</span><br className="hidden md:block" />
-              <span className="inline-block">14日で</span>
-              <span className="inline-block"><strong className="planb-fv__kenten">自部署の</strong></span><span className="inline-block"><strong className="planb-fv__kenten">業務ツール</strong>を</span><br className="hidden md:block" />
-              <span className="inline-block">本番公開できる研修。</span>
+            {/* Desktop Heading */}
+            <h1 className="planb-fv__heading hidden md:block leading-tight">
+              営業・事務・企画の社員が、<br />
+              14日で<strong className="planb-fv__kenten">自部署の業務ツール</strong>を<br />
+              本番公開できる研修。
+            </h1>
+
+            {/* Mobile Heading */}
+            <h1 className="planb-fv__heading md:hidden leading-[1.6]">
+              営業・事務・企画の<br />
+              社員が、14日で<br />
+              <strong className="planb-fv__kenten">自部署の業務ツール</strong>を<br />
+              本番公開できる研修。
             </h1>
 
             <p className="planb-fv__stat-note" style={{
@@ -88,7 +96,7 @@ export default function HeroBanner() {
 
           </div>
 
-          <div className="planb-fv__illust">
+          <div className="planb-fv__illust hidden md:block">
             <Image
               src="/img/planb-fv/hero-illust.webp"
               alt="非エンジニアが14日で業務ツールを本番公開する研修"
@@ -98,14 +106,6 @@ export default function HeroBanner() {
               style={{ width: "100%", height: "auto" }}
             />
           </div>
-        </div>
-      </div>
-
-      <div className="planb-fv__partners">
-        <div className="planb-fv__partners-text-wrap">
-          <p className="planb-fv__partners-text">
-            <span>プログラミング</span><strong style={{ color: '#ffab08', padding: '0 2px' }}>完全未経験</strong><span>から始められます</span>
-          </p>
         </div>
       </div>
     </section>

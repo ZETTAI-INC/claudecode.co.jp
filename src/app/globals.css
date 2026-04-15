@@ -390,8 +390,22 @@ body {
     width: 60vw;
   }
   .planb-fv__stats {
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-wrap: nowrap;
+    gap: 4px;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .planb-fv__stat {
+    flex: 1;
+    white-space: nowrap;
+  }
+  .planb-fv__stat-label {
+    font-size: 12px;
+  }
+  .planb-fv__stat-divider {
+    margin: 0 8px;
+    height: 44px;
+    align-self: center;
   }
   .planb-fv__stat-number {
     font-size: 40px;
