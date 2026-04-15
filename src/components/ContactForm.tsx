@@ -39,12 +39,12 @@ export default function ContactForm() {
         <div className="contact__inner">
           <p className="contact__sub">CONTACT</p>
           
-          <div className="flex justify-center mb-10">
-            <div className="inline-flex bg-gray-100 p-1 rounded-full">
+          <div className="flex flex-col sm:flex-row justify-center mb-10 gap-2 sm:gap-4">
+            <div className="inline-flex bg-gray-100 p-1 rounded-full mx-auto sm:mx-0">
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); setActiveTab("interest"); }}
-                className={`px-5 md:px-8 py-3 rounded-full text-sm font-bold transition-all ${
+                className={`px-4 md:px-8 py-3 rounded-full text-[13px] md:text-sm font-bold transition-all whitespace-nowrap ${
                   activeTab === "interest"
                     ? "bg-white text-blue-600 shadow-sm"
                     : "text-gray-500 hover:text-gray-900"
@@ -55,7 +55,7 @@ export default function ContactForm() {
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); setActiveTab("apply"); }}
-                className={`px-5 md:px-8 py-3 rounded-full text-sm font-bold transition-all ${
+                className={`px-4 md:px-8 py-3 rounded-full text-[13px] md:text-sm font-bold transition-all whitespace-nowrap ${
                   activeTab === "apply"
                     ? "bg-white text-blue-600 shadow-sm"
                     : "text-gray-500 hover:text-gray-900"
@@ -69,7 +69,8 @@ export default function ContactForm() {
           {activeTab === "interest" ? (
             <>
               <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
-                <span className="inline-block">14日で内製化できる業務か、</span>
+                <span className="inline-block">14日で内製化</span>
+                <span className="inline-block">できる業務か、</span><br className="md:hidden" />
                 <span className="inline-block"><strong>30分で診断</strong>します</span>
               </h2>
               <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>
@@ -89,7 +90,7 @@ export default function ContactForm() {
           ) : (
             <>
               <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
-                <span className="inline-block">リスキリング研修の</span>
+                <span className="inline-block">リスキリング研修の</span><br className="md:hidden" />
                 <span className="inline-block"><strong>お申し込み</strong></span>
               </h2>
               <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>

@@ -148,9 +148,9 @@ const AiServiceStrengths: React.FC = () => {
         </div>
 
         {/* --- Bottom Area: 3 Points --- */}
-        <div className="pt-20 lg:pt-24 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-12 relative px-2">
+        <div className="pt-20 lg:pt-24 flex flex-col md:grid md:grid-cols-3 gap-16 md:gap-6 lg:gap-12 relative px-2">
           {POINTS.map((point, index) => (
-            <div key={index} className="flex flex-col relative z-10 pt-8">
+            <div key={index} className="flex flex-col relative z-10 pt-8 mt-6 md:mt-0">
               
               {/* Giant Background Number */}
               <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-[#e1effc] opacity-60 pointer-events-none tracking-tighter leading-none -z-10 font-sans">

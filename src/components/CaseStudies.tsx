@@ -24,7 +24,7 @@ const cases: CaseStudy[] = [
   {
     image: "/img/uploads/2024/03/ab7c30289fa514dce543f51f60922ae7.jpg",
     title: "開発部門100名がClaude Codeを習得し、開発工数50%削減を達成",
-    company: "大手製造業A社",
+    company: "株式会社FINES（上場企業）",
     industry: "製造業",
     scale: "従業員800名（対象部門100名）",
     department: "生産管理部",
@@ -41,7 +41,7 @@ const cases: CaseStudy[] = [
   {
     image: "/img/uploads/2024/02/c3e59afb1b9e8b9302dadc9db83a8df4.png",
     title: "納品スピード3倍を達成したSIerのAIペアプログラミング導入",
-    company: "SIer B社",
+    company: "株式会社WIZ",
     industry: "IT・通信",
     scale: "従業員200名（対象チーム15名）",
     department: "受託開発チーム",
@@ -58,7 +58,7 @@ const cases: CaseStudy[] = [
   {
     image: "/img/uploads/2024/02/13cf17df8b0af8de2e099ea6c60f09d5.png",
     title: "非エンジニア中心のスタートアップが業務効率化70%を実現",
-    company: "スタートアップC社",
+    company: "株式会社XiM",
     industry: "SaaS",
     scale: "従業員30名（全社参加）",
     department: "事業推進部",

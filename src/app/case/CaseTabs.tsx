@@ -13,7 +13,7 @@ interface CaseStudy {
 
 const cases: CaseStudy[] = [
   {
-    company: "大手製造業A社",
+    company: "株式会社FINES（上場企業）",
     title: "開発チーム50名の生産性が2倍に向上",
     description:
       "Claude Codeを導入し、コードレビュー時間を60%削減。開発チーム全体の生産性が飛躍的に向上し、AIを活用した新しいスタイルの開発フローが定着。リリースサイクルの短縮にも大きく貢献しました。",
@@ -25,7 +25,7 @@ const cases: CaseStudy[] = [
     ],
   },
   {
-    company: "ITコンサルティングB社",
+    company: "株式会社WIZ",
     title: "新人エンジニアの圧倒的な早期即戦力化",
     description:
       "研修期間を従来の3ヶ月からわずか1ヶ月に短縮。Claude Codeを活用した実務直結型カリキュラムにより、初学者のエンジニアであっても早期に高難易度のプロジェクトへアサイン可能になりました。",
@@ -37,7 +37,7 @@ const cases: CaseStudy[] = [
     ],
   },
   {
-    company: "金融系C社",
+    company: "株式会社XiM",
     title: "AI導入による大幅な業務効率化とROI向上",
     description:
       "社内の定型業務の自動化率80%を達成。AIを活用した既存業務プロセスの抜本的な見直しにより、社員がより創造的で付加価値の高い業務に集中できる理想的な労働環境を構築しました。",
