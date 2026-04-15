@@ -24,7 +24,7 @@ const cases: CaseStudy[] = [
   {
     image: "/img/cases/fines-training.jpeg",
     title: "動画配信プラットフォームの広告レポート作成を自動化、運用工数を60%削減",
-    company: "株式会社FINES（上場企業）",
+    company: "株式会社ファインズ（東証グロース：5125）",
     industry: "動画マーケティングDX",
     scale: "中小企業向け動画マーケティング支援・Videoクラウド運営",
     department: "広告運用部",
@@ -93,6 +93,7 @@ const cases: CaseStudy[] = [
 
 export default function CaseStudies() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const c = cases[currentIndex];
 
   const handlePrev = () => {
@@ -127,14 +128,22 @@ export default function CaseStudies() {
               
               {/* Image (Compact) */}
               <div className="md:w-[220px] lg:w-[260px] flex-shrink-0">
-                <div className="relative w-full aspect-[4/3] md:aspect-square overflow-hidden bg-gray-100 rounded-sm">
+                <button
+                  type="button"
+                  onClick={() => setIsImageOpen(true)}
+                  className="relative w-full aspect-[4/3] md:aspect-square overflow-hidden bg-gray-100 rounded-sm cursor-zoom-in group"
+                  aria-label="画像を拡大"
+                >
                   <Image
                     src={c.image}
                     alt={c.company}
                     fill
                     style={{ objectFit: "contain" }}
                   />
-                </div>
+                  <span className="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    タップで拡大
+                  </span>
+                </button>
               </div>
 
               {/* Info (Right Side) */}
@@ -237,6 +246,33 @@ export default function CaseStudies() {
         </div>
 
       </div>
+
+      {isImageOpen && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setIsImageOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setIsImageOpen(false)}
+            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white text-xl font-bold"
+            aria-label="閉じる"
+          >
+            ×
+          </button>
+          <div className="relative w-full max-w-5xl aspect-[4/3]" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={c.image}
+              alt={c.company}
+              fill
+              style={{ objectFit: "contain" }}
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
