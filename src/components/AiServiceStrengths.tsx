@@ -60,10 +60,10 @@ const AiServiceStrengths: React.FC = () => {
             </svg>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-4 relative z-10">
+          <div className="flex lg:flex-row items-start lg:items-center justify-start lg:justify-center gap-6 lg:gap-4 relative z-10 overflow-x-auto pb-8 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 lg:scroll-p-0">
             
             {/* Left Column (2 bubbles) */}
-            <div className="flex flex-col gap-6 w-full lg:w-[32%]">
+            <div className="flex flex-col gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
               {/* Bubble: Left Top */}
               <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
                 <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">{renderWithTerms("内製化が進まない")}</h3>
@@ -85,7 +85,7 @@ const AiServiceStrengths: React.FC = () => {
             </div>
 
             {/* Center Column (1 bubble + Human SVG) */}
-            <div className="flex flex-col items-center gap-6 w-full lg:w-[32%]">
+            <div className="flex flex-col items-center justify-start gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
               {/* Bubble: Center Top */}
               <div className="bg-[#ebebeb] rounded-xl p-5 relative shadow-sm w-full">
                 <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">外注費が膨らむ一方</h3>
@@ -117,7 +117,7 @@ const AiServiceStrengths: React.FC = () => {
             </div>
 
             {/* Right Column (2 bubbles) */}
-            <div className="flex flex-col gap-6 w-full lg:w-[32%]">
+            <div className="flex flex-col gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
               {/* Bubble: Right Top */}
               <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
                 <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">AI人材が採用できない</h3>
@@ -148,9 +148,9 @@ const AiServiceStrengths: React.FC = () => {
         </div>
 
         {/* --- Bottom Area: 3 Points --- */}
-        <div className="pt-20 lg:pt-24 flex flex-col md:grid md:grid-cols-3 gap-16 md:gap-6 lg:gap-12 relative px-2">
+        <div className="pt-24 lg:pt-24 flex md:grid md:grid-cols-3 gap-6 lg:gap-12 relative px-4 sm:px-6 md:px-2 overflow-x-auto snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 md:scroll-p-0 pb-8 md:pb-0 -mx-4 sm:-mx-6 md:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {POINTS.map((point, index) => (
-            <div key={index} className="flex flex-col relative z-10 pt-8 mt-6 md:mt-0">
+            <div key={index} className="flex flex-col relative z-10 pt-8 mt-4 md:mt-0 flex-shrink-0 w-[85vw] sm:w-[320px] md:w-auto snap-center md:snap-align-none">
               
               {/* Giant Background Number */}
               <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-[#e1effc] opacity-60 pointer-events-none tracking-tighter leading-none -z-10 font-sans">

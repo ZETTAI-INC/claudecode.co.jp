@@ -62,11 +62,11 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="flex lg:grid lg:grid-cols-3 gap-4 lg:gap-8 overflow-x-auto pb-8 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 lg:scroll-p-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-[#f8fafc] rounded-[16px] p-8 md:p-10 border border-[#e6edf5] flex flex-col"
+              className="bg-[#f8fafc] rounded-[16px] p-8 md:p-10 border border-[#e6edf5] flex flex-col flex-shrink-0 w-[85vw] sm:w-[320px] lg:w-auto snap-center lg:snap-align-none"
             >
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-[#e6edf5]">
                 <div className="w-[56px] h-[56px] rounded-full bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-white font-black text-2xl flex-shrink-0">

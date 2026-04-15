@@ -24,10 +24,10 @@ const BeforeAfter: React.FC = () => {
         </div>
 
         {/* Before / After Container */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 mt-10">
+        <div className="flex flex-row items-center justify-start md:justify-between gap-6 mt-10 overflow-x-auto pb-8 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 md:scroll-p-0">
           
           {/* LEFT: Before Block */}
-          <div className="w-full md:w-[46%] bg-[#EAF5FF] rounded-lg p-6 md:p-8 flex flex-col items-center">
+          <div className="w-[85vw] sm:w-[320px] md:w-[46%] flex-shrink-0 snap-center md:snap-align-none bg-[#EAF5FF] rounded-lg p-6 md:p-8 flex flex-col items-center shadow-sm md:shadow-none">
             <h3 className="text-[#1890FF] font-bold text-xl md:text-2xl tracking-wider mb-6">
               研修前の社員 (Before)
             </h3>
@@ -73,13 +73,13 @@ const BeforeAfter: React.FC = () => {
             </div>
           </div>
 
-          {/* CENTER: Arrow (Right on Desktop, Down on Mobile) */}
-          <div className="flex-shrink-0 w-8 md:w-16 h-12 md:h-24 flex items-center justify-center transform md:rotate-0 rotate-90">
+          {/* CENTER: Arrow (Right on Desktop, Right on Mobile) */}
+          <div className="flex-shrink-0 w-8 md:w-16 h-12 md:h-24 flex items-center justify-center snap-center md:snap-align-none">
             <div className="w-0 h-0 border-l-[20px] md:border-l-[30px] border-l-gray-300 border-t-[15px] md:border-t-[20px] border-t-transparent border-b-[15px] md:border-b-[20px] border-b-transparent"></div>
           </div>
 
           {/* RIGHT: After Block */}
-          <div className="w-full md:w-[46%] bg-[#FCE8E8] rounded-lg p-6 md:p-8 flex flex-col items-center">
+          <div className="w-[85vw] sm:w-[320px] md:w-[46%] flex-shrink-0 snap-center md:snap-align-none bg-[#FCE8E8] rounded-lg p-6 md:p-8 flex flex-col items-center shadow-sm md:shadow-none">
             <h3 className="text-[#E55252] font-bold text-xl md:text-2xl tracking-wider mb-6">
               研修後の社員 (After)
             </h3>
