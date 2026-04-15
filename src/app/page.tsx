@@ -1,19 +1,13 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
-import ClaudeDesktopFeatures from "@/components/ClaudeDesktopFeatures";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import ClientCompanies from "@/components/ClientCompanies";
 import CaseStudies from "@/components/CaseStudies";
-import WhyResults from "@/components/WhyResults";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
 import BeforeAfter from "@/components/BeforeAfter";
 import DevelopmentSpeedComparison from "@/components/DevelopmentSpeedComparison";
-import RoiEquation from "@/components/RoiEquation";
-import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
-import TalentDevelopment from "@/components/TalentDevelopment";
 import Pricing from "@/components/Pricing";
-import SubsidyList from "@/components/SubsidyList";
 import RstaffingFv from "@/components/RstaffingFv";
 import ResourceDownloadCta from "@/components/ResourceDownloadCta";
 import Flow from "@/components/Flow";
@@ -31,17 +25,11 @@ export default function Home() {
           <HeroBanner />
           <AiServiceStrengths />
           <ClaudeCodeOverview />
-          <ClaudeDesktopFeatures />
           <BeforeAfter />
-          <TalentDevelopment />
           <DevelopmentSpeedComparison />
-          <AiDevelopmentWorkflow />
-          <WhyResults />
-          <SubsidyList />
           <AdoptionTimeline />
           <ClientCompanies />
           <CaseStudies />
-          <RoiEquation />
           <Pricing />
           <RstaffingFv />
           <Flow />

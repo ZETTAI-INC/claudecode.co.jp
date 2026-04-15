@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import TrainingTimeline from "@/components/TrainingTimeline";
 import TalentDevelopment from "@/components/TalentDevelopment";
 import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
+import ClaudeDesktopFeatures from "@/components/ClaudeDesktopFeatures";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
@@ -72,6 +73,8 @@ export default function CurriculumPage() {
         </section>
 
         <TalentDevelopment />
+
+        <ClaudeDesktopFeatures />
 
         <TrainingTimeline />
 
