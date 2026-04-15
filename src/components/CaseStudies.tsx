@@ -22,7 +22,7 @@ interface CaseStudy {
 
 const cases: CaseStudy[] = [
   {
-    image: "/img/uploads/2024/03/ab7c30289fa514dce543f51f60922ae7.jpg",
+    image: "/img/cases/fines-training.jpeg",
     title: "動画配信プラットフォームの広告レポート作成を自動化、運用工数を60%削減",
     company: "株式会社FINES（上場企業）",
     industry: "動画マーケティングDX",
