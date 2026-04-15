@@ -66,10 +66,12 @@ export default function Flow() {
 
         <div className="relative">
           <div className="hidden md:block absolute left-[60px] top-[40px] bottom-[40px] w-[2px] bg-[#d8ebff]" />
+          {/* Mobile horizontal line */}
+          <div className="block md:hidden absolute left-4 right-0 top-[40px] h-[2px] bg-[#d8ebff]" />
 
-          <div className="space-y-8 md:space-y-10">
+          <div className="flex flex-row md:flex-col gap-8 md:gap-10 overflow-x-auto pb-8 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 md:scroll-p-0 pt-2">
             {steps.map((step) => (
-              <div key={step.number} className="relative flex gap-6 md:gap-10">
+              <div key={step.number} className="relative flex flex-col md:flex-row gap-6 md:gap-10 w-[85vw] sm:w-[320px] md:w-[100%] flex-shrink-0 snap-center md:snap-align-none">
                 <div className="flex-shrink-0 relative z-10">
                   <div className="w-[80px] h-[80px] md:w-[120px] md:h-[120px] rounded-full bg-white border-4 border-[#2563eb] flex flex-col items-center justify-center shadow-[0_8px_24px_rgba(37,99,235,0.15)]">
                     <span className="text-[#2563eb] text-[10px] md:text-xs font-bold tracking-[0.1em]">

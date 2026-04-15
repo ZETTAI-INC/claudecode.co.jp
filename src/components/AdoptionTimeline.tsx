@@ -55,10 +55,12 @@ export default function AdoptionTimeline() {
 
         <div className="relative">
           <div className="hidden md:block absolute left-[48px] top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#2563eb] via-[#ff5c00] to-[#059669] rounded-full" />
+          {/* Mobile horizontal line */}
+          <div className="block md:hidden absolute left-4 right-0 top-[36px] h-[3px] bg-gradient-to-r from-[#2563eb] via-[#ff5c00] to-[#059669] rounded-full" />
 
-          <div className="space-y-6 md:space-y-8">
+          <div className="flex flex-row md:flex-col gap-6 md:gap-8 md:space-y-0 overflow-x-auto pb-8 -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 md:scroll-p-0 pt-2">
             {milestones.map((m) => (
-              <div key={m.day} className="relative flex gap-5 md:gap-8">
+              <div key={m.day} className="relative flex flex-col md:flex-row gap-5 md:gap-8 w-[85vw] sm:w-[320px] md:w-[100%] flex-shrink-0 snap-center md:snap-align-none">
                 <div className="flex-shrink-0 relative z-10">
                   <div
                     className="w-[72px] h-[72px] md:w-[96px] md:h-[96px] rounded-full flex flex-col items-center justify-center border-[3px]"

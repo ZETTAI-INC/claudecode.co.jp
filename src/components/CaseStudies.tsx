@@ -132,7 +132,7 @@ export default function CaseStudies() {
                     src={c.image}
                     alt={c.company}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>
