@@ -20,6 +20,7 @@ export default function ContactForm() {
     goal: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [activeTab, setActiveTab] = useState<"interest" | "apply">("interest");
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,16 +38,72 @@ export default function ContactForm() {
       <div className="contact__bg">
         <div className="contact__inner">
           <p className="contact__sub">CONTACT</p>
-          <h2 className="contact__heading">
-            14日で内製化できる業務か、
-            <br className="sp-only" />
-            <strong>30分で診断</strong>します
-          </h2>
-          <p className="contact__lead">
-            「対象部署」「作りたい業務」「セキュリティ前提」の3点だけ確認します。
-            <br />
-            担当者より<strong>1営業日以内</strong>にご連絡いたします。
-          </p>
+          
+          <div className="flex justify-center mb-10">
+            <div className="inline-flex bg-gray-100 p-1 rounded-full">
+              <button
+                type="button"
+                onClick={(e) => { e.preventDefault(); setActiveTab("interest"); }}
+                className={`px-5 md:px-8 py-3 rounded-full text-sm font-bold transition-all ${
+                  activeTab === "interest"
+                    ? "bg-white text-blue-600 shadow-sm"
+                    : "text-gray-500 hover:text-gray-900"
+                }`}
+              >
+                研修に興味ある方
+              </button>
+              <button
+                type="button"
+                onClick={(e) => { e.preventDefault(); setActiveTab("apply"); }}
+                className={`px-5 md:px-8 py-3 rounded-full text-sm font-bold transition-all ${
+                  activeTab === "apply"
+                    ? "bg-white text-blue-600 shadow-sm"
+                    : "text-gray-500 hover:text-gray-900"
+                }`}
+              >
+                申し込みたい方
+              </button>
+            </div>
+          </div>
+
+          {activeTab === "interest" ? (
+            <>
+              <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
+                <span className="inline-block">14日で内製化できる業務か、</span>
+                <span className="inline-block"><strong>30分で診断</strong>します</span>
+              </h2>
+              <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>
+                <p style={{ marginBottom: "8px" }}>
+                  <span className="inline-block">「対象部署」</span>
+                  <span className="inline-block">「作りたい業務」</span>
+                  <span className="inline-block">「セキュリティ前提」の</span>
+                  <span className="inline-block" style={{ color: "#2563eb", fontWeight: "bold" }}>3点だけ</span>
+                  <span className="inline-block">確認します。</span>
+                </p>
+                <p>
+                  <span className="inline-block">担当者から<strong>24時間以内</strong>に</span>
+                  <span className="inline-block">お電話いたします。</span>
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
+                <span className="inline-block">リスキリング研修の</span>
+                <span className="inline-block"><strong>お申し込み</strong></span>
+              </h2>
+              <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>
+                <p style={{ marginBottom: "8px" }}>
+                  <span className="inline-block">研修の開始時期やカリキュラム内容の詳細など、</span>
+                  <span className="inline-block">今後の具体的なご案内をスムーズに進めます。</span>
+                </p>
+                <p>
+                  <span className="inline-block">担当者から<strong>24時間以内</strong>に</span>
+                  <span className="inline-block">お電話いたします。</span>
+                </p>
+              </div>
+            </>
+          )}
 
           {submitted ? (
             <div className="contact__thanks">
@@ -61,7 +118,7 @@ export default function ContactForm() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   <li style={{ display: "flex", gap: "8px", marginBottom: "12px", alignItems: "flex-start" }}>
                     <span style={{ color: "#2563eb", fontWeight: 900, flexShrink: 0 }}>1.</span>
-                    <span><strong>1営業日以内</strong>に担当者からメールでご連絡</span>
+                    <span><strong>24時間以内</strong>に担当者からお電話でご連絡</span>
                   </li>
                   <li style={{ display: "flex", gap: "8px", marginBottom: "12px", alignItems: "flex-start" }}>
                     <span style={{ color: "#2563eb", fontWeight: 900, flexShrink: 0 }}>2.</span>
@@ -160,7 +217,7 @@ export default function ContactForm() {
               </p>
 
               <button type="submit" className="contact__submit">
-                <span>30分の適合診断を申し込む</span>
+                <span>{activeTab === "interest" ? "30分の適合診断を申し込む" : "研修のお申し込みを完了する"}</span>
                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
                   <path
                     d="M1.16 12.85c-.14-.17-.22-.37-.22-.58 0-.21.07-.39.22-.55l4.6-4.6L1.13 2.49c-.14-.14-.21-.33-.2-.57.01-.24.08-.42.22-.56.18-.18.36-.26.56-.25.2.01.38.1.53.25l5.21 5.21c.09.09.14.17.18.26.04.09.05.18.05.29s-.02.2-.05.29c-.04.09-.09.17-.18.26l-5.18 5.18c-.16.16-.34.23-.55.22-.2-.01-.4-.08-.56-.22z"

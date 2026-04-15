@@ -1528,17 +1528,22 @@ body {
   padding: 60px 20px;
 }
 .contentSubsidy_list {
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px;
   list-style: none;
   padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .contentSubsidy_list li {
-  break-inside: avoid;
-  margin-bottom: 12px;
+  width: 100%;
 }
 .subsidy-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .subsidy-item p {
   font-size: 14px;
@@ -1547,7 +1552,8 @@ body {
 }
 @media (max-width: 940px) {
   .contentSubsidy_list {
-    column-count: 1;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 @media (max-width: 768px) {

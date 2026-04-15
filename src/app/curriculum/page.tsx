@@ -2,16 +2,52 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TrainingTimeline from "@/components/TrainingTimeline";
+import TalentDevelopment from "@/components/TalentDevelopment";
+import AiDevelopmentWorkflow from "@/components/AiDevelopmentWorkflow";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "14日間カリキュラム | CLAUDE CODE リスキリング研修",
   description:
     "14日間ブートキャンプの1日あたりの典型スケジュール・到達度・成果物イメージ。業務を一番知る社員が2週間で自力で業務ツールを作れる人材になるまでの具体的なプロセスをご紹介します。",
+  alternates: { canonical: "/curriculum" },
+  openGraph: { url: "https://claudecode.co.jp/curriculum", title: "14日間カリキュラム | CLAUDE CODE リスキリング研修" },
+};
+
+const curriculumJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "Claude Code 14日間リスキリング・ブートキャンプ",
+  description:
+    "業務を一番知る社員が2週間で自力で業務ツールを作れる人材になるための、14日間のClaude Code実践カリキュラム。",
+  provider: {
+    "@type": "Organization",
+    name: "株式会社ZETTAI",
+    sameAs: "https://claudecode.co.jp/",
+  },
+  educationalLevel: "Professional",
+  inLanguage: "ja-JP",
+  timeRequired: "P14D",
+  hasCourseInstance: {
+    "@type": "CourseInstance",
+    courseMode: "Blended",
+    courseWorkload: "PT112H",
+  },
 };
 
 export default function CurriculumPage() {
   return (
     <div id="page" className="site">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "カリキュラム", url: "https://claudecode.co.jp/curriculum" },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(curriculumJsonLd) }}
+      />
       <Header />
       <main id="primary" className="site-main">
         {/* Page Header */}
@@ -35,7 +71,11 @@ export default function CurriculumPage() {
           </div>
         </section>
 
+        <TalentDevelopment />
+
         <TrainingTimeline />
+
+        <AiDevelopmentWorkflow />
 
         {/* CTA */}
         <section className="py-14 md:py-20 text-center bg-white">

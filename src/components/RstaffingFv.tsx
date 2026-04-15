@@ -19,9 +19,9 @@ export default function RstaffingFv() {
                   <span className="mv__dividerLine">／</span>
                 </div>
                 <div className="mv__serviceBoxes">
-                  <span className="mv__serviceBox">課題<br className="onlySp" />ヒアリング</span>
-                  <span className="mv__serviceBox">カリキュラム<br className="onlySp" />設計</span>
-                  <span className="mv__serviceBox">14日で<br className="onlySp" />本番公開</span>
+                  <div className="mv__serviceBox"><span>課題<br className="onlySp" />ヒアリング</span></div>
+                  <div className="mv__serviceBox"><span>カリキュラム<br className="onlySp" />設計</span></div>
+                  <div className="mv__serviceBox"><span>14日で<br className="onlySp" />本番公開</span></div>
                 </div>
               </div>
               

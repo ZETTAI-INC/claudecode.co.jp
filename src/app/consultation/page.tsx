@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "適合診断（30分） | Claude Code リスキリング研修",
   description:
     "14日で内製化できる業務か、30分で診断します。対象部署・作りたい業務・セキュリティ前提の3点を確認し、48時間以内に適合判定をお返しします。",
+  alternates: { canonical: "/consultation" },
+  openGraph: { url: "https://claudecode.co.jp/consultation", title: "適合診断（30分） | CLAUDE CODE リスキリング研修" },
 };
 
 const topics = [
@@ -79,6 +82,12 @@ const faqs = [
 export default function ConsultationPage() {
   return (
     <div id="page" className="site font-sans bg-[#fcfcfd] pb-10">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "適合診断", url: "https://claudecode.co.jp/consultation" },
+        ]}
+      />
       <Header />
       <main id="primary" className="site-main pb-24 md:pb-0">
         

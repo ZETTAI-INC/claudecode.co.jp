@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "WEB制作 御見積書 | 株式会社ZETTAI",
   description:
     "株式会社ZETTAIが提供するWEB制作の御見積書ダウンロードページです。デザインのみ／管理画面込み／SEO・AIO対策基盤支援付きの3プランをご用意しています。",
+  alternates: { canonical: "/estimate" },
+  openGraph: { url: "https://claudecode.co.jp/estimate", title: "WEB制作 御見積書 | 株式会社ZETTAI" },
 };
 
 type Plan = {
@@ -64,6 +67,12 @@ const formatYen = (n: number) => `¥${n.toLocaleString("ja-JP")}`;
 export default function EstimatePage() {
   return (
     <div id="page" className="site">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "WEB制作 御見積書", url: "https://claudecode.co.jp/estimate" },
+        ]}
+      />
       <Header />
       <main id="primary" className="site-main">
         {/* Page title */}

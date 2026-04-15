@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "お役立ち資料 | CLAUDE CODE リスキリング研修",
+  title: "お役立ち資料・ホワイトペーパー",
+  description:
+    "Claude Code研修サービス概要、AI人材育成導入ガイド、補助金活用ハンドブック、事例集など、企業のAI活用を支援する資料を無料ダウンロードいただけます。",
+  alternates: { canonical: "/resources" },
+  openGraph: { url: "https://claudecode.co.jp/resources", title: "お役立ち資料 | CLAUDE CODE リスキリング研修" },
 };
 
 const resources = [
@@ -36,6 +41,12 @@ const resources = [
 export default function ResourcesPage() {
   return (
     <div id="page" className="site">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "お役立ち資料", url: "https://claudecode.co.jp/resources" },
+        ]}
+      />
       <Header />
       <main id="primary" className="site-main">
         {/* Page Header */}

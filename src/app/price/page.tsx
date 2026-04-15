@@ -5,6 +5,7 @@ import SubsidyFlow from "@/components/SubsidyFlow";
 import MentorshipSupport from "@/components/MentorshipSupport";
 import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 import Pricing from "@/components/Pricing";
+import RoiEquation from "@/components/RoiEquation";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
@@ -35,6 +36,8 @@ export default function PricePage() {
 
         {/* Overview section */ }
         <ClaudeCodeOverview />
+
+        <RoiEquation />
 
         {/* Pricing table (unified with home) */}
         <Pricing />

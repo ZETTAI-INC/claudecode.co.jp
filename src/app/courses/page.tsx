@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CoursesSelector from "@/components/CoursesSelector";
+import WhyResults from "@/components/WhyResults";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function CoursesPage() {
         </section>
 
         <CoursesSelector />
+        <WhyResults />
         <ContactForm />
       </main>
       <Footer />

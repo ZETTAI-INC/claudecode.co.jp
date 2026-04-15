@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "特定商取引法に基づく表記 | CLAUDE CODE リスキリング研修",
+  title: "特定商取引法に基づく表記",
+  description:
+    "CLAUDE CODE リスキリング研修における特定商取引法に基づく表記。販売事業者、所在地、支払方法、サービス提供時期などをご確認いただけます。",
+  alternates: { canonical: "/tokushoho" },
+  robots: { index: true, follow: true },
 };
 
 const rows = [
@@ -33,6 +38,12 @@ const rows = [
 export default function TokushohoPage() {
   return (
     <div id="page">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "特定商取引法に基づく表記", url: "https://claudecode.co.jp/tokushoho" },
+        ]}
+      />
       <Header />
       <main id="primary" className="site-main">
         <div className="mt-[64px] py-16 px-4">

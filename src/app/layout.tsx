@@ -37,9 +37,44 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://claudecode.co.jp"),
-  title: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
+  title: {
+    default: "CLAUDE CODE リスキリング研修 | 株式会社ZETTAI",
+    template: "%s | CLAUDE CODE リスキリング研修",
+  },
   description:
-    "Claude Codeを活用したAI開発スキルの習得を、企業・個人向けにサポート。実践型リスキリング研修サービス。",
+    "Claude Codeを活用したAI開発スキルの習得を、企業・個人向けにサポート。実践型リスキリング研修サービス。生成AIによるコーディング自動化・開発生産性向上・人材育成を一気通貫で支援します。",
+  keywords: [
+    "Claude Code",
+    "クロードコード",
+    "AI研修",
+    "生成AI研修",
+    "リスキリング",
+    "AI人材育成",
+    "DX研修",
+    "AIコーディング",
+    "Anthropic",
+    "プログラミング研修",
+    "企業研修",
+    "法人研修",
+  ],
+  authors: [{ name: "株式会社ZETTAI" }],
+  creator: "株式会社ZETTAI",
+  publisher: "株式会社ZETTAI",
+  formatDetection: { email: false, address: false, telephone: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     locale: "ja_JP",
     siteName: "CLAUDE CODE リスキリング研修",
@@ -83,7 +118,81 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://claudecode.co.jp/#organization",
+                  name: "株式会社ZETTAI",
+                  alternateName: "ZETTAI Inc.",
+                  url: "https://claudecode.co.jp/",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://claudecode.co.jp/favicon.png",
+                  },
+                  sameAs: ["https://claudecode.co.jp/"],
+                  contactPoint: [
+                    {
+                      "@type": "ContactPoint",
+                      contactType: "customer support",
+                      email: "info@claudecode.co.jp",
+                      availableLanguage: ["Japanese"],
+                      areaServed: "JP",
+                    },
+                  ],
+                  address: {
+                    "@type": "PostalAddress",
+                    addressCountry: "JP",
+                    addressRegion: "東京都",
+                    addressLocality: "渋谷区",
+                  },
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://claudecode.co.jp/#website",
+                  url: "https://claudecode.co.jp/",
+                  name: "CLAUDE CODE リスキリング研修",
+                  description:
+                    "Claude Codeを活用したAI開発スキルの実践型リスキリング研修",
+                  publisher: { "@id": "https://claudecode.co.jp/#organization" },
+                  inLanguage: "ja-JP",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: {
+                      "@type": "EntryPoint",
+                      urlTemplate:
+                        "https://claudecode.co.jp/?s={search_term_string}",
+                    },
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+                {
+                  "@type": "Service",
+                  "@id": "https://claudecode.co.jp/#service",
+                  name: "Claude Code リスキリング研修",
+                  serviceType: "AI開発リスキリング研修",
+                  provider: {
+                    "@id": "https://claudecode.co.jp/#organization",
+                  },
+                  areaServed: { "@type": "Country", name: "Japan" },
+                  audience: {
+                    "@type": "BusinessAudience",
+                    audienceType: "企業の開発組織・人事・経営層",
+                  },
+                  description:
+                    "Claude Codeを活用したAIコーディング・開発生産性向上のための実践型リスキリング研修。Eラーニング、ハンズオン、伴走型メンタリング、法人カスタマイズプランを提供。",
+                },
+              ],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

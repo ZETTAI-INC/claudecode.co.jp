@@ -7,16 +7,25 @@ import AdPerformanceComparison from "@/components/AdPerformanceComparison";
 import AiComparisonSelector from "@/components/AiComparisonSelector";
 import TargetAudience from "@/components/TargetAudience";
 import { WhyResultsCompare } from "@/components/WhyResults";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "AI比較・効果検証 | Claude Code リスキリング研修",
   description:
     "Claude Code と主要AIサービス（ChatGPT / Gemini / Copilot）の業務成果物ベース比較、研修前後の開発スピード差分、実装到達度データをまとめました。",
+  alternates: { canonical: "/compare" },
+  openGraph: { url: "https://claudecode.co.jp/compare", title: "AI比較・効果検証 | CLAUDE CODE リスキリング研修" },
 };
 
 export default function ComparePage() {
   return (
     <div id="page" className="site">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "ホーム", url: "https://claudecode.co.jp/" },
+          { name: "AI比較・効果検証", url: "https://claudecode.co.jp/compare" },
+        ]}
+      />
       <Header />
       <main id="primary" className="site-main">
         {/* Page Header */}

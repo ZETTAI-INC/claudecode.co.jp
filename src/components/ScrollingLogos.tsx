@@ -74,7 +74,7 @@ function LogoGallery({ logos }: { logos: LogoItem[] }) {
         <div key={i} className="logo-gallery-item">
           <Image
             src={logo.src}
-            alt=""
+            alt="導入企業ロゴ"
             width={logo.width}
             height={logo.height}
             style={{ objectFit: "contain", width: "auto", height: "auto", maxWidth: "100%", maxHeight: "100%" }}
