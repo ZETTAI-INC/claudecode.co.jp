@@ -8,6 +8,7 @@ interface CaseStudy {
   image: string;
   title: string;
   company: string;
+  ticker?: string;
   industry: string;
   scale: string;
   department: string;
@@ -24,7 +25,8 @@ const cases: CaseStudy[] = [
   {
     image: "/img/cases/fines-training.jpeg",
     title: "動画配信プラットフォームの広告レポート作成を自動化、運用工数を60%削減",
-    company: "株式会社ファインズ（東証グロース：5125）",
+    company: "株式会社ファインズ",
+    ticker: "東証グロース：5125",
     industry: "動画マーケティングDX",
     scale: "中小企業向け動画マーケティング支援・Videoクラウド運営",
     department: "広告運用部",
@@ -150,13 +152,20 @@ export default function CaseStudies() {
               <div className="flex-1 flex flex-col justify-center">
                 
                 {/* Title & Company */}
-                <div className="flex flex-col md:flex-row md:items-baseline gap-2 mb-2">
-                  <h3 className="text-xl md:text-[28px] font-bold text-[#1890FF] tracking-wide">
-                    {renderWithTerms(c.company)} <span className="text-lg md:text-xl font-medium">様</span>
-                  </h3>
-                  <p className="text-xs md:text-sm font-bold text-gray-600 mt-1 md:mt-0 md:ml-3">
-                    {c.built}の開発・提供
-                  </p>
+                <div className="mb-2">
+                  {c.ticker && (
+                    <span className="inline-block text-[10px] md:text-xs font-bold text-[#1890FF] bg-[#E6F4FF] border border-[#1890FF]/30 rounded px-2 py-0.5 mb-2">
+                      {c.ticker}
+                    </span>
+                  )}
+                  <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3">
+                    <h3 className="text-xl md:text-[28px] font-bold text-[#1890FF] tracking-wide whitespace-nowrap">
+                      {renderWithTerms(c.company)} <span className="text-lg md:text-xl font-medium">様</span>
+                    </h3>
+                    <p className="text-xs md:text-sm font-bold text-gray-600">
+                      {c.built}の開発・提供
+                    </p>
+                  </div>
                 </div>
 
                 {/* Department & Role */}
