@@ -13,6 +13,7 @@ import ResourceDownloadCta from "@/components/ResourceDownloadCta";
 import Flow from "@/components/Flow";
 import Faq from "@/components/Faq";
 import ContactForm from "@/components/ContactForm";
+import CeoMessage from "@/components/CeoMessage";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 
@@ -35,6 +36,7 @@ export default function Home() {
           <Flow />
           <Faq />
           <ResourceDownloadCta />
+          <CeoMessage />
           <ContactForm />
         </div>
       </main>

@@ -60,81 +60,73 @@ const AiServiceStrengths: React.FC = () => {
             </svg>
           </div>
 
-          <div className="flex lg:flex-row items-start lg:items-center justify-start lg:justify-center gap-6 lg:gap-4 relative z-10 overflow-x-auto pb-8 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 lg:scroll-p-0">
+          {/* Flattened structure: Swipeable on mobile, Grid on desktop */}
+          <div className="flex lg:grid lg:grid-cols-3 lg:grid-rows-[auto_auto] items-stretch lg:items-start justify-start lg:justify-center gap-4 lg:gap-x-6 lg:gap-y-6 relative z-10 overflow-x-auto pb-8 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 lg:scroll-p-0">
             
-            {/* Left Column (2 bubbles) */}
-            <div className="flex flex-col gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
-              {/* Bubble: Left Top */}
-              <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">{renderWithTerms("内製化が進まない")}</h3>
-                <p className="text-sm text-[#555] leading-relaxed">
-                  {renderWithTerms("PoCは作れても、本番運用まで持っていける人材が社内にいない")}
-                </p>
-                {/* Tail pointing towards center-right */}
-                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#f0f0f0]"></div>
-              </div>
+            {/* Bubble 1: Left Top */}
+            <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-1 lg:row-start-1 h-auto flex flex-col">
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">{renderWithTerms("内製化が進まない")}</h3>
+              <p className="text-sm text-[#555] leading-relaxed flex-1">
+                {renderWithTerms("PoCは作れても、本番運用まで持っていける人材が社内にいない")}
+              </p>
+              {/* Tail pointing towards center-right */}
+              <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#f0f0f0]"></div>
+            </div>
 
-              {/* Bubble: Left Bottom */}
-              <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">属人化が止まらない</h3>
-                <p className="text-sm text-[#555] leading-relaxed">
-                  AI活用が一部社員に依存、退職リスクで事業が止まりかねない
-                </p>
-                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#e8e8e8]"></div>
+            {/* Bubble 2: Left Bottom */}
+            <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-1 lg:row-start-2 h-auto flex flex-col">
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">属人化が止まらない</h3>
+              <p className="text-sm text-[#555] leading-relaxed flex-1">
+                AI活用が一部社員に依存、退職リスクで事業が止まりかねない
+              </p>
+              <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#e8e8e8]"></div>
+            </div>
+
+            {/* Bubble 3: Center Top */}
+            <div className="bg-[#ebebeb] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-2 lg:row-start-1 h-auto flex flex-col">
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">外注費が膨らむ一方</h3>
+              <p className="text-sm text-[#555] leading-relaxed flex-1">
+                軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する
+              </p>
+              <div className="hidden lg:block absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-[#ebebeb]"></div>
+            </div>
+
+            {/* SVG Illustration: Center Bottom */}
+            <div className="relative w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-2 lg:row-start-2 h-48 flex items-center justify-center lg:mt-4">
+              {/* Scribble background */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg viewBox="0 0 100 100" fill="none" stroke="#b3b3b3" strokeWidth="3" className="w-48 h-48 opacity-70">
+                  <path d="M50 20 C20 10, 10 40, 30 60 C50 80, 80 70, 70 40 C60 10, 20 20, 30 50 C40 80, 80 50, 50 20 Z" />
+                  <path d="M30 30 C10 50, 40 80, 70 60 C100 40, 70 10, 50 30 C30 50, 50 90, 80 60" />
+                  <circle cx="50" cy="50" r="40" stroke="#d9d9d9" strokeDasharray="5,5" />
+                </svg>
+              </div>
+              {/* Human Silhouette */}
+              <div className="relative z-10 text-black">
+                <svg width="80" height="120" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="4" r="3" />
+                  <path d="M12 8 C8 8, 5 10, 4 13 L8 14 L8 22 L11 22 L11 16 L13 16 L13 22 L16 22 L16 14 L20 13 C19 10, 16 8, 12 8 Z" />
+                  <path d="M4 13 L1 10 M20 13 L23 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
               </div>
             </div>
 
-            {/* Center Column (1 bubble + Human SVG) */}
-            <div className="flex flex-col items-center justify-start gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
-              {/* Bubble: Center Top */}
-              <div className="bg-[#ebebeb] rounded-xl p-5 relative shadow-sm w-full">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">外注費が膨らむ一方</h3>
-                <p className="text-sm text-[#555] leading-relaxed">
-                  軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する
-                </p>
-                <div className="hidden lg:block absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-[#ebebeb]"></div>
-              </div>
-
-              {/* Human & Scribble Icon */}
-              <div className="relative w-48 h-48 flex items-center justify-center mt-4">
-                {/* Scribble background */}
-                <div className="absolute inset-0">
-                  <svg viewBox="0 0 100 100" fill="none" stroke="#b3b3b3" strokeWidth="3" className="w-full h-full opacity-70">
-                    <path d="M50 20 C20 10, 10 40, 30 60 C50 80, 80 70, 70 40 C60 10, 20 20, 30 50 C40 80, 80 50, 50 20 Z" />
-                    <path d="M30 30 C10 50, 40 80, 70 60 C100 40, 70 10, 50 30 C30 50, 50 90, 80 60" />
-                    <circle cx="50" cy="50" r="40" stroke="#d9d9d9" strokeDasharray="5,5" />
-                  </svg>
-                </div>
-                {/* Human Silhouette (Frustrated/Confused pose) */}
-                <div className="relative z-10 text-black">
-                  <svg width="80" height="120" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="4" r="3" />
-                    <path d="M12 8 C8 8, 5 10, 4 13 L8 14 L8 22 L11 22 L11 16 L13 16 L13 22 L16 22 L16 14 L20 13 C19 10, 16 8, 12 8 Z" />
-                    <path d="M4 13 L1 10 M20 13 L23 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
-              </div>
+            {/* Bubble 4: Right Top */}
+            <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-3 lg:row-start-1 h-auto flex flex-col">
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">AI人材が採用できない</h3>
+              <p className="text-sm text-[#555] leading-relaxed flex-1">
+                年収レンジを上げても採れない、採れても定着しない
+              </p>
+              <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#f0f0f0]"></div>
             </div>
 
-            {/* Right Column (2 bubbles) */}
-            <div className="flex flex-col gap-6 w-[85vw] sm:w-[300px] lg:w-[32%] flex-shrink-0 snap-center lg:snap-align-none">
-              {/* Bubble: Right Top */}
-              <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">AI人材が採用できない</h3>
-                <p className="text-sm text-[#555] leading-relaxed">
-                  年収レンジを上げても採れない、採れても定着しない
-                </p>
-                <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#f0f0f0]"></div>
-              </div>
-
-              {/* Bubble: Right Bottom */}
-              <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm">
-                <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333]">{renderWithTerms("PoCで止まる")}</h3>
-                <p className="text-sm text-[#555] leading-relaxed">
-                  生成AIの検証は進むが、業務に落ちる実装まで到達しない
-                </p>
-                <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#e8e8e8]"></div>
-              </div>
+            {/* Bubble 5: Right Bottom */}
+            <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-3 lg:row-start-2 h-auto flex flex-col">
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">{renderWithTerms("PoCで止まる")}</h3>
+              <p className="text-sm text-[#555] leading-relaxed flex-1">
+                生成AIの検証は進むが、業務に落ちる実装まで到達しない
+              </p>
+              <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#e8e8e8]"></div>
             </div>
 
           </div>

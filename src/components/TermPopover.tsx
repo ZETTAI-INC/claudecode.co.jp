@@ -72,7 +72,7 @@ export default function TermPopover({ termKey, children, iconOnly = false, tone 
   if (!entry) return <span>{children ?? termKey}</span>;
 
   return (
-    <span className={`inline ${className}`}>
+    <span className={`inline-block whitespace-nowrap ${className}`}>
       {!iconOnly && <span>{children ?? entry.label}</span>}
       <button
         ref={triggerRef}

@@ -36,8 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const newsEntriesSitemap: MetadataRoute.Sitemap = newsEntries.map((e) => ({
     url: `${BASE}/info/${e.slug}`,
     lastModified: e.date ? new Date(e.date) : now,
-    changeFrequency: "monthly",
-    priority: 0.6,
+    changeFrequency: e.type === "blog" ? "monthly" : "yearly",
+    priority: e.type === "blog" ? 0.8 : 0.6,
   }));
   return [...staticEntries, ...newsEntriesSitemap];
 }
