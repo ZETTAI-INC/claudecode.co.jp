@@ -56,7 +56,7 @@ const cases: CaseStudy[] = [
       "顧客情報を扱うため研修中は架空の商談データを使用。本番リリース時にはアクセス権限を法人営業部内に限定し、情シス部門のログ監査ルールに準拠した設計で運用開始。",
   },
   {
-    image: "/img/uploads/2024/02/13cf17df8b0af8de2e099ea6c60f09d5.png",
+    image: "/img/cases/xim-training.png",
     title: "ISマーケティング会社のSNS運用データ分析を自動化、提案サイクルを日次化",
     company: "株式会社XiM",
     industry: "ISマーケティング・ブランドデザイン",
