@@ -32,9 +32,10 @@ export default function HeroBanner() {
               />
             </div>
 
-            <h1 className="planb-fv__heading" style={{ wordBreak: 'keep-all' }}>
-              <span className="inline-block">営業・事務・企画の社員が、</span><br />
-              <span className="inline-block">14日で<strong className="planb-fv__kenten">自部署の業務ツール</strong>を</span><br />
+            <h1 className="planb-fv__heading">
+              <span className="inline-block">営業・事務・企画の</span><span className="inline-block">社員が、</span><br className="hidden md:block" />
+              <span className="inline-block">14日で</span>
+              <span className="inline-block"><strong className="planb-fv__kenten">自部署の</strong></span><span className="inline-block"><strong className="planb-fv__kenten">業務ツール</strong>を</span><br className="hidden md:block" />
               <span className="inline-block">本番公開できる研修。</span>
             </h1>
 

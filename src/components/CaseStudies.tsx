@@ -39,7 +39,7 @@ const cases: CaseStudy[] = [
       "クライアントの広告実績データを扱うため、研修では完全にマスク済みのダミーデータで開発。本番接続時には情報システム部門のセキュリティレビューを経て段階的にリリースする体制を構築。",
   },
   {
-    image: "/img/uploads/2024/02/c3e59afb1b9e8b9302dadc9db83a8df4.png",
+    image: "/img/cases/wiz-training.jpeg",
     title: "DXサービス300種を扱う営業組織が、提案書自動生成で商談数を2.5倍に",
     company: "株式会社WIZ",
     industry: "IT総合商社・DX支援",
