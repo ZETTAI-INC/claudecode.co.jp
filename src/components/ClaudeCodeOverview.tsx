@@ -34,7 +34,7 @@ export default function ClaudeCodeOverview() {
 
   return (
     <div className="w-full bg-white py-16 font-sans select-none mb-10 border-b border-gray-200">
-      <div className="max-w-[1100px] mx-auto px-5 mb-10 text-center">
+      <div className="max-w-[1200px] mx-auto px-5 mb-10 text-center">
         <p className="text-blue-600 font-bold text-sm mb-2 tracking-widest uppercase">Overview</p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Claude Codeとは？</h2>
         <div className="bg-[#f8f9fa] p-7 md:p-10 rounded-2xl mx-auto max-w-4xl text-gray-800 font-bold leading-[1.9] text-base md:text-lg border border-gray-100 shadow-sm">
@@ -44,7 +44,7 @@ export default function ClaudeCodeOverview() {
       </div>
 
       <div className="w-full overflow-x-auto pb-10">
-        <div className="min-w-[1000px] max-w-[1100px] mx-auto px-5 relative pt-4">
+        <div className="min-w-[1000px] max-w-[1200px] mx-auto px-5 relative pt-4">
           
           {/* Main Title Area */}
           <div className="text-center mb-6">

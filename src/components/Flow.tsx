@@ -46,7 +46,7 @@ const steps: Step[] = [
 export default function Flow() {
   return (
     <section className="bg-[#f8fafc] py-20 md:py-28 px-4 sm:px-6 font-sans">
-      <div className="max-w-[1240px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-14 md:mb-16">
           <div className="inline-flex items-center justify-center gap-2 mb-5">
             <span className="w-1.5 h-5 bg-[#2563eb] block"></span>

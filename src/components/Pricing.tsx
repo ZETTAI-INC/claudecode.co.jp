@@ -4,7 +4,7 @@ import { renderWithTerms } from "@/components/renderWithTerms";
 export default function Pricing() {
   return (
     <section className="bg-white py-16 md:py-24 px-4 sm:px-6 font-sans text-[#333]">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         
         {/* Header Bar */}
         <div className="flex justify-between items-center mb-10">
@@ -27,8 +27,8 @@ export default function Pricing() {
             <div className="bg-[#7A7A7A] text-white font-bold py-4 px-2 text-center text-[15px] tracking-wide relative">
               Eラーニングコース
             </div>
-            <div className="bg-[#7A7A7A] text-white font-bold py-4 px-2 text-center text-[15px] tracking-wide relative">
-               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#1890FF] text-white text-[10px] font-black px-3 py-0.5 rounded shadow-sm tracking-widest whitespace-nowrap">
+            <div className="bg-gradient-to-b from-orange-400 to-orange-500 text-white font-bold py-4 px-2 text-center text-[15px] md:text-[16px] tracking-wide relative">
+               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] md:text-[11px] font-black px-4 py-0.5 rounded-full shadow-sm tracking-widest whitespace-nowrap border border-white">
                 おすすめ
               </div>
               ハイブリッドコース
@@ -46,9 +46,9 @@ export default function Pricing() {
                 30万円〜<span className="text-sm font-bold"> / 月</span>
               </span>
             </div>
-            <div className="bg-white flex flex-col items-center justify-center py-6 px-2 text-center">
-              <span className="font-bold text-xl md:text-2xl text-gray-800">
-                50万円〜<span className="text-sm font-bold"> / 月</span>
+            <div className="bg-orange-50/70 flex flex-col items-center justify-center py-6 px-2 text-center shadow-[inset_0_0_0_2px_#fb923c]">
+              <span className="font-black text-2xl md:text-3xl text-orange-600">
+                50万円〜<span className="text-sm font-bold text-gray-800"> / 月</span>
               </span>
             </div>
             <div className="bg-white flex flex-col items-center justify-center py-6 px-2 text-center">
@@ -67,7 +67,7 @@ export default function Pricing() {
               </span>
               <span className="text-[11px] text-gray-500 mt-1 font-bold">※(オンデマンド期間の例)</span>
             </div>
-            <div className="bg-white flex flex-col items-center justify-center py-4 px-4 text-center">
+            <div className="bg-orange-50/70 flex flex-col items-center justify-center py-4 px-4 text-center shadow-[inset_2px_0_0_0_#fb923c,inset_-2px_0_0_0_#fb923c]">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
                 2週間（対面+オンライン）<br />+ 伴走4週間
               </span>
@@ -87,7 +87,7 @@ export default function Pricing() {
                 完全オンライン / 自己ペース
               </span>
             </div>
-            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+            <div className="bg-orange-50/70 flex items-center justify-center py-4 px-4 text-center shadow-[inset_2px_0_0_0_#fb923c,inset_-2px_0_0_0_#fb923c]">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
                 対面 + オンライン併用
               </span>
@@ -107,7 +107,7 @@ export default function Pricing() {
                 人数上限なし（追加料金なし）
               </span>
             </div>
-            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+            <div className="bg-orange-50/70 flex items-center justify-center py-4 px-4 text-center shadow-[inset_2px_0_0_0_#fb923c,inset_-2px_0_0_0_#fb923c]">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
                 5〜15名 / 回
               </span>
@@ -127,7 +127,7 @@ export default function Pricing() {
                 チャット質問サポート30日<br />（追加料金なし）
               </span>
             </div>
-            <div className="bg-white flex items-center justify-center py-4 px-4 text-center">
+            <div className="bg-orange-50/70 flex items-center justify-center py-4 px-4 text-center shadow-[inset_2px_0_0_0_#fb923c,inset_-2px_0_0_0_#fb923c,inset_0_-2px_0_0_#fb923c]">
               <span className="font-bold text-[13px] md:text-sm text-gray-800 leading-relaxed">
                 修了後3ヶ月のチャット伴走＋<br/>平日オンライン{renderWithTerms("コードレビュー")}<br/>（追加料金なし）
               </span>

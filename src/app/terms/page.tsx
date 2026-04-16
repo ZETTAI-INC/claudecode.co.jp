@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "利用規約 | Claude Code リスキリング研修",
+  description:
+    "Claude Code リスキリング研修の利用規約です。本サービスをご利用いただくすべてのお客様に適用される条件を定めています。",
 };
 
 export default function TermsPage() {

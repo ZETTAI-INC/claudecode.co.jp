@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー | Claude Code リスキリング研修",
+  description:
+    "株式会社ZETTAIが運営するClaude Code リスキリング研修における個人情報の取り扱いについて定めたプライバシーポリシーです。",
 };
 
 export default function PrivacyPage() {

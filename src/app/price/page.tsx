@@ -9,6 +9,8 @@ import RoiEquation from "@/components/RoiEquation";
 
 export const metadata: Metadata = {
   title: "料金プラン | CLAUDE CODE リスキリング研修",
+  description:
+    "Claude Code リスキリング研修の料金プラン。基礎導入・実践開発・エンタープライズの3プランをご用意。助成金の活用で実質負担を大幅に軽減できます。",
 };
 
 export default function PricePage() {

@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "運営会社 | Claude Code リスキリング研修",
+  description:
+    "Claude Code リスキリング研修を運営する株式会社ZETTAIの会社概要。所在地・設立・事業内容をご案内します。",
 };
 
 const companyInfo = [

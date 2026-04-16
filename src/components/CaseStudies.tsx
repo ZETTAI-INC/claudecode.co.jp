@@ -107,7 +107,7 @@ export default function CaseStudies() {
 
   return (
     <section id="frontSectionCaseStudies" className="bg-white py-14 md:py-20 px-4 sm:px-6 font-sans text-[#333]">
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         
         {/* --- Global Header --- */}
         <div className="flex justify-between items-end mb-2">

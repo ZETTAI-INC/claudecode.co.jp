@@ -31,7 +31,7 @@ const POINTS = [
 const AiServiceStrengths: React.FC = () => {
   return (
     <section className="bg-white py-10 md:py-24 font-sans text-[#333] overflow-hidden">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
         {/* Header */}
         <div className="flex flex-col items-center justify-center text-center mb-16 relative">
@@ -134,7 +134,7 @@ const AiServiceStrengths: React.FC = () => {
 
         {/* --- Middle Banner: Solution Statement --- */}
         <div className="relative bg-[#1e5eb0] text-white py-6 md:py-8 text-center text-xl md:text-3xl font-bold tracking-wide shadow-md">
-          そのお悩み、私たちが解決します！
+          そのお悩み、Claude Codeが解決します！
           {/* Downward Triangle */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-t-[#1e5eb0]"></div>
         </div>
@@ -145,12 +145,12 @@ const AiServiceStrengths: React.FC = () => {
             <div key={index} className="flex flex-col relative z-10 pt-8 mt-4 md:mt-0 flex-shrink-0 w-[85vw] sm:w-[320px] md:w-auto snap-center md:snap-align-none">
               
               {/* Giant Background Number */}
-              <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-[#e1effc] opacity-60 pointer-events-none tracking-tighter leading-none -z-10 font-sans">
+              <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-orange-400/30 pointer-events-none tracking-tighter leading-none -z-10 font-sans">
                 {point.num}
               </div>
 
               {/* POINT! Text */}
-              <div className="text-center text-[#2563eb] text-xl font-bold italic tracking-widest mb-4">
+              <div className="text-center text-orange-500 text-xl font-bold italic tracking-widest mb-4">
                 POINT!
               </div>
 

@@ -34,17 +34,18 @@ export default function HeroBanner() {
 
             {/* Desktop Heading */}
             <h1 className="planb-fv__heading hidden md:block leading-tight">
-              営業・事務・企画の社員が、<br />
-              14日で<strong className="planb-fv__kenten">自部署の業務ツール</strong>を<br />
-              本番公開できる研修。
+              「コードって何？」状態から<br />
+              5日で<strong className="planb-fv__kenten">社員が自走</strong>する。<br />
+              <span style={{ whiteSpace: "nowrap" }}>未経験特化のClaude Code研修。</span>
             </h1>
 
             {/* Mobile Heading */}
             <h1 className="planb-fv__heading md:hidden leading-[1.6]">
-              営業・事務・企画の<br />
-              社員が、14日で<br />
-              <strong className="planb-fv__kenten">自部署の業務ツール</strong>を<br />
-              本番公開できる研修。
+              「コードって何？」<br />
+              状態から5日で<br />
+              <strong className="planb-fv__kenten">社員が自走</strong>する。<br />
+              未経験特化の<br />
+              Claude Code研修。
             </h1>
 
             <p className="planb-fv__stat-note" style={{
@@ -55,9 +56,9 @@ export default function HeroBanner() {
               marginBottom: "20px",
               maxWidth: "480px",
             }}>
-              Excel台帳のWeb化、日報の自動集計、承認フローのアプリ化――
+              プログラミング経験ゼロの社員が、自分で業務ツールを
               <br />
-              プログラミング経験ゼロから、現場で使える1本を納品します。
+              つくって公開できるようになる研修です。
             </p>
 
             <div className="planb-fv__stats">

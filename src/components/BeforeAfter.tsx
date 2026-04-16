@@ -6,124 +6,95 @@ const BeforeAfter: React.FC = () => {
       <div className="max-w-[1000px] mx-auto px-4 md:px-8 relative">
         
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-xl md:text-[24px] font-bold tracking-wider text-gray-800">
-            研修前と研修後、社員1人の姿が変わる
-          </h2>
-          <div className="text-[#1890FF] font-black text-lg md:text-xl tracking-widest">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-block text-[#1890FF] font-black tracking-widest text-sm mb-4 bg-[#EAF5FF] px-4 py-1.5 rounded-full">
             Claude Code
           </div>
-        </div>
-
-        {/* Text */}
-        <div className="text-center mb-16 px-4">
-          <p className="text-[16px] md:text-[20px] font-bold leading-[1.8] tracking-wide text-gray-700">
-            組織の変化は、社員1人の仕事の変化から始まります。<br className="hidden md:block" />
+          <h2 className="text-2xl md:text-[32px] font-bold tracking-tight text-gray-800 mb-6 leading-relaxed">
+            研修前と研修後、<br className="md:hidden"/>社員1人の姿が変わる
+          </h2>
+          <p className="text-[15px] md:text-[17px] text-gray-600 font-bold leading-[1.9]">
+            組織の変化は、社員1人の仕事の変化から始まります。<br className="hidden md:block"/>
             研修を受けた社員は、同じ業務に「別の手札」で向き合えるようになります。
           </p>
         </div>
 
-        {/* Before / After Container */}
-        <div className="flex flex-col md:flex-row items-center md:items-stretch justify-center md:justify-between gap-6 mt-10 pb-8">
+        {/* Before / After Split Panel */}
+        <div className="flex flex-col md:flex-row bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 overflow-hidden">
           
-          {/* LEFT: Before Block */}
-          <div className="w-full md:w-[46%] bg-[#EAF5FF] rounded-lg p-6 md:p-8 flex flex-col items-center shadow-sm md:shadow-none">
-            <h3 className="text-[#1890FF] font-bold text-xl md:text-2xl tracking-wider mb-6">
+          {/* LEFT: Before */}
+          <div className="w-full md:w-1/2 bg-[#F8FAFC] p-8 md:p-12 flex flex-col relative">
+            <h3 className="text-gray-400 font-black text-lg tracking-widest mb-8 border-b border-gray-200 pb-4">
               研修前の社員 (Before)
             </h3>
             
-            <div className="w-full flex flex-col gap-4">
-              
-              {/* Card 1 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#1890FF] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                  </svg>
+            <ul className="flex flex-col gap-8 mt-2">
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  業務課題に気づいても、<br className="hidden lg:block"/>改善する手段を持っていない
+                <div className="font-bold text-[15px] md:text-[16px] text-gray-600 leading-[1.8]">
+                  業務課題に気づいても、<br />改善する手段を持っていない
                 </div>
-              </div>
+              </li>
 
-              {/* Card 2 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#1890FF] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                  </svg>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  Excel・マクロ止まりで<br className="hidden lg:block"/>生産性の限界を感じている
+                <div className="font-bold text-[15px] md:text-[16px] text-gray-600 leading-[1.8]">
+                  Excel・マクロ止まりで<br />生産性の限界を感じている
                 </div>
-              </div>
+              </li>
 
-              {/* Card 3 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#1890FF] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16.14 13.91c-1.39-4-1.63-8.86-1.63-8.86-.06-.85-.85-1.46-1.72-1.38-.85.06-1.46.85-1.38 1.72 0 0 .23 4.67 1.5 8.35-1.48 1.83-2.66 4.63-3.41 8.26H6.11c-.9 0-1.63-.73-1.63-1.63V4H10v12.22l2.36-2.58c.84-.92 2.22-.87 3.01.12l.77 1.15zm2.74-7.46l-2.06 2.06 1.41 1.41 2.06-2.06-1.41-1.41zM19.1 4.5l-2.06 2.06 1.41 1.41 2.06-2.06-1.41-1.41zm-15.01 16H20v2H4.09v-2z" />
-                  </svg>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  改善提案はできても、<br className="hidden lg:block"/>実行は外注・IT部門頼み
+                <div className="font-bold text-[15px] md:text-[16px] text-gray-600 leading-[1.8]">
+                  改善提案はできても、<br />実行は外注・IT部門頼み
                 </div>
-              </div>
-
-            </div>
+              </li>
+            </ul>
           </div>
 
-          {/* CENTER: Arrow (Right on Desktop, Right on Mobile) */}
-          <div className="w-16 h-12 md:h-24 flex items-center justify-center">
-            <div className="hidden md:block w-0 h-0 border-l-[30px] border-l-gray-300 border-t-[20px] border-t-transparent border-b-[20px] border-b-transparent"></div>
-            <div className="block md:hidden w-0 h-0 border-t-[20px] border-t-gray-300 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent"></div>
-          </div>
-
-          {/* RIGHT: After Block */}
-          <div className="w-full md:w-[46%] bg-[#FCE8E8] rounded-lg p-6 md:p-8 flex flex-col items-center shadow-sm md:shadow-none">
-            <h3 className="text-[#E55252] font-bold text-xl md:text-2xl tracking-wider mb-6">
+          {/* RIGHT: After */}
+          <div className="w-full md:w-1/2 bg-[#1890FF] p-8 md:p-12 flex flex-col relative text-white">
+            {/* Arrow connecting the two sides implicitly via background design, or just keep it minimal */}
+            <div className="hidden md:block absolute top-[50%] -left-4 -translate-y-1/2 w-8 h-8 bg-[#1890FF] rotate-45 transform origin-center border-l border-b border-transparent"></div>
+            
+            <h3 className="text-blue-200 font-black text-lg tracking-widest mb-8 border-b border-blue-400 pb-4 relative z-10">
               研修後の社員 (After)
             </h3>
             
-            <div className="w-full flex flex-col gap-4">
-              
-              {/* Card 1 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#E55252] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
-                  </svg>
+            <ul className="flex flex-col gap-8 mt-2 relative z-10">
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-white text-[#1890FF] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  業務課題を自分の手で<br className="hidden lg:block"/>ツール化・自動化できる
+                <div className="font-bold text-[16px] md:text-[18px] leading-[1.7]">
+                  業務課題を自分の手で<br />ツール化・自動化できる
                 </div>
-              </div>
+              </li>
 
-              {/* Card 2 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#E55252] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 2v11h3v9l7-12h-4l4-8z" />
-                  </svg>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-white text-[#1890FF] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  Claude Codeで試作が数時間、<br className="hidden lg:block"/>改修も自分で即反映
+                <div className="font-bold text-[16px] md:text-[18px] leading-[1.7]">
+                  Claude Codeで試作が数時間、<br />改修も自分で即反映
                 </div>
-              </div>
+              </li>
 
-              {/* Card 3 */}
-              <div className="bg-white rounded p-4 md:p-5 flex items-center gap-5 shadow-sm">
-                <div className="text-[#E55252] w-10 flex-shrink-0 flex justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L3.9 19.46c-.23.18-.32.49-.22.75.11.27.36.44.64.45l4.32.1c.32.01.62-.12.82-.35.2-.23.27-.55.19-.85l-1.04-3.52c-.08-.27-.32-.45-.6-.46-.28 0-.54.15-.65.41l-.47 1.1C5.56 15.65 4.8 13.92 4.8 12c0-3.97 3.23-7.2 7.2-7.2s7.2 3.23 7.2 7.2c0 2.05-.86 3.89-2.24 5.21-.21.2-.23.53-.04.75.19.2.53.22.74.04 1.63-1.55 2.65-3.73 2.65-6.2 0-4.97-4.03-9-9-9zM11 7v5.59l4.3 2.55.75-1.24-3.55-2.1V7h-1.5z" />
-                  </svg>
+              <li className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-white text-[#1890FF] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <div className="font-bold text-[15px] md:text-[17px] text-gray-800 leading-snug">
-                  提案ではなく「完成品」を<br className="hidden lg:block"/>上司や部署に持っていける
+                <div className="font-bold text-[16px] md:text-[18px] leading-[1.7]">
+                  提案ではなく「完成品」を<br />上司や部署に持っていける
                 </div>
-              </div>
-
-            </div>
+              </li>
+            </ul>
           </div>
 
         </div>
