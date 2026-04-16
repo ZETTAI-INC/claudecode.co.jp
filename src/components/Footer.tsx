@@ -135,6 +135,14 @@ export default function Footer() {
           <p className="footer__copyright">
             &copy; {new Date().getFullYear()} 株式会社ZETTAI All Rights Reserved.
           </p>
+          <Link
+            href="/admin/"
+            className="footer__admin-link"
+            aria-label="管理者画面"
+            title="管理者画面"
+          >
+            <span className="material-icons-outlined">admin_panel_settings</span>
+          </Link>
         </div>
       </div>
     </footer>
