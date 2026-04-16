@@ -171,12 +171,12 @@ const AiServiceStrengths: React.FC = () => {
             <div key={index} className="flex flex-col relative z-10 pt-8 mt-4 md:mt-0 flex-shrink-0 w-[85vw] sm:w-[320px] md:w-auto snap-center md:snap-align-none">
 
               {/* Giant Background Number */}
-              <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-orange-400/30 pointer-events-none tracking-tighter leading-none -z-10 font-sans">
+              <div className="absolute top-[-50px] md:top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-orange-400/20 md:text-orange-400/30 pointer-events-none tracking-tighter leading-none -z-10 font-sans">
                 {point.num}
               </div>
 
               {/* POINT! Text */}
-              <div className="text-center text-orange-500 text-xl font-bold italic tracking-widest mb-4">
+              <div className="text-center text-orange-500 text-xl font-bold italic tracking-widest mb-4 mt-6 md:mt-0 relative z-10">
                 POINT!
               </div>
 

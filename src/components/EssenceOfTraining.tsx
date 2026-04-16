@@ -95,16 +95,16 @@ export default function EssenceOfTraining() {
         </h2>
 
         {/* Legend / Headers */}
-        <div className="flex w-full mb-4 md:mb-6 relative px-2 items-end">
-          <div className="w-16 md:w-24 shrink-0"></div> {/* Spacer for icon */}
-          <div className="flex-1 text-center text-gray-400 text-[15px] md:text-[18px] font-black tracking-widest">
+        <div className="flex w-full mb-3 md:mb-6 relative px-1 md:px-2 items-end">
+          <div className="w-12 sm:w-16 md:w-24 shrink-0"></div> {/* Spacer for icon */}
+          <div className="flex-1 text-center text-gray-400 text-[12px] md:text-[18px] font-black tracking-widest leading-tight">
             研修前 (Before)<br />
-            <span className="text-[12.5px] md:text-[14.5px] font-bold text-gray-400 tracking-normal mt-1 inline-block" style={{ wordBreak: "keep-all" }}>課題は手作業のまま、本番化は外注任せ</span>
+            <span className="text-[10px] md:text-[14.5px] font-bold text-gray-400 tracking-normal mt-1 block">課題は手作業、外注任せ</span>
           </div>
-          <div className="w-6 md:w-10 shrink-0"></div> {/* Match arrow gap */}
-          <div className="flex-1 text-center text-[#1890FF] text-[15px] md:text-[18px] font-black tracking-widest">
+          <div className="w-4 md:w-10 shrink-0"></div> {/* Match arrow gap */}
+          <div className="flex-1 text-center text-[#1890FF] text-[12px] md:text-[18px] font-black tracking-widest leading-tight">
             14日後 (After)<br />
-            <span className="text-[12.5px] md:text-[14.5px] font-bold text-[#1890FF] tracking-normal mt-1 inline-block" style={{ wordBreak: "keep-all" }}>非エンジニア社員がAIを自ら本番導入</span>
+            <span className="text-[10px] md:text-[14.5px] font-bold text-[#1890FF] tracking-normal mt-1 block">非エンジニアが自ら導入</span>
           </div>
         </div>
 
@@ -113,23 +113,23 @@ export default function EssenceOfTraining() {
           
           {/* Row 1 */}
           <div className="flex items-center w-full group">
-            <div className="w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1.5 transition-colors group-hover:text-[#FF6B00]">
-              <SalesIcon />
-              <span className="text-[12px] md:text-[13px] font-black border-b-[3px] border-gray-200 pb-0.5 mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">営業・設計</span>
+            <div className="w-12 sm:w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1 md:gap-1.5 transition-colors group-hover:text-[#FF6B00]">
+              <div className="scale-75 md:scale-100 origin-center"><SalesIcon /></div>
+              <span className="text-[10px] md:text-[13px] font-black border-b-[2px] md:border-b-[3px] border-gray-200 pb-0.5 mt-0 md:mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">営業・設計</span>
             </div>
             
-            <div className="flex-1 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
-              <div className="w-full md:flex-1 bg-white border-[2.5px] border-gray-200 rounded-full py-3.5 px-6 md:px-8 text-center text-[13.5px] md:text-[15.5px] font-black text-gray-600 min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
-                <span className="leading-[1.6]" style={{ wordBreak: "keep-all" }}>手作業の見積書作成で<br className="hidden lg:block"/><span className="text-[#FF6B00]">コピペミス</span>や<span className="text-[#FF6B00]">二度手間</span>が発生</span>
+            <div className="flex-1 flex flex-row items-center justify-between gap-1.5 md:gap-5">
+              <div className="flex-1 bg-white border-[1.5px] md:border-[2.5px] border-gray-200 rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center text-[10.5px] md:text-[15.5px] font-black text-gray-600 min-h-[64px] md:min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
+                <span className="leading-[1.4] md:leading-[1.6]">手作業の見積書作成で<br/><span className="text-[#FF6B00]">コピペミス</span>や<span className="text-[#FF6B00]">二度手間</span></span>
               </div>
               
-              <div className="text-gray-300 shrink-0 font-black text-xl md:text-2xl transform rotate-90 md:rotate-0">
+              <div className="text-gray-300 shrink-0 font-black text-xs md:text-2xl">
                 →
               </div>
               
-              <div className="w-full md:flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-full py-3.5 px-6 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
-                <div className="text-[16px] md:text-[19px] font-black text-white leading-[1.5] drop-shadow-sm tracking-wide" style={{ wordBreak: "keep-all" }}>
+              <div className="flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[64px] md:min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
+                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
+                <div className="text-[11px] md:text-[19px] font-black text-white leading-[1.3] md:leading-[1.5] drop-shadow-sm tracking-normal md:tracking-wide">
                   見積書作成ツールを<br/><Kenten color="white">本番導入</Kenten>
                 </div>
               </div>
@@ -138,23 +138,23 @@ export default function EssenceOfTraining() {
 
           {/* Row 2 */}
           <div className="flex items-center w-full group">
-            <div className="w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1.5 transition-colors group-hover:text-[#FF6B00]">
-              <AdminIcon />
-              <span className="text-[12px] md:text-[13px] font-black border-b-[3px] border-gray-200 pb-0.5 mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">管理・企画</span>
+            <div className="w-12 sm:w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1 md:gap-1.5 transition-colors group-hover:text-[#FF6B00]">
+              <div className="scale-75 md:scale-100 origin-center"><AdminIcon /></div>
+              <span className="text-[10px] md:text-[13px] font-black border-b-[2px] md:border-b-[3px] border-gray-200 pb-0.5 mt-0 md:mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">管理・企画</span>
             </div>
             
-            <div className="flex-1 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
-              <div className="w-full md:flex-1 bg-white border-[2.5px] border-gray-200 rounded-full py-3.5 px-6 md:px-8 text-center text-[13.5px] md:text-[15.5px] font-black text-gray-600 min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
-                <span className="leading-[1.6]" style={{ wordBreak: "keep-all" }}>複数ツールに散らばったデータの<br className="hidden lg:block"/>集計に<span className="text-[#FF6B00]">毎月数日かかる</span></span>
+            <div className="flex-1 flex flex-row items-center justify-between gap-1.5 md:gap-5">
+              <div className="flex-1 bg-white border-[1.5px] md:border-[2.5px] border-gray-200 rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center text-[10.5px] md:text-[15.5px] font-black text-gray-600 min-h-[64px] md:min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
+                <span className="leading-[1.4] md:leading-[1.6]">複数ツールのデータ<br/>集計に<span className="text-[#FF6B00]">毎月数日かかる</span></span>
               </div>
               
-              <div className="text-gray-300 shrink-0 font-black text-xl md:text-2xl transform rotate-90 md:rotate-0">
+              <div className="text-gray-300 shrink-0 font-black text-xs md:text-2xl">
                 →
               </div>
               
-              <div className="w-full md:flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-full py-3.5 px-6 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
-                <div className="text-[16px] md:text-[19px] font-black text-white leading-[1.5] drop-shadow-sm tracking-wide" style={{ wordBreak: "keep-all" }}>
+              <div className="flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[64px] md:min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
+                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
+                <div className="text-[11px] md:text-[19px] font-black text-white leading-[1.3] md:leading-[1.5] drop-shadow-sm tracking-normal md:tracking-wide">
                   実績ダッシュボードを<br/><Kenten color="white">本番稼働</Kenten>
                 </div>
               </div>
@@ -163,23 +163,23 @@ export default function EssenceOfTraining() {
 
           {/* Row 3 */}
           <div className="flex items-center w-full group">
-            <div className="w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1.5 transition-colors group-hover:text-[#FF6B00]">
-              <FieldIcon />
-              <span className="text-[12px] md:text-[13px] font-black border-b-[3px] border-gray-200 pb-0.5 mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">現場・労務</span>
+            <div className="w-12 sm:w-16 md:w-24 shrink-0 flex flex-col items-center justify-center text-gray-300 gap-1 md:gap-1.5 transition-colors group-hover:text-[#FF6B00]">
+              <div className="scale-75 md:scale-100 origin-center"><FieldIcon /></div>
+              <span className="text-[10px] md:text-[13px] font-black border-b-[2px] md:border-b-[3px] border-gray-200 pb-0.5 mt-0 md:mt-0.5 text-gray-500 transition-colors group-hover:border-[#FF6B00]">現場・労務</span>
             </div>
             
-            <div className="flex-1 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-5">
-              <div className="w-full md:flex-1 bg-white border-[2.5px] border-gray-200 rounded-full py-3.5 px-6 md:px-8 text-center text-[13.5px] md:text-[15.5px] font-black text-gray-600 min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
-                <span className="leading-[1.6]" style={{ wordBreak: "keep-all" }}>紙の報告書とシステム入力の<br className="hidden lg:block"/><span className="text-[#FF6B00]">二重管理</span>で現場が疲弊</span>
+            <div className="flex-1 flex flex-row items-center justify-between gap-1.5 md:gap-5">
+              <div className="flex-1 bg-white border-[1.5px] md:border-[2.5px] border-gray-200 rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center text-[10.5px] md:text-[15.5px] font-black text-gray-600 min-h-[64px] md:min-h-[76px] flex items-center justify-center shadow-sm relative overflow-hidden transition-all group-hover:border-[#FF6B00]">
+                <span className="leading-[1.4] md:leading-[1.6]">紙報告とシステム入力の<br/><span className="text-[#FF6B00]">二重管理</span>で現場疲弊</span>
               </div>
               
-              <div className="text-gray-300 shrink-0 font-black text-xl md:text-2xl transform rotate-90 md:rotate-0">
+              <div className="text-gray-300 shrink-0 font-black text-xs md:text-2xl">
                 →
               </div>
               
-              <div className="w-full md:flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-full py-3.5 px-6 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
-                <div className="text-[16px] md:text-[19px] font-black text-white leading-[1.5] drop-shadow-sm tracking-wide" style={{ wordBreak: "keep-all" }}>
+              <div className="flex-1 bg-gradient-to-br from-[#1890FF] to-[#0A6ED1] rounded-[12px] md:rounded-full py-2.5 md:py-3.5 px-2 md:px-8 text-center shadow-[0_8px_20px_rgba(24,144,255,0.3)] min-h-[64px] md:min-h-[76px] flex flex-col items-center justify-center relative overflow-hidden transition-transform hover:scale-[1.02] cursor-default border border-white/50">
+                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-white opacity-[0.06] rounded-bl-full pointer-events-none"></div>
+                <div className="text-[11px] md:text-[19px] font-black text-white leading-[1.3] md:leading-[1.5] drop-shadow-sm tracking-normal md:tracking-wide">
                   スマホ報告フローを<br/><Kenten color="white">本番導入</Kenten>
                 </div>
               </div>

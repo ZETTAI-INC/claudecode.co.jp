@@ -168,14 +168,14 @@ export default function DevelopmentSpeedComparison() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center my-8 text-center relative">
-                <div className="w-[2px] h-10 bg-[#1890FF] absolute -top-8 left-1/2 -translate-x-1/2"></div>
-                <div className="text-xs font-bold text-gray-600 mb-1">本番導入に不要な工程をすべて削ぎ落とし</div>
+              <div className="flex flex-col items-center justify-center mt-12 mb-16 text-center relative">
+                <div className="w-[2px] h-12 bg-[#1890FF] absolute -top-12 left-1/2 -translate-x-1/2"></div>
+                <div className="text-xs font-bold text-gray-600 mb-2 px-2">本番導入に不要な工程をすべて削ぎ落とし</div>
                 <div className="font-bold text-lg text-gray-800">
-                  <span className="text-4xl font-black text-[#1890FF] tracking-tighter mr-1">1/10</span>
-                  の期間で本番導入
+                  <span className="text-5xl font-black text-[#1890FF] tracking-tighter mr-1">1/10</span>
+                  <span className="text-sm">の期間で本番導入</span>
                 </div>
-                <div className="w-[2px] h-10 bg-[#1890FF] absolute -bottom-10 left-1/2 -translate-x-1/2">
+                <div className="w-[2px] h-12 bg-[#1890FF] absolute -bottom-14 left-1/2 -translate-x-1/2">
                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[2px] w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1890FF]"></div>
                 </div>
               </div>
@@ -195,8 +195,8 @@ export default function DevelopmentSpeedComparison() {
           </div>
 
           {/* Bottom Blue Strip */}
-          <div className="w-full bg-[#1890FF] text-white text-center py-4 px-4 font-bold text-[14px] md:text-base tracking-wide shadow-inner">
-            本番導入に関係ない工程を切り落とすから、非エンジニアでも14日で本番環境まで到達できる
+          <div className="w-full bg-[#1890FF] text-white text-center py-5 px-4 font-bold text-[14.5px] md:text-base tracking-wide shadow-inner mt-4 md:mt-0">
+            本番導入に関係ない工程を切り落とすから、<br className="block sm:hidden" />非エンジニアでも14日で本番環境まで到達できる
           </div>
 
         </div>
