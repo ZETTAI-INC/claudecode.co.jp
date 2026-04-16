@@ -4,11 +4,30 @@ import Footer from "@/components/Footer";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "WEB制作 御見積書 | 株式会社ZETTAI",
+  title: "WEB制作 見積もりダウンロード | 株式会社ZETTAI",
   description:
-    "株式会社ZETTAIが提供するWEB制作の御見積書ダウンロードページです。デザインのみ／管理画面込み／SEO・AIO対策基盤支援付きの3プランをご用意しています。",
-  alternates: { canonical: "/estimate" },
-  openGraph: { url: "https://claudecode.co.jp/estimate", title: "WEB制作 御見積書 | 株式会社ZETTAI" },
+    "株式会社ZETTAIのWEB制作 御見積書PDFをその場で無料ダウンロード。デザインのみ15万円／管理画面込み25万円／SEO・AIO対策基盤支援付き35万円の3プランを比較し、そのまま社内稟議にご活用いただけます。",
+  keywords: [
+    "WEB制作 見積もり",
+    "ホームページ制作 料金",
+    "見積書 PDF",
+    "CMS構築",
+    "SEO対策",
+    "AIO対策",
+    "Core Web Vitals",
+    "Claude Code",
+    "株式会社ZETTAI",
+    "おうとまくん",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/estimate" },
+  openGraph: {
+    title: "WEB制作 見積もりダウンロード | 株式会社ZETTAI",
+    description:
+      "WEB制作の御見積書をPDFで即ダウンロード。15万円／25万円／35万円の3プラン比較付き。社内稟議にそのままご利用いただけます。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/estimate",
+  },
 };
 
 type Plan = {

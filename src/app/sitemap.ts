@@ -3,12 +3,24 @@ import { newsEntries } from "@/data/news";
 
 const BASE = "https://claudecode.co.jp";
 
-const staticRoutes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+const staticRoutes: {
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/llmo-reskilling", priority: 0.95, changeFrequency: "weekly" },
+  { path: "/claude-code-houjin", priority: 0.9, changeFrequency: "monthly" },
   { path: "/courses", priority: 0.9, changeFrequency: "weekly" },
   { path: "/curriculum", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/curriculum/step1", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/curriculum/step2", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/curriculum/step3", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/curriculum/step4", priority: 0.8, changeFrequency: "monthly" },
   { path: "/price", priority: 0.9, changeFrequency: "weekly" },
   { path: "/case", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/faq", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/process", priority: 0.85, changeFrequency: "monthly" },
   { path: "/compare", priority: 0.8, changeFrequency: "monthly" },
   { path: "/consultation", priority: 0.8, changeFrequency: "monthly" },
   { path: "/fit-check", priority: 0.7, changeFrequency: "monthly" },

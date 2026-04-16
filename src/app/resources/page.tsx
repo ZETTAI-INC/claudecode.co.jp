@@ -4,11 +4,30 @@ import Footer from "@/components/Footer";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "お役立ち資料・ホワイトペーパー",
+  title: "資料請求・お役立ち資料 無料ダウンロード | おうとまくん",
   description:
-    "Claude Code研修サービス概要、AI人材育成導入ガイド、補助金活用ハンドブック、事例集など、企業のAI活用を支援する資料を無料ダウンロードいただけます。",
-  alternates: { canonical: "/resources" },
-  openGraph: { url: "https://claudecode.co.jp/resources", title: "お役立ち資料 | CLAUDE CODE リスキリング研修" },
+    "おうとまくんAIリスキリング研修のサービス概要、AI人材育成 導入ガイド、人材開発支援助成金の活用マニュアル、導入事例集を無料でダウンロード。社内稟議・比較検討にそのままお使いいただけるPDF資料をご用意しています。",
+  keywords: [
+    "資料請求",
+    "ホワイトペーパー",
+    "AI研修 資料",
+    "リスキリング 導入ガイド",
+    "助成金 マニュアル",
+    "人材開発支援助成金",
+    "導入事例",
+    "Claude Code",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/resources" },
+  openGraph: {
+    title: "資料請求・お役立ち資料 無料ダウンロード | おうとまくん",
+    description:
+      "サービス概要・導入ガイド・助成金マニュアル・事例集を無料PDFでダウンロード。社内稟議にそのままお使いいただけます。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/resources",
+  },
 };
 
 const resources = [

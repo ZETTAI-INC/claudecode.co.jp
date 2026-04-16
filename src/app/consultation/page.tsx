@@ -5,11 +5,31 @@ import ContactForm from "@/components/ContactForm";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "適合診断（30分） | Claude Code リスキリング研修",
+  title: "無料相談・適合診断（30分）| おうとまくん",
   description:
-    "14日で内製化できる業務か、30分で診断します。対象部署・作りたい業務・セキュリティ前提の3点を確認し、48時間以内に適合判定をお返しします。",
-  alternates: { canonical: "/consultation" },
-  openGraph: { url: "https://claudecode.co.jp/consultation", title: "適合診断（30分） | CLAUDE CODE リスキリング研修" },
+    "おうとまくんAI研修の無料オンライン相談・適合診断。対象部署／作りたい業務／セキュリティ前提の3点を30分ヒアリングし、最短14日で内製化できるか48時間以内に適合判定をお返しします。",
+  keywords: [
+    "無料相談",
+    "AI研修 相談",
+    "適合診断",
+    "Claude Code",
+    "リスキリング",
+    "内製化",
+    "最短14日",
+    "人材開発支援助成金",
+    "法人研修",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/consultation" },
+  openGraph: {
+    title: "無料相談・適合診断（30分）| おうとまくん",
+    description:
+      "対象部署・作りたい業務・セキュリティ前提の3点を30分でヒアリング。48時間以内に「最短14日で内製化できるか」の適合判定をお返しします。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/consultation",
+  },
 };
 
 const topics = [

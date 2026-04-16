@@ -8,9 +8,33 @@ import Pricing from "@/components/Pricing";
 import RoiEquation from "@/components/RoiEquation";
 
 export const metadata: Metadata = {
-  title: "料金プラン | CLAUDE CODE リスキリング研修",
+  title: "法人研修プラン・料金・助成金シミュレーション | おうとまくん",
   description:
-    "Claude Code リスキリング研修の料金プラン。基礎導入・実践開発・エンタープライズの3プランをご用意。助成金の活用で実質負担を大幅に軽減できます。",
+    "AIリスキリング研修「おうとまくん」の料金プラン。1ステップ10万円、人材開発支援助成金の活用で中小企業75%補助・実質負担18%〜。最短14日で開発内製化を実現する法人研修の投資対効果をご確認いただけます。",
+  keywords: [
+    "リスキリング",
+    "AIリスキリング",
+    "Claude Code",
+    "法人研修",
+    "企業研修 料金",
+    "人材開発支援助成金",
+    "助成金75%",
+    "リスキリング 費用",
+    "最短14日",
+    "開発内製化",
+    "DX研修",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/price" },
+  openGraph: {
+    title: "法人研修プラン・料金・助成金シミュレーション | おうとまくん",
+    description:
+      "1ステップ10万円、助成金活用で実質負担18%〜。最短14日で開発内製化を実現するAIリスキリング研修の料金プラン。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/price",
+  },
 };
 
 export default function PricePage() {

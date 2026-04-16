@@ -5,15 +5,32 @@ import { newsEntries } from "@/data/news";
 import InfoTabs from "./InfoTabs";
 
 export const metadata: Metadata = {
-  title: "お知らせ・ブログ | Claude Code リスキリング研修",
+  title: "お知らせ・Claude Code活用ブログ・最新情報 | おうとまくん",
   description:
-    "Claude Code リスキリング研修の最新ニュースと、Claude Codeの使い方・比較・活用テクニック・導入事例などのブログ記事をお届けします。",
-  alternates: { canonical: "/info" },
+    "AIリスキリング研修「おうとまくん」の最新ニュースとClaude Code活用ブログ。使い方・他AI比較・業務活用テクニック・助成金75%補助の導入事例まで、最短14日で開発内製化を目指す企業向けの情報を随時更新します。",
+  keywords: [
+    "Claude Code",
+    "Claude Code 使い方",
+    "AIリスキリング",
+    "リスキリング",
+    "AI研修",
+    "AI活用ブログ",
+    "開発内製化",
+    "非エンジニア 開発",
+    "最短14日",
+    "助成金75%",
+    "DX研修",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/info" },
   openGraph: {
-    url: "https://claudecode.co.jp/info",
-    title: "お知らせ・ブログ | Claude Code リスキリング研修",
+    title: "お知らせ・Claude Code活用ブログ・最新情報 | おうとまくん",
     description:
-      "Claude Code リスキリング研修の最新ニュースとClaude Code活用ブログ。",
+      "Claude Codeの使い方・比較・活用事例・助成金情報など、AIリスキリング研修「おうとまくん」の最新情報を随時更新。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/info",
   },
 };
 

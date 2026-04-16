@@ -10,11 +10,33 @@ import { WhyResultsCompare } from "@/components/WhyResults";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "AI比較・効果検証 | Claude Code リスキリング研修",
+  title: "Claude Code vs ChatGPT/Gemini/Copilot 効果検証比較 | おうとまくん",
   description:
-    "Claude Code と主要AIサービス（ChatGPT / Gemini / Copilot）の業務成果物ベース比較、研修前後の開発スピード差分、実装到達度データをまとめました。",
-  alternates: { canonical: "/compare" },
-  openGraph: { url: "https://claudecode.co.jp/compare", title: "AI比較・効果検証 | CLAUDE CODE リスキリング研修" },
+    "AIリスキリング研修「おうとまくん」が、Claude Codeと主要AI（ChatGPT・Gemini・Copilot）を業務成果物ベースで比較。最短14日の研修前後で開発スピード・実装到達度がどこまで変わるかを定量データで公開します。",
+  keywords: [
+    "Claude Code 比較",
+    "ChatGPT 比較",
+    "AI比較",
+    "AIリスキリング",
+    "AI研修",
+    "リスキリング おすすめ",
+    "開発内製化",
+    "非エンジニア 開発",
+    "最短14日",
+    "AI人材育成",
+    "DX研修",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/compare" },
+  openGraph: {
+    title: "Claude Code vs ChatGPT/Gemini/Copilot 効果検証比較 | おうとまくん",
+    description:
+      "業務成果物・開発スピード・実装到達度の3観点で、Claude Codeと主要AIサービスを定量比較した効果検証レポート。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/compare",
+  },
 };
 
 export default function ComparePage() {

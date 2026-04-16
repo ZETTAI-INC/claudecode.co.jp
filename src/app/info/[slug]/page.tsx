@@ -25,12 +25,25 @@ export async function generateMetadata({
   if (!entry) return {};
   const desc = entry.body.replace(/\s+/g, " ").trim().slice(0, 140);
   const url = `https://claudecode.co.jp/info/${entry.slug}`;
+  const baseKeywords = [
+    "Claude Code",
+    "AIリスキリング",
+    "リスキリング",
+    "AI研修",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ];
+  const keywords = Array.from(
+    new Set([...(entry.tags ?? []), ...baseKeywords])
+  );
   return {
-    title: `${entry.title} | Claude Code リスキリング研修`,
+    title: `${entry.title} | おうとまくん`,
     description: desc,
-    alternates: { canonical: `/info/${entry.slug}` },
+    keywords,
+    alternates: { canonical: `https://claudecode.co.jp/info/${entry.slug}` },
     openGraph: {
       type: "article",
+      locale: "ja_JP",
       url,
       title: entry.title,
       description: desc,

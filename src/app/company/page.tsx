@@ -3,9 +3,32 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "運営会社 | Claude Code リスキリング研修",
+  title: "運営会社 | 株式会社ZETTAI 会社概要",
   description:
-    "Claude Code リスキリング研修を運営する株式会社ZETTAIの会社概要。所在地・設立・事業内容をご案内します。",
+    "AIリスキリング研修「おうとまくん」を運営する株式会社ZETTAIの会社概要。所在地、設立、事業内容、AI研修・開発内製化支援の実績をご案内します。最短14日で非エンジニアをAI開発人材へ。",
+  keywords: [
+    "株式会社ZETTAI 会社概要",
+    "おうとまくん 運営会社",
+    "AI研修 企業",
+    "Claude Code 運営",
+    "AIリスキリング 会社",
+    "法人研修 運営会社",
+    "AI人材育成 企業",
+    "株式会社ZETTAI",
+    "おうとまくん",
+    "Claude Code",
+  ],
+  alternates: {
+    canonical: "https://claudecode.co.jp/company",
+  },
+  openGraph: {
+    title: "運営会社 | 株式会社ZETTAI",
+    description:
+      "AIリスキリング研修「おうとまくん」を運営する株式会社ZETTAIの会社概要。AI研修と開発内製化支援で企業のDXを推進。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/company",
+  },
 };
 
 const companyInfo = [

@@ -8,11 +8,33 @@ import ClaudeDesktopFeatures from "@/components/ClaudeDesktopFeatures";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "14日間カリキュラム | CLAUDE CODE リスキリング研修",
+  title: "最短14日間カリキュラム・実践ブートキャンプ | おうとまくん",
   description:
-    "14日間ブートキャンプの1日あたりの典型スケジュール・到達度・成果物イメージ。業務を一番知る社員が2週間で自力で業務ツールを作れる人材になるまでの具体的なプロセスをご紹介します。",
-  alternates: { canonical: "/curriculum" },
-  openGraph: { url: "https://claudecode.co.jp/curriculum", title: "14日間カリキュラム | CLAUDE CODE リスキリング研修" },
+    "AIリスキリング研修「おうとまくん」の14日間ブートキャンプ。1日あたりの到達度・成果物・実装工程を公開。業務を一番知る社員が2週間で自力で業務ツールを作れる人材になるまでのプロセスを助成金75%補助で提供します。",
+  keywords: [
+    "リスキリング",
+    "AIリスキリング",
+    "Claude Code",
+    "AI研修",
+    "最短14日",
+    "プログラミング未経験",
+    "非エンジニア 開発",
+    "開発内製化",
+    "DX研修",
+    "AI人材育成",
+    "リスキリング カリキュラム",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/curriculum" },
+  openGraph: {
+    title: "最短14日間カリキュラム・実践ブートキャンプ | おうとまくん",
+    description:
+      "非エンジニアが2週間で自力で業務ツールを作れるようになる、Claude Code実践カリキュラムの全工程と到達度。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/curriculum",
+  },
 };
 
 const curriculumJsonLd = {

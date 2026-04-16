@@ -5,9 +5,32 @@ import Footer from "@/components/Footer";
 import { upcomingSeminars, archivedSeminars } from "@/data/seminars";
 
 export const metadata: Metadata = {
-  title: "無料セミナー | CLAUDE CODE リスキリング研修",
+  title: "無料オンラインセミナー（毎週木曜）| おうとまくん",
   description:
-    "毎週開催のClaude Code無料オンラインセミナー。Google Meetで60分、現場社員がAIでツールを内製化する実践事例と導入ステップをお届けします。",
+    "おうとまくんAIリスキリング研修の毎週開催 無料オンラインセミナー。木曜20:00からGoogle Meetで60分、非エンジニアの現場社員が最短14日で業務ツールを内製化する実践事例と導入ステップ、助成金活用までお届けします。",
+  keywords: [
+    "無料セミナー",
+    "AIセミナー",
+    "Claude Code セミナー",
+    "リスキリング",
+    "オンラインセミナー",
+    "内製化",
+    "最短14日",
+    "人材開発支援助成金",
+    "法人研修",
+    "AI人材育成",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/seminars" },
+  openGraph: {
+    title: "無料オンラインセミナー（毎週木曜）| おうとまくん",
+    description:
+      "毎週木曜20:00にGoogle Meetで60分。現場社員が最短14日で業務ツールを内製する実践事例と導入ステップをお届けします。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/seminars",
+  },
 };
 
 const features = [

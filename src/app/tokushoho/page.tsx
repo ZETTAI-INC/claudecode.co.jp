@@ -6,8 +6,18 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "特定商取引法に基づく表記",
   description:
-    "CLAUDE CODE リスキリング研修における特定商取引法に基づく表記。販売事業者、所在地、支払方法、サービス提供時期などをご確認いただけます。",
-  alternates: { canonical: "/tokushoho" },
+    "AIリスキリング研修「おうとまくん」における特定商取引法に基づく表記。販売事業者である株式会社ZETTAIの所在地、支払方法、サービス提供時期をご確認いただけます。",
+  keywords: [
+    "特定商取引法",
+    "特商法",
+    "おうとまくん",
+    "株式会社ZETTAI",
+    "販売事業者",
+    "Claude Code",
+  ],
+  alternates: {
+    canonical: "https://claudecode.co.jp/tokushoho",
+  },
   robots: { index: true, follow: true },
 };
 

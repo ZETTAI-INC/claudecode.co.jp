@@ -48,9 +48,9 @@ export default function EssenceOfTraining() {
       <div className="w-full xl:w-[38%] bg-[#F4F7FB] p-6 md:p-8 xl:py-10 flex flex-col justify-between border-r border-gray-200/60 relative z-10">
         
         {/* 1. Header */}
-        <h2 className="text-[18px] md:text-[22px] font-black text-gray-800 mb-6 tracking-widest leading-relaxed flex flex-col items-start gap-2.5">
+        <h2 className="text-[18px] md:text-[22px] font-black text-gray-800 mb-6 tracking-wide leading-relaxed flex flex-col items-start gap-2.5">
           <span>この研修の本質は</span>
-          <span className="text-white bg-[#FF6B00] px-4 py-1.5 rounded shadow-sm text-[24px] md:text-[28px]">本番導入まで届かせること</span>
+          <span className="text-white bg-[#FF6B00] px-3 md:px-4 py-1.5 rounded shadow-sm text-[20px] md:text-[28px] tracking-wide whitespace-nowrap">本番導入まで届かせること</span>
         </h2>
 
         {/* 2. Visual Equation / Diagram */}

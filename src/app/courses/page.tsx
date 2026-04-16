@@ -6,9 +6,33 @@ import WhyResults from "@/components/WhyResults";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "コース一覧 | Claude Code リスキリング研修",
+  title: "研修コース一覧・法人プラン | おうとまくん",
   description:
-    "Claude Code リスキリング研修のすべてのコースを一覧でご紹介します。非エンジニア向けの基礎導入から、エンジニア向けの上級編、人材派遣型のDISPATCH、実務伴走型のCoworkまで、企業の課題に合わせてお選びいただけます。",
+    "AIリスキリング研修「おうとまくん」の全コース一覧。非エンジニア向け基礎導入、エンジニア向け上級編、人材派遣型DISPATCH、伴走型Coworkまで、最短14日・助成金75%補助で企業の開発内製化を支援します。",
+  keywords: [
+    "リスキリング",
+    "AIリスキリング",
+    "Claude Code",
+    "企業研修",
+    "法人研修",
+    "リスキリング おすすめ",
+    "非エンジニア 開発",
+    "開発内製化",
+    "最短14日",
+    "助成金75%",
+    "AI人材育成",
+    "おうとまくん",
+    "株式会社ZETTAI",
+  ],
+  alternates: { canonical: "https://claudecode.co.jp/courses" },
+  openGraph: {
+    title: "研修コース一覧・法人プラン | おうとまくん",
+    description:
+      "非エンジニア向け基礎導入からDISPATCH・Coworkまで、最短14日で開発内製化を実現するAIリスキリング研修の全コース。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://claudecode.co.jp/courses",
+  },
 };
 
 export default function CoursesPage() {

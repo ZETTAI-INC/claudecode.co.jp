@@ -18,9 +18,31 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const seminar = upcomingSeminars.find((s) => s.slug === slug);
   if (!seminar) return { title: "無料セミナー" };
+  const url = `https://claudecode.co.jp/seminars/${seminar.slug}`;
+  const description = `${seminar.date}（${seminar.weekday}）${seminar.time} Google Meet開催。${seminar.summary} 参加費無料・${seminar.capacity}。おうとまくんAIリスキリング研修の無料オンラインセミナーです。`;
   return {
-    title: `${seminar.title} | 無料セミナー | CLAUDE CODE`,
-    description: seminar.summary,
+    title: `${seminar.title} | 無料オンラインセミナー`,
+    description,
+    keywords: [
+      "無料セミナー",
+      "オンラインセミナー",
+      "Claude Code",
+      "AI研修",
+      "リスキリング",
+      "内製化",
+      "最短14日",
+      seminar.tag,
+      "おうとまくん",
+      "株式会社ZETTAI",
+    ],
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${seminar.title} | 無料オンラインセミナー`,
+      description: seminar.summary,
+      type: "website",
+      locale: "ja_JP",
+      url,
+    },
   };
 }
 

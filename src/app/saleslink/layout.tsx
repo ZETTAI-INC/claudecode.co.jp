@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZETTAI｜高単価BtoB商材特化のテレアポ代行サービス",
+  title: "SalesLink｜高単価BtoB商材特化のテレアポ代行",
   description:
-    "株式会社ZETTAIは高単価BtoB商材特化のテレアポ代行サービスを通じて営業活動をご支援する会社です。",
-  keywords: "株式会社ZETTAI",
+    "株式会社ZETTAIが提供するSalesLinkは、高単価BtoB商材に特化したテレアポ代行サービス。AI研修「おうとまくん」運営会社のノウハウで営業活動を支援します。",
+  keywords: [
+    "SalesLink",
+    "テレアポ代行",
+    "BtoB 営業代行",
+    "高単価商材 営業",
+    "株式会社ZETTAI",
+    "おうとまくん",
+    "営業支援サービス",
+    "インサイドセールス",
+  ],
+  alternates: {
+    canonical: "https://claudecode.co.jp/saleslink",
+  },
   openGraph: {
-    title: "ZETTAI｜高単価BtoB商材特化のテレアポ代行サービス",
-    url: "https://saleslink.jp",
+    title: "SalesLink｜高単価BtoB商材特化のテレアポ代行",
     description:
-      "株式会社ZETTAIは高単価BtoB商材特化のテレアポ代行サービスを通じて営業活動をご支援する会社です。",
+      "株式会社ZETTAIが提供する高単価BtoB商材特化のテレアポ代行サービス「SalesLink」。営業活動を効率化します。",
     type: "website",
-    siteName: "ZETTAI",
-    images: ["/ogp.png"],
     locale: "ja_JP",
+    url: "https://claudecode.co.jp/saleslink",
+    siteName: "SalesLink",
+    images: ["/ogp.png"],
   },
   icons: {
     icon: [

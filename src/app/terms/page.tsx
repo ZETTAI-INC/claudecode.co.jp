@@ -3,9 +3,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "利用規約 | Claude Code リスキリング研修",
+  title: "利用規約",
   description:
-    "Claude Code リスキリング研修の利用規約です。本サービスをご利用いただくすべてのお客様に適用される条件を定めています。",
+    "AIリスキリング研修「おうとまくん」の利用規約。株式会社ZETTAIが提供する本サービスをご利用いただくお客様に適用される条件を定めています。",
+  keywords: [
+    "利用規約",
+    "サービス利用条件",
+    "おうとまくん",
+    "株式会社ZETTAI",
+    "Claude Code",
+  ],
+  alternates: {
+    canonical: "https://claudecode.co.jp/terms",
+  },
 };
 
 export default function TermsPage() {
