@@ -72,7 +72,7 @@ export default function ClientCompanies() {
         {/* --- Header --- */}
         <div className="flex justify-between items-end mb-2">
           <h2 className="text-xl md:text-[28px] font-bold tracking-wider text-gray-800">
-            Claude Code 活用企業
+            Claude Codeを本番導入している企業
           </h2>
           <div className="text-[#1890FF] font-black text-lg md:text-xl tracking-widest leading-none mb-1">
             Claude Code
@@ -83,7 +83,7 @@ export default function ClientCompanies() {
         {/* --- Subtitle --- */}
         <div className="text-center mb-10 md:mb-16">
           <h3 className="text-[16px] md:text-[22px] font-bold text-gray-700 tracking-wider">
-            世界中の企業がClaude Codeで開発を加速しています
+            世界中の企業がすでにClaude Codeを本番業務に導入しています
           </h3>
         </div>
       </div>

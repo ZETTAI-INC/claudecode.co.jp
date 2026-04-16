@@ -1,17 +1,17 @@
 export default function AdoptionTimeline() {
   const milestones = [
     {
-      day: "5",
+      day: "14",
       unit: "日後",
       color: "#2563eb",
       bg: "#eaf3ff",
       border: "#b3d4ff",
       label: "STEP 1",
-      title: "社員が「自分で作れる」状態になる",
+      title: "受講者が業務ツールを1本、本番導入する",
       description:
-        "プログラミング未経験の社員が、Claude Codeを使って業務ツールを自力で設計・実装・公開できるスキルを習得。外注や情シス依頼なしで「思いついたら自分で形にできる」実装力が身につきます。",
-      deliverable: "成果：受講者1人あたり業務ツール1本を本番公開",
-      impact: "外注コスト削減・開発リードタイム短縮",
+        "プログラミング未経験の社員が、Claude Codeで要件定義から本番デプロイまでを14日で完結。外注や情シス依頼を挟まずに、自部署の業務ツールを本番環境で稼働させるところまで到達します。",
+      deliverable: "成果：受講者1人あたりAIツール1本を本番導入",
+      impact: "外注コスト削減・本番導入リードタイム短縮",
     },
     {
       day: "30",
@@ -20,11 +20,11 @@ export default function AdoptionTimeline() {
       bg: "#fff7f0",
       border: "#ffcaa5",
       label: "STEP 2",
-      title: "業務効率化ツールが量産される",
+      title: "本番稼働するAIツールが部署で量産される",
       description:
-        "実装力を得た社員が、自部署の課題を次々とツール化。Excel台帳のWeb化、日報の自動集計、承認フローのアプリ化など、現場が「欲しい」と思った瞬間に内製で解決できる体制が動き出します。",
-      deliverable: "成果：部署内で稼働する業務ツール複数本",
-      impact: "業務時間の削減・属人化の解消",
+        "14日で本番導入を経験した社員が、自部署の次の課題も続けて本番化。Excel台帳のWeb化、日報の自動集計、承認フローのアプリ化まで、現場が欲しいと思った瞬間に本番環境へ届けられる体制が動き出します。",
+      deliverable: "成果：部署内で本番稼働するAIツール複数本",
+      impact: "業務時間の削減・本番運用の属人化解消",
     },
     {
       day: "90",
@@ -33,11 +33,11 @@ export default function AdoptionTimeline() {
       bg: "#ecfdf5",
       border: "#a7f3d0",
       label: "STEP 3",
-      title: "受講者が教える側になり、AI人材が増殖する",
+      title: "本番導入できる人材が社内で増殖する",
       description:
-        "ツールの成果を見た他部署から「うちにも教えて」が発生。受講者がナレッジを横展開し、社内に自走できるAI人材が自然増殖。1人の研修投資が、組織全体のAI実装力に変わります。",
-      deliverable: "成果：社内AI実装者の自然増・内製文化の定着",
-      impact: "採用コスト削減・全社DXの加速",
+        "本番導入済みツールの成果を見た他部署から「うちにも」が発生。受講者がノウハウを横展開し、14日で本番導入まで届かせられる人材が社内で自然増殖。1人の研修投資が、全社の本番導入力に変わります。",
+      deliverable: "成果：社内で本番導入できる人材の自然増",
+      impact: "AI人材採用コスト削減・全社本番導入の加速",
     },
   ];
 
@@ -52,12 +52,12 @@ export default function AdoptionTimeline() {
             </span>
           </div>
           <h2 className="text-2xl md:text-4xl lg:text-[42px] font-black text-[#151515] leading-[1.4] tracking-tight mb-4">
-            1人の研修が、組織を変える
+            14日の本番導入が、90日で組織を変える
           </h2>
           <p className="text-[#555] text-base md:text-lg leading-[1.9]">
-            実装力の獲得 → 業務改善の量産 → AI人材の増殖。
+            1本目の本番導入 → 部署内で量産 → 全社に本番導入人材が増殖。
             <br className="hidden md:block" />
-            投資が複利で回る3ステップです。
+            1人の研修投資が、本番導入力として複利で回る3ステップです。
           </p>
         </div>
 

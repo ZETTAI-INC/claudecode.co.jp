@@ -147,7 +147,7 @@ export default function Pricing() {
             対象企業・法人の条件
           </h3>
           <p className="text-gray-700 font-bold text-[13px] md:text-sm leading-[1.8] tracking-wide">
-            {renderWithTerms("自社内のDX・内製化にコミットする意志があること。")}実際の業務課題を題材とした学習プロジェクトが設計されていること。<br />
+            {renderWithTerms("自社内で14日本番導入を回す意志があること。")}実際の業務課題を題材に、本番導入まで到達するプロジェクトを設計すること。<br />
             記載の料金目安は受講人数・カスタマイズ内容により変動いたします。<br />
             ※ {renderWithTerms("厚生労働省の人材開発支援助成金・DX分野リスキリング推進事業など、各種助成金の対象となる可能性があります。")}
           </p>

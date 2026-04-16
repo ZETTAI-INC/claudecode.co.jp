@@ -1,20 +1,16 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
-import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
 import AdoptionTimeline from "@/components/AdoptionTimeline";
 import ClientCompanies from "@/components/ClientCompanies";
 import CaseStudies from "@/components/CaseStudies";
 import AiServiceStrengths from "@/components/AiServiceStrengths";
 import EssenceOfTraining from "@/components/EssenceOfTraining";
-import VennDiagramSection from "@/components/VennDiagramSection";
 import DevelopmentSpeedComparison from "@/components/DevelopmentSpeedComparison";
 import Pricing from "@/components/Pricing";
 import RstaffingFv from "@/components/RstaffingFv";
 import ResourceDownloadCta from "@/components/ResourceDownloadCta";
-import Flow from "@/components/Flow";
 import Faq from "@/components/Faq";
 import ContactForm from "@/components/ContactForm";
-import CeoMessage from "@/components/CeoMessage";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 
@@ -24,10 +20,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "プログラミング未経験の社員でも本当に14日で実装できるようになりますか？",
+      name: "プログラミング未経験の社員でも、本当に14日でAIを業務に本番導入できますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい。本研修は業務知識のある非エンジニア職（営業・企画・事務・マーケティングなど）を主対象としており、受講者の約96%が14日間で自部署の業務ツールを自力で本番公開する状態まで到達しています。Claude Codeが自然言語で実装を支援するため、従来のプログラミング研修のような文法学習は最小限で済みます。",
+        text: "はい。本研修は業務知識のある非エンジニア職（営業・企画・事務・マーケティングなど）を主対象とし、受講者の約96%が14日間で自部署の業務ツールを自力で本番導入しています。Claude Codeが自然言語で実装を支援するため、従来のプログラミング研修のような文法学習は最小限で済みます。",
       },
     },
     {
@@ -51,7 +47,7 @@ const faqJsonLd = {
       name: "研修内容は自社の業務に合わせてカスタマイズできますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "カスタマイズが前提です。事前ヒアリングで受講者の所属部署・業務課題を伺い、その課題をそのまま研修中の実装題材に使います。修了時には「業務に直結する」1本のツールが残ります。",
+        text: "カスタマイズが前提です。事前ヒアリングで受講者の所属部署・業務課題を伺い、その課題をそのまま研修中の本番導入テーマに使います。修了時には、その課題を解決する1本のAIツールが御社の本番環境で稼働している状態になります。",
       },
     },
     {
@@ -67,7 +63,7 @@ const faqJsonLd = {
       name: "研修後に受講者が使えなくなる「形骸化」が心配です。",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "本研修は修了後の伴走支援をセットにしており、実践開発コースは3ヶ月、社内講師育成コースは6ヶ月、専門メンターが質問対応と現場定着を支援します。座学ではなく、実装した業務ツールを現場で使い続ける設計です。",
+        text: "本研修は修了後の伴走支援をセットにしており、実践開発コースは3ヶ月、社内講師育成コースは6ヶ月、専門メンターが質問対応と本番運用の定着を支援します。座学ではなく、14日で本番導入したAIツールを現場で使い続け、次の本番導入まで回す設計です。",
       },
     },
     {
@@ -75,7 +71,7 @@ const faqJsonLd = {
       name: "修了後の成果はどのように測定しますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "修了時点で各受講者が実装した業務ツールの本数・稼働状況・業務時間削減効果をレポートします。理解度テストではなく、業務インパクトで測定するのが本研修の特徴です。",
+        text: "修了時点で各受講者が本番導入したAIツールの本数・稼働状況・業務時間削減効果をレポートします。理解度テストではなく、本番導入のインパクトで測定するのが本研修の特徴です。",
       },
     },
     {
@@ -133,19 +129,15 @@ export default function Home() {
         <div>
           <HeroBanner />
           <AiServiceStrengths />
-          <ClaudeCodeOverview />
           <EssenceOfTraining />
-      <VennDiagramSection />
           <DevelopmentSpeedComparison />
           <AdoptionTimeline />
           <ClientCompanies />
           <CaseStudies />
           <Pricing />
           <RstaffingFv />
-          <Flow />
           <Faq />
           <ResourceDownloadCta />
-          <CeoMessage />
           <ContactForm />
         </div>
       </main>

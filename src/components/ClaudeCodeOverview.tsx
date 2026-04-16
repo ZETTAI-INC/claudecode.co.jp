@@ -38,8 +38,8 @@ export default function ClaudeCodeOverview() {
         <p className="text-blue-600 font-bold text-sm mb-2 tracking-widest uppercase">Overview</p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">Claude Codeとは？</h2>
         <div className="bg-[#f8f9fa] p-7 md:p-10 rounded-2xl mx-auto max-w-4xl text-gray-800 font-bold leading-[1.9] text-base md:text-lg border border-gray-100 shadow-sm">
-          非エンジニアでも圧倒的な成果を出せる、全く新しい企業向けの実践型AIリスキリング研修です。<br className="hidden md:block"/>
-          最新AIスキルの習得・実務課題の直接的な解決・内製化支援のワンストップ提供により、貴社の事業拡大を強力に後押しします。
+          非エンジニア社員が14日でAIを業務に本番導入するための、自然言語ベースの実装ツールです。<br className="hidden md:block"/>
+          要件定義からコーディング・本番デプロイまでをClaude Code 1本で完結できるため、従来6ヶ月かかっていた実装工程を14日に圧縮できます。
         </div>
       </div>
 
@@ -49,11 +49,11 @@ export default function ClaudeCodeOverview() {
           {/* Main Title Area */}
           <div className="text-center mb-6">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 tracking-wide">
-              AI内製化とグロースに必要な
+              14日で本番導入するために必要な
             </h3>
             <div className="bg-[#005ebb] text-white py-4 shadow-md mx-10">
               <p className="text-xl md:text-2xl font-bold tracking-wider">
-                機能・業務・ノウハウをワンストップでサービス提供
+                機能・業務ノウハウ・運用体制を研修内でワンストップ提供
               </p>
             </div>
           </div>

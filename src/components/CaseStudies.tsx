@@ -163,7 +163,7 @@ export default function CaseStudies() {
                       {renderWithTerms(c.company)} <span className="text-lg md:text-xl font-medium">様</span>
                     </h3>
                     <p className="text-xs md:text-sm font-bold text-gray-600">
-                      {c.built}の開発・提供
+                      {c.built}を本番導入
                     </p>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function CaseStudies() {
                     <p key={i}>{line}</p>
                   ))}
                   <div className="inline-block mt-2 font-black text-[#1890FF] text-[15px]">
-                    公開までの期間：{c.daysToLaunch}
+                    本番導入までの期間：{c.daysToLaunch}
                   </div>
                 </div>
               </div>

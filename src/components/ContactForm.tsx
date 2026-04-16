@@ -69,14 +69,14 @@ export default function ContactForm() {
           {activeTab === "interest" ? (
             <>
               <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
-                <span className="inline-block">14日で内製化</span>
+                <span className="inline-block">14日で本番導入</span>
                 <span className="inline-block">できる業務か、</span><br className="md:hidden" />
                 <span className="inline-block"><strong>30分で診断</strong>します</span>
               </h2>
               <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>
                 <p style={{ marginBottom: "8px" }}>
                   <span className="inline-block">「対象部署」</span>
-                  <span className="inline-block">「作りたい業務」</span>
+                  <span className="inline-block">「本番導入したい業務」</span>
                   <span className="inline-block">「セキュリティ前提」の</span>
                   <span className="inline-block" style={{ color: "#2563eb", fontWeight: "bold" }}>3点だけ</span>
                   <span className="inline-block">確認します。</span>
@@ -90,12 +90,12 @@ export default function ContactForm() {
           ) : (
             <>
               <h2 className="contact__heading" style={{ wordBreak: 'keep-all' }}>
-                <span className="inline-block">リスキリング研修の</span><br className="md:hidden" />
+                <span className="inline-block">14日本番導入研修の</span><br className="md:hidden" />
                 <span className="inline-block"><strong>お申し込み</strong></span>
               </h2>
               <div className="contact__lead" style={{ wordBreak: 'keep-all' }}>
                 <p style={{ marginBottom: "8px" }}>
-                  <span className="inline-block">研修の開始時期やカリキュラム内容の詳細など、</span>
+                  <span className="inline-block">本番導入の開始時期やカリキュラム内容の詳細など、</span>
                   <span className="inline-block">今後の具体的なご案内をスムーズに進めます。</span>
                 </p>
                 <p>
@@ -123,11 +123,11 @@ export default function ContactForm() {
                   </li>
                   <li style={{ display: "flex", gap: "8px", marginBottom: "12px", alignItems: "flex-start" }}>
                     <span style={{ color: "#2563eb", fontWeight: 900, flexShrink: 0 }}>2.</span>
-                    <span>30分のオンライン相談で「対象部署」「作りたい業務」「セキュリティ前提」を確認</span>
+                    <span>30分のオンライン相談で「対象部署」「本番導入したい業務」「セキュリティ前提」を確認</span>
                   </li>
                   <li style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
                     <span style={{ color: "#2563eb", fontWeight: 900, flexShrink: 0 }}>3.</span>
-                    <span>相談後<strong>48時間以内</strong>に適合判定と概算の方向性をお返しします</span>
+                    <span>相談後<strong>48時間以内</strong>に14日本番導入の適合判定と概算をお返しします</span>
                   </li>
                 </ul>
               </div>
@@ -198,7 +198,7 @@ export default function ContactForm() {
 
               <div className="contact__field">
                 <label className="contact__label">
-                  作りたい業務ツールを一言
+                  本番導入したい業務ツールを一言
                 </label>
                 <input
                   type="text"
@@ -218,7 +218,7 @@ export default function ContactForm() {
               </p>
 
               <button type="submit" className="contact__submit">
-                <span>{activeTab === "interest" ? "30分の適合診断を申し込む" : "研修のお申し込みを完了する"}</span>
+                <span>{activeTab === "interest" ? "30分の適合診断を申し込む" : "14日本番導入研修のお申し込みを完了する"}</span>
                 <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
                   <path
                     d="M1.16 12.85c-.14-.17-.22-.37-.22-.58 0-.21.07-.39.22-.55l4.6-4.6L1.13 2.49c-.14-.14-.21-.33-.2-.57.01-.24.08-.42.22-.56.18-.18.36-.26.56-.25.2.01.38.1.53.25l5.21 5.21c.09.09.14.17.18.26.04.09.05.18.05.29s-.02.2-.05.29c-.04.09-.09.17-.18.26l-5.18 5.18c-.16.16-.34.23-.55.22-.2-.01-.4-.08-.56-.22z"

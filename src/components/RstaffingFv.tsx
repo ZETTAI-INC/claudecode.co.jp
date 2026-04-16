@@ -9,7 +9,7 @@ export default function RstaffingFv() {
             <div className="mv__textBlock">
               <h2 className="mv__title" style={{ wordBreak: 'keep-all' }}>
                 <span className="inline-block">次は御社の番です。</span><br />
-                <span className="inline-block">14日後、<strong className="mv__titleHighlight">1本の業務ツール</strong>が本番で動きます</span>
+                <span className="inline-block">14日後、<strong className="mv__titleHighlight">1本のAIツール</strong>が御社の本番環境で動きます</span>
               </h2>
 
               <div className="mv__servicesWrapper">
@@ -21,13 +21,13 @@ export default function RstaffingFv() {
                 <div className="mv__serviceBoxes">
                   <div className="mv__serviceBox"><span>課題<br className="onlySp" />ヒアリング</span></div>
                   <div className="mv__serviceBox"><span>カリキュラム<br className="onlySp" />設計</span></div>
-                  <div className="mv__serviceBox"><span>14日で<br className="onlySp" />本番公開</span></div>
+                  <div className="mv__serviceBox"><span>14日で<br className="onlySp" />本番導入</span></div>
                 </div>
               </div>
-              
+
               <p className="mv__desc">
-                業種・規模を問わず、御社の業務課題に合わせて研修を設計します。<br />
-                まずは30分で「自社に合うか」を確認しましょう。
+                業種・規模を問わず、御社の業務課題に合わせて14日本番導入を設計します。<br />
+                まずは30分で「自社業務が14日で本番導入できるか」を確認しましょう。
               </p>
 
               <div className="mv__inquiryButton">

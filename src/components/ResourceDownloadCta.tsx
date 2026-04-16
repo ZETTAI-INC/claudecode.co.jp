@@ -10,7 +10,7 @@ export default function ResourceDownloadCta() {
               <span className="conversionArea__titleStrong">今だけ</span>
               <span className="conversionArea__titleSmall">限定配布！</span>
             </span>
-            教育マニュアル配布中
+            14日本番導入マニュアル配布中
           </div>
           <div className="conversionArea__container">
             <div className="conversionArea__text">
@@ -19,13 +19,13 @@ export default function ResourceDownloadCta() {
               </div>
               <ul className="conversionArea__list">
                 <li className="conversionArea__listItem">
-                  ・Claude Code 導入の実践手順
+                  ・14日で本番導入する実践手順
                 </li>
                 <li className="conversionArea__listItem">
-                  ・社内展開ロードマップ
+                  ・本番導入後の社内横展開ロードマップ
                 </li>
                 <li className="conversionArea__listItem">
-                  ・現場で使えるプロンプト集
+                  ・本番環境で使える要件定義プロンプト集
                 </li>
               </ul>
             </div>

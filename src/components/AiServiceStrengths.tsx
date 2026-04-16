@@ -1,34 +1,60 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import ClaudeCodeOverview from "@/components/ClaudeCodeOverview";
+import VennDiagramSection from "@/components/VennDiagramSection";
 import { renderWithTerms } from "@/components/renderWithTerms";
 
 const POINTS = [
   {
     num: "01",
-    title: "2週間で「社内に実装者を残す」",
+    title: "14日で「本番稼働するAIツール」を1本残す",
     list: [
-      "外注に出していた業務ツール開発を、社内メンバーが自走で完遂できる状態まで引き上げ",
-      "研修後に残るのは知識ではなく、本番リリース済みの成果物"
+      "修了時に残るのは学習証明書ではなく、自部署で本番稼働しているAIツール",
+      "受講者の96%が14日以内に自部署業務へ本番導入（自社パイロット実績 n=128）"
     ]
   },
   {
     num: "02",
-    title: "非エンジニアを実装者に変える",
+    title: "非エンジニア社員が「本番導入する側」に回る",
     list: [
-      "営業・企画・事務職でも、業務ツールを自力で設計・実装・公開できるレベルまで到達",
-      "高騰するAI人材採用に依存せず、既存社員で内製体制を構築"
+      "営業・企画・事務職のままで、自部署の業務ツールを本番環境に届けられるように",
+      "高騰するAI人材採用に頼らず、既存社員だけで本番導入を回せる体制に変わる"
     ]
   },
   {
     num: "03",
-    title: "修了後も続く伴走サポート",
+    title: "本番導入後も止まらない伴走支援",
     list: [
-      "研修修了後に手が止まらないよう、現場定着まで専門メンターが継続支援",
-      "学んだ内容を「使い続けられる」状態まで仕組み化"
+      "14日で導入したAIツールを現場で使い続けられるよう、専門メンターが定着まで支援",
+      "2本目・3本目の本番導入も、社内だけで回せる状態まで仕組み化"
     ]
   }
 ];
 
 const AiServiceStrengths: React.FC = () => {
+  const [isOverviewOpen, setIsOverviewOpen] = useState(false);
+  const [isVennOpen, setIsVennOpen] = useState(false);
+  const anyModalOpen = isOverviewOpen || isVennOpen;
+
+  useEffect(() => {
+    if (anyModalOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setIsOverviewOpen(false);
+          setIsVennOpen(false);
+        }
+      };
+      window.addEventListener("keydown", onKey);
+      return () => {
+        document.body.style.overflow = prev;
+        window.removeEventListener("keydown", onKey);
+      };
+    }
+  }, [anyModalOpen]);
+
   return (
     <section className="bg-white py-10 md:py-24 font-sans text-[#333] overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
@@ -39,7 +65,7 @@ const AiServiceStrengths: React.FC = () => {
             Common Struggles
           </span>
           <h2 className="text-2xl md:text-3xl lg:text-[36px] font-black text-[#29034f] tracking-wide relative pb-5">
-            こんなお悩みございませんか？
+            こんなお悩みありませんか？
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60px] h-[4px] bg-gradient-to-r from-[#2563eb] to-[#ff5c00] rounded-full opacity-80"></div>
           </h2>
         </div>
@@ -65,9 +91,9 @@ const AiServiceStrengths: React.FC = () => {
             
             {/* Bubble 1: Left Top */}
             <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-1 lg:row-start-1 h-auto flex flex-col">
-              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">{renderWithTerms("内製化が進まない")}</h3>
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">社内に作れる人がいない</h3>
               <p className="text-sm text-[#555] leading-relaxed flex-1">
-                {renderWithTerms("PoCは作れても、本番運用まで持っていける人材が社内にいない")}
+                {renderWithTerms("業務効率化のアイデアはあるのに、社内にエンジニアがおらずエクセルと手作業のまま")}
               </p>
               {/* Tail pointing towards center-right */}
               <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#f0f0f0]"></div>
@@ -75,9 +101,9 @@ const AiServiceStrengths: React.FC = () => {
 
             {/* Bubble 2: Left Bottom */}
             <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-1 lg:row-start-2 h-auto flex flex-col">
-              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">属人化が止まらない</h3>
+              <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">属人化して止まる</h3>
               <p className="text-sm text-[#555] leading-relaxed flex-1">
-                AI活用が一部社員に依存、退職リスクで事業が止まりかねない
+                AI活用が一部社員に依存、退職・異動した瞬間に現場の業務が止まるリスクがある
               </p>
               <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[15px] border-l-[#e8e8e8]"></div>
             </div>
@@ -86,7 +112,7 @@ const AiServiceStrengths: React.FC = () => {
             <div className="bg-[#ebebeb] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-2 lg:row-start-1 h-auto flex flex-col">
               <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">外注費が膨らむ一方</h3>
               <p className="text-sm text-[#555] leading-relaxed flex-1">
-                軽微な機能追加でも毎回外注、年間コストが事業計画を圧迫する
+                ボタン1つ追加するのに数十万円・数週間、軽微な修正でも毎回外注でコストがかさむ
               </p>
               <div className="hidden lg:block absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[15px] border-t-[#ebebeb]"></div>
             </div>
@@ -115,7 +141,7 @@ const AiServiceStrengths: React.FC = () => {
             <div className="bg-[#f0f0f0] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-3 lg:row-start-1 h-auto flex flex-col">
               <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">AI人材が採用できない</h3>
               <p className="text-sm text-[#555] leading-relaxed flex-1">
-                年収レンジを上げても採れない、採れても定着しない
+                年収レンジを上げても採れない、採れても定着せず数ヶ月で辞めてしまう
               </p>
               <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#f0f0f0]"></div>
             </div>
@@ -124,7 +150,7 @@ const AiServiceStrengths: React.FC = () => {
             <div className="bg-[#e8e8e8] rounded-xl p-5 relative shadow-sm w-[85vw] sm:w-[300px] lg:w-full flex-shrink-0 snap-center lg:snap-align-none lg:col-start-3 lg:row-start-2 h-auto flex flex-col">
               <h3 className="text-lg md:text-xl font-bold text-center mb-3 text-[#333] whitespace-nowrap">{renderWithTerms("PoCで止まる")}</h3>
               <p className="text-sm text-[#555] leading-relaxed flex-1">
-                生成AIの検証は進むが、業務に落ちる実装まで到達しない
+                デモまでは作れても、現場で毎日使われるツールとして業務に載らないまま塩漬けに
               </p>
               <div className="hidden lg:block absolute -left-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[15px] border-r-[#e8e8e8]"></div>
             </div>
@@ -134,7 +160,7 @@ const AiServiceStrengths: React.FC = () => {
 
         {/* --- Middle Banner: Solution Statement --- */}
         <div className="relative bg-[#1e5eb0] text-white py-6 md:py-8 text-center text-xl md:text-3xl font-bold tracking-wide shadow-md">
-          そのお悩み、Claude Codeが解決します！
+          そのお悩み、<span className="underline decoration-4 underline-offset-4">14日で本番導入する研修</span>がすべて解決します
           {/* Downward Triangle */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-t-[#1e5eb0]"></div>
         </div>
@@ -143,7 +169,7 @@ const AiServiceStrengths: React.FC = () => {
         <div className="pt-24 lg:pt-24 flex md:grid md:grid-cols-3 gap-6 lg:gap-12 relative px-4 sm:px-6 md:px-2 overflow-x-auto snap-x snap-mandatory scroll-p-4 sm:scroll-p-6 md:scroll-p-0 pb-8 md:pb-0 -mx-4 sm:-mx-6 md:mx-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {POINTS.map((point, index) => (
             <div key={index} className="flex flex-col relative z-10 pt-8 mt-4 md:mt-0 flex-shrink-0 w-[85vw] sm:w-[320px] md:w-auto snap-center md:snap-align-none">
-              
+
               {/* Giant Background Number */}
               <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 text-[100px] lg:text-[130px] font-bold text-orange-400/30 pointer-events-none tracking-tighter leading-none -z-10 font-sans">
                 {point.num}
@@ -175,7 +201,94 @@ const AiServiceStrengths: React.FC = () => {
           ))}
         </div>
 
+        {/* --- Info Triggers --- */}
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center items-center mt-12 md:mt-16">
+          <button
+            type="button"
+            onClick={() => setIsOverviewOpen(true)}
+            className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white transition-all shadow-sm hover:shadow-md text-[14px] md:text-[15px] font-bold cursor-pointer"
+            aria-label="Claude Codeとは？ 詳細を開く"
+            style={{ wordBreak: "keep-all" }}
+          >
+            <span className="w-6 h-6 rounded-full bg-[#2563eb] group-hover:bg-white text-white group-hover:text-[#2563eb] flex items-center justify-center text-[13px] font-black leading-none transition-colors">
+              i
+            </span>
+            <span>そもそも Claude Code とは？</span>
+            <span className="text-[18px] leading-none">→</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsVennOpen(true)}
+            className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white transition-all shadow-sm hover:shadow-md text-[14px] md:text-[15px] font-bold cursor-pointer"
+            aria-label="最強の内製化チームの条件を開く"
+            style={{ wordBreak: "keep-all" }}
+          >
+            <span className="w-6 h-6 rounded-full bg-[#FF6B00] group-hover:bg-white text-white group-hover:text-[#FF6B00] flex items-center justify-center text-[13px] font-black leading-none transition-colors">
+              ?
+            </span>
+            <span>なぜ「業務 × Claude Code」が最強なのか？</span>
+            <span className="text-[18px] leading-none">→</span>
+          </button>
+        </div>
+
       </div>
+
+      {/* --- Claude Code Overview Modal --- */}
+      {isOverviewOpen && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/70 flex items-start justify-center p-2 sm:p-4 overflow-y-auto"
+          onClick={() => setIsOverviewOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Claude Codeとは？"
+        >
+          <div
+            className="relative bg-white rounded-2xl w-full max-w-4xl my-4 sm:my-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsOverviewOpen(false)}
+              className="absolute top-3 right-3 z-[100] w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-lg font-bold shadow-md cursor-pointer"
+              aria-label="閉じる"
+            >
+              ×
+            </button>
+            <div className="overflow-hidden rounded-2xl [&>div]:py-8 md:[&>div]:py-10 [&>div]:mb-0">
+              <ClaudeCodeOverview />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* --- Venn Diagram Modal --- */}
+      {isVennOpen && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/70 flex items-start justify-center p-2 sm:p-4 overflow-y-auto"
+          onClick={() => setIsVennOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="なぜ業務 × Claude Code が最強なのか？"
+        >
+          <div
+            className="relative bg-white rounded-2xl w-full max-w-4xl my-4 sm:my-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsVennOpen(false)}
+              className="absolute top-3 right-3 z-[100] w-9 h-9 flex items-center justify-center rounded-full bg-white hover:bg-gray-100 text-gray-700 text-lg font-bold shadow-md cursor-pointer"
+              aria-label="閉じる"
+            >
+              ×
+            </button>
+            <div className="overflow-hidden rounded-2xl [&>section]:my-0 [&>section]:px-3 md:[&>section]:px-5 [&>section]:py-5 md:[&>section]:py-7 [&_.venn-card]:p-5 md:[&_.venn-card]:p-7">
+              <VennDiagramSection />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
